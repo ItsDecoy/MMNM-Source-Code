@@ -691,6 +691,39 @@ class PlayState extends MusicBeatState
 					bg.antialiasing = false;
 					add(bg);
 				}
+			case 'mx': // mx week in progress
+				//var anothercloud:BGSprite = new BGSprite('background/anothercloud', -450, 250, 0.9, 0.9);
+				//anothercloud.setGraphicSize(Std.int(anothercloud.width * 2.3));
+				//add(anothercloud);
+
+				var cloudnumero3:BGSprite = new BGSprite('background/cloud', 1350, -50, 0.9, 0.9);
+				cloudnumero3.setGraphicSize(Std.int(cloudnumero3.width * 0.9));
+				add(cloudnumero3);
+
+				var cloudnumero2:BGSprite = new BGSprite('background/cloud', 550, -200, 0.9, 0.9);
+				cloudnumero2.setGraphicSize(Std.int(cloudnumero2.width * 0.7));
+				add(cloudnumero2);
+
+				var cloud:BGSprite = new BGSprite('background/cloud', -350, -100, 0.9, 0.9);
+				cloud.setGraphicSize(Std.int(cloud.width * 1.0));
+				add(cloud);
+
+				var hills:BGSprite = new BGSprite('background/hills', 100, 200, 0.9, 0.9);
+				hills.setGraphicSize(Std.int(hills.width * 2.3));
+				add(hills);
+
+				var grass:BGSprite = new BGSprite('background/grass', -430, -200, 0.9, 0.9);
+				grass.setGraphicSize(Std.int(grass.width * 2.4));
+				grass.updateHitbox();
+				add(grass);
+
+				var bg:BGSprite = new BGSprite('background/floor', -1250, -700, 0.9, 0.9);
+				bg.setGraphicSize(Std.int(bg.width * 0.7));
+				add(bg);
+
+				var pillar:BGSprite = new BGSprite('background/pillar', 200, 200, 0.9, 0.9);
+				pillar.setGraphicSize(Std.int(pillar.width * 2.6));
+				add(pillar);	
 		}
 
 		if(isPixelStage) {
