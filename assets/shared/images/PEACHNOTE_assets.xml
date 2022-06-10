@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="PEACHNOTE_assets.png">
+<SubTexture name="purple0000" x="0" y="0" width="194" height="194" frameX="0" frameY="0" frameWidth="194" frameHeight="194" />
+<SubTexture name="green0000" x="194" y="0" width="194" height="194" frameX="0" frameY="0" frameWidth="194" frameHeight="194" />
+<SubTexture name="red0000" x="0" y="194" width="194" height="194" frameX="0" frameY="0" frameWidth="194" frameHeight="194" />
+<SubTexture name="blue0000" x="194" y="194" width="194" height="194" frameX="0" frameY="0" frameWidth="194" frameHeight="194" />
+</TextureAtlas>

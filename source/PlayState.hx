@@ -270,6 +270,9 @@ class PlayState extends MusicBeatState
 	// Less laggy controls
 	private var keysArray:Array<Dynamic>;
 
+	private var peachGate:FlxSprite;
+	private var peachValue:Float = 0;
+
 	override public function create()
 	{
 		Paths.clearStoredMemory();
@@ -877,7 +880,7 @@ class PlayState extends MusicBeatState
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
-		timeTxt.setFormat(Paths.font("Pixel_NES.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat(Paths.font("Pixel_NES.otf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
@@ -1033,14 +1036,14 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("Pixel_NES.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat(Paths.font("Pixel_NES.otf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
-		botplayTxt.setFormat(Paths.font("Pixel_NES.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt.setFormat(Paths.font("Pixel_NES.otf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
@@ -1048,6 +1051,14 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.downScroll) {
 			botplayTxt.y = timeBarBG.y - 78;
 		}
+
+		peachGate = new FlxSprite().loadGraphic(Paths.image('scarySCREEN', 'shared'));
+		peachGate.scrollFactor.set();
+		peachGate.screenCenter();
+		peachValue = peachGate.y;
+		peachGate.y += FlxG.height;
+		peachGate.cameras = [camHUD];
+		add(peachGate);
 
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
@@ -2177,7 +2188,14 @@ class PlayState extends MusicBeatState
 		{
 			iconP1.swapOldIcon();
 		}*/
+		
+		peachGate.y = FlxMath.lerp(peachGate.y, peachValue + FlxG.height, CoolUtil.boundTo(elapsed * 0.125, 0, 1));
 
+		if(peachGate.y <= peachValue)
+		{
+			peachGate.y = peachValue;
+		}
+		
 		callOnLuas('onUpdate', [elapsed]);
 
 		switch (curStage)
@@ -3896,6 +3914,14 @@ class PlayState extends MusicBeatState
 					note.destroy();
 				}
 				return;
+			}
+
+			switch(note.noteType) {
+				case 'peachNote':
+					if(peachGate.y > peachValue)
+						FlxG.camera.shake(0.0025, 0.1);
+						camHUD.shake(0.0075, 0.1);
+						peachGate.y -= 150;
 			}
 
 			if (!note.isSustainNote)

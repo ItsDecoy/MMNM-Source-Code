@@ -98,6 +98,13 @@ class Note extends FlxSprite
 
 		if(noteData > -1 && noteType != value) {
 			switch(value) {
+				case 'peachNote':
+					ignoreNote = mustPress;
+					reloadNote('PEACH');
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+					missHealth = 0.3;
 				case 'Hurt Note':
 					ignoreNote = mustPress;
 					reloadNote('HURT');
@@ -229,6 +236,7 @@ class Note extends FlxSprite
 				scale.y *= PlayState.daPixelZoom;
 				updateHitbox();
 			}
+
 		} else if(!isSustainNote) {
 			earlyHitMult = 1;
 		}
@@ -249,6 +257,12 @@ class Note extends FlxSprite
 			if(skin == null || skin.length < 1) {
 				skin = 'NOTE_assets';
 			}
+		}
+
+		if(prefix != null && prefix == 'PEACH')
+		{
+			trace('FOUND IT');
+			offsetX -= 14;
 		}
 
 		var animName:String = null;

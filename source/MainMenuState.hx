@@ -33,12 +33,9 @@ class MainMenuState extends MusicBeatState
 	private var camAchievement:FlxCamera;
 	
 	var optionShit:Array<String> = [
+		'mx_mode',
 		'story_mode',
-		'freeplay',
-		#if MODS_ALLOWED 'mods', #end
-		#if ACHIEVEMENTS_ALLOWED 'awards', #end
-		'credits',
-		#if !switch 'donate', #end
+		'extras',
 		'options'
 	];
 
@@ -46,6 +43,9 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
+	var thingCursor:FlxSprite;
+
+	var xPos:Float = 50;
 
 	override function create()
 	{
@@ -70,10 +70,9 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
-		bg.scrollFactor.set(0, yScroll);
-		bg.setGraphicSize(Std.int(bg.width * 1.175));
+		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_BACKGROUND'));
+		bg.scrollFactor.set(0, 0);
+		bg.setGraphicSize(Std.int(bg.width * 1.025));
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
@@ -84,44 +83,31 @@ class MainMenuState extends MusicBeatState
 		add(camFollow);
 		add(camFollowPos);
 
-		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
-		magenta.scrollFactor.set(0, yScroll);
-		magenta.setGraphicSize(Std.int(magenta.width * 1.175));
-		magenta.updateHitbox();
-		magenta.screenCenter();
-		magenta.visible = false;
-		magenta.antialiasing = ClientPrefs.globalAntialiasing;
-		magenta.color = 0xFFfd719b;
-		add(magenta);
-		
-		// magenta.scrollFactor.set();
+		thingCursor = new FlxSprite().loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_PIPE', 'preload'));
+		thingCursor.scrollFactor.set();
+		add(thingCursor);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
 		var scale:Float = 1;
-		/*if(optionShit.length > 6) {
-			scale = 6 / optionShit.length;
-		}*/
 
 		for (i in 0...optionShit.length)
 		{
-			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(0, (i * 140)  + offset);
+			var offset:Float = 200 - (Math.max(optionShit.length, 4) - 4) * 60;
+			var menuItem:FlxSprite = new FlxSprite(xPos, (i * 100)  + offset).loadGraphic(Paths.image('mainmenustuff/' + optionShit[i], 'preload'));
+			if(i == 1)
+			{
+				menuItem.y -= 50;
+			}
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
-			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
-			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
-			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
 			menuItem.updateHitbox();
 		}
 
@@ -136,7 +122,10 @@ class MainMenuState extends MusicBeatState
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
-		// NG.core.calls.event.logEvent('swag').send();
+		var logoTHING:FlxSprite = new FlxSprite(50, 40).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_LOGO', 'preload'));
+		logoTHING.scrollFactor.set();
+		add(logoTHING);
+
 
 		changeItem();
 
@@ -209,8 +198,6 @@ class MainMenuState extends MusicBeatState
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 
-					if(ClientPrefs.flashing) FlxFlicker.flicker(magenta, 1.1, 0.15, false);
-
 					menuItems.forEach(function(spr:FlxSprite)
 					{
 						if (curSelected != spr.ID)
@@ -232,15 +219,13 @@ class MainMenuState extends MusicBeatState
 								switch (daChoice)
 								{
 									case 'story_mode':
-										MusicBeatState.switchState(new StoryMenuState());
-									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
-									#if MODS_ALLOWED
-									case 'mods':
-										MusicBeatState.switchState(new ModsMenuState());
-									#end
+									case 'mx_mode':
+										MusicBeatState.switchState(new StoryMenuState());
 									case 'awards':
 										MusicBeatState.switchState(new AchievementsMenuState());
+									case 'extras':
+										
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
 									case 'options':
@@ -260,12 +245,27 @@ class MainMenuState extends MusicBeatState
 			#end
 		}
 
-		super.update(elapsed);
-
-		menuItems.forEach(function(spr:FlxSprite)
-		{
-			spr.screenCenter(X);
+		menuItems.forEach(function(spr:FlxSprite){
+			if(spr.ID == curSelected)
+			{
+				spr.x = FlxMath.lerp(spr.x, xPos + 50, CoolUtil.boundTo(elapsed * 5, 0, 1));
+				if(curSelected == 1)
+				{
+					thingCursor.y = FlxMath.lerp(thingCursor.y, spr.y + 30, CoolUtil.boundTo(elapsed * 10, 0, 1));
+				}
+				else
+				{
+					thingCursor.y = FlxMath.lerp(thingCursor.y, spr.y - 10, CoolUtil.boundTo(elapsed * 10, 0, 1));
+				}
+				thingCursor.x = 0;
+			}
+			else
+			{
+				spr.x = FlxMath.lerp(spr.x, xPos, CoolUtil.boundTo(elapsed * 5, 0, 1));
+			}
 		});
+		
+		super.update(elapsed);
 	}
 
 	function changeItem(huh:Int = 0)
@@ -279,17 +279,17 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			spr.animation.play('idle');
+			//spr.animation.play('idle');
 			spr.updateHitbox();
-
+			//spr.x = xPos;
 			if (spr.ID == curSelected)
 			{
-				spr.animation.play('selected');
+				/*spr.x = xPos + 50;
 				var add:Float = 0;
 				if(menuItems.length > 4) {
 					add = menuItems.length * 8;
 				}
-				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y - add);
+				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y - add);*/
 				spr.centerOffsets();
 			}
 		});
