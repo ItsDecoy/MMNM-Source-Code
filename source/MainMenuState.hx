@@ -45,7 +45,7 @@ class MainMenuState extends MusicBeatState
 	var debugKeys:Array<FlxKey>;
 	var thingCursor:FlxSprite;
 
-	var xPos:Float = 50;
+	var xPos:Float = 0;
 
 	override function create()
 	{
@@ -83,7 +83,27 @@ class MainMenuState extends MusicBeatState
 		add(camFollow);
 		add(camFollowPos);
 
-		thingCursor = new FlxSprite().loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_PIPE', 'preload'));
+		for (i in 0...optionShit.length)
+		{
+			var offset:Float = 160 - (Math.max(optionShit.length, 4) - 4) * 80;
+			thingCursor = new FlxSprite(0, (i * 125)  + offset).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_PIPE', 'preload'));
+			thingCursor.scrollFactor.set();
+			add(thingCursor);
+
+			switch(i)
+			{
+				case 0:
+					thingCursor.y -= 10;
+				case 1:
+					thingCursor.y -= 15;
+				case 2:
+					thingCursor.y -= 10;
+				case 3:
+					thingCursor.y -= 5;
+			}
+		}
+
+		thingCursor = new FlxSprite().loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_CURSOR', 'preload'));
 		thingCursor.scrollFactor.set();
 		add(thingCursor);
 
@@ -94,8 +114,8 @@ class MainMenuState extends MusicBeatState
 
 		for (i in 0...optionShit.length)
 		{
-			var offset:Float = 200 - (Math.max(optionShit.length, 4) - 4) * 60;
-			var menuItem:FlxSprite = new FlxSprite(xPos, (i * 100)  + offset).loadGraphic(Paths.image('mainmenustuff/' + optionShit[i], 'preload'));
+			var offset:Float = 160 - (Math.max(optionShit.length, 4) - 4) * 80;
+			var menuItem:FlxSprite = new FlxSprite(xPos, (i * 125)  + offset).loadGraphic(Paths.image('mainmenustuff/' + optionShit[i], 'preload'));
 			if(i == 1)
 			{
 				menuItem.y -= 50;
@@ -113,16 +133,16 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
+		/*var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' v" + Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShit);
+		add(versionShit);*/
 
-		var logoTHING:FlxSprite = new FlxSprite(50, 40).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_LOGO', 'preload'));
+		var logoTHING:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_LOGO', 'preload'));
 		logoTHING.scrollFactor.set();
 		add(logoTHING);
 
@@ -248,16 +268,22 @@ class MainMenuState extends MusicBeatState
 		menuItems.forEach(function(spr:FlxSprite){
 			if(spr.ID == curSelected)
 			{
-				spr.x = FlxMath.lerp(spr.x, xPos + 50, CoolUtil.boundTo(elapsed * 5, 0, 1));
-				if(curSelected == 1)
+				spr.x = FlxMath.lerp(spr.x, xPos + 35, CoolUtil.boundTo(elapsed * 5, 0, 1));
+				var addition = 0;
+				switch(spr.ID)
 				{
-					thingCursor.y = FlxMath.lerp(thingCursor.y, spr.y + 30, CoolUtil.boundTo(elapsed * 10, 0, 1));
+					case 0:
+						addition = 20;
+					case 1:
+						addition = 70;
+					case 2:
+						addition = 25;
+					case 3:
+						addition = 30;
+
 				}
-				else
-				{
-					thingCursor.y = FlxMath.lerp(thingCursor.y, spr.y - 10, CoolUtil.boundTo(elapsed * 10, 0, 1));
-				}
-				thingCursor.x = 0;
+				thingCursor.y = FlxMath.lerp(thingCursor.y, spr.y + addition, CoolUtil.boundTo(elapsed * 10, 0, 1));
+				thingCursor.x = 410;
 			}
 			else
 			{
