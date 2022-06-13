@@ -16,6 +16,7 @@ import flixel.math.FlxMath;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import flixel.math.FlxPoint;
 import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
@@ -39,11 +40,21 @@ class MainMenuState extends MusicBeatState
 		'options'
 	];
 
+	var artList:Array<String> = [
+		'mx_mode',
+		'all_stars'
+	];
+
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
 	var thingCursor:FlxSprite;
+	var pipes:FlxTypedGroup<FlxSprite>;
+	var coverART:FlxSprite;
+	var coverART2:FlxSprite;
+	var ca_pos:FlxPoint;
+	var ca_pos2:FlxPoint;
 
 	var xPos:Float = 0;
 
@@ -83,23 +94,27 @@ class MainMenuState extends MusicBeatState
 		add(camFollow);
 		add(camFollowPos);
 
+		pipes = new FlxTypedGroup<FlxSprite>();
+		add(pipes);
+
 		for (i in 0...optionShit.length)
 		{
 			var offset:Float = 160 - (Math.max(optionShit.length, 4) - 4) * 80;
-			thingCursor = new FlxSprite(0, (i * 125)  + offset).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_PIPE', 'preload'));
-			thingCursor.scrollFactor.set();
-			add(thingCursor);
-
+			var thingCursor2 = new FlxSprite(-100, (i * 125)  + offset).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_PIPE', 'preload'));
+			thingCursor2.scrollFactor.set();
+			
+			pipes.add(thingCursor2);
+			
 			switch(i)
 			{
 				case 0:
-					thingCursor.y -= 10;
+					thingCursor2.y -= 10;
 				case 1:
-					thingCursor.y -= 15;
+					thingCursor2.y -= 15;
 				case 2:
-					thingCursor.y -= 10;
+					thingCursor2.y -= 10;
 				case 3:
-					thingCursor.y -= 5;
+					thingCursor2.y -= 5;
 			}
 		}
 
@@ -142,6 +157,16 @@ class MainMenuState extends MusicBeatState
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);*/
 
+		coverART2 = new FlxSprite(625, 100);
+		coverART2.scrollFactor.set();
+		ca_pos2 = new FlxPoint(coverART2.x, coverART2.y);
+		add(coverART2);
+
+		coverART = new FlxSprite(625, 100);
+		coverART.scrollFactor.set();
+		ca_pos = new FlxPoint(coverART.x, coverART.y);
+		add(coverART);
+
 		var logoTHING:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_LOGO', 'preload'));
 		logoTHING.scrollFactor.set();
 		add(logoTHING);
@@ -182,6 +207,8 @@ class MainMenuState extends MusicBeatState
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
+
+		
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
@@ -268,6 +295,21 @@ class MainMenuState extends MusicBeatState
 		menuItems.forEach(function(spr:FlxSprite){
 			if(spr.ID == curSelected)
 			{
+				coverART2.x = FlxMath.lerp(coverART2.x, ca_pos2.x, CoolUtil.boundTo(elapsed * 5, 0, 1));
+				coverART2.y = FlxMath.lerp(coverART2.y, ca_pos2.y, CoolUtil.boundTo(elapsed * 5, 0, 1));
+
+				coverART.loadGraphic(Paths.image('mainmenustuff/art/' + artList[spr.ID]));
+				switch(spr.ID)
+				{
+					case 0:
+						coverART.x = FlxMath.lerp(coverART.x, ca_pos.x + 6, CoolUtil.boundTo(elapsed * 5, 0, 1));
+						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y - 8, CoolUtil.boundTo(elapsed * 5, 0, 1));
+					case 1:
+						coverART.x = FlxMath.lerp(coverART.x, ca_pos.x, CoolUtil.boundTo(elapsed * 5, 0, 1));
+						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y, CoolUtil.boundTo(elapsed * 5, 0, 1));
+				}
+
+
 				spr.x = FlxMath.lerp(spr.x, xPos + 35, CoolUtil.boundTo(elapsed * 5, 0, 1));
 				var addition = 0;
 				switch(spr.ID)
@@ -305,17 +347,23 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			//spr.animation.play('idle');
 			spr.updateHitbox();
-			//spr.x = xPos;
 			if (spr.ID == curSelected)
 			{
-				/*spr.x = xPos + 50;
-				var add:Float = 0;
-				if(menuItems.length > 4) {
-					add = menuItems.length * 8;
+				if(huh < 0)
+				{
+					coverART2.setPosition(coverART.x, coverART.y);
+					ca_pos2.set(ca_pos.x, ca_pos.y + 750);
+					coverART.y = ca_pos.y - 750;
+					coverART2.loadGraphicFromSprite(coverART);
 				}
-				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y - add);*/
+				else
+				{
+					coverART2.setPosition(coverART.x, coverART.y);
+					ca_pos2.set(ca_pos.x, ca_pos.y - 750);
+					coverART.y = ca_pos.y + 750;
+					coverART2.loadGraphicFromSprite(coverART);
+				}
 				spr.centerOffsets();
 			}
 		});
