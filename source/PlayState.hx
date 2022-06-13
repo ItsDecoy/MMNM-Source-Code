@@ -215,6 +215,11 @@ class PlayState extends MusicBeatState
 	var santa:BGSprite;
 	var heyTimer:Float;
 
+	var scarycloud:BGSprite;
+	var scarycloudnumero2:BGSprite;
+	var scarycloudnumero3:BGSprite;
+	var scaryhills:BGSprite;
+
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 	var bgGhouls:BGSprite;
@@ -692,9 +697,35 @@ class PlayState extends MusicBeatState
 					add(bg);
 				}
 			case 'mx': // mx week in progress
-				//var anothercloud:BGSprite = new BGSprite('background/anothercloud', -450, 250, 0.9, 0.9);
-				//anothercloud.setGraphicSize(Std.int(anothercloud.width * 2.3));
-				//add(anothercloud);
+
+				//scary
+
+				scarycloudnumero3 = new BGSprite('background/scary/scarycloud', 1350, -50, 0.9, 0.9, ['Scary_Cloud']);
+				scarycloudnumero3.setGraphicSize(Std.int(scarycloudnumero3.width * 0.9));
+				scarycloudnumero3.animation.addByPrefix('cloudbeat3', 'Scary_Cloud', 24);
+				add(scarycloudnumero3);
+
+
+				scarycloudnumero2 = new BGSprite('background/scary/scarycloud', 550, -200, 0.9, 0.9, ['Scary_Cloud']);
+				scarycloudnumero2.setGraphicSize(Std.int(scarycloudnumero2.width * 0.7));
+				scarycloudnumero2.animation.addByPrefix('cloudbeat2', 'Scary_Cloud', 24);
+				add(scarycloudnumero2);
+
+				scarycloud = new BGSprite('background/scary/scarycloud', -350, -100, 0.9, 0.9, ['Scary_Cloud']);
+				scarycloud.setGraphicSize(Std.int(scarycloud.width * 1.0));
+				scarycloud.animation.addByPrefix('cloudbeat1', 'Scary_Cloud', 24);
+				add(scarycloud);
+
+				scaryhills = new BGSprite('background/scary/scaryhill', 100, 200, 0.9, 0.9, ['blink']);
+				scaryhills.setGraphicSize(Std.int(scaryhills.width * 2.3));
+				scaryhills.animation.addByPrefix('tobeat', 'blink', 24);
+				add(scaryhills);
+
+				var scarybg:BGSprite = new BGSprite('background/scary/scaryfloor', -1250, -700, 0.9, 0.9);
+				scarybg.setGraphicSize(Std.int(scarybg.width * 0.7));
+				add(scarybg);
+
+				//no scary
 
 				var cloudnumero3:BGSprite = new BGSprite('background/cloud', 1350, -50, 0.9, 0.9);
 				cloudnumero3.setGraphicSize(Std.int(cloudnumero3.width * 0.9));
@@ -1612,6 +1643,14 @@ class PlayState extends MusicBeatState
 	
 					bottomBoppers.dance(true);
 					santa.dance(true);
+				}
+
+				if(curStage == 'mx') 
+				{
+					scarycloudnumero3.dance(true);
+					scarycloudnumero2.dance(true);
+					scarycloud.dance(true);
+					scaryhills.dance(true);
 				}
 
 				switch (swagCounter)
