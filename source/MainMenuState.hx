@@ -20,6 +20,7 @@ import flixel.math.FlxPoint;
 import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
+import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 
 using StringTools;
@@ -42,6 +43,8 @@ class MainMenuState extends MusicBeatState
 
 	var artList:Array<String> = [
 		'mx_mode',
+		'all_stars',
+		'mx_mode',
 		'all_stars'
 	];
 
@@ -55,6 +58,8 @@ class MainMenuState extends MusicBeatState
 	var coverART2:FlxSprite;
 	var ca_pos:FlxPoint;
 	var ca_pos2:FlxPoint;
+
+	var ready:Bool = true;
 
 	var xPos:Float = 0;
 
@@ -199,6 +204,18 @@ class MainMenuState extends MusicBeatState
 	}
 	#end
 
+	var curBeater:Int = 0;
+
+	override public function beatHit()
+	{
+		super.beatHit();
+
+		curBeater++;
+
+		trace('this works!');
+
+	}
+
 	var selectedSomethin:Bool = false;
 
 	override function update(elapsed:Float)
@@ -217,13 +234,11 @@ class MainMenuState extends MusicBeatState
 		{
 			if (controls.UI_UP_P)
 			{
-				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(-1);
 			}
 
 			if (controls.UI_DOWN_P)
 			{
-				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(1);
 			}
 
@@ -307,6 +322,12 @@ class MainMenuState extends MusicBeatState
 					case 1:
 						coverART.x = FlxMath.lerp(coverART.x, ca_pos.x, CoolUtil.boundTo(elapsed * 5, 0, 1));
 						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y, CoolUtil.boundTo(elapsed * 5, 0, 1));
+					case 2:
+						coverART.x = FlxMath.lerp(coverART.x, ca_pos.x + 6, CoolUtil.boundTo(elapsed * 5, 0, 1));
+						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y - 8, CoolUtil.boundTo(elapsed * 5, 0, 1));
+					case 3:
+						coverART.x = FlxMath.lerp(coverART.x, ca_pos.x, CoolUtil.boundTo(elapsed * 5, 0, 1));
+						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y, CoolUtil.boundTo(elapsed * 5, 0, 1));
 				}
 
 
@@ -338,34 +359,44 @@ class MainMenuState extends MusicBeatState
 
 	function changeItem(huh:Int = 0)
 	{
-		curSelected += huh;
-
-		if (curSelected >= menuItems.length)
-			curSelected = 0;
-		if (curSelected < 0)
-			curSelected = menuItems.length - 1;
-
-		menuItems.forEach(function(spr:FlxSprite)
+		if(ready)
 		{
-			spr.updateHitbox();
-			if (spr.ID == curSelected)
+			ready = false;
+			FlxG.sound.play(Paths.sound('scrollMenu'));
+			curSelected += huh;
+
+			if (curSelected >= menuItems.length)
+				curSelected = 0;
+			if (curSelected < 0)
+				curSelected = menuItems.length - 1;
+
+			menuItems.forEach(function(spr:FlxSprite)
 			{
-				if(huh < 0)
+				spr.updateHitbox();
+				if (spr.ID == curSelected)
 				{
-					coverART2.setPosition(coverART.x, coverART.y);
-					ca_pos2.set(ca_pos.x, ca_pos.y + 750);
-					coverART.y = ca_pos.y - 750;
-					coverART2.loadGraphicFromSprite(coverART);
+					if(huh < 0)
+					{
+						coverART2.setPosition(coverART.x, coverART.y);
+						ca_pos2.set(ca_pos.x, ca_pos.y + 750);
+						coverART.y = ca_pos.y - 750;
+						coverART2.loadGraphicFromSprite(coverART);
+					}
+					else
+					{
+						coverART2.setPosition(coverART.x, coverART.y);
+						ca_pos2.set(ca_pos.x, ca_pos.y - 750);
+						coverART.y = ca_pos.y + 750;
+						coverART2.loadGraphicFromSprite(coverART);
+					}
+					spr.centerOffsets();
 				}
-				else
-				{
-					coverART2.setPosition(coverART.x, coverART.y);
-					ca_pos2.set(ca_pos.x, ca_pos.y - 750);
-					coverART.y = ca_pos.y + 750;
-					coverART2.loadGraphicFromSprite(coverART);
-				}
-				spr.centerOffsets();
-			}
-		});
+			});
+			new FlxTimer().start(0.25, function(tmr:FlxTimer)
+			{
+				ready = true;
+			});
+		}
+
 	}
 }

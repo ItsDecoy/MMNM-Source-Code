@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "mario_idle"
+		},
+		{
+			"offsets": [
+				113,
+				-61
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "mario_left"
+		},
+		{
+			"offsets": [
+				50,
+				-44
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "mario_down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-24
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "mario_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				-54
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "mario_right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/RECUP_RECUP_VICTIM",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

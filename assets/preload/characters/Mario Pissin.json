@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-145,
+				239
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Mario_Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-190,
+				220
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Mario_Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-99,
+				229
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Mario_Down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-177,
+				305
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Mario_Up"
+		},
+		{
+			"offsets": [
+				-213,
+				296
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Mario_ Right"
+		},
+		{
+			"offsets": [
+				-100,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "miss_left"
+		},
+		{
+			"offsets": [
+				-100,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "miss_down"
+		},
+		{
+			"offsets": [
+				-100,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "miss_up"
+		},
+		{
+			"offsets": [
+				-100,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "miss_right"
+		},
+		{
+			"offsets": [
+				16,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "death"
+		},
+		{
+			"offsets": [
+				16,
+				80
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "death"
+		},
+		{
+			"offsets": [
+				16,
+				80
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "death"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Mariotakespee",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-10,
+		-200
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

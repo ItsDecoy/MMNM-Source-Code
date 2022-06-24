@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				130,
+				-11
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "victim idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				279,
+				-5
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "victim_left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				109,
+				-18
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "victim_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				119,
+				119
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "victim_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				81,
+				-91
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "victim_right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/RECUP_RECUP_RECUP_RECUP_VICTIM",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		-240,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

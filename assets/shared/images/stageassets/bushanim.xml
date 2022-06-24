@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bushanim.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blink0000" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0001" x="4096" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0002" x="4096" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0003" x="0" y="2240" width="4096" height="2240"/>
+	<SubTexture name="blink0004" x="0" y="2240" width="4096" height="2240"/>
+	<SubTexture name="blink0005" x="4096" y="2240" width="4096" height="2240"/>
+	<SubTexture name="blink0006" x="4096" y="2240" width="4096" height="2240"/>
+	<SubTexture name="blink0007" x="4096" y="2240" width="4096" height="2240"/>
+	<SubTexture name="blink0008" x="0" y="4480" width="4096" height="2240"/>
+	<SubTexture name="blink0009" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0010" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0011" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0012" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0013" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0014" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0015" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0016" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0017" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0018" x="0" y="0" width="4096" height="2240"/>
+	<SubTexture name="blink0019" x="0" y="0" width="4096" height="2240"/>
+</TextureAtlas>
