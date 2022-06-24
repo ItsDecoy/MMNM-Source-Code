@@ -105,6 +105,13 @@ class Note extends FlxSprite
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;
 					missHealth = 0.3;
+				case 'mxNOTE':
+					ignoreNote = mustPress;
+					reloadNote('MX');
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+					missHealth = 0.3;
 				case 'Hurt Note':
 					ignoreNote = mustPress;
 					reloadNote('HURT');

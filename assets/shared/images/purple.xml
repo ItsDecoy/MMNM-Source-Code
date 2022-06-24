@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="MXNOTE_assets.png">
+<SubTexture name="purple0000" x="0" y="0" width="161" height="158" frameX="0" frameY="0" frameWidth="161" frameHeight="158" />
+<SubTexture name="green0000" x="0" y="0" width="161" height="158" frameX="0" frameY="0" frameWidth="161" frameHeight="158" />
+<SubTexture name="red0000" x="0" y="0" width="161" height="158" frameX="0" frameY="0" frameWidth="161" frameHeight="158" />
+<SubTexture name="blue0000" x="0" y="0" width="161" height="158" frameX="0" frameY="0" frameWidth="161" frameHeight="158" />
+</TextureAtlas>
