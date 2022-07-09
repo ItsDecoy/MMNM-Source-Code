@@ -12,9 +12,10 @@ class CRTShader extends FlxShader
         #endif
         #define PI 3.1415926538
 
-        const float scale = 1.0;
+        const float scale = 0.5;
 
         uniform vec2 curvature;
+        uniform float uTime;
         uniform vec2 resolution;
         uniform vec2 scanLineOpacity;
         uniform float brightness;
@@ -47,7 +48,17 @@ class CRTShader extends FlxShader
             vec2 uv = openfl_TextureCoordv;
             vec2 nuv = screenDistort(uv);
 
-            vec4 source = flixel_texture2D(bitmap, nuv);
+            float hres = 600, vres = 480;
+
+            vec2 cell, local;
+
+            cell.x = floor(nuv.x * hres) / hres;
+            cell.y = floor(nuv.y * vres) / vres;
+            
+            local.x = fract(nuv.x * hres);
+            local.y = fract(nuv.y * vres);
+
+            vec4 source = flixel_texture2D(bitmap, cell);
 
             source *= vignetteIntensity(nuv, resolution, vignetteOpacity);
 
@@ -72,10 +83,10 @@ class CRTShader extends FlxShader
 	public function new()
 	{
 		super();
-		curvature.value = [8, 8];
-		resolution.value = [300, 20];
-		scanLineOpacity.value = [0.0, 0.05];
-		brightness.value = [1.3];
+		curvature.value = [3, 3];
+		resolution.value = [150, 75];
+		scanLineOpacity.value = [0.25, 0.25];
+		brightness.value = [1.5];
 		vignetteOpacity.value = [0.3];
 	}
 }
