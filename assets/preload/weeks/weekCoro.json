@@ -1,25 +1,25 @@
 {
 	"songs": [
 		[
-			"Pissed",
-			"dad",
+			"Pink Forest",
+			"icon-p",
 			[
-				146,
-				113,
-				253
+				181,
+				49,
+				83
 			]
 		]
 	],
 	"hiddenUntilUnlocked": false,
 	"hideFreeplay": false,
 	"weekBackground": "stage",
-	"difficulties": "",
+	"difficulties": "Normal",
 	"weekCharacters": [
 		"dad",
 		"bf",
 		"gf"
 	],
-	"storyName": "Your New Week",
+	"storyName": "Again?",
 	"weekName": "Custom Week",
 	"freeplayColor": [
 		146,

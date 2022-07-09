@@ -1,12 +1,12 @@
 {
 	"songs": [
 		[
-			"Burning Hatred",
-			"dad",
+			"Victimized",
+			"icon-MAR",
 			[
-				146,
-				113,
-				253
+				141,
+				69,
+				103
 			]
 		]
 	],
@@ -19,7 +19,7 @@
 		"bf",
 		"gf"
 	],
-	"storyName": "Your New Week",
+	"storyName": "MARIO",
 	"weekName": "Custom Week",
 	"freeplayColor": [
 		146,

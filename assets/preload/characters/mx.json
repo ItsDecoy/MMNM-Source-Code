@@ -73,12 +73,12 @@
 		0,
 		350
 	],
-	"healthicon": "dad",
+	"healthicon": "icon-mx",
 	"flip_x": true,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		83,
+		0,
+		0
 	],
 	"camera_position": [
 		-1220,

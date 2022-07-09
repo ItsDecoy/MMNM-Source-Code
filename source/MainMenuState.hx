@@ -44,8 +44,8 @@ class MainMenuState extends MusicBeatState
 	var artList:Array<String> = [
 		'mx_mode',
 		'all_stars',
-		'mx_mode',
-		'all_stars'
+		'extras',
+		'options'
 	];
 
 	var magenta:FlxSprite;

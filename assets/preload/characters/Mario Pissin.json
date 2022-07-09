@@ -60,77 +60,77 @@
 				-100,
 				80
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "miss_left"
+			"loop": false,
+			"name": "misleft"
 		},
 		{
 			"offsets": [
 				-100,
 				80
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "miss_down"
+			"loop": false,
+			"name": "msido"
 		},
 		{
 			"offsets": [
 				-100,
 				80
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "miss_up"
+			"loop": false,
+			"name": "missip"
 		},
 		{
 			"offsets": [
 				-100,
 				80
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "miss_right"
+			"loop": false,
+			"name": "missright"
 		},
 		{
 			"offsets": [
 				16,
 				80
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "firstDeath",
-			"indices": [],
-			"name": "death"
+			"loop": false,
+			"name": "the inevitable fate of death"
 		},
 		{
 			"offsets": [
 				16,
 				80
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "deathLoop",
-			"indices": [],
-			"name": "death"
+			"loop": true,
+			"name": "the inevitable fate of death"
 		},
 		{
 			"offsets": [
 				16,
 				80
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 25,
 			"anim": "deathConfirm",
-			"indices": [],
-			"name": "death"
+			"loop": false,
+			"name": "the inevitable fate of death"
 		}
 	],
 	"no_antialiasing": false,
@@ -139,12 +139,12 @@
 		0,
 		350
 	],
-	"healthicon": "bf",
+	"healthicon": "icon-pissm",
 	"flip_x": true,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		255,
+		0,
+		0
 	],
 	"camera_position": [
 		-10,

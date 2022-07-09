@@ -62,12 +62,12 @@
 		0,
 		0
 	],
-	"healthicon": "dad",
+	"healthicon": "icon-p",
 	"flip_x": false,
 	"healthbar_colors": [
-		175,
-		102,
-		206
+		155,
+		113,
+		130
 	],
 	"camera_position": [
 		-70,

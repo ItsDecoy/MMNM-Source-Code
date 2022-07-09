@@ -1,12 +1,12 @@
 {
 	"songs": [
 		[
-			"Pink Forest",
-			"dad",
+			"Pissed",
+			"icon-pissm",
 			[
-				146,
-				113,
-				253
+				160,
+				120,
+				0
 			]
 		]
 	],
@@ -19,8 +19,8 @@
 		"bf",
 		"gf"
 	],
-	"storyName": "Your New Week",
-	"weekName": "Pink",
+	"storyName": "Time to take a piss",
+	"weekName": "Custom Week",
 	"freeplayColor": [
 		146,
 		113,

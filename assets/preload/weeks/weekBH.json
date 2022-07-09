@@ -1,12 +1,12 @@
 {
 	"songs": [
 		[
-			"Victimized",
-			"dad",
+			"Burning Hatred",
+			"icon-ihy",
 			[
-				146,
-				113,
-				253
+				12,
+				128,
+				58
 			]
 		]
 	],
@@ -19,7 +19,7 @@
 		"bf",
 		"gf"
 	],
-	"storyName": "Your New Week",
+	"storyName": "Angry Brother",
 	"weekName": "Custom Week",
 	"freeplayColor": [
 		146,

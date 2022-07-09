@@ -24,6 +24,8 @@ import flixel.addons.transition.FlxTransitionableState;
 import flixel.graphics.atlas.FlxAtlas;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import openfl.display.Shader;
+import openfl.filters.ShaderFilter;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
@@ -425,6 +427,10 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'World 1-1':
+				var crt:CRTShader = new CRTShader();
+				camGame.setFilters([new ShaderFilter(crt)]);
+				camHUD.setFilters([new ShaderFilter(crt)]);
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -1932,6 +1938,25 @@ class PlayState extends MusicBeatState
 					value1: newEventNote[2],
 					value2: newEventNote[3]
 				};
+
+				if(newEventNote[1] == 'MX Stomp')
+				{
+					var amount = Conductor.stepCrochet * 4;
+					var int = newEventNote[2];
+
+					var instTemp:FlxSound = new FlxSound().loadEmbedded(Paths.inst(PlayState.SONG.song));
+					var steps = -1 * Std.int(((instTemp.length - newEventNote[0]) / Conductor.stepCrochet) - (instTemp.length / Conductor.stepCrochet));
+					var curSection = Math.floor(steps / 16);
+
+					trace(int);
+
+					var note:Note = new Note(newEventNote[0] + amount, Std.int(int % 4));
+					note.noteType = 'mxNOTE';
+					note.noAnimation = true;
+					note.mustPress = true;
+					unspawnNotes.push(note);
+				}
+
 				subEvent.strumTime -= eventNoteEarlyTrigger(subEvent);
 				eventNotes.push(subEvent);
 				eventPushed(subEvent);
@@ -2189,6 +2214,22 @@ class PlayState extends MusicBeatState
 			iconP1.swapOldIcon();
 		}*/
 		
+		if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
+		{
+			moveCameraSection(Std.int(curStep / 16));
+		}
+
+		if(dodgeTimer > 0)
+		{
+			dodging = true;
+			trace(dodgeTimer);
+			dodgeTimer -= elapsed;
+		}
+		else
+		{
+			dodging = false;
+		}
+
 		peachGate.y = FlxMath.lerp(peachGate.y, peachValue + FlxG.height, CoolUtil.boundTo(elapsed * 0.125, 0, 1));
 
 		if(peachGate.y <= peachValue)
@@ -2500,7 +2541,6 @@ class PlayState extends MusicBeatState
 			{
 				var strumGroup:FlxTypedGroup<StrumNote> = playerStrums;
 				if(!daNote.mustPress) strumGroup = opponentStrums;
-
 				var strumX:Float = strumGroup.members[daNote.noteData].x;
 				var strumY:Float = strumGroup.members[daNote.noteData].y;
 				var strumAngle:Float = strumGroup.members[daNote.noteData].angle;
@@ -2885,6 +2925,19 @@ class PlayState extends MusicBeatState
 				if(curStage == 'schoolEvil' && !ClientPrefs.lowQuality) {
 					bgGhouls.dance(true);
 					bgGhouls.visible = true;
+				}
+			
+			case 'MX Stomp':
+				if(dad.curCharacter.toLowerCase() == 'mx')
+				{
+					dad.playAnim('Stomp');
+					dad.specialAnim = true;
+					dad.animation.finishCallback = function(name:String){
+						if(name.toLowerCase() == 'Stomp')
+						{
+							dad.specialAnim = false;
+						}
+					}
 				}
 
 			case 'Play Animation':
@@ -3705,7 +3758,8 @@ class PlayState extends MusicBeatState
 				// hold note functions
 				if (daNote.isSustainNote && controlHoldArray[daNote.noteData] && daNote.canBeHit 
 				&& daNote.mustPress && !daNote.tooLate && !daNote.wasGoodHit) {
-					goodNoteHit(daNote);
+					if(!bf_stunned)
+						goodNoteHit(daNote);
 				}
 			});
 
@@ -3749,6 +3803,36 @@ class PlayState extends MusicBeatState
 			}
 		});
 		combo = 0;
+		
+		if(daNote.noteType == 'mxNOTE')
+		{
+			FlxG.camera.shake(0.015, 0.5);
+			camHUD.shake(0.0125, 0.5);
+			
+			if(!dodging && !bf_stunned)
+			{
+				if(bf_stunned_timer != null)
+				{
+					bf_stunned_timer.cancel();
+				}
+
+				playerStrums.forEach(function(spr:StrumNote)
+				{
+					FlxTween.tween(spr, {alpha: 0.25}, 0.5, {ease: FlxEase.bounceOut});
+				});
+
+				bf_stunned = true;
+
+				bf_stunned_timer = new FlxTimer().start(3, function(tmr:FlxTimer) {
+					bf_stunned = false;
+
+					playerStrums.forEach(function(spr:StrumNote)
+					{
+						FlxTween.tween(spr, {alpha: 1}, 0.5, {ease: FlxEase.bounceOut});
+					});
+				});
+			}
+		}
 
 		health -= daNote.missHealth * healthLoss;
 		if(instakillOnMiss)
@@ -3881,9 +3965,16 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	var dodging = false;
+	var dodgeTimer:Float = 0;
+	var bf_stunned = false;
+	var bf_stunned_timer:FlxTimer;
+	var bf_tween:FlxTween;
+	var curPosBF:Float = 0;
+	
 	function goodNoteHit(note:Note):Void
 	{
-		if (!note.wasGoodHit)
+		if (!note.wasGoodHit && !bf_stunned)
 		{
 			if (ClientPrefs.hitsoundVolume > 0 && !note.hitsoundDisabled)
 			{
@@ -3922,6 +4013,25 @@ class PlayState extends MusicBeatState
 						FlxG.camera.shake(0.0025, 0.1);
 						camHUD.shake(0.0075, 0.1);
 						peachGate.y -= 150;
+				case 'mxNOTE':
+					trace('dodging');
+					dodgeTimer = 1;
+
+					if(bf_tween != null)
+					{
+						bf_tween.cancel();
+						boyfriend.y = curPosBF;
+					}
+
+					FlxG.camera.shake(0.01, 0.1);
+					camHUD.shake(0.0075, 0.1);
+
+					curPosBF = boyfriend.y;
+
+					bf_tween = FlxTween.tween(boyfriend, {y: curPosBF - 150}, 0.25, {ease: FlxEase.quintOut, onComplete:function(twn:FlxTween){
+						bf_tween = FlxTween.tween(boyfriend, {y: curPosBF}, 1, {ease: FlxEase.bounceOut});
+					}});
+
 			}
 
 			if (!note.isSustainNote)

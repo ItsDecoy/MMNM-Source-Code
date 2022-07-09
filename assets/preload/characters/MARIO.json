@@ -2,19 +2,8 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				-30
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "mario_idle"
-		},
-		{
-			"offsets": [
 				113,
-				-61
+				-62
 			],
 			"loop": false,
 			"fps": 24,
@@ -24,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				50,
-				-44
+				33,
+				-50
 			],
 			"loop": false,
 			"fps": 24,
@@ -36,8 +25,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				0,
-				-24
+				1,
+				-33
 			],
 			"anim": "singUP",
 			"fps": 24,
@@ -47,31 +36,42 @@
 		{
 			"loop": false,
 			"offsets": [
-				-12,
-				-54
+				-2,
+				-64
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
 			"name": "mario_right",
 			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-30
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "mario_idle",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/RECUP_RECUP_VICTIM",
+	"image": "characters/RECUP_RECUP_RECUP_RECUP_VICTM",
 	"position": [
 		0,
-		0
+		20
 	],
-	"healthicon": "dad",
+	"healthicon": "icon-MAR",
 	"flip_x": false,
 	"healthbar_colors": [
-		175,
-		102,
-		206
+		161,
+		69,
+		103
 	],
 	"camera_position": [
-		0,
-		0
+		-150,
+		110
 	],
 	"sing_duration": 6.1,
 	"scale": 1
