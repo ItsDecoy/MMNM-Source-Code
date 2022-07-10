@@ -233,6 +233,14 @@ class PlayState extends MusicBeatState
 	public static var seenCutscene:Bool = false;
 	public static var deathCounter:Int = 0;
 
+	var bf_xCAM:Float = 0;
+	var bf_yCAM:Float = 0;
+
+	var camAmount:Float = 25;
+
+	var dad_xCAM:Float = 0;
+	var dad_yCAM:Float = 0;
+
 	public var defaultCamZoom:Float = 1.05;
 
 	// how big to stretch the pixel art assets
@@ -1080,11 +1088,6 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 
-		// if (SONG.song == 'South')
-		// FlxG.camera.alpha = 0.7;
-		// UI_camera.zoom = 1;
-
-		// cameras = [FlxG.cameras.list[1]];
 		startingSong = true;
 
 		// SONG SPECIFIC SCRIPTS
@@ -1114,6 +1117,15 @@ class PlayState extends MusicBeatState
 		}
 		#end
 		
+		switch(curStage)
+		{
+			case 'World 1-1' | 'World 1...':
+				iconP1.flipX = true;
+				iconP2.flipX = true;
+
+				healthBar.fillDirection = LEFT_TO_RIGHT;
+		}
+
 		var daSong:String = Paths.formatToSongPath(curSong);
 		if (isStoryMode && !seenCutscene)
 		{
@@ -2431,8 +2443,15 @@ class PlayState extends MusicBeatState
 
 		var iconOffset:Int = 26;
 
-		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
-		iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
+		switch(curStage)
+		{
+			case 'World 1-1' | 'World 1...':
+				iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 100, 0, 100, 0) * 0.01)) + (150 * iconP2.scale.x - 150) / 2 - iconOffset;
+				iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 100, 0, 100, 0) * 0.01)) - (150 * iconP1.scale.x) / 2 - iconOffset * 2;
+			default:
+				iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
+				iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
+		}
 
 		if (health > 2)
 			health = 2;
@@ -3154,14 +3173,14 @@ class PlayState extends MusicBeatState
 	{
 		if(isDad)
 		{
-			camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
+			camFollow.set(dad.getMidpoint().x + 150 + dad_xCAM, dad.getMidpoint().y - 100 + dad_yCAM);
 			camFollow.x += dad.cameraPosition[0] + opponentCameraOffset[0];
 			camFollow.y += dad.cameraPosition[1] + opponentCameraOffset[1];
 			tweenCamIn();
 		}
 		else
 		{
-			camFollow.set(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
+			camFollow.set(boyfriend.getMidpoint().x - 100 + bf_xCAM, boyfriend.getMidpoint().y - 100 + bf_yCAM);
 			camFollow.x -= boyfriend.cameraPosition[0] - boyfriendCameraOffset[0];
 			camFollow.y += boyfriend.cameraPosition[1] + boyfriendCameraOffset[1];
 
@@ -3178,8 +3197,8 @@ class PlayState extends MusicBeatState
 			switch(curStage)
 			{
 				case 'World 1-1':
-					camFollow.x += 500;
-					camFollow.y -= 200;
+					camFollow.x -= 100;
+					camFollow.y -= 0;
 			}
 		}
 	}
@@ -3957,6 +3976,24 @@ class PlayState extends MusicBeatState
 				char.playAnim(animToPlay, true);
 				char.holdTimer = 0;
 			}
+
+			switch (Math.abs(note.noteData))
+			{
+				case 2:
+					dad_yCAM = -camAmount;
+					dad_xCAM = 0;
+				case 3:
+					dad_xCAM = camAmount;
+					dad_yCAM = 0;
+				case 1:
+					dad_yCAM = camAmount;
+					dad_xCAM = 0;
+				case 0:
+					dad_xCAM = -camAmount;
+					dad_yCAM = 0;
+			}
+
+			moveCameraSection(Std.int(curStep / 16));
 		}
 
 		if (SONG.needsVoices)
@@ -4089,6 +4126,25 @@ class PlayState extends MusicBeatState
 						gf.heyTimer = 0.6;
 					}
 				}
+
+				
+				switch (Math.abs(note.noteData))
+				{
+					case 2:
+						bf_yCAM = -camAmount;
+						bf_xCAM = 0;
+					case 3:
+						bf_xCAM = camAmount;
+						bf_yCAM = 0;
+					case 1:
+						bf_yCAM = camAmount;
+						bf_xCAM = 0;
+					case 0:
+						bf_xCAM = -camAmount;
+						bf_yCAM = 0;
+				}
+
+				moveCameraSection(Std.int(curStep / 16));
 			}
 
 			if(cpuControlled) {
