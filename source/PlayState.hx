@@ -427,7 +427,7 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
-			case 'World 1-1':
+			case 'World 1-1' | 'World 1...':
 				var crt:CRTShader = new CRTShader();
 				camGame.setFilters([new ShaderFilter(crt)]);
 				camHUD.setFilters([new ShaderFilter(crt)]);
