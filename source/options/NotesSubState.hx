@@ -44,9 +44,15 @@ class NotesSubState extends MusicBeatSubstate
 	var posX = 230;
 	public function new() {
 		super();
+
+		var int = FlxG.random.int(1, 100);
+		var normalMX:String = 'MXOptions';
+		if(int == 1)
+		{
+			normalMX = 'MXNugget';
+		}
 		
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.color = 0xFFea71fd;
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image(normalMX));
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
@@ -84,7 +90,7 @@ class NotesSubState extends MusicBeatSubstate
 			shaderArray.push(newShader);
 		}
 
-		hsbText = new Alphabet(0, 0, "Hue    Saturation  Brightness", false, false, 0, 0.65);
+		hsbText = new Alphabet(0, 0, "Hue    Saturation  Brightness", false, false, 0, 0.65, true);
 		hsbText.x = posX + 240;
 		add(hsbText);
 

@@ -392,7 +392,7 @@ class MainMenuState extends MusicBeatState
 					spr.centerOffsets();
 				}
 			});
-			new FlxTimer().start(0.25, function(tmr:FlxTimer)
+			new FlxTimer().start(0.2, function(tmr:FlxTimer)
 			{
 				ready = true;
 			});

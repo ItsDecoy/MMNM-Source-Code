@@ -55,8 +55,14 @@ class BaseOptionsMenu extends MusicBeatSubstate
 		DiscordClient.changePresence(rpcTitle, null);
 		#end
 		
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.color = 0xFFea71fd;
+		var int = FlxG.random.int(1, 100);
+		var normalMX:String = 'MXOptions';
+		if(int == 1)
+		{
+			normalMX = 'MXNugget';
+		}
+
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image(normalMX));
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
@@ -89,7 +95,7 @@ class BaseOptionsMenu extends MusicBeatSubstate
 
 		for (i in 0...optionsArray.length)
 		{
-			var optionText:Alphabet = new Alphabet(0, 70 * i, optionsArray[i].name, false, false);
+			var optionText:Alphabet = new Alphabet(0, 70 * i, optionsArray[i].name, false, false, 0.05, 1, true);
 			optionText.isMenuItem = true;
 			optionText.x += 300;
 			/*optionText.forceX = 300;
