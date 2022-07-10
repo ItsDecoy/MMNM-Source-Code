@@ -12,7 +12,7 @@ class CRTShader extends FlxShader
         #endif
         #define PI 3.1415926538
 
-        const float scale = 0.5;
+        const float scale = 1.0;
 
         uniform vec2 curvature;
         uniform float uTime;

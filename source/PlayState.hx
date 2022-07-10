@@ -1183,7 +1183,14 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			startCountdown();
+			switch(curStage)
+			{
+				case 'World 1-1':
+					snapCamFollowToPos((boyfriend.getGraphicMidpoint().x + dad.getGraphicMidpoint().x)/2, (boyfriend.getGraphicMidpoint().y + dad.getGraphicMidpoint().y)/2);
+					startCountdown();
+				default:
+					startCountdown();
+			}
 		}
 		RecalculateRating();
 
@@ -3166,6 +3173,13 @@ class PlayState extends MusicBeatState
 						cameraTwn = null;
 					}
 				});
+			}
+
+			switch(curStage)
+			{
+				case 'World 1-1':
+					camFollow.x += 500;
+					camFollow.y -= 200;
 			}
 		}
 	}
