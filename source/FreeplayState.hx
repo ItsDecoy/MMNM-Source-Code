@@ -110,7 +110,7 @@ class FreeplayState extends MusicBeatState
 			artCover.scrollFactor.set();
 			artCover.screenCenter();
 			artCover.ID = i;
-			artCover.x += i * 400;
+			artCover.x += i * 575;
 			artCover.antialiasing = false;
 			arts.add(artCover);
 		}
@@ -167,9 +167,20 @@ class FreeplayState extends MusicBeatState
 			bg.velocity.set(25, 0);
 
 		arts.forEach(function(spr:FlxSprite){
-			var x = ((FlxG.width / 2) - spr.frameWidth / 2) + (400 * (spr.ID - curSelected));
+			var x = ((FlxG.width / 2) - spr.frameWidth / 2) + (575 * (spr.ID - curSelected));
 			if(spr.x != x)
 				spr.x = FlxMath.lerp(spr.x, x, CoolUtil.boundTo(elapsed * 9, 0, 1));
+
+			if(spr.ID == curSelected)
+			{
+				spr.scale.x = FlxMath.lerp(spr.scale.x, 1, CoolUtil.boundTo(elapsed * 6, 0, 1));
+				spr.scale.y = FlxMath.lerp(spr.scale.y, 1, CoolUtil.boundTo(elapsed * 6, 0, 1));
+			}
+			else
+			{
+				spr.scale.x = FlxMath.lerp(spr.scale.x, 0.75, CoolUtil.boundTo(elapsed * 6, 0, 1));
+				spr.scale.y = FlxMath.lerp(spr.scale.y, 0.75, CoolUtil.boundTo(elapsed * 6, 0, 1));
+			}
 		});
 
 		if (FlxG.sound.music.volume < 0.7)
@@ -359,6 +370,7 @@ class FreeplayState extends MusicBeatState
 				{
 					spr.loadGraphic(Paths.image('freeplay/art/' + songs[spr.ID].songName.toLowerCase() + '_select', 'preload'));
 				}	
+
 			}
 			else
 			{
