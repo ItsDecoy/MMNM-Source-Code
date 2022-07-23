@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				30,
+				-251
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Goomb Idle"
+		},
+		{
+			"offsets": [
+				49,
+				-241
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Goomb Left"
+		},
+		{
+			"offsets": [
+				39,
+				-250
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Goomb Down"
+		},
+		{
+			"offsets": [
+				9,
+				-191
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Goomb Up"
+		},
+		{
+			"offsets": [
+				21,
+				-241
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Goomb Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/goomba",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon-goomb",
+	"flip_x": false,
+	"healthbar_colors": [
+		158,
+		65,
+		0
+	],
+	"camera_position": [
+		20,
+		220
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

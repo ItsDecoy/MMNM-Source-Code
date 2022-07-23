@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-145,
+				239
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Mario_Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-190,
+				220
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Mario_Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-99,
+				229
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Mario_Down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-177,
+				305
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Mario_Up"
+		},
+		{
+			"offsets": [
+				-213,
+				296
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Mario_ Right"
+		},
+		{
+			"offsets": [
+				-100,
+				80
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "misleft"
+		},
+		{
+			"offsets": [
+				-100,
+				80
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "msido"
+		},
+		{
+			"offsets": [
+				-100,
+				80
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "missip"
+		},
+		{
+			"offsets": [
+				-100,
+				80
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "missright"
+		},
+		{
+			"offsets": [
+				16,
+				80
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "the inevitable fate of death"
+		},
+		{
+			"offsets": [
+				16,
+				80
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "the inevitable fate of death"
+		},
+		{
+			"offsets": [
+				16,
+				80
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "the inevitable fate of death"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Mariotakespee",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "icon-pissm",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		-10,
+		-200
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

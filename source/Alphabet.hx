@@ -38,6 +38,8 @@ class Alphabet extends FlxSpriteGroup
 	var lastSprite:AlphaCharacter;
 	var xPosResetted:Bool = false;
 
+	var inverted:Bool = true;
+
 	var splitWords:Array<String> = [];
 
 	public var isBold:Bool = false;
@@ -47,7 +49,7 @@ class Alphabet extends FlxSpriteGroup
 	public var typed:Bool = false;
 
 	public var typingSpeed:Float = 0.05;
-	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1)
+	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1, ?inverted:Bool = false)
 	{
 		super(x, y);
 		forceX = Math.NEGATIVE_INFINITY;
@@ -56,6 +58,7 @@ class Alphabet extends FlxSpriteGroup
 		_finalText = text;
 		this.text = text;
 		this.typed = typed;
+		this.inverted = inverted;
 		isBold = bold;
 
 		if (text != "")
@@ -81,6 +84,7 @@ class Alphabet extends FlxSpriteGroup
 			remove(letter);
 			lettersArray.remove(letter);
 		}
+
 		lettersArray = [];
 		splitWords = [];
 		loopNum = 0;
@@ -146,7 +150,7 @@ class Alphabet extends FlxSpriteGroup
 				consecutiveSpaces = 0;
 
 				// var letter:AlphaCharacter = new AlphaCharacter(30 * loopNum, 0, textSize);
-				var letter:AlphaCharacter = new AlphaCharacter(xPos, 0, textSize);
+				var letter:AlphaCharacter = new AlphaCharacter(xPos, 0, textSize, inverted);
 
 				if (isBold)
 				{
@@ -287,7 +291,7 @@ class Alphabet extends FlxSpriteGroup
 				consecutiveSpaces = 0;
 
 				// var letter:AlphaCharacter = new AlphaCharacter(30 * loopNum, 0, textSize);
-				var letter:AlphaCharacter = new AlphaCharacter(xPos, 55 * yMulti, textSize);
+				var letter:AlphaCharacter = new AlphaCharacter(xPos, 55 * yMulti, textSize, inverted);
 				letter.row = curRow;
 				if (isBold)
 				{
@@ -380,12 +384,16 @@ class AlphaCharacter extends FlxSprite
 
 	public var row:Int = 0;
 
+	private var inverted = false;
+
 	private var textSize:Float = 1;
 
-	public function new(x:Float, y:Float, textSize:Float)
+	public function new(x:Float, y:Float, textSize:Float, ?inverted:Bool = false)
 	{
 		super(x, y);
+		this.inverted = inverted;
 		var tex = Paths.getSparrowAtlas('alphabet');
+		if(this.inverted){tex = Paths.getSparrowAtlas('alphabetINV');}
 		frames = tex;
 
 		setGraphicSize(Std.int(width * textSize));

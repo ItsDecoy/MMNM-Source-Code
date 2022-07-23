@@ -1,7 +1,6 @@
-tutorial
-week1
-week2
-week3
-week4
-week5
-week6
+weekBH
+weekCoro
+weekFH
+weekMX
+weekPiss
+weekVIC

@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				89,
+				231
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "MX_Idle instance"
+		},
+		{
+			"offsets": [
+				531,
+				27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MX_Down instance"
+		},
+		{
+			"offsets": [
+				264,
+				433
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "MX_Up instance"
+		},
+		{
+			"offsets": [
+				746,
+				613
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "Stomp",
+			"indices": [],
+			"name": "MX_Stomp  instance"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				324,
+				207
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MX_Right instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				78,
+				183
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "MX_Left instance",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mx",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "icon-mx",
+	"flip_x": true,
+	"healthbar_colors": [
+		83,
+		0,
+		0
+	],
+	"camera_position": [
+		-1220,
+		-580
+	],
+	"sing_duration": 4,
+	"scale": 2.7
+}

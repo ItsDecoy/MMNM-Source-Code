@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Spooki_Cloud.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Scary_Cloud0000" x="1" y="1" width="428" height="390" frameX="-9" frameY="0" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0001" x="1" y="1" width="428" height="390" frameX="-9" frameY="0" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0002" x="477" y="1" width="441" height="366" frameX="-2" frameY="-9" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0003" x="477" y="1" width="441" height="366" frameX="-2" frameY="-9" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0004" x="1" y="439" width="444" height="359" frameX="0" frameY="-12" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0005" x="1" y="439" width="444" height="359" frameX="0" frameY="-12" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0006" x="1" y="439" width="444" height="359" frameX="0" frameY="-12" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0007" x="1" y="439" width="444" height="359" frameX="0" frameY="-12" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0008" x="1" y="439" width="444" height="359" frameX="0" frameY="-12" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0009" x="1" y="439" width="444" height="359" frameX="0" frameY="-12" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0010" x="1" y="439" width="444" height="359" frameX="0" frameY="-12" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0011" x="1" y="439" width="444" height="359" frameX="0" frameY="-12" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0012" x="1" y="439" width="444" height="359" frameX="0" frameY="-12" frameWidth="444" frameHeight="390"/>
+	<SubTexture name="Scary_Cloud0013" x="1" y="439" width="444" height="359" frameX="0" frameY="-12" frameWidth="444" frameHeight="390"/>
+</TextureAtlas>

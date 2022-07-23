@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="peachh.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Peach_Down0000" x="0" y="0" width="584" height="853"/>
+	<SubTexture name="Peach_Down0001" x="0" y="0" width="584" height="853"/>
+	<SubTexture name="Peach_Down0002" x="0" y="0" width="584" height="853"/>
+	<SubTexture name="Peach_Down0003" x="584" y="0" width="577" height="846" frameX="-7" frameY="-7" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Down0004" x="584" y="0" width="577" height="846" frameX="-7" frameY="-7" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Down0005" x="584" y="0" width="577" height="846" frameX="-7" frameY="-7" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Down0006" x="1161" y="0" width="566" height="844" frameX="-18" frameY="-8" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Down0007" x="1161" y="0" width="566" height="844" frameX="-18" frameY="-8" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Down0008" x="1161" y="0" width="566" height="844" frameX="-18" frameY="-8" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Down0009" x="1161" y="0" width="566" height="844" frameX="-18" frameY="-8" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Down0010" x="1161" y="0" width="566" height="844" frameX="-18" frameY="-8" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Down0011" x="1161" y="0" width="566" height="844" frameX="-18" frameY="-8" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Down0012" x="1161" y="0" width="566" height="844" frameX="-18" frameY="-8" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Down0013" x="1161" y="0" width="566" height="844" frameX="-18" frameY="-8" frameWidth="584" frameHeight="853"/>
+	<SubTexture name="Peach_Idle0000" x="1727" y="0" width="573" height="860" frameX="-1" frameY="-4" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0001" x="1727" y="0" width="573" height="860" frameX="-1" frameY="-4" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0002" x="1727" y="0" width="573" height="860" frameX="-1" frameY="-4" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0003" x="2300" y="0" width="577" height="864"/>
+	<SubTexture name="Peach_Idle0004" x="2300" y="0" width="577" height="864"/>
+	<SubTexture name="Peach_Idle0005" x="2300" y="0" width="577" height="864"/>
+	<SubTexture name="Peach_Idle0006" x="2877" y="0" width="569" height="860" frameX="-1" frameY="-4" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0007" x="2877" y="0" width="569" height="860" frameX="-1" frameY="-4" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0008" x="2877" y="0" width="569" height="860" frameX="-1" frameY="-4" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0009" x="3446" y="0" width="567" height="856" frameX="-2" frameY="-8" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0010" x="3446" y="0" width="567" height="856" frameX="-2" frameY="-8" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0011" x="3446" y="0" width="567" height="856" frameX="-2" frameY="-8" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0012" x="0" y="864" width="567" height="854" frameX="-2" frameY="-10" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0013" x="0" y="864" width="567" height="854" frameX="-2" frameY="-10" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0014" x="0" y="864" width="567" height="854" frameX="-2" frameY="-10" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0015" x="0" y="864" width="567" height="854" frameX="-2" frameY="-10" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0016" x="0" y="864" width="567" height="854" frameX="-2" frameY="-10" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Idle0017" x="0" y="864" width="567" height="854" frameX="-2" frameY="-10" frameWidth="577" frameHeight="864"/>
+	<SubTexture name="Peach_Left0000" x="567" y="864" width="860" height="934" frameX="0" frameY="0" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0001" x="567" y="864" width="860" height="934" frameX="0" frameY="0" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0002" x="567" y="864" width="860" height="934" frameX="0" frameY="0" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0003" x="1427" y="864" width="845" height="921" frameX="-32" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0004" x="1427" y="864" width="845" height="921" frameX="-32" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0005" x="1427" y="864" width="845" height="921" frameX="-32" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0006" x="2272" y="864" width="843" height="917" frameX="-37" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0007" x="2272" y="864" width="843" height="917" frameX="-37" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0008" x="2272" y="864" width="843" height="917" frameX="-37" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0009" x="2272" y="864" width="843" height="917" frameX="-37" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0010" x="2272" y="864" width="843" height="917" frameX="-37" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0011" x="2272" y="864" width="843" height="917" frameX="-37" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0012" x="2272" y="864" width="843" height="917" frameX="-37" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Left0013" x="2272" y="864" width="843" height="917" frameX="-37" frameY="-8" frameWidth="880" frameHeight="934"/>
+	<SubTexture name="Peach_Right0000" x="3115" y="864" width="696" height="917" frameX="-2" frameY="0" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0001" x="3115" y="864" width="696" height="917" frameX="-2" frameY="0" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0002" x="3115" y="864" width="696" height="917" frameX="-2" frameY="0" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0003" x="0" y="1798" width="696" height="901" frameX="0" frameY="-6" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0004" x="0" y="1798" width="696" height="901" frameX="0" frameY="-6" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0005" x="0" y="1798" width="696" height="901" frameX="0" frameY="-6" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0006" x="696" y="1798" width="695" height="897" frameX="0" frameY="-4" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0007" x="696" y="1798" width="695" height="897" frameX="0" frameY="-4" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0008" x="696" y="1798" width="695" height="897" frameX="0" frameY="-4" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0009" x="696" y="1798" width="695" height="897" frameX="0" frameY="-4" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0010" x="696" y="1798" width="695" height="897" frameX="0" frameY="-4" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0011" x="696" y="1798" width="695" height="897" frameX="0" frameY="-4" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0012" x="696" y="1798" width="695" height="897" frameX="0" frameY="-4" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Right0013" x="696" y="1798" width="695" height="897" frameX="0" frameY="-4" frameWidth="698" frameHeight="917"/>
+	<SubTexture name="Peach_Up0000" x="1391" y="1798" width="695" height="853" frameX="-3" frameY="0" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0001" x="1391" y="1798" width="695" height="853" frameX="-3" frameY="0" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0002" x="1391" y="1798" width="695" height="853" frameX="-3" frameY="0" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0003" x="2086" y="1798" width="696" height="845" frameX="-1" frameY="-8" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0004" x="2086" y="1798" width="696" height="845" frameX="-1" frameY="-8" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0005" x="2086" y="1798" width="696" height="845" frameX="-1" frameY="-8" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0006" x="2782" y="1798" width="695" height="843" frameX="0" frameY="-9" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0007" x="2782" y="1798" width="695" height="843" frameX="0" frameY="-9" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0008" x="2782" y="1798" width="695" height="843" frameX="0" frameY="-9" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0009" x="2782" y="1798" width="695" height="843" frameX="0" frameY="-9" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0010" x="2782" y="1798" width="695" height="843" frameX="0" frameY="-9" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0011" x="2782" y="1798" width="695" height="843" frameX="0" frameY="-9" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0012" x="2782" y="1798" width="695" height="843" frameX="0" frameY="-9" frameWidth="698" frameHeight="853"/>
+	<SubTexture name="Peach_Up0013" x="2782" y="1798" width="695" height="843" frameX="0" frameY="-9" frameWidth="698" frameHeight="853"/>
+</TextureAtlas>

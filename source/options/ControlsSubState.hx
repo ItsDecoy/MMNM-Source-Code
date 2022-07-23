@@ -71,8 +71,14 @@ class ControlsSubState extends MusicBeatSubstate {
 	public function new() {
 		super();
 
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.color = 0xFFea71fd;
+		var int = FlxG.random.int(1, 100);
+		var normalMX:String = 'MXOptions';
+		if(int == 1)
+		{
+			normalMX = 'MXNugget';
+		}
+
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image(normalMX));
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
@@ -90,7 +96,7 @@ class ControlsSubState extends MusicBeatSubstate {
 				isCentered = true;
 			}
 
-			var optionText:Alphabet = new Alphabet(0, (10 * i), optionShit[i][0], (!isCentered || isDefaultKey), false);
+			var optionText:Alphabet = new Alphabet(0, (10 * i), optionShit[i][0], (!isCentered || isDefaultKey), false, 0.05, 1, isCentered);
 			optionText.isMenuItem = true;
 			if(isCentered) {
 				optionText.screenCenter(X);
