@@ -203,7 +203,7 @@
 	"image": "characters/PlumberBF_Assets",
 	"position": [
 		0,
-		350
+		310
 	],
 	"healthicon": "bf",
 	"flip_x": true,
