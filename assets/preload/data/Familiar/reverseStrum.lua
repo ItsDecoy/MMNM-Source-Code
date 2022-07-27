@@ -11,4 +11,5 @@ function onCreatePost()
         setPropertyFromGroup('opponentStrums', 2, 'x', defaultPlayerStrumX2 + 0)
         setPropertyFromGroup('opponentStrums', 3, 'x', defaultPlayerStrumX3 + 0)
         setPropertyFromGroup('opponentStrums', 4, 'x', defaultPlayerStrumX4 + 0)
+
     end

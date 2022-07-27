@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="noteSplashes.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Simbolo 10000" x="10" y="10" width="101" height="88" frameX="-78" frameY="-102" frameWidth="283" frameHeight="312"/>
+	<SubTexture name="Simbolo 10001" x="10" y="10" width="101" height="88" frameX="-78" frameY="-102" frameWidth="283" frameHeight="312"/>
+	<SubTexture name="Simbolo 10002" x="121" y="10" width="123" height="116" frameX="-68" frameY="-94" frameWidth="283" frameHeight="312"/>
+	<SubTexture name="Simbolo 10003" x="254" y="10" width="182" height="195" frameX="-40" frameY="-46" frameWidth="283" frameHeight="312"/>
+	<SubTexture name="Simbolo 20000" x="254" y="10" width="182" height="195" frameX="-40" frameY="-46" frameWidth="283" frameHeight="312"/>
+	<SubTexture name="Simbolo 20001" x="446" y="10" width="283" height="312"/>
+	<SubTexture name="Simbolo 20002" x="446" y="10" width="283" height="312"/>
+</TextureAtlas>

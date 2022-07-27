@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NyanCat_Bopper.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="NyanCat_bopper0000" x="44" y="44" width="928" height="429" frameX="0" frameY="-19" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0001" x="44" y="44" width="928" height="429" frameX="0" frameY="-19" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0002" x="1045" y="44" width="923" height="431" frameX="-2" frameY="-17" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0003" x="1045" y="44" width="923" height="431" frameX="-2" frameY="-17" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0004" x="44" y="548" width="910" height="446" frameX="-26" frameY="-3" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0005" x="44" y="548" width="910" height="446" frameX="-26" frameY="-3" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0006" x="1027" y="548" width="907" height="450" frameX="-31" frameY="0" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0007" x="1027" y="548" width="907" height="450" frameX="-31" frameY="0" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0008" x="1027" y="548" width="907" height="450" frameX="-31" frameY="0" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0009" x="1027" y="548" width="907" height="450" frameX="-31" frameY="0" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0010" x="1027" y="548" width="907" height="450" frameX="-31" frameY="0" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0011" x="1027" y="548" width="907" height="450" frameX="-31" frameY="0" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0012" x="1027" y="548" width="907" height="450" frameX="-31" frameY="0" frameWidth="938" frameHeight="450"/>
+	<SubTexture name="NyanCat_bopper0013" x="1027" y="548" width="907" height="450" frameX="-31" frameY="0" frameWidth="938" frameHeight="450"/>
+</TextureAtlas>

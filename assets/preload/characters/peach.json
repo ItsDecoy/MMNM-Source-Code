@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-10,
 				89
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Peach_Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Peach_Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				250,
 				147
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Peach_Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Peach_Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				8,
 				77
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Peach_Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Peach_Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				117,
 				77
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Peach_Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Peach_Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				58,
 				124
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Peach_Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Peach_Right"
 		}
 	],
 	"no_antialiasing": false,
@@ -70,7 +70,7 @@
 		130
 	],
 	"camera_position": [
-		-70,
+		-30,
 		90
 	],
 	"sing_duration": 6.1,

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-50,
+				39
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "IHY_Idle"
+		},
+		{
+			"offsets": [
+				156,
+				-51
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "IHY_Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				149,
+				-59
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "IHY_Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				28,
+				55
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "IHY_Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				16
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "IHY_Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/IHY_Luigi",
+	"position": [
+		-170,
+		-50
+	],
+	"healthicon": "icon-ihy",
+	"flip_x": false,
+	"healthbar_colors": [
+		12,
+		148,
+		58
+	],
+	"camera_position": [
+		-180,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

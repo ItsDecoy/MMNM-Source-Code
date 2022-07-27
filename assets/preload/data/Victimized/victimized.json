@@ -1,7 +1,7 @@
 {
 	"song": {
 		"player1": "bf",
-		"gfVersion": "gf",
+		"gfVersion": "gf-scaled",
 		"notes": [
 			{
 				"sectionNotes": [],
@@ -2260,14 +2260,44 @@
 				"bpm": 105
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 105,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 105,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 105,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 105
 			},
 			{
 				"gfSection": false,
@@ -2291,14 +2321,15 @@
 			}
 		],
 		"events": [],
-		"player2": "dad",
+		"player2": "Victim",
+		"mania": 3,
 		"player3": "gf",
 		"splashSkin": "noteSplashes",
 		"song": "Victimized",
 		"needsVoices": true,
 		"arrowSkin": "",
 		"validScore": true,
-		"stage": "Blowy-Blowy",
+		"stage": "Donut Plains",
 		"bpm": 105,
 		"speed": 2.5
 	}

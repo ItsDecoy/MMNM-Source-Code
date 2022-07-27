@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Sanic and Weegee boppers.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sanic_weegee_boppers0000" x="44" y="44" width="870" height="896" frameX="-2" frameY="-39" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0001" x="44" y="44" width="870" height="896" frameX="-2" frameY="-39" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0002" x="987" y="44" width="860" height="899" frameX="-4" frameY="-36" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0003" x="987" y="44" width="860" height="899" frameX="-4" frameY="-36" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0004" x="44" y="1016" width="857" height="933" frameX="0" frameY="-3" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0005" x="44" y="1016" width="857" height="933" frameX="0" frameY="-3" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0006" x="974" y="1016" width="856" height="936" frameX="0" frameY="0" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0007" x="974" y="1016" width="856" height="936" frameX="0" frameY="0" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0008" x="974" y="1016" width="856" height="936" frameX="0" frameY="0" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0009" x="974" y="1016" width="856" height="936" frameX="0" frameY="0" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0010" x="974" y="1016" width="856" height="936" frameX="0" frameY="0" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0011" x="974" y="1016" width="856" height="936" frameX="0" frameY="0" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0012" x="974" y="1016" width="856" height="936" frameX="0" frameY="0" frameWidth="872" frameHeight="936"/>
+	<SubTexture name="sanic_weegee_boppers0013" x="974" y="1016" width="856" height="936" frameX="0" frameY="0" frameWidth="872" frameHeight="936"/>
+</TextureAtlas>

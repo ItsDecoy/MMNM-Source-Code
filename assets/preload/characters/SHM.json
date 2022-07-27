@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				30,
+				103
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "mario idle"
+		},
+		{
+			"offsets": [
+				34,
+				91
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "mario left"
+		},
+		{
+			"offsets": [
+				30,
+				91
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "mario down"
+		},
+		{
+			"offsets": [
+				173,
+				131
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "mario up"
+		},
+		{
+			"offsets": [
+				30,
+				83
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "mario right"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/SecretMario",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon-shm",
+	"flip_x": false,
+	"healthbar_colors": [
+		97,
+		62,
+		62
+	],
+	"camera_position": [
+		-10,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

@@ -3288,7 +3288,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 		#end
-		
+
 		#if LUA_ALLOWED
 		var ret:Dynamic = callOnLuas('onEndSong', []);
 		#else

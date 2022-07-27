@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="LuigiMafia.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Loogi Idle0000" x="1942" y="1481" width="607" height="1326" frameX="0" frameY="-42" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0001" x="1942" y="1481" width="607" height="1326" frameX="0" frameY="-42" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0002" x="1942" y="1481" width="607" height="1326" frameX="0" frameY="-42" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0003" x="3140" y="1481" width="592" height="1342" frameX="-10" frameY="-27" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0004" x="3140" y="1481" width="592" height="1342" frameX="-10" frameY="-27" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0005" x="3140" y="1481" width="592" height="1342" frameX="-10" frameY="-27" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0006" x="2549" y="1481" width="591" height="1358" frameX="-11" frameY="-11" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0007" x="2549" y="1481" width="591" height="1358" frameX="-11" frameY="-11" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0008" x="1351" y="1481" width="591" height="1366" frameX="-11" frameY="-3" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0009" x="1351" y="1481" width="591" height="1366" frameX="-11" frameY="-3" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0010" x="760" y="1481" width="591" height="1369" frameX="-11" frameY="0" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0011" x="760" y="1481" width="591" height="1369" frameX="-11" frameY="0" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0012" x="760" y="1481" width="591" height="1369" frameX="-11" frameY="0" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0013" x="760" y="1481" width="591" height="1369" frameX="-11" frameY="0" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0014" x="760" y="1481" width="591" height="1369" frameX="-11" frameY="0" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Idle0015" x="760" y="1481" width="591" height="1369" frameX="-11" frameY="0" frameWidth="607" frameHeight="1369"/>
+	<SubTexture name="Loogi Shoot0000" x="6846" y="1338" width="1064" height="1321" frameX="-2" frameY="-160" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0001" x="6846" y="1338" width="1064" height="1321" frameX="-2" frameY="-160" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0002" x="6846" y="0" width="1066" height="1338" frameX="0" frameY="-143" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0003" x="4468" y="0" width="2378" height="1388" frameX="0" frameY="-93" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0004" x="4468" y="1388" width="2378" height="1388" frameX="0" frameY="-93" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0005" x="0" y="0" width="2234" height="1481" frameX="0" frameY="0" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0006" x="2234" y="0" width="2234" height="1481" frameX="0" frameY="0" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0007" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0008" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0009" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0010" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0011" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0012" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0013" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0014" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0015" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0016" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0017" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+	<SubTexture name="Loogi Shoot0018" x="0" y="1481" width="760" height="1343" frameX="0" frameY="-138" frameWidth="2378" frameHeight="1481"/>
+</TextureAtlas>
