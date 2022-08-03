@@ -1,15 +1,19 @@
-function onCreate()
+flamesMyBestie = {{-80, 320}, {575, 316}, {1225, 312}}
 
+function onCreate()
 	makeLuaSprite('Smoke', 'IHY/coughcough', -750, -100);
 	addLuaSprite('Smoke', false);
+	setScrollFactor('Smoke', 0.4, 0.4)
 	
 	makeLuaSprite('ManInTheMirror', 'IHY/TheWallsHaveEYes', -750, -150);
 	addLuaSprite('ManInTheMirror', false);
 	scaleObject('ManInTheMirror',0.65,0.65);
+	setScrollFactor('ManInTheMirror', 0.7, 0.7)
 	 
 	makeLuaSprite('Backdrop', 'IHY/In the back walls', -500, -150);
 	addLuaSprite('Backdrop', false);
 	scaleObject('Backdrop',0.55,0.55);
+	setScrollFactor('Backdrop', 0.7, 0.7)
 
 	makeLuaSprite('BridgeOfDeath', 'IHY/IHYourBridge', -500, -150);
 	addLuaSprite('BridgeOfDeath', false);
@@ -26,24 +30,14 @@ function onCreate()
 	setProperty('broke.visible', false);
 
 
-
-	makeAnimatedLuaSprite('FlameMD','IHY/fire',-80,325);
-	addAnimationByPrefix('FlameMD', 'fireanim','penis', 24,true);
-	objectPlayAnimation('FlameMD','fireanime',true);
-	addLuaSprite('FlameMD',false);
-	scaleObject('FlameMD',0.65,0.65);
-	
-	makeAnimatedLuaSprite('FlameMD1','IHY/fire',575,323);
-	addAnimationByPrefix('FlameMD1', 'fireanim','penis', 24,true);
-	objectPlayAnimation('FlameMD1','fireanime',true);
-	addLuaSprite('FlameMD1',false);
-	scaleObject('FlameMD1',0.65,0.65);
-
-	makeAnimatedLuaSprite('FlameMD2','IHY/fire',1225,317);
-	addAnimationByPrefix('FlameMD2', 'fireanim','penis', 24,true);
-	objectPlayAnimation('FlameMD2','fireanime',true);
-	addLuaSprite('FlameMD2',false);
-	scaleObject('FlameMD2',0.65,0.65);
+	for i=1,#flamesMyBestie do
+		makeAnimatedLuaSprite('FlameMD'..i,'IHY/fire',flamesMyBestie[i][1],flamesMyBestie[i][2]);
+		addAnimationByPrefix('FlameMD'..i, 'fireanim','penis', 24,true);
+		objectPlayAnimation('FlameMD'..i,'fireanime',true);
+		addLuaSprite('FlameMD'..i,false);
+		scaleObject('FlameMD'..i,0.65,0.65);
+		setScrollFactor('FlameMD'..i, 0.7, 0.7)
+	end
 
 	makeLuaSprite('damn', 'IHY/damnit', 270, 400);
 	addLuaSprite('damn', true);
