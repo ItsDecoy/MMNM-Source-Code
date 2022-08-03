@@ -5,22 +5,12 @@ function onCreate()
         setTextColor('runTxt', 'ffffff');
 	setObjectCamera('runTxt', 'hud');
 	setProperty('runTxt.visible', false);
+	
+	addLuaScript('lua/reverseStrum')
 end
 
 function onCreatePost()
-        setTextFont('runTxt', 'Pixel_NES.otf')
-
-        setPropertyFromGroup('playerStrums', 0, 'x', defaultOpponentStrumX0)
-        setPropertyFromGroup('playerStrums', 1, 'x', defaultOpponentStrumX1)
-        setPropertyFromGroup('playerStrums', 2, 'x', defaultOpponentStrumX2)
-        setPropertyFromGroup('playerStrums', 3, 'x', defaultOpponentStrumX3)
-        setPropertyFromGroup('playerStrums', 4, 'x', defaultOpponentStrumX4)
-
-        setPropertyFromGroup('opponentStrums', 0, 'x', defaultPlayerStrumX0 + 0)
-        setPropertyFromGroup('opponentStrums', 1, 'x', defaultPlayerStrumX1 + 0)
-        setPropertyFromGroup('opponentStrums', 2, 'x', defaultPlayerStrumX2 + 0)
-        setPropertyFromGroup('opponentStrums', 3, 'x', defaultPlayerStrumX3 + 0)
-        setPropertyFromGroup('opponentStrums', 4, 'x', defaultPlayerStrumX4 + 0)
+    setTextFont('runTxt', 'Pixel_NES.otf')
 end
 
 function onStepHit()
