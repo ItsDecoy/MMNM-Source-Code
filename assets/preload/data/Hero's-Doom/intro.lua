@@ -4,10 +4,10 @@ local camActivated = false
 function onCreatePost()
 	setProperty('camHUD.visible', false)
 	
-	makeLuaSprite('DarkBox','MX/mxbgmmnm_sky',-800,0);
-	addLuaSprite('DarkBox',true);
-	setObjectCamera('Darkbox','other');
-	scaleObject('DarkBox',3,3)
+	makeLuaSprite('DarkBox', '', 0, 0);
+	makeGraphic('DarkBox', screenWidth, screenHeight, '000000')
+	setObjectCamera('DarkBox', 'camOther');
+	addLuaSprite('DarkBox', false);
 	
 	for i=1,#mxLines do
 		makeLuaSprite('mxLine'..i,'MX/'..mxLines[i],225,100);
@@ -21,8 +21,6 @@ end
 function lineVisible(line, fadeTime)
 	setProperty(line..'.alpha', 1)
 	doTweenAlpha(line..'AlphaTween', line, 0, fadeTime, linear);
-	doTweenX(line..'ScaleXTween', line..'.scale', 1.1, fadeTime, linear);
-	doTweenY(line..'ScaleYTween', line..'.scale', 1.1,fadeTime, linear);
 end
 
 function onUpdate()
