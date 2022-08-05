@@ -9933,7 +9933,7 @@
 		"needsVoices": true,
 		"stage": "World 1-1",
 		"validScore": true,
-		"arrowSkin": "",
+		"arrowSkin": "NESNOTE_assets",
 		"speed": 3,
 		"bpm": 205
 	}
