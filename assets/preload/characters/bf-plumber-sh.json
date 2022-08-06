@@ -3,76 +3,76 @@
 		{
 			"loop": false,
 			"offsets": [
-				-10,
-				89
+				-12,
+				30
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "Peach_Idle",
+			"name": "BF idle dance",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				55,
-				153
+				-3,
+				33
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Peach_Left",
+			"name": "BF NOTE LEFT0",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				8,
-				107
+				-19,
+				-14
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Peach_Down",
+			"name": "BF NOTE DOWN0",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				109,
-				120
+				-36,
+				77
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "Peach_Up",
+			"name": "BF NOTE UP0",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				48,
-				110
+				-52,
+				34
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Peach_Right",
+			"name": "BF NOTE RIGHT0",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/peachh",
+	"image": "characters/PlumberBF_sh_Assets",
 	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		229
+	],
+	"camera_position": [
 		0,
 		0
 	],
-	"healthicon": "icon-p",
-	"flip_x": false,
-	"healthbar_colors": [
-		155,
-		113,
-		130
-	],
-	"camera_position": [
-		-30,
-		90
-	],
-	"sing_duration": 6.1,
+	"sing_duration": 4,
 	"scale": 1
 }

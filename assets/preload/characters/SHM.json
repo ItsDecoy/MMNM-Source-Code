@@ -1,62 +1,62 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				30,
 				103
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "mario idle"
+			"fps": 24,
+			"name": "mario idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				34,
 				91
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "mario left"
+			"fps": 24,
+			"name": "mario left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				30,
 				91
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "mario down"
+			"fps": 24,
+			"name": "mario down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				173,
 				131
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "mario up"
+			"fps": 24,
+			"name": "mario up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				30,
 				83
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "mario right"
+			"fps": 24,
+			"name": "mario right",
+			"indices": []
 		}
 	],
-	"no_antialiasing": true,
+	"no_antialiasing": false,
 	"image": "characters/SecretMario",
 	"position": [
 		0,

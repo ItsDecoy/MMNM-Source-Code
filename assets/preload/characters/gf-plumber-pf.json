@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-2,
+				60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "GF_Idle"
+		},
+		{
+			"offsets": [
+				82,
+				96
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "GF_Down"
+		},
+		{
+			"offsets": [
+				4,
+				132
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "GF_Up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-55,
+				98
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "GF_Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				31,
+				56
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "GF_Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/PlumberGF_PF",
+	"position": [
+		-20,
+		40
+	],
+	"healthicon": "icon-gf",
+	"flip_x": true,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.7
+}

@@ -1,77 +1,77 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				-50,
+				-250,
+				9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Grand Dad Idle"
+		},
+		{
+			"offsets": [
+				-121,
 				39
 			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "IHY_Idle",
-			"indices": []
-		},
-		{
 			"loop": false,
-			"offsets": [
-				153,
-				27
-			],
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "IHY_Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "GD Left"
 		},
 		{
 			"offsets": [
-				135,
-				-59
+				-91,
+				-410
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "IHY_Down"
+			"name": "GD Down"
 		},
 		{
 			"offsets": [
-				28,
-				53
+				-139,
+				39
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "IHY_Up"
+			"name": "GD Up"
 		},
 		{
 			"offsets": [
-				-19,
-				16
+				-159,
+				-51
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "IHY_Right"
+			"name": "GD RIght"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/IHY_Luigi",
+	"image": "characters/Grand_Dad",
 	"position": [
-		-170,
-		-50
+		0,
+		0
 	],
-	"healthicon": "icon-ihy",
+	"healthicon": "icon-GD",
 	"flip_x": false,
 	"healthbar_colors": [
-		12,
-		148,
-		58
+		216,
+		126,
+		126
 	],
 	"camera_position": [
-		-180,
-		60
+		20,
+		220
 	],
 	"sing_duration": 6.1,
 	"scale": 0.9

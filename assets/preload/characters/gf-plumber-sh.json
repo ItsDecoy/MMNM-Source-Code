@@ -1,14 +1,13 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				-2,
-				54
-			],
 			"loop": false,
-			"anim": "sad",
+			"offsets": [
+				3,
+				50
+			],
 			"fps": 24,
-			"name": "gf sad",
+			"anim": "sad",
 			"indices": [
 				0,
 				1,
@@ -23,17 +22,17 @@
 				10,
 				11,
 				12
-			]
+			],
+			"name": "gf sad"
 		},
 		{
+			"loop": false,
 			"offsets": [
-				0,
+				3,
 				61
 			],
-			"loop": false,
-			"anim": "danceLeft",
 			"fps": 24,
-			"name": "GF Dancing Beat",
+			"anim": "danceLeft",
 			"indices": [
 				30,
 				0,
@@ -51,17 +50,17 @@
 				12,
 				13,
 				14
-			]
+			],
+			"name": "GF Dancing Beat"
 		},
 		{
+			"loop": false,
 			"offsets": [
-				0,
+				3,
 				61
 			],
-			"loop": false,
-			"anim": "danceRight",
 			"fps": 24,
-			"name": "GF Dancing Beat",
+			"anim": "danceRight",
 			"indices": [
 				15,
 				16,
@@ -78,11 +77,23 @@
 				27,
 				28,
 				29
-			]
+			],
+			"name": "GF Dancing Beat"
+		},
+		{
+			"offsets": [
+				3,
+				63
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "cheer",
+			"indices": [],
+			"name": "GF Cheer"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/PlumberGF_assets",
+	"image": "characters/PlumberGF_sh_assets",
 	"position": [
 		0,
 		0
@@ -96,7 +107,7 @@
 	],
 	"camera_position": [
 		0,
-		-30
+		-40
 	],
 	"sing_duration": 4,
 	"scale": 1
