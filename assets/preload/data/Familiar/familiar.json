@@ -5531,7 +5531,7 @@
 		"splashSkin": "noteSplashes",
 		"song": "Familiar",
 		"needsVoices": true,
-		"arrowSkin": "NES",
+		"arrowSkin": "NESNOTE_assets",
 		"validScore": true,
 		"stage": "World 1...",
 		"bpm": 95,

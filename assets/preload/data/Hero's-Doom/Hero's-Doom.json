@@ -1,12 +1,9 @@
 {
 	"song": {
 		"player1": "bf-plumber-flipped",
-<<<<<<< HEAD
 		"events": [],
 		"gfVersion": "gf-plumber",
 		"player2": "mx",
-=======
->>>>>>> b2c737e78efb9884055dfced5df53d7ca67e952d
 		"notes": [
 			{
 				"sectionNotes": [
