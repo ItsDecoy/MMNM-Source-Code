@@ -287,7 +287,7 @@ class MainMenuState extends MusicBeatState
 									case 'awards':
 										MusicBeatState.switchState(new AchievementsMenuState());
 									case 'extras':
-										
+										MusicBeatState.switchState(new ExtrasMenu());
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
 									case 'options':

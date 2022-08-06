@@ -54,10 +54,29 @@ import Note.EventNote;
 import openfl.events.KeyboardEvent;
 import flixel.util.FlxSave;
 import Achievements;
+import flixel.addons.display.FlxBackdrop;
 
 class ExtrasMenu extends MusicBeatState
 {
-    var bg:FlxSprite;
+    var bg:FlxBackdrop;
 
-    //IM ADDING THIS IN DO NOT WORRY
+    //IM ADDING THIS IN DO NOT WORRY, Hi I'm paul :)
+    override function create(){
+        bg = new FlxBackdrop(Paths.image('freeplay/loopingback','preload'), 1, 1, true, true);
+        bg.scrollFactor.set();
+        bg.antialiasing = false;
+        add(bg);
+
+
+        super.create();
+    }
+
+    override function update(elapsed:Float) {
+        if(bg != null)
+            bg.velocity.set(25, 0); 
+
+        super.update(elapsed);
+
+    }
+
 }
