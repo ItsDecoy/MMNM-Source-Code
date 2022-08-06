@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "bf",
+		"player1": "gf-plumber-pf",
 		"player2": "peach",
 		"events": [],
 		"notes": [
@@ -1450,11 +1450,6 @@
 						0
 					],
 					[
-						100363.636363636,
-						5,
-						409.090909090909
-					],
-					[
 						100909.090909091,
 						4,
 						409.090909090909
@@ -1833,11 +1828,6 @@
 						409.090909090909
 					],
 					[
-						118909.090909091,
-						5,
-						681.818181818182
-					],
-					[
 						119727.272727273,
 						6,
 						0
@@ -1846,6 +1836,16 @@
 						119863.636363636,
 						4,
 						0
+					],
+					[
+						118909.090909091,
+						5,
+						409.090909090909
+					],
+					[
+						119454.545454545,
+						7,
+						136.363636363636
 					]
 				],
 				"typeOfSection": 0,
@@ -2505,13 +2505,18 @@
 					],
 					[
 						149333.333333333,
-						7,
-						250
+						5,
+						583.333333333333
 					],
 					[
 						149333.333333333,
-						5,
-						250
+						7,
+						583.333333333333
+					],
+					[
+						150000,
+						6,
+						583.333333333333
 					]
 				],
 				"altAnim": false,
@@ -2552,11 +2557,6 @@
 					[
 						151333.333333333,
 						7,
-						583.333333333333
-					],
-					[
-						151333.333333333,
-						4,
 						583.333333333333
 					]
 				],
@@ -2609,6 +2609,16 @@
 						152666.666666667,
 						4,
 						583.333333333333
+					],
+					[
+						152000,
+						4,
+						583.333333333333
+					],
+					[
+						152666.666666667,
+						7,
+						583.333333333333
 					]
 				],
 				"altAnim": false,
@@ -2654,7 +2664,27 @@
 					[
 						153333.333333333,
 						7,
-						1250
+						416.666666666667
+					],
+					[
+						153833.333333333,
+						6,
+						0
+					],
+					[
+						153916.666666667,
+						5,
+						0
+					],
+					[
+						154000,
+						7,
+						0
+					],
+					[
+						154000,
+						4,
+						583.333333333333
 					]
 				],
 				"altAnim": false,
@@ -2751,16 +2781,6 @@
 					[
 						156000,
 						6,
-						583.333333333333
-					],
-					[
-						156000,
-						5,
-						583.333333333333
-					],
-					[
-						156666.666666667,
-						7,
 						583.333333333333
 					],
 					[
@@ -2892,6 +2912,11 @@
 					[
 						158500,
 						2,
+						0
+					],
+					[
+						158250,
+						1,
 						0
 					]
 				],
@@ -3126,6 +3151,11 @@
 					[
 						163833.333333333,
 						2,
+						0
+					],
+					[
+						163583.333333333,
+						1,
 						0
 					]
 				],
@@ -4831,24 +4861,44 @@
 				"bpm": 110
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 110,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 110,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 110,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 110
 			},
 			{
 				"gfSection": false,
@@ -4862,7 +4912,8 @@
 			}
 		],
 		"gfVersion": "gf",
-		"player3": null,
+		"player3": "gf",
+		"mania": 3,
 		"splashSkin": "noteSplashes",
 		"song": "Pink Forest",
 		"stage": "Pink Forest",

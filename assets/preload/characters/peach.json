@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-10,
 				89
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Peach_Idle"
-		},
-		{
-			"offsets": [
-				250,
-				147
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "Peach_Left"
+			"name": "Peach_Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				55,
+				153
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Peach_Left",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				8,
-				77
+				107
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Peach_Down"
+			"fps": 24,
+			"name": "Peach_Down",
+			"indices": []
 		},
 		{
-			"offsets": [
-				117,
-				77
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				109,
+				120
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "Peach_Up"
+			"fps": 24,
+			"name": "Peach_Up",
+			"indices": []
 		},
 		{
-			"offsets": [
-				58,
-				124
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				48,
+				110
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Peach_Right"
+			"fps": 24,
+			"name": "Peach_Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

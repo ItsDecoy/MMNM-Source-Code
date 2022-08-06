@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-250,
+				9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Grand Dad Idle"
+		},
+		{
+			"offsets": [
+				-121,
+				39
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "GD Left"
+		},
+		{
+			"offsets": [
+				-91,
+				-410
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "GD Down"
+		},
+		{
+			"offsets": [
+				-139,
+				39
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "GD Up"
+		},
+		{
+			"offsets": [
+				-159,
+				-51
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "GD RIght"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Grand_Dad",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon-GD",
+	"flip_x": false,
+	"healthbar_colors": [
+		216,
+		126,
+		126
+	],
+	"camera_position": [
+		20,
+		220
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

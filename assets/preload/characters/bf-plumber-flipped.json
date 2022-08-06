@@ -2,8 +2,13 @@
 	"animations": [
 		{
 			"offsets": [
+<<<<<<< HEAD
 				-5,
 				-10
+=======
+				158,
+				20
+>>>>>>> b2c737e78efb9884055dfced5df53d7ca67e952d
 			],
 			"loop": false,
 			"fps": 24,
@@ -13,8 +18,13 @@
 		},
 		{
 			"offsets": [
+<<<<<<< HEAD
 				-26,
 				-53
+=======
+				123,
+				-21
+>>>>>>> b2c737e78efb9884055dfced5df53d7ca67e952d
 			],
 			"loop": false,
 			"fps": 24,
@@ -24,8 +34,13 @@
 		},
 		{
 			"offsets": [
+<<<<<<< HEAD
 				14,
 				27
+=======
+				178,
+				68
+>>>>>>> b2c737e78efb9884055dfced5df53d7ca67e952d
 			],
 			"loop": false,
 			"fps": 24,
@@ -34,6 +49,7 @@
 			"name": "BF NOTE UP0"
 		},
 		{
+<<<<<<< HEAD
 			"offsets": [
 				7,
 				19
@@ -196,24 +212,57 @@
 			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "BF NOTE RIGHT0"
+			"name": "BF NOTE RIGHT0",
+			"loop": false,
+			"offsets": [
+				201,
+				22
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF NOTE RIGHT0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				123,
+				23
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF NOTE LEFT0",
+			"indices": []
+>>>>>>> b2c737e78efb9884055dfced5df53d7ca67e952d
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/PlumberBF_Assets",
 	"position": [
+<<<<<<< HEAD
 		-20,
 		310
+=======
+		0,
+		350
+>>>>>>> b2c737e78efb9884055dfced5df53d7ca67e952d
 	],
 	"healthicon": "bf",
 	"flip_x": false,
 	"healthbar_colors": [
 		49,
 		176,
+<<<<<<< HEAD
 		209
 	],
 	"camera_position": [
 		-330,
+=======
+		229
+	],
+	"camera_position": [
+		-50,
+>>>>>>> b2c737e78efb9884055dfced5df53d7ca67e952d
 		0
 	],
 	"sing_duration": 4,
