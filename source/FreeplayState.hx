@@ -52,6 +52,7 @@ class FreeplayState extends MusicBeatState
 	var colorTween:FlxTween;
 
 	var arts:FlxTypedGroup<FlxSprite>;
+	var artsSelect:FlxTypedGroup<FlxSprite>;
 	var nameArt:FlxSprite;
 
 	override function create()
@@ -101,6 +102,9 @@ class FreeplayState extends MusicBeatState
 		
 		arts = new FlxTypedGroup<FlxSprite>();
 		add(arts);
+
+		artsSelect = new FlxTypedGroup<FlxSprite>();
+		add(artsSelect);
 		
 		for(i in 0...songs.length)
 		{
@@ -113,6 +117,14 @@ class FreeplayState extends MusicBeatState
 			artCover.x += i * 575;
 			artCover.antialiasing = false;
 			arts.add(artCover);
+			
+			var artCoverSelect = new FlxSprite().loadGraphic(Paths.image('freeplay/art/' + songs[i].songName.toLowerCase() + '_select', 'preload'));
+			artCoverSelect.scrollFactor.set();
+			artCoverSelect.screenCenter();
+			artCoverSelect.ID = i;
+			artCoverSelect.x += i * 575;
+			artCoverSelect.antialiasing = false;
+			artsSelect.add(artCoverSelect);
 		}
 
 		var select = new FlxSprite().loadGraphic(Paths.image('freeplay/select', 'preload'));
@@ -181,6 +193,9 @@ class FreeplayState extends MusicBeatState
 				spr.scale.x = FlxMath.lerp(spr.scale.x, 0.75, CoolUtil.boundTo(elapsed * 6, 0, 1));
 				spr.scale.y = FlxMath.lerp(spr.scale.y, 0.75, CoolUtil.boundTo(elapsed * 6, 0, 1));
 			}
+
+			artsSelect.members[spr.ID].x = spr.x;
+			artsSelect.members[spr.ID].scale.set(spr.scale.x, spr.scale.y);
 		});
 
 		if (FlxG.sound.music.volume < 0.7)
@@ -362,22 +377,27 @@ class FreeplayState extends MusicBeatState
 			curSelected = 0;
 
 		arts.forEach(function(spr:FlxSprite){
+
 			if(curSelected == spr.ID)
 			{
 				nameArt.loadGraphic(Paths.image('freeplay/names/' + songs[spr.ID].songName.toLowerCase() + '_name'));
-
-				if(spr.graphic != Paths.image('freeplay/art/' + songs[spr.ID].songName.toLowerCase() + '_select', 'preload'))
+				for(i in 0...artsSelect.members.length)
 				{
-					spr.loadGraphic(Paths.image('freeplay/art/' + songs[spr.ID].songName.toLowerCase() + '_select', 'preload'));
-				}	
+					if(spr.ID == artsSelect.members[i].ID)
+					{
+						artsSelect.members[i].visible = true;
+					}
+					else
+					{
+						artsSelect.members[i].visible = false;
+					}
+				}
 
+				spr.visible = false;
 			}
 			else
 			{
-				if(spr.graphic != Paths.image('freeplay/art/' + songs[spr.ID].songName.toLowerCase() + '_idle', 'preload'))
-				{
-					spr.loadGraphic(Paths.image('freeplay/art/' + songs[spr.ID].songName.toLowerCase() + '_idle', 'preload'));
-				}
+				spr.visible = true;
 			}
 		});
 	}
