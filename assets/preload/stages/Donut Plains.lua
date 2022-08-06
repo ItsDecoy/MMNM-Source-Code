@@ -9,9 +9,9 @@ function onCreate()
 	scaleObject('Whole-Ah Castle2', 0.7, 0.7);
 	
 	
-	setProperty('Whole-Ah Castle2.visible',true);
+	setProperty('Whole-Ah Castle.visible',true);
 
-
+	setProperty('Whole-Ah Castle2.visible',false);
 	
 
 

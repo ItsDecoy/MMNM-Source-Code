@@ -4,7 +4,7 @@ function onCreate()
 		addLuaSprite('Sky', false);
 		scaleObject('Sky',1.8,1.8);
 
-	makeLuaSprite('GRAND','grandDad/Grand_Dad_BG1_1', -200, -300);
+	makeLuaSprite('GRAND','grandDad/Grand_Dad_BG1_1', -100, -300);
 		addLuaSprite('GRAND', true);
 		scaleObject('GRAND',0.6,0.6)
 
