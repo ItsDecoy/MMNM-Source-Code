@@ -174,6 +174,7 @@ class MainMenuState extends MusicBeatState
 
 		var logoTHING:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_LOGO', 'preload'));
 		logoTHING.scrollFactor.set();
+		logoTHING.antialiasing = ClientPrefs.globalAntialiasing;
 		add(logoTHING);
 
 

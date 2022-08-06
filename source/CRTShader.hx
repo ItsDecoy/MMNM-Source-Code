@@ -16,6 +16,7 @@ class CRTShader extends FlxShader
 
         uniform vec2 curvature;
         uniform float uTime;
+        uniform vec2 screenResolution;
         uniform vec2 resolution;
         uniform vec2 scanLineOpacity;
         uniform float brightness;
@@ -48,7 +49,8 @@ class CRTShader extends FlxShader
             vec2 uv = openfl_TextureCoordv;
             vec2 nuv = screenDistort(uv);
 
-            float hres = 600, vres = 480;
+            float hres = screenResolution[0];
+            float vres = screenResolution[1];
 
             vec2 cell, local;
 
@@ -83,7 +85,8 @@ class CRTShader extends FlxShader
 	public function new()
 	{
 		super();
-		curvature.value = [3, 3];
+		curvature.value = [3.5, 3.5];
+        screenResolution.value = [600, 480];
 		resolution.value = [150, 75];
 		scanLineOpacity.value = [0.25, 0.25];
 		brightness.value = [1.5];

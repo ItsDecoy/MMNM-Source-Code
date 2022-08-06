@@ -7,10 +7,10 @@ function onCreate()
 	setProperty('black.scale.y',2)
 	setLuaSpriteScrollFactor('black',0,0)
 	addLuaSprite('black', true);
-    
 	doTweenAlpha('iconfade', 'iconP2', 0, 0.1, linear);
-
-          setProperty("camGame.zoom",1.4) 
+    setProperty("camGame.zoom",1.4)
+	
+	addLuaScript('lua/CameraFollowPos')
 end
 
 function onUpdate(elapsed) 

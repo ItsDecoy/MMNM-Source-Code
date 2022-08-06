@@ -145,6 +145,15 @@ class PlayState extends MusicBeatState
 	public var grpNoteSplashes:FlxTypedGroup<NoteSplash>;
 
 	public var camZooming:Bool = false;
+	public var camZoomingMult:Float = 1;
+	public var camZoomingDecay:Float = 1;
+	public var camZoomingSpeed:Float = 4;
+
+	public var camTween:FlxTween;
+	public var camGameAlphaTween:FlxTween;
+	public var camHUDAlphaTween:FlxTween;
+	public var camOtherAlphaTween:FlxTween;
+
 	private var curSong:String = "";
 
 	public var gfSpeed:Int = 1;
@@ -186,6 +195,12 @@ class PlayState extends MusicBeatState
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
+
+	public var iconP1scale:Float = 1;
+	public var iconP2scale:Float = 1;
+	// for lua scripts just in case - Ighby
+	public var iconP1ScaleTween:FlxTween;
+	public var iconP2ScaleTween:FlxTween;
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 	var dialogueJson:DialogueFile = null;
@@ -247,6 +262,7 @@ class PlayState extends MusicBeatState
 	var dad_yCAM:Float = 0;
 
 	public var defaultCamZoom:Float = 1.05;
+	public var stageCamZoom:Float = 1;
 
 	// how big to stretch the pixel art assets
 	public static var daPixelZoom:Float = 6;
@@ -410,7 +426,9 @@ class PlayState extends MusicBeatState
 			};
 		}
 
-		defaultCamZoom = stageData.defaultZoom;
+		stageCamZoom = stageData.defaultZoom;
+
+		defaultCamZoom = stageCamZoom;
 		isPixelStage = stageData.isPixelStage;
 		BF_X = stageData.boyfriend[0];
 		BF_Y = stageData.boyfriend[1];
@@ -2170,6 +2188,18 @@ class PlayState extends MusicBeatState
 				finishTimer.active = false;
 			if (songSpeedTween != null)
 				songSpeedTween.active = false;
+			if (iconP1ScaleTween != null)
+				iconP1ScaleTween.active = false;
+			if (iconP2ScaleTween != null)
+				iconP2ScaleTween.active = false;
+			if (camTween != null)
+				camTween.active = false;
+			if (camGameAlphaTween != null)
+				camGameAlphaTween.active = false;
+			if (camHUDAlphaTween != null)
+				camHUDAlphaTween.active = false;
+			if (camOtherAlphaTween != null)
+				camOtherAlphaTween.active = false;
 
 			if(blammedLightsBlackTween != null)
 				blammedLightsBlackTween.active = false;
@@ -2211,6 +2241,18 @@ class PlayState extends MusicBeatState
 				finishTimer.active = true;
 			if (songSpeedTween != null)
 				songSpeedTween.active = true;
+			if (iconP1ScaleTween != null)
+				iconP1ScaleTween.active = true;
+			if (iconP2ScaleTween != null)
+				iconP2ScaleTween.active = true;
+			if (camTween != null)
+				camTween.active = true;
+			if (camGameAlphaTween != null)
+				camGameAlphaTween.active = true;
+			if (camHUDAlphaTween != null)
+				camHUDAlphaTween.active = true;
+			if (camOtherAlphaTween != null)
+				camOtherAlphaTween.active = true;
 
 			if(blammedLightsBlackTween != null)
 				blammedLightsBlackTween.active = true;
@@ -2505,12 +2547,12 @@ class PlayState extends MusicBeatState
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 
-		var mult:Float = FlxMath.lerp(1, iconP1.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
-		iconP1.scale.set(mult, mult);
+		//var mult:Float = FlxMath.lerp(1, iconP1.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
+		iconP1.scale.set(iconP1scale, iconP1scale);
 		iconP1.updateHitbox();
 
-		var mult:Float = FlxMath.lerp(1, iconP2.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
-		iconP2.scale.set(mult, mult);
+		//var mult:Float = FlxMath.lerp(1, iconP2.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
+		iconP2.scale.set(iconP2scale, iconP2scale);
 		iconP2.updateHitbox();
 
 		var iconOffset:Int = 26;
@@ -2593,8 +2635,8 @@ class PlayState extends MusicBeatState
 
 		if (camZooming)
 		{
-			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
-			camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
+			if (camTween == null) FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125 * camZoomingDecay), 0, 1));
+			camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125 * camZoomingDecay), 0, 1));
 		}
 
 		FlxG.watch.addQuick("beatShit", curBeat);
@@ -3211,6 +3253,87 @@ class PlayState extends MusicBeatState
 						}
 					});
 				}
+			case 'Camera Fade':
+				var split:Array<String> = value2.split(',');
+				var alpha:Float = 0;
+				var duration:Float = 0;
+				if(split[0] != null) alpha = Std.parseFloat(split[0].trim());
+				if(split[1] != null) duration = Std.parseFloat(split[1].trim());
+				if(Math.isNaN(alpha)) alpha = 0;
+				if(Math.isNaN(duration)) duration = 0;
+
+				if (duration > 0)
+				{
+					switch (value1)
+					{
+						case 'camHUD':
+							camHUDAlphaTween = FlxTween.tween(camHUD, {alpha: alpha}, duration, {ease: FlxEase.linear, onComplete:
+								function (twn:FlxTween)
+								{
+									camHUDAlphaTween = null;
+								}
+							});
+						case 'camOther':
+							camOtherAlphaTween = FlxTween.tween(camOther, {alpha: alpha}, duration, {ease: FlxEase.linear, onComplete:
+								function (twn:FlxTween)
+								{
+									camOtherAlphaTween = null;
+								}
+							});
+						default:
+							camGameAlphaTween = FlxTween.tween(camGame, {alpha: alpha}, duration, {ease: FlxEase.linear, onComplete:
+								function (twn:FlxTween)
+								{
+									camGameAlphaTween = null;
+								}
+							});
+					}
+				}
+				else
+				{
+					switch (value1)
+					{
+						case 'camHUD':
+							camHUD.alpha = alpha;
+						case 'camOther':
+							camOther.alpha = alpha;
+						default:
+							camGame.alpha = alpha;
+					}
+				}
+			case 'Zoom Camera':
+				var val1:Float = Std.parseFloat(value1);
+				if(Math.isNaN(val1)) val1 = 1;
+
+				var targetZoom = stageCamZoom * val1;
+				if (value2 != '')
+				{
+					var split = value2.split(',');
+					var duration:Float = 0;
+					var leEase:String = 'linear';
+					if(split[0] != null) duration = Std.parseFloat(split[0].trim());
+					if(split[1] != null) leEase = split[1].trim();
+					if(Math.isNaN(duration)) duration = 0;
+
+					if (duration > 0)
+					{
+						camTween = FlxTween.tween(FlxG.camera, {zoom: targetZoom}, duration, {ease: FunkinLua.getFlxEaseByString(leEase), onComplete:
+							function (twn:FlxTween)
+							{
+								camTween = null;
+							}
+						});
+					}
+					else
+					{
+						FlxG.camera.zoom = targetZoom;
+					}
+				}
+				defaultCamZoom = targetZoom;
+			case 'Set Property':
+				var killMe:Array<String> = value1.split('.');
+				if(killMe.length > 1) FunkinLua.setVarInArray(FunkinLua.getPropertyLoopThingWhatever(killMe, true, true), killMe[killMe.length-1], value2);
+				else FunkinLua.setVarInArray(this, value1, value2);
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -4533,14 +4656,32 @@ class PlayState extends MusicBeatState
 		{
 			moveCameraSection(Std.int(curStep / 16));
 		}
-		if (camZooming && FlxG.camera.zoom < 1.35 && ClientPrefs.camZooms && curBeat % 4 == 0)
+		if (camZooming && FlxG.camera.zoom < 1.35 && ClientPrefs.camZooms && curBeat % camZoomingSpeed == 0)
 		{
-			FlxG.camera.zoom += 0.015;
-			camHUD.zoom += 0.03;
+			if (camTween == null) FlxG.camera.zoom += 0.015  * camZoomingMult;
+			camHUD.zoom += 0.03  * camZoomingMult;
 		}
 
-		iconP1.scale.set(1.2, 1.2);
-		iconP2.scale.set(1.2, 1.2);
+		var scale = 1.26;
+		var tweenDur = Conductor.crochet / 2900;
+		iconP1scale = scale;
+		iconP2scale = scale;
+
+		iconP1.scale.set(iconP1scale, iconP1scale);
+		iconP2.scale.set(iconP2scale, iconP2scale);
+
+		iconP1ScaleTween = FlxTween.tween(this, {iconP1scale: 1}, tweenDur, {ease: FlxEase.linear, onComplete:
+			function (twn:FlxTween)
+			{
+				iconP1ScaleTween = null;
+			}
+		});
+		iconP2ScaleTween = FlxTween.tween(this, {iconP2scale: 1}, tweenDur, {ease: FlxEase.linear, onComplete:
+			function (twn:FlxTween)
+			{
+				iconP2ScaleTween = null;
+			}
+		});
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
