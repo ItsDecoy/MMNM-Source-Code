@@ -41,10 +41,10 @@ function onCreate()
 	addLuaSprite('Shadow2',false);
 	scaleObject('Shadow2',1.85,1.85);
 	
-	makeLuaSprite('DeadToadAlert','MX/mxbgmmnm_pole',50,50);
+	makeLuaSprite('DeadToadAlert','MX/mxbgmmnm_pole',-750,50);
 	addLuaSprite('DeadToadAlert',false);
 		
-	makeLuaSprite('Dead','MX/mxbgmmnm_wall',-420,100);
+	makeLuaSprite('Dead','MX/mxbgmmnm_wall',-220,50);
 	addLuaSprite('Dead',false);
 	scaleObject('Dead',1,1);
 	setScrollFactor('Dead',0.95,0.95)
