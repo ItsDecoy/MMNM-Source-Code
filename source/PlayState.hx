@@ -115,6 +115,7 @@ class PlayState extends MusicBeatState
 	public var gfGroup:FlxSpriteGroup;
 	public static var curStage:String = '';
 	public static var isPixelStage:Bool = false;
+	public static var isNESstage:Bool = false;
 	public static var SONG:SwagSong = null;
 	public static var isStoryMode:Bool = false;
 	public static var storyWeek:Int = 0;
@@ -384,7 +385,6 @@ class PlayState extends MusicBeatState
 		var songName:String = Paths.formatToSongPath(SONG.song);
 
 		curStage = PlayState.SONG.stage;
-		//trace('stage is: ' + curStage);
 		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
 			switch (songName)
 			{
@@ -413,6 +413,7 @@ class PlayState extends MusicBeatState
 				directory: "",
 				defaultZoom: 0.9,
 				isPixelStage: false,
+				isNESstage: false,
 			
 				boyfriend: [770, 100],
 				girlfriend: [400, 130],
@@ -430,6 +431,7 @@ class PlayState extends MusicBeatState
 
 		defaultCamZoom = stageCamZoom;
 		isPixelStage = stageData.isPixelStage;
+		isNESstage = stageData.isNESstage;
 		BF_X = stageData.boyfriend[0];
 		BF_Y = stageData.boyfriend[1];
 		GF_X = stageData.girlfriend[0];
@@ -458,10 +460,6 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
-			case 'World 1-1' | 'World 1...':
-				var crt:CRTShader = new CRTShader();
-				camGame.setFilters([new ShaderFilter(crt)]);
-				camHUD.setFilters([new ShaderFilter(crt)]);
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -790,6 +788,13 @@ class PlayState extends MusicBeatState
 				var pillar:BGSprite = new BGSprite('background/pillar', 200, 200, 0.9, 0.9);
 				pillar.setGraphicSize(Std.int(pillar.width * 2.6));
 				add(pillar);	
+		}
+
+		if (isNESstage)
+		{
+			var crt:CRTShader = new CRTShader();
+			camGame.setFilters([new ShaderFilter(crt)]);
+			camHUD.setFilters([new ShaderFilter(crt)]);
 		}
 
 		if(isPixelStage) {
@@ -3054,8 +3059,8 @@ class PlayState extends MusicBeatState
 				if(ClientPrefs.camZooms && FlxG.camera.zoom < 1.35) {
 					var camZoom:Float = Std.parseFloat(value1);
 					var hudZoom:Float = Std.parseFloat(value2);
-					if(Math.isNaN(camZoom)) camZoom = 0.015;
-					if(Math.isNaN(hudZoom)) hudZoom = 0.03;
+					if(Math.isNaN(camZoom)) camZoom = 0.015 * camZoomingMult;
+					if(Math.isNaN(hudZoom)) hudZoom = 0.03 * camZoomingMult;
 
 					FlxG.camera.zoom += camZoom;
 					camHUD.zoom += hudZoom;
@@ -3264,16 +3269,18 @@ class PlayState extends MusicBeatState
 
 				if (duration > 0)
 				{
-					switch (value1)
+					switch (value1.toLowerCase())
 					{
-						case 'camHUD':
+						case 'camhud':
+							if (camHUDAlphaTween != null) camHUDAlphaTween.cancel();
 							camHUDAlphaTween = FlxTween.tween(camHUD, {alpha: alpha}, duration, {ease: FlxEase.linear, onComplete:
 								function (twn:FlxTween)
 								{
 									camHUDAlphaTween = null;
 								}
 							});
-						case 'camOther':
+						case 'camother':
+							if (camOtherAlphaTween != null) camOtherAlphaTween.cancel();
 							camOtherAlphaTween = FlxTween.tween(camOther, {alpha: alpha}, duration, {ease: FlxEase.linear, onComplete:
 								function (twn:FlxTween)
 								{
@@ -3281,6 +3288,7 @@ class PlayState extends MusicBeatState
 								}
 							});
 						default:
+							if (camGameAlphaTween != null) camGameAlphaTween.cancel();
 							camGameAlphaTween = FlxTween.tween(camGame, {alpha: alpha}, duration, {ease: FlxEase.linear, onComplete:
 								function (twn:FlxTween)
 								{
@@ -3291,17 +3299,22 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					switch (value1)
+					switch (value1.toLowerCase())
 					{
-						case 'camHUD':
+						case 'camhud':
 							camHUD.alpha = alpha;
-						case 'camOther':
+						case 'camother':
 							camOther.alpha = alpha;
 						default:
 							camGame.alpha = alpha;
 					}
 				}
 			case 'Zoom Camera':
+				if (camTween != null)
+				{
+					camTween.cancel();
+					camTween = null;
+				}
 				var val1:Float = Std.parseFloat(value1);
 				if(Math.isNaN(val1)) val1 = 1;
 
@@ -3387,13 +3400,6 @@ class PlayState extends MusicBeatState
 						cameraTwn = null;
 					}
 				});
-			}
-
-			switch(curStage)
-			{
-				case 'World 1-1':
-					camFollow.x -= 100;
-					camFollow.y -= 0;
 			}
 		}
 	}

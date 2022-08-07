@@ -2,8 +2,10 @@
 	"directory": "",
 	"defaultZoom": 0.8,
 	"isPixelStage": false,
+	"isNESstage": true,
 
 	"boyfriend": [305, 360],
 	"girlfriend": [400, 370],
-	"opponent": [915, 370]
+	"opponent": [915, 370],
+	"camera_boyfriend": [100, 0]
 }
