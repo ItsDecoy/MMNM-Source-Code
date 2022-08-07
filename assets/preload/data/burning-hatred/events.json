@@ -1,0 +1,859 @@
+{
+	"song": {
+		"speed": 2.5,
+		"stage": "That Mario Guy SMH",
+		"player1": "bf-plumber",
+		"player2": "NormLoogi",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"0.4"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1.5"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				11892.8571428571,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"0"
+					]
+				]
+			],
+			[
+				13607.1428571429,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1.5"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"2"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"1.2"
+					]
+				]
+			],
+			[
+				41035.7142857143,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"0"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"0.3"
+					]
+				]
+			],
+			[
+				41142.8571428572,
+				[
+					[
+						"Add Camera Zoom",
+						"0.03",
+						"0.06"
+					],
+					[
+						"Zoom Camera",
+						"1.3",
+						"0.15, sineOut"
+					]
+				]
+			],
+			[
+				48000,
+				[
+					[
+						"Zoom Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				54857.1428571429,
+				[
+					[
+						"Camera Fade",
+						"camHUD",
+						"0,0.7"
+					]
+				]
+			],
+			[
+				57642.8571428572,
+				[
+					[
+						"Screen Shake",
+						"0.1, 0.003",
+						"0.1, 0.003"
+					],
+					[
+						"Zoom Camera",
+						"1.1",
+						""
+					]
+				]
+			],
+			[
+				60000,
+				[
+					[
+						"Screen Shake",
+						"1, 0.004",
+						"1, 0.004"
+					],
+					[
+						"Zoom Camera",
+						"1.2",
+						""
+					]
+				]
+			],
+			[
+				63428.5714285715,
+				[
+					[
+						"Change Character",
+						"dad",
+						"IHYLuigi"
+					],
+					[
+						"Zoom Camera",
+						"1.35",
+						"4.8,linear"
+					]
+				]
+			],
+			[
+				63728.5714285715,
+				[
+					[
+						"Change Scroll Speed",
+						"1.27",
+						".1"
+					]
+				]
+			],
+			[
+				63783.2512315271,
+				[
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"2.5"
+					]
+				]
+			],
+			[
+				64308.2512315271,
+				[
+					[
+						"Screen Shake",
+						"0.1, 0.005",
+						"0.1, 0.005"
+					]
+				]
+			],
+			[
+				65508.2512315271,
+				[
+					[
+						"Screen Shake",
+						"2.5, 0.005",
+						"2.5, 0.005"
+					]
+				]
+			],
+			[
+				67983.2512315271,
+				[
+					[
+						"Camera Fade",
+						"camHUD",
+						"1,0.5"
+					]
+				]
+			],
+			[
+				68583.2512315271,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					],
+					[
+						"Zoom Camera",
+						"1",
+						"4.5,linear"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					]
+				]
+			],
+			[
+				70833.2512315271,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				73383.2512315271,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1.1"
+					]
+				]
+			],
+			[
+				75783.2512315271,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1.2"
+					]
+				]
+			],
+			[
+				76966.3762315271,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"0"
+					]
+				]
+			],
+			[
+				78168.2512315271,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1.3"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"2"
+					]
+				]
+			],
+			[
+				94975.7512315271,
+				[
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"4"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"0"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"1"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"1"
+					]
+				]
+			],
+			[
+				94983.2512315271,
+				[
+					[
+						"Zoom Camera",
+						"1.2",
+						""
+					]
+				]
+			],
+			[
+				106979.501231527,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					]
+				]
+			],
+			[
+				106983.251231527,
+				[
+					[
+						"Zoom Camera",
+						"1.2",
+						""
+					]
+				]
+			],
+			[
+				111783.251231527,
+				[
+					[
+						"Zoom Camera",
+						"1",
+						"3, sineInOut"
+					]
+				]
+			],
+			[
+				116579.501231527,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"2.5"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"1"
+					]
+				]
+			],
+			[
+				118833.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				121383.251231527,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1.1"
+					]
+				]
+			],
+			[
+				123783.251231527,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1.2"
+					]
+				]
+			],
+			[
+				124970.126231527,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"0"
+					]
+				]
+			],
+			[
+				126183.251231527,
+				[
+					[
+						"Zoom Camera",
+						"1.4",
+						"5,sineInOut"
+					],
+					[
+						"Camera Follow Pos",
+						"970",
+						"580"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"5"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"4"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1.3"
+					]
+				]
+			],
+			[
+				127383.251231527,
+				[
+					[
+						"Camera Follow Pos",
+						"270",
+						"430"
+					]
+				]
+			],
+			[
+				128583.251231527,
+				[
+					[
+						"Camera Follow Pos",
+						"970",
+						"580"
+					]
+				]
+			],
+			[
+				129783.251231527,
+				[
+					[
+						"Camera Follow Pos",
+						"270",
+						"430"
+					]
+				]
+			],
+			[
+				130983.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.02",
+						"0.04"
+					],
+					[
+						"Zoom Camera",
+						"1",
+						""
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"2.5"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"1"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"2"
+					]
+				]
+			],
+			[
+				134583.251231527,
+				[
+					[
+						"Zoom Camera",
+						"1.4",
+						"0.2,expoOut"
+					],
+					[
+						"Screen Shake",
+						"0.75,0.005",
+						"0.75,0.007"
+					]
+				]
+			],
+			[
+				135183.251231527,
+				[
+					[
+						"Zoom Camera",
+						"1",
+						"0.8,expoOut"
+					]
+				]
+			],
+			[
+				139383.251231527,
+				[
+					[
+						"Zoom Camera",
+						"1.4",
+						"0.2,expoOut"
+					]
+				]
+			],
+			[
+				139983.251231527,
+				[
+					[
+						"Zoom Camera",
+						"1",
+						"0.8,expoOut"
+					]
+				]
+			],
+			[
+				150183.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"4"
+					],
+					[
+						"Zoom Camera",
+						"1.2",
+						"0.3,cubeOut"
+					],
+					[
+						"Camera Follow Pos",
+						"970",
+						"580"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"0"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"3.5"
+					]
+				]
+			],
+			[
+				150333.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				150483.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				150783.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				151083.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				151383.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					],
+					[
+						"Camera Follow Pos",
+						"270",
+						"430"
+					]
+				]
+			],
+			[
+				151683.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				151833.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				151983.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				152283.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				152583.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					],
+					[
+						"Camera Follow Pos",
+						"970",
+						"580"
+					]
+				]
+			],
+			[
+				152733.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				152883.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				153183.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				153483.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				153783.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					],
+					[
+						"Camera Follow Pos",
+						"270",
+						"430"
+					]
+				]
+			],
+			[
+				154083.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				154233.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.01",
+						"0.02"
+					]
+				]
+			],
+			[
+				154383.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.09",
+						"1"
+					],
+					[
+						"Screen Shake",
+						"0.7, 0.005",
+						"0.7, 0.007"
+					],
+					[
+						"Zoom Camera",
+						"2.7",
+						"0.1,cubeOut"
+					],
+					[
+						"Camera Follow Pos",
+						"180",
+						"370"
+					]
+				]
+			],
+			[
+				154908.251231527,
+				[
+					[
+						"Zoom Camera",
+						"1",
+						"0.08,cubeIn"
+					]
+				]
+			],
+			[
+				154964.501231527,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"2"
+					]
+				]
+			],
+			[
+				154983.251231527,
+				[
+					[
+						"Add Camera Zoom",
+						"0.045",
+						"0.06"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"2"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				177783.251231527,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"0"
+					]
+				]
+			],
+			[
+				178683.251231527,
+				[
+					[
+						"Camera Fade",
+						"camHUD",
+						"0,0.3"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "gf-plumber",
+		"bpm": 140,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "Burning-Hatred"
+	}
+}
