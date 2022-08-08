@@ -56,8 +56,7 @@ function onCreate()
 	scaleObject('red',0.3,0.3)
         setObjectCamera('red','other')
 
-		setProperty('dadGroup.visible',false);
-
+		
 	close(true)
 
 
@@ -72,6 +71,6 @@ end
  if curStep == 320 then
 	doTweenY('redy', 'red', 400, 0.9, 'sineOut')
 	doTweenY('lovey', 'love', 400, 0.9, 'sineOut')
-	setProperty('dadGroup.visible',true);
+	
 end
 end
