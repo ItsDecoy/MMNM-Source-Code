@@ -14,7 +14,7 @@ function onCreate()
 	makeLuaSprite('GoobShad','piss/BG-Goombas-Shadow', 200, 700);
 	addLuaSprite('GoobShad', false);
 
-	makeLuaSprite('MarShad','piss/BG-Mario-shadow', 720, 610);
+	makeLuaSprite('MarShad','piss/BG-Mario-shadow', 720, 650);
 	addLuaSprite('MarShad', false);
 
 	
