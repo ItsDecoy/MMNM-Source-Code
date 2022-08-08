@@ -115,7 +115,7 @@ class FreeplayState extends MusicBeatState
 			artCover.screenCenter();
 			artCover.ID = i;
 			artCover.x += i * 575;
-			artCover.antialiasing = ClientPrefs.globalAntialiasing;
+			artCover.antialiasing = false;
 			arts.add(artCover);
 			
 			var artCoverSelect = new FlxSprite().loadGraphic(Paths.image('freeplay/art/' + songs[i].songName.toLowerCase() + '_select', 'preload'));
@@ -123,7 +123,7 @@ class FreeplayState extends MusicBeatState
 			artCoverSelect.screenCenter();
 			artCoverSelect.ID = i;
 			artCoverSelect.x += i * 575;
-			artCoverSelect.antialiasing = ClientPrefs.globalAntialiasing;
+			artCoverSelect.antialiasing = false;
 			artsSelect.add(artCoverSelect);
 		}
 
@@ -380,7 +380,7 @@ class FreeplayState extends MusicBeatState
 
 			if(curSelected == spr.ID)
 			{
-				nameArt.loadGraphic(Paths.image('freeplay/names/' + songs[spr.ID].songName.toLowerCase() + '_name'));
+				nameArt.loadGraphic(Paths.image('freeplay/names/' + songs[spr.ID].songName.toLowerCase() + '_name'));y
 				for(i in 0...artsSelect.members.length)
 				{
 					if(spr.ID == artsSelect.members[i].ID)
