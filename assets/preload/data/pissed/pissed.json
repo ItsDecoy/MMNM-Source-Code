@@ -3889,7 +3889,7 @@
 		"events": [],
 		"player3": null,
 		"song": "Pissed",
-		"arrowSkin": "PissNotes",
+		"arrowSkin": "PISSNOTE_assets",
 		"validScore": true,
 		"stage": "The End",
 		"needsVoices": true,

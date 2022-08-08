@@ -4167,7 +4167,7 @@
 		"splashSkin": "noteSplashes",
 		"song": "A Grand Ol' Time",
 		"needsVoices": true,
-		"arrowSkin": "GrandNotes",
+		"arrowSkin": "GRANDNOTE_assets",
 		"stage": "FLINTSTONES",
 		"validScore": true,
 		"bpm": 153,

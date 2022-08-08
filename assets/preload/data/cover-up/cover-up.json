@@ -3955,7 +3955,7 @@
 		"events": [],
 		"player3": null,
 		"song": "Cover Up",
-		"arrowSkin": "SecretNotes",
+		"arrowSkin": "SECRETNOTE_assets",
 		"validScore": true,
 		"needsVoices": true,
 		"stage": "Outlook",

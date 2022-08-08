@@ -2,10 +2,50 @@
 	"song": {
 		"speed": 2.4,
 		"stage": "Pink Forest",
-		"player1": "bf",
+		"player1": "gf-plumber-pf",
 		"player2": "peach",
 		"player3": null,
 		"events": [
+			[
+				0,
+				[
+					[
+						"Zoom Camera",
+						"2",
+						"0.1,linear"
+					]
+				]
+			],
+			[
+				8727.27272727273,
+				[
+					[
+						"Zoom Camera",
+						"3.4",
+						"40,linear"
+					]
+				]
+			],
+			[
+				43636.3636363637,
+				[
+					[
+						"Zoom Camera",
+						"1.3",
+						"0.1,linear"
+					]
+				]
+			],
+			[
+				52363.6363636364,
+				[
+					[
+						"Zoom Camera",
+						"1",
+						"16,sineOut"
+					]
+				]
+			],
 			[
 				70363.6363636364,
 				[
@@ -2702,7 +2742,7 @@
 		"validScore": false,
 		"gfVersion": "gf",
 		"bpm": 110,
-		"arrowSkin": "",
+		"arrowSkin": "SMWNOTE_assets",
 		"needsVoices": true,
 		"song": "Pink Forest"
 	}

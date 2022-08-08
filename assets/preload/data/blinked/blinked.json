@@ -2216,7 +2216,7 @@
 		"song": "Blinked",
 		"stage": "Sight-Seeing",
 		"validScore": true,
-		"arrowSkin": "DaisyNotes",
+		"arrowSkin": "DAISYNOTE_assets",
 		"needsVoices": true,
 		"speed": 2.6,
 		"bpm": 140

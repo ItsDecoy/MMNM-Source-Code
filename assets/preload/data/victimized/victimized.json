@@ -2325,6 +2325,7 @@
 		"mania": 3,
 		"player3": "gf",
 		"splashSkin": "noteSplashes",
+		"noteSkin": "SMWNOTE_assets",
 		"song": "Victimized",
 		"needsVoices": true,
 		"arrowSkin": "",
