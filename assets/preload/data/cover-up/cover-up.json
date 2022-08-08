@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "bfexe",
+		"player1": "bf-plumber-sh",
 		"notes": [
 			{
 				"sectionNotes": [],
@@ -3951,7 +3951,7 @@
 			}
 		],
 		"player2": "SHM",
-		"gfVersion": "gf",
+		"gfVersion": "gf-plumber-sh",
 		"events": [],
 		"player3": null,
 		"song": "Cover Up",
