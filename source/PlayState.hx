@@ -408,7 +408,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		var path:String = Paths.getPreloadPath('data/' + songName + '/info.txt');
+		/*var path:String = Paths.getPreloadPath('data/' + songName + '/info.txt');
 
 		#if MODS_ALLOWED
 		var modPath:String = Paths.modFolders('data/' + songName + '/info.txt');
@@ -422,6 +422,7 @@ class PlayState extends MusicBeatState
 			songAuthor = Assets.getText(path);
 		}
 		#end
+		*/
 
 		var stageData:StageFile = StageData.getStageFile(curStage);
 		if(stageData == null) { //Stage couldn't be found, create a dummy stage for preventing a crash

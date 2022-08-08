@@ -387,7 +387,7 @@ class FreeplayState extends MusicBeatState
 
 			if(curSelected == spr.ID)
 			{
-				nameArt.loadGraphic(Paths.image('freeplay/names/' + songs[spr.ID].songName.toLowerCase() + '_name'));y
+				nameArt.loadGraphic(Paths.image('freeplay/names/' + songs[spr.ID].songName.toLowerCase() + '_name'));
 				for(i in 0...artsSelect.members.length)
 				{
 					if(spr.ID == artsSelect.members[i].ID)
