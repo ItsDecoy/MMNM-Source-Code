@@ -117,6 +117,7 @@ class PlayState extends MusicBeatState
 	public static var isPixelStage:Bool = false;
 	public static var isNESstage:Bool = false;
 	public static var SONG:SwagSong = null;
+	public static var songAuthor:String = 'unknown';
 	public static var isStoryMode:Bool = false;
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
@@ -406,6 +407,21 @@ class PlayState extends MusicBeatState
 					curStage = 'stage';
 			}
 		}
+
+		var path:String = Paths.getPreloadPath('data/' + songName + '/info.txt');
+
+		#if MODS_ALLOWED
+		var modPath:String = Paths.modFolders('data/' + songName + '/info.txt');
+		if(FileSystem.exists(modPath)) {
+			songAuthor = Assets.getText(modPath);
+		} else if(FileSystem.exists(path)) {
+			songAuthor = Assets.getText(path);
+		}
+		#else
+		if(Assets.exists(path)) {
+			songAuthor = Assets.getText(path);
+		}
+		#end
 
 		var stageData:StageFile = StageData.getStageFile(curStage);
 		if(stageData == null) { //Stage couldn't be found, create a dummy stage for preventing a crash
@@ -3412,6 +3428,18 @@ class PlayState extends MusicBeatState
 				}
 			});
 		}
+	}
+
+	public static function getCharacterColor(character:String):FlxColor
+	{
+		switch (character)
+		{
+			case 'gf' | 'girlfriend':
+				return FlxColor.fromRGB(instance.gf.healthColorArray[0], instance.gf.healthColorArray[1], instance.gf.healthColorArray[2]);
+			case 'bf' | 'boyfriend':
+				return FlxColor.fromRGB(instance.boyfriend.healthColorArray[0], instance.boyfriend.healthColorArray[1], instance.boyfriend.healthColorArray[2]);
+			default:
+		}		return FlxColor.fromRGB(instance.dad.healthColorArray[0], instance.dad.healthColorArray[1], instance.dad.healthColorArray[2]);
 	}
 
 	function snapCamFollowToPos(x:Float, y:Float) {

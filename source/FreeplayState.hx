@@ -18,7 +18,6 @@ import lime.utils.Assets;
 import flixel.system.FlxSound;
 import openfl.utils.Assets as OpenFlAssets;
 import flixel.addons.display.FlxBackdrop;
-import WeekData;
 #if MODS_ALLOWED
 import sys.FileSystem;
 #end
@@ -54,6 +53,8 @@ class FreeplayState extends MusicBeatState
 	var arts:FlxTypedGroup<FlxSprite>;
 	var artsSelect:FlxTypedGroup<FlxSprite>;
 	var nameArt:FlxSprite;
+
+	var timeElapsed:Float = 0;
 
 	override function create()
 	{
@@ -175,26 +176,32 @@ class FreeplayState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+		timeElapsed += 1 * elapsed;
+
 		if(bg != null)
 			bg.velocity.set(25, 0);
 
+		var speed = 12;
 		arts.forEach(function(spr:FlxSprite){
-			var x = ((FlxG.width / 2) - spr.frameWidth / 2) + (575 * (spr.ID - curSelected));
-			if(spr.x != x)
-				spr.x = FlxMath.lerp(spr.x, x, CoolUtil.boundTo(elapsed * 9, 0, 1));
-
+			var x:Float = ((FlxG.width / 2) - spr.frameWidth / 2) + (575 * (spr.ID - curSelected));
+			
 			if(spr.ID == curSelected)
 			{
-				spr.scale.x = FlxMath.lerp(spr.scale.x, 1, CoolUtil.boundTo(elapsed * 6, 0, 1));
-				spr.scale.y = FlxMath.lerp(spr.scale.y, 1, CoolUtil.boundTo(elapsed * 6, 0, 1));
+				spr.scale.x = FlxMath.lerp(spr.scale.x, 1, CoolUtil.boundTo(elapsed * speed, 0, 1));
+				spr.scale.y = FlxMath.lerp(spr.scale.y, 1, CoolUtil.boundTo(elapsed * speed, 0, 1));
+				spr.y = (Math.sin(timeElapsed * 3) * 8);
 			}
 			else
 			{
-				spr.scale.x = FlxMath.lerp(spr.scale.x, 0.75, CoolUtil.boundTo(elapsed * 6, 0, 1));
-				spr.scale.y = FlxMath.lerp(spr.scale.y, 0.75, CoolUtil.boundTo(elapsed * 6, 0, 1));
+				spr.scale.x = FlxMath.lerp(spr.scale.x, 0.75, CoolUtil.boundTo(elapsed * speed, 0, 1));
+				spr.scale.y = FlxMath.lerp(spr.scale.y, 0.75, CoolUtil.boundTo(elapsed * speed, 0, 1));
+				spr.y = 0;
 			}
 
+			spr.x = FlxMath.lerp(spr.x, x, CoolUtil.boundTo(elapsed * speed, 0, 1));
+
 			artsSelect.members[spr.ID].x = spr.x;
+			artsSelect.members[spr.ID].y = spr.y;
 			artsSelect.members[spr.ID].scale.set(spr.scale.x, spr.scale.y);
 		});
 
