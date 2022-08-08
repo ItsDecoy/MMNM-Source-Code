@@ -2,7 +2,7 @@ function onCreate()
 	-- background shit
 	makeLuaSprite('Whole-Ah Castle', 'stageassets/mariobg', -550, -400);
 	addLuaSprite('Whole-Ah Castle', false);
-	scaleObject('Whole-Ah Castle', 0.75, 0.75);
+	scaleObject('Whole-Ah Castle', 0.7, 0.7);
 	
 	
 

@@ -1,7 +1,7 @@
 {
 	"song": {
-		"player1": "bf",
-		"gfVersion": "gf-scaled",
+		"player1": "bf-plumber",
+		"gfVersion": "gf-plumber-scaled",
 		"notes": [
 			{
 				"sectionNotes": [],
