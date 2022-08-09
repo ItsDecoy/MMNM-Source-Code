@@ -10,7 +10,7 @@ function onCreate()
 		setScrollFactor('Sir Strife',0.8,0.8)
 
 	
-	makeLuaSprite('Sir Strife1','falseHero/Mr.Strife',1250,500);
+	makeLuaSprite('Sir Strife1','falseHero/Mr.Strife',1050,300);
 		addLuaSprite('Sir Strife1',false)
 		scaleObject('Sir Strife1',0.8,0.8)
 		setScrollFactor('Sir Strife1',0.8,0.8)
@@ -52,9 +52,9 @@ function onCreate()
 		scaleObject('DeadToadAlert',0.9,0.9)
 		setScrollFactor('DeadToadAlert',0.9,0.9);
 				
-   	makeLuaSprite('DeadToadAlert2','falseHero/mxfalse_hero_bg_wall',-420,-150);
+   	makeLuaSprite('DeadToadAlert2','falseHero/mxfalse_hero_bg_wall',-200,-170);
 		addLuaSprite('DeadToadAlert2',false);
-		scaleObject('DeadToadAlert2',0.8,0.8)
+		scaleObject('DeadToadAlert2',0.8,0.8);
 
 
 
@@ -73,8 +73,8 @@ function onUpdate(elapsed)
 daElapsed = elapsed * 30
 	i = i + daElapsed
 	
-	setProperty('Sir Strife1.y', (math.sin(i/250)*65) + 400);
-	yy = (math.sin(i/100)*45) - 400
+	setProperty('Sir Strife1.x', (math.sin(i/250)*65) + 1400);
+	yy = (math.sin(i/250)*45) - 1000
 
 daElapsed = elapsed * 30
 	i = i + daElapsed
