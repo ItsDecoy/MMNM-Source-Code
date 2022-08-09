@@ -13,10 +13,10 @@ function onCreate()
 	addLuaSprite('Cloud', false);
 	setScrollFactor('Cloud', 0.7, 0.7)
 	
-	makeLuaSprite('GoobShad', folder..'BG-Goombas-Shadow', 200, 700);
+	makeLuaSprite('GoobShad', folder..'BG-Goombas-Shadow', 200, 720);
 	addLuaSprite('GoobShad', false);
 
-	makeLuaSprite('MarShad', folder..'BG-Mario-shadow', 720, 650);
+	makeLuaSprite('MarShad', folder..'BG-Mario-shadow', 705, 650);
 	addLuaSprite('MarShad', false);
 	
 	close(true)
