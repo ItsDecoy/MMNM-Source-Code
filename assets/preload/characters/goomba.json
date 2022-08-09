@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				30,
 				-251
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Goomb Idle"
+			"fps": 24,
+			"name": "Goomb Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				49,
 				-241
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Goomb Left"
+			"fps": 24,
+			"name": "Goomb Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				39,
 				-250
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Goomb Down"
+			"fps": 24,
+			"name": "Goomb Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				9,
 				-191
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Goomb Up"
+			"fps": 24,
+			"name": "Goomb Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				21,
 				-241
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Goomb Right"
+			"fps": 24,
+			"name": "Goomb Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/goomba",
 	"position": [
-		0,
-		0
+		-20,
+		120
 	],
 	"healthicon": "icon-goomb",
 	"flip_x": false,

@@ -101,8 +101,8 @@
 		},
 		{
 			"offsets": [
-				76,
-				30
+				-14,
+				-90
 			],
 			"loop": false,
 			"fps": 24,
@@ -112,8 +112,8 @@
 		},
 		{
 			"offsets": [
-				76,
-				30
+				-14,
+				-90
 			],
 			"loop": true,
 			"fps": 24,
@@ -123,8 +123,8 @@
 		},
 		{
 			"offsets": [
-				76,
-				30
+				-14,
+				-90
 			],
 			"loop": false,
 			"fps": 25,
@@ -136,8 +136,8 @@
 	"no_antialiasing": false,
 	"image": "characters/Mariotakespee",
 	"position": [
-		0,
-		350
+		-110,
+		300
 	],
 	"healthicon": "icon-pissm",
 	"flip_x": true,
