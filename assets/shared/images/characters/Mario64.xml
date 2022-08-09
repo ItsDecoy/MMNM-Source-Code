@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Mario64.png"><SubTexture name="Mario64 idle0000" x="2669" y="765" width="283" height="362" frameX="-739" frameY="-247" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0001" x="2395" y="0" width="274" height="392" frameX="-740" frameY="-250" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0002" x="1696" y="1920" width="252" height="396" frameX="-742" frameY="-256" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0003" x="1975" y="423" width="264" height="420" frameX="-728" frameY="-263" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0004" x="414" y="1484" width="338" height="426" frameX="-668" frameY="-273" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0005" x="1299" y="1920" width="397" height="407" frameX="-641" frameY="-263" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0006" x="1079" y="1023" width="394" height="440" frameX="-651" frameY="-254" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0007" x="0" y="2336" width="362" height="385" frameX="-667" frameY="-247" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0008" x="2669" y="1127" width="295" height="352" frameX="-685" frameY="-242" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0009" x="2669" y="0" width="312" height="389" frameX="-681" frameY="-249" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0010" x="1948" y="1920" width="347" height="396" frameX="-685" frameY="-258" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0011" x="752" y="1484" width="320" height="424" frameX="-682" frameY="-271" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0012" x="345" y="1920" width="295" height="414" frameX="-694" frameY="-263" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0013" x="1388" y="1484" width="256" height="423" frameX="-716" frameY="-257" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0014" x="1644" y="1484" width="237" height="423" frameX="-741" frameY="-252" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0015" x="2669" y="389" width="273" height="376" frameX="-740" frameY="-249" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 idle0016" x="2669" y="765" width="283" height="362" frameX="-739" frameY="-247" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 left0000" x="0" y="1920" width="345" height="416" frameX="-659" frameY="-234" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 left0001" x="640" y="1920" width="304" height="413" frameX="-674" frameY="-230" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 left0002" x="1563" y="440" width="259" height="435" frameX="-692" frameY="-227" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 right0000" x="944" y="1920" width="355" height="410" frameX="-699" frameY="-233" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 right0001" x="1072" y="1484" width="316" height="424" frameX="-710" frameY="-228" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 right0002" x="399" y="1023" width="270" height="451" frameX="-723" frameY="-225" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 up0000" x="669" y="1023" width="207" height="445" frameX="-703" frameY="-212" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 up0001" x="1771" y="875" width="196" height="424" frameX="-711" frameY="-221" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 up0002" x="1975" y="1262" width="198" height="417" frameX="-717" frameY="-231" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 down0000" x="1563" y="875" width="208" height="435" frameX="-747" frameY="-250" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 down0001" x="876" y="1023" width="203" height="445" frameX="-742" frameY="-241" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 down0002" x="798" y="519" width="213" height="453" frameX="-733" frameY="-232" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss left0000" x="815" y="0" width="363" height="506" frameX="-698" frameY="-185" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss left0001" x="432" y="519" width="366" height="488" frameX="-686" frameY="-199" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss left0002" x="1178" y="478" width="328" height="469" frameX="-685" frameY="-214" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss right0000" x="418" y="0" width="397" height="516" frameX="-687" frameY="-176" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss right0001" x="0" y="0" width="418" height="519" frameX="-694" frameY="-187" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss right0002" x="0" y="519" width="432" height="504" frameX="-703" frameY="-199" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss up0000" x="0" y="1484" width="414" height="436" frameX="-692" frameY="-201" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss up0001" x="1975" y="0" width="420" height="423" frameX="-694" frameY="-191" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss up0002" x="1975" y="843" width="412" height="419" frameX="-697" frameY="-187" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss down0000" x="1178" y="0" width="385" height="478" frameX="-702" frameY="-209" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss down0001" x="1563" y="0" width="412" height="440" frameX="-734" frameY="-258" frameWidth="1280" frameHeight="720" />
+<SubTexture name="Mario64 miss down0002" x="0" y="1023" width="399" height="461" frameX="-751" frameY="-244" frameWidth="1280" frameHeight="720" />
+</TextureAtlas>

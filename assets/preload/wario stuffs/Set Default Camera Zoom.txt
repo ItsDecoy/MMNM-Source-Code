@@ -1,0 +1,3 @@
+Set the Default Zoom of the Main Camera
+
+Value 1: Zoom Multiplier (default is 1)
