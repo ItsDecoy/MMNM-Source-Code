@@ -4697,7 +4697,7 @@ class PlayState extends MusicBeatState
 		}
 
 		var scale = 1.26;
-		var tweenDur = Conductor.crochet / 2900;
+		var tweenDur = Conductor.crochet / 3000;
 		iconP1scale = scale;
 		iconP2scale = scale;
 

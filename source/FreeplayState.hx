@@ -116,7 +116,7 @@ class FreeplayState extends MusicBeatState
 			artCover.screenCenter();
 			artCover.ID = i;
 			artCover.x += i * 575;
-			artCover.antialiasing = false;
+			artCover.antialiasing = ClientPrefs.globalAntialiasing;
 			arts.add(artCover);
 			
 			var artCoverSelect = new FlxSprite().loadGraphic(Paths.image('freeplay/art/' + songs[i].songName.toLowerCase() + '_select', 'preload'));
