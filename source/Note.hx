@@ -100,13 +100,13 @@ class Note extends FlxSprite
 			switch(value) {
 				case 'Peach Note':
 					ignoreNote = mustPress;
-					reloadNote('PEACH');
+					reloadNote('', 'PEACHNOTE_assets');
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;
 					missHealth = 0.3;
-				case 'Jump NOTE':
-					reloadNote('MX');
+				case 'Jump Note':
+					reloadNote('', 'JUMPNOTE_assets');
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;

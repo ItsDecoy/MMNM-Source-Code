@@ -2081,7 +2081,7 @@ class PlayState extends MusicBeatState
 					trace(int);
 
 					var note:Note = new Note(newEventNote[0] + amount, Std.int(int % 4));
-					note.noteType = 'mxNOTE';
+					note.noteType = 'Jump Note';
 					note.noAnimation = true;
 					note.mustPress = true;
 					unspawnNotes.push(note);
@@ -4066,7 +4066,7 @@ class PlayState extends MusicBeatState
 		});
 		combo = 0;
 		
-		if(daNote.noteType == 'mxNOTE')
+		if(daNote.noteType == 'Jump Note')
 		{
 			FlxG.camera.shake(0.015, 0.5);
 			camHUD.shake(0.0125, 0.5);
@@ -4288,12 +4288,12 @@ class PlayState extends MusicBeatState
 			}
 
 			switch(note.noteType) {
-				case 'peachNote':
+				case 'Peach Note':
 					if(peachGate.y > peachValue)
 						FlxG.camera.shake(0.0025, 0.1);
 						camHUD.shake(0.0075, 0.1);
 						peachGate.y -= 150;
-				case 'mxNOTE':
+				case 'Jump Note':
 					trace('dodging');
 					dodgeTimer = 1;
 
