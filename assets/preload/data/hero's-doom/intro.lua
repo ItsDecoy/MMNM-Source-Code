@@ -2,12 +2,8 @@ local mxLines = {'Boyfriend', 'rapping', 'doesnt', 'get', 'you', 'Far'}
 local camActivated = false
 
 function onCreatePost()
-	setProperty('camHUD.visible', false)
-	
-	makeLuaSprite('DarkBox', '', 0, 0);
-	makeGraphic('DarkBox', screenWidth, screenHeight, '000000')
-	setObjectCamera('DarkBox', 'camOther');
-	addLuaSprite('DarkBox', false);
+	triggerEvent('Camera Fade', '0', '0')
+	triggerEvent('HUD Fade', '0', '0')
 	
 	for i=1,#mxLines do
 		makeLuaSprite('mxLine'..i,'MX/'..mxLines[i],225,100);
@@ -23,16 +19,7 @@ function lineVisible(line, fadeTime)
 	doTweenAlpha(line..'AlphaTween', line, 0, fadeTime, linear);
 end
 
-function onUpdate()
-	-- This exists just to prevent the camera doesn't stay black if you skipped the time in charting mode
-	if not camActivated and curBeat >= 32 then
-		camActivated = true
-		setProperty('DarkBox.visible', false);
-		setProperty('camHUD.visible', true)
-	end
-end
-
-function onSongStart() -- 'BOYFRIEND' Done separate because onBeatHit() isn't triggered in beat 0
+function onSongStart() -- 'BOYFRIEND' Done separate because onBeatHit() isn't triggered in beat 0 :(
 	-- BOYFRIEND
 	lineVisible('mxLine1', 3.5)
 end

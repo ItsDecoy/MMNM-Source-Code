@@ -152,9 +152,8 @@ class PlayState extends MusicBeatState
 	public var camZoomingSpeed:Float = 4;
 
 	public var camTween:FlxTween;
-	public var camGameAlphaTween:FlxTween;
 	public var camHUDAlphaTween:FlxTween;
-	public var camOtherAlphaTween:FlxTween;
+	public var camBlackAlphaTween:FlxTween;
 
 	private var curSong:String = "";
 
@@ -194,13 +193,13 @@ class PlayState extends MusicBeatState
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
 	public var camHUD:FlxCamera;
+	public var camBlack:FlxCamera;
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
 
 	public var iconP1scale:Float = 1;
 	public var iconP2scale:Float = 1;
-	// for lua scripts just in case - Ighby
 	public var iconP1ScaleTween:FlxTween;
 	public var iconP2ScaleTween:FlxTween;
 
@@ -278,6 +277,8 @@ class PlayState extends MusicBeatState
 	public var opponentCameraOffset:Array<Float> = null;
 	public var girlfriendCameraOffset:Array<Float> = null;
 
+	var prevCamFade:Float = 0;
+
 	#if desktop
 	// Discord RPC variables
 	var storyDifficultyText:String = "";
@@ -342,12 +343,15 @@ class PlayState extends MusicBeatState
 
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
+		camBlack = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
+		camBlack.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
+		FlxG.cameras.add(camBlack);
 		FlxG.cameras.add(camHUD);
 		FlxG.cameras.add(camOther);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
@@ -1190,6 +1194,12 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
+
+		var black = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		black.scrollFactor.set();
+		add(black);
+
+		black.cameras = [camBlack];
 
 		startingSong = true;
 
@@ -2215,12 +2225,10 @@ class PlayState extends MusicBeatState
 				iconP2ScaleTween.active = false;
 			if (camTween != null)
 				camTween.active = false;
-			if (camGameAlphaTween != null)
-				camGameAlphaTween.active = false;
 			if (camHUDAlphaTween != null)
 				camHUDAlphaTween.active = false;
-			if (camOtherAlphaTween != null)
-				camOtherAlphaTween.active = false;
+			if (camBlackAlphaTween != null)
+				camBlackAlphaTween.active = false;
 
 			if(blammedLightsBlackTween != null)
 				blammedLightsBlackTween.active = false;
@@ -2268,12 +2276,10 @@ class PlayState extends MusicBeatState
 				iconP2ScaleTween.active = true;
 			if (camTween != null)
 				camTween.active = true;
-			if (camGameAlphaTween != null)
-				camGameAlphaTween.active = true;
 			if (camHUDAlphaTween != null)
 				camHUDAlphaTween.active = true;
-			if (camOtherAlphaTween != null)
-				camOtherAlphaTween.active = true;
+			if (camBlackAlphaTween != null)
+				camBlackAlphaTween.active = true;
 
 			if(blammedLightsBlackTween != null)
 				blammedLightsBlackTween.active = true;
@@ -2913,7 +2919,27 @@ class PlayState extends MusicBeatState
 	}
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String) {
-		switch(eventName) {
+		switch(eventName)
+		{
+			case 'MX Stomp':
+				if(dad.curCharacter.toLowerCase() == 'mx')
+				{
+					dad.playAnim('Stomp');
+					dad.specialAnim = true;
+					dad.animation.finishCallback = function(name:String){
+						if(name.toLowerCase() == 'Stomp')
+						{
+							dad.specialAnim = false;
+						}
+					}
+				}
+			case 'Wario Slam':
+				var var1:Float = Std.parseFloat(value1);
+				if(Math.isNaN(var1)) var1 = 0;
+
+				camGame.shake(0.02, 0.1);
+				camHUD.shake(0.025, 0.1);
+				health -= var1;
 			case 'Hey!':
 				var value:Int = 2;
 				switch(value1.toLowerCase().trim()) {
@@ -3087,20 +3113,6 @@ class PlayState extends MusicBeatState
 					bgGhouls.dance(true);
 					bgGhouls.visible = true;
 				}
-			
-			case 'MX Stomp':
-				if(dad.curCharacter.toLowerCase() == 'mx')
-				{
-					dad.playAnim('Stomp');
-					dad.specialAnim = true;
-					dad.animation.finishCallback = function(name:String){
-						if(name.toLowerCase() == 'Stomp')
-						{
-							dad.specialAnim = false;
-						}
-					}
-				}
-
 			case 'Play Animation':
 				//trace('Anim to play: ' + value1);
 				var char:Character = dad;
@@ -3275,55 +3287,46 @@ class PlayState extends MusicBeatState
 					});
 				}
 			case 'Camera Fade':
-				var split:Array<String> = value2.split(',');
-				var alpha:Float = 0;
-				var duration:Float = 0;
-				if(split[0] != null) alpha = Std.parseFloat(split[0].trim());
-				if(split[1] != null) duration = Std.parseFloat(split[1].trim());
-				if(Math.isNaN(alpha)) alpha = 0;
-				if(Math.isNaN(duration)) duration = 0;
+				var leAlpha:Float = Std.parseFloat(value1);
+				if(Math.isNaN(leAlpha)) leAlpha = 1;
+
+				leAlpha = 1 - leAlpha;
+
+				var duration:Float = Std.parseFloat(value2);
+				if(Math.isNaN(duration)) duration = 1;
 
 				if (duration > 0)
 				{
-					switch (value1.toLowerCase())
-					{
-						case 'camhud':
-							if (camHUDAlphaTween != null) camHUDAlphaTween.cancel();
-							camHUDAlphaTween = FlxTween.tween(camHUD, {alpha: alpha}, duration, {ease: FlxEase.linear, onComplete:
-								function (twn:FlxTween)
-								{
-									camHUDAlphaTween = null;
-								}
-							});
-						case 'camother':
-							if (camOtherAlphaTween != null) camOtherAlphaTween.cancel();
-							camOtherAlphaTween = FlxTween.tween(camOther, {alpha: alpha}, duration, {ease: FlxEase.linear, onComplete:
-								function (twn:FlxTween)
-								{
-									camOtherAlphaTween = null;
-								}
-							});
-						default:
-							if (camGameAlphaTween != null) camGameAlphaTween.cancel();
-							camGameAlphaTween = FlxTween.tween(camGame, {alpha: alpha}, duration, {ease: FlxEase.linear, onComplete:
-								function (twn:FlxTween)
-								{
-									camGameAlphaTween = null;
-								}
-							});
-					}
+					camBlackAlphaTween = FlxTween.tween(camBlack, {alpha: leAlpha}, duration, {ease: FlxEase.linear, onComplete:
+						function (twn:FlxTween)
+						{
+							camBlackAlphaTween = null;
+						}
+					});
 				}
 				else
 				{
-					switch (value1.toLowerCase())
-					{
-						case 'camhud':
-							camHUD.alpha = alpha;
-						case 'camother':
-							camOther.alpha = alpha;
-						default:
-							camGame.alpha = alpha;
-					}
+					camBlack.alpha = leAlpha;
+				}
+			case 'HUD Fade':
+				var leAlpha:Float = Std.parseFloat(value1);
+				if(Math.isNaN(leAlpha)) leAlpha = 1;
+
+				var duration:Float = Std.parseFloat(value2);
+				if(Math.isNaN(duration)) duration = 1;
+
+				if (duration > 0)
+				{
+					camHUDAlphaTween = FlxTween.tween(camHUD, {alpha: leAlpha}, duration, {ease: FlxEase.linear, onComplete:
+						function (twn:FlxTween)
+						{
+							camHUDAlphaTween = null;
+						}
+					});
+				}
+				else
+				{
+					camHUD.alpha = leAlpha;
 				}
 			case 'Zoom Camera':
 				if (camTween != null)

@@ -1,14 +1,15 @@
 local i = 0
-local blacked = true
+local getReal = false
 
 function onCreatePost()
-	makeLuaSprite('black', '', 0, 0);
-	makeGraphic('black',1280,720,'000000')
-	setProperty('black.scale.x',2)
-	setProperty('black.scale.y',2)
-	setLuaSpriteScrollFactor('black',0,0)
-	addLuaSprite('black', true);
-	doTweenAlpha('iconfade', 'iconP2', 0, 0.1, linear);
+	setProperty('iconP1.visible', false);
+	setProperty('iconP2.visible', false);
+	setProperty('healthBar.visible', false);
+	setProperty('healthBarBG.visible', false);
+	setProperty('scoreTxt.visible', false);
+	
+	triggerEvent('Camera Fade', '0', '0')
+	triggerEvent('HUD Fade', '0', '0')
 	
 	makeLuaSprite('love','Coronation/love', 360, 400);
 	addLuaSprite('love', false);
@@ -25,27 +26,35 @@ function onCreatePost()
 	--addLuaScript('lua/CameraFollowPos')
 end
 
+function onSongStart()
+	-- Putting this outside onCreatePost just in case
+	for i = 0,3 do
+		setPropertyFromGroup('opponentStrums', i, 'visible', false);
+	end
+end
+
 function onUpdate(elapsed)
 	i = i + elapsed
 	setProperty('dad.y', (math.sin(i * 1.2)*80) + 320)
 	
-	if blacked and curStep > 384 then
-		setProperty('blackfade.visible',false);
-		blacked = false
+	if curStep >= 320 and not getReal then
+		if not hideHud then
+			setProperty('iconP1.visible', true);
+			setProperty('iconP2.visible', true);
+			setProperty('healthBar.visible', true);
+			setProperty('healthBarBG.visible', true);
+			setProperty('scoreTxt.visible', true);
+			setProperty('opponentStrums.visible', true);
+			for i = 0,3 do
+				setPropertyFromGroup('opponentStrums', i, 'visible', true);
+			end
+		end
+		setProperty('dad.visible',true);
+		getReal = true
 	end
 end
 
 function onStepHit()
-	-- Black Fades.
-	if curStep == 64 then
-		doTweenAlpha('blackfade', 'black', 0, 0.7, linear);
-	end
-	
-	-- Black Appears again.
-	if curStep == 280 then
-		doTweenAlpha('blackfade', 'black', 1, 0.7, linear);
-	end 
-	
 	-- She loves...
 	if curStep == 292 then
 		doTweenY('lovey', 'love', 0, 0.5, 'sineOut')
@@ -60,13 +69,5 @@ function onStepHit()
 	if curStep == 320 then
 		doTweenY('redy', 'red', 400, 0.9, 'sineOut')
 		doTweenY('lovey', 'love', 400, 0.9, 'sineOut')
-		setProperty('dad.visible',true);
 	end
-
-	-- Black Fades again and peach's icon becomes visible too.
-	if curStep == 384 then
-		blacked = false
-		doTweenAlpha('iconfade', 'iconP2', 1, 0.7, linear);
-		doTweenAlpha('blackfade', 'black', 0, 0.7, linear);
-	end 
 end

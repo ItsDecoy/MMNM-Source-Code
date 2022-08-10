@@ -2,7 +2,7 @@ local dadScaleX = 1
 local dadScaleY = 1
 
 function onCreate()
-	local location = ''
+	local location = 'hallway/'
 	
 	makeAnimatedLuaSprite('hall', location..'Hallway', -500, 180);
 	addAnimationByPrefix('hall', 'idle', 'Hallway idle', 60, true)
@@ -21,7 +21,7 @@ function onCreatePost()
 end
 
 function onUpdate()
-	triggerEvent('Camera Follow Pos', 520, 780)
+	--triggerEvent('Camera Follow Pos', 520, 780)
 	
 	local dist = 1 - getProperty('health')
 	setProperty('dad.scale.x', dadScaleX + (dist))

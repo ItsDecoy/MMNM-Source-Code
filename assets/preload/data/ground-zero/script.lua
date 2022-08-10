@@ -1,6 +1,10 @@
 local barScale = 1
 local slamHealthGain = 1
 
+function onCreate()
+	addLuaScript('lua/reverseStrum')
+end
+
 function onCreatePost()
 	slamHealthGain = getProperty('healthGain')
 	if slamHealthGain > 1 then
@@ -11,10 +15,6 @@ function onCreatePost()
 	end
 	setProperty('healthGain', getProperty('healthGain') * 0.5)
 	setProperty('camHUD.alpha', 0)
-end
-
-function onSongStart()
-	doTweenZoom('cameraIntroTween', 'camGame', 1.1, 10, 'cubeInOut')
 end
 
 function onUpdatePost()
