@@ -2,6 +2,7 @@
 	"directory": "",
 	"defaultZoom": 0.7,
 	"isPixelStage": false,
+	"stageStyle": "n64",
 
 	"boyfriend": [160, 420],
 	"girlfriend": [500, 420],

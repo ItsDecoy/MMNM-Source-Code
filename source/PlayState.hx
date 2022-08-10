@@ -115,7 +115,7 @@ class PlayState extends MusicBeatState
 	public var gfGroup:FlxSpriteGroup;
 	public static var curStage:String = '';
 	public static var isPixelStage:Bool = false;
-	public static var isNESstage:Bool = false;
+	public static var stageStyle:String = '';
 	public static var SONG:SwagSong = null;
 	public static var songAuthor:String = 'unknown';
 	public static var isStoryMode:Bool = false;
@@ -433,7 +433,7 @@ class PlayState extends MusicBeatState
 				directory: "",
 				defaultZoom: 0.9,
 				isPixelStage: false,
-				isNESstage: false,
+				stageStyle: "",
 			
 				boyfriend: [770, 100],
 				girlfriend: [400, 130],
@@ -451,7 +451,7 @@ class PlayState extends MusicBeatState
 
 		defaultCamZoom = stageCamZoom;
 		isPixelStage = stageData.isPixelStage;
-		isNESstage = stageData.isNESstage;
+		stageStyle = stageData.stageStyle.toLowerCase();
 		BF_X = stageData.boyfriend[0];
 		BF_Y = stageData.boyfriend[1];
 		GF_X = stageData.girlfriend[0];
@@ -810,7 +810,7 @@ class PlayState extends MusicBeatState
 				add(pillar);	
 		}
 
-		if (isNESstage)
+		if (stageStyle == 'nes' || stageStyle == 'n64')
 		{
 			var crt:CRTShader = new CRTShader();
 			camGame.setFilters([new ShaderFilter(crt)]);

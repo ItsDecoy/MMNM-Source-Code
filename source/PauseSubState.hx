@@ -1,5 +1,6 @@
 package;
 
+import flixel.util.FlxTimer;
 import flixel.group.FlxSpriteGroup;
 import Controls.Control;
 import flixel.FlxG;
@@ -23,7 +24,7 @@ class PauseSubState extends MusicBeatSubstate
 	static var curPage:Int = 0;
 	static var curSelected:Int = 0;
 
-	var next = '';
+	var prefix = '';
 
 	var grpMenuShit:FlxTypedGroup<PauseItem>;
 
@@ -32,8 +33,16 @@ class PauseSubState extends MusicBeatSubstate
 	var difficultyChoices = [];
 
 	var pauseMusic:FlxSound;
+
+	// Elements
+	var levelInfo:FlxText;
+	var songAuthor:FlxText;
+	var pauseSongCredit:FlxText;
+	var blueballedTxt:FlxText;
 	var practiceText:FlxText;
 	var skipTimeText:FlxText;
+	var chartingText:FlxText;
+
 	var curTime:Float = Math.max(0, Conductor.songPosition);
 	var menu:FlxSpriteGroup;
 
@@ -46,6 +55,8 @@ class PauseSubState extends MusicBeatSubstate
 	var arrowDown:FlxSprite;
 
 	var selectTimer:Float = 0;
+	var swagCounter:Int = 0;
+	var countdownStarted:Bool = false;
 
 	public static var songName:String = '';
 
@@ -53,11 +64,12 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		super();
 		if(CoolUtil.difficulties.length < 2) menuItemsOG.remove('Change Difficulty'); //No need to change difficulty if there is only one!
-		if (PlayState.isNESstage) next = '_nes';
+		if (PlayState.stageStyle != '') prefix = '_' + PlayState.stageStyle;
 
 		menu = new FlxSpriteGroup();
+		grpMenuShit = new FlxTypedGroup<PauseItem>();
 
-		FlxG.sound.play(Paths.sound('pause' + next), 1);
+		FlxG.sound.play(Paths.sound('pause' + prefix), 1);
 
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		bg.alpha = 0;
@@ -77,7 +89,7 @@ class PauseSubState extends MusicBeatSubstate
 		pageColorSprite.color = PlayState.getCharacterColor('dad');
 		menu.add(pageColorSprite);
 
-		var levelInfo:FlxText = new FlxText(pageSprite.x, pageSprite.y  + 20, 0, "", 55);
+		levelInfo = new FlxText(pageSprite.x, pageSprite.y  + 20, 0, "", 55);
 		levelInfo.text = PlayState.SONG.song.toUpperCase();
 		levelInfo.scrollFactor.set();
 		levelInfo.setFormat(Paths.font("SuperMario.ttf"), 55);
@@ -87,7 +99,7 @@ class PauseSubState extends MusicBeatSubstate
 		levelInfo.screenCenter(X);
 		menu.add(levelInfo);
 
-		var songAuthor:FlxText = new FlxText(levelInfo.x, levelInfo.y  + 40, 0, "", 24);
+		songAuthor = new FlxText(levelInfo.x, levelInfo.y  + 40, 0, "", 24);
 		songAuthor.text = 'By: ' + PlayState.songAuthor;
 		songAuthor.scrollFactor.set();
 		songAuthor.setFormat(Paths.font("Arial Rounded Bold.ttf"), 24);
@@ -98,7 +110,7 @@ class PauseSubState extends MusicBeatSubstate
 		songAuthor.screenCenter(X);
 		menu.add(songAuthor);
 
-		var pauseSongCredit:FlxText = new FlxText(pageSprite.x, pageSprite.y - 22, 0, "Pause Song By: willisaclown", 16);
+		pauseSongCredit = new FlxText(pageSprite.x, pageSprite.y - 22, 0, "Pause Song By: willisaclown", 16);
 		pauseSongCredit.scrollFactor.set();
 		pauseSongCredit.setFormat(Paths.font("Arial Rounded Bold.ttf"), 16);
 		pauseSongCredit.alignment = FlxTextAlign.CENTER;
@@ -108,7 +120,7 @@ class PauseSubState extends MusicBeatSubstate
 		pauseSongCredit.screenCenter(X);
 		menu.add(pauseSongCredit);
 
-		var blueballedTxt:FlxText = new FlxText(0, pageSprite.y + pageSprite.height, 0, "", 62);
+		blueballedTxt = new FlxText(0, pageSprite.y + pageSprite.height, 0, "", 62);
 		blueballedTxt.text = "GAME OVERS: " + PlayState.deathCounter;
 		blueballedTxt.scrollFactor.set();
 		blueballedTxt.alignment = FlxTextAlign.CENTER;
@@ -129,7 +141,7 @@ class PauseSubState extends MusicBeatSubstate
 		practiceText.visible = PlayState.instance.practiceMode;
 		add(practiceText);
 
-		var chartingText:FlxText = new FlxText(20, 15 + 101, 0, "CHARTING MODE", 32);
+		chartingText = new FlxText(20, 15 + 101, 0, "CHARTING MODE", 32);
 		chartingText.scrollFactor.set();
 		chartingText.setFormat(Paths.font('Arial Rounded Bold.ttf'), 32);
 		chartingText.x = FlxG.width - (chartingText.width + 20);
@@ -192,8 +204,6 @@ class PauseSubState extends MusicBeatSubstate
 			pauseMusic.loadEmbedded(Paths.music(Paths.formatToSongPath('Funky Mario Three')), true, true);
 		}
 
-		grpMenuShit = new FlxTypedGroup<PauseItem>();
-
 		changePage(0);
 		changeSelection(0);
 
@@ -214,6 +224,7 @@ class PauseSubState extends MusicBeatSubstate
 		menu.y -= 800;
 
 		FlxTween.tween(bg, {alpha: 0.75}, 0.8, {ease: FlxEase.quartInOut});
+		FlxTween.tween(pauseMusic, {volume: 0.25}, 2, {ease: FlxEase.linear});
 		FlxTween.tween(menu, {y: menu.y + 800}, 0.15, {ease: FlxEase.quartOut, onComplete:
 		function (twn:FlxTween)
 		{
@@ -244,17 +255,14 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		selectTimer += 1 * elapsed;
 
-		if (pauseMusic.volume < 0.25)
-			pauseMusic.volume += 0.15 * elapsed;
-
 		super.update(elapsed);
 
-		var upP = controls.UI_UP_P;
-		var downP = controls.UI_DOWN_P;
-		var accepted = controls.ACCEPT;
+		var upP = countdownStarted ? false : controls.UI_UP_P;
+		var downP = countdownStarted ? false : controls.UI_DOWN_P;
+		var accepted = countdownStarted ? false : controls.ACCEPT;
 
-		if (upP) if (changeSelection(-1)) FlxG.sound.play(Paths.sound('scrollMenu' + next), 1);
-		if (downP) if (changeSelection(1)) FlxG.sound.play(Paths.sound('scrollMenu' + next), 1);
+		if (upP) if (changeSelection(-1)) FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
+		if (downP) if (changeSelection(1)) FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
 
 		selectLeft.x = pageSprite.x + 70 - selectLeft.width + (Math.sin(selectTimer * 7) * 3);
 		selectRight.x = pageSprite.x + pageSprite.width - 70 - (Math.sin(selectTimer * 7) * 3);
@@ -265,13 +273,13 @@ class PauseSubState extends MusicBeatSubstate
 			case 'Skip Time':
 				if (controls.UI_LEFT_P)
 				{
-					FlxG.sound.play(Paths.sound('scrollMenu' + next), 1);
+					FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
 					curTime -= 1000;
 					holdTime = 0;
 				}
 				if (controls.UI_RIGHT_P)
 				{
-					FlxG.sound.play(Paths.sound('scrollMenu' + next), 1);
+					FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
 					curTime += 1000;
 					holdTime = 0;
 				}
@@ -315,7 +323,20 @@ class PauseSubState extends MusicBeatSubstate
 			switch (daSelected)
 			{
 				case "Continue":
-					close();
+					FlxG.sound.play(Paths.sound('pause' + prefix), 1);
+
+					FlxTween.cancelTweensOf(menu);
+					FlxTween.cancelTweensOf(levelInfo);
+					FlxTween.cancelTweensOf(pauseSongCredit);
+					FlxTween.cancelTweensOf(songAuthor);
+					FlxTween.cancelTweensOf(arrowDown);
+					FlxTween.cancelTweensOf(arrowUp);
+					FlxTween.cancelTweensOf(blueballedTxt);
+					FlxTween.cancelTweensOf(pauseMusic);
+
+					FlxTween.tween(menu, {y: menu.y - 800}, 0.15, {ease: FlxEase.quartIn});
+					FlxTween.tween(pauseMusic, {volume: 0}, 0.5, {ease: FlxEase.linear});
+					startCountdown();
 				case 'Change Difficulty':
 					menuItems = difficultyChoices;
 					regenMenu();
@@ -371,6 +392,101 @@ class PauseSubState extends MusicBeatSubstate
 		}
 	}
 
+	public function startCountdown()
+	{
+		countdownStarted = true;
+		new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
+		{
+			var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
+			introAssets.set('default', ['ready', 'set', 'go']);
+			introAssets.set('pixel', ['pixelUI/ready-pixel', 'pixelUI/set-pixel', 'pixelUI/date-pixel']);
+			var introSoundsSuffix:String = '';
+
+			var introAlts:Array<String> = introAssets.get('default');
+			var antialias:Bool = ClientPrefs.globalAntialiasing;
+
+			if(PlayState.isPixelStage) {
+				introSoundsSuffix = '-pixel';
+				introAlts = introAssets.get('pixel');
+				antialias = false;
+			}
+
+			switch (swagCounter)
+			{
+				case 0:
+					FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
+				case 1:
+					var countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
+					countdownReady.scrollFactor.set();
+					countdownReady.updateHitbox();
+
+					if (PlayState.isPixelStage)
+						countdownReady.setGraphicSize(Std.int(countdownReady.width * PlayState.daPixelZoom));
+
+					countdownReady.screenCenter();
+					countdownReady.antialiasing = antialias;
+					add(countdownReady);
+
+					FlxTween.tween(countdownReady, {alpha: 0}, Conductor.crochet / 1000, {
+						ease: FlxEase.cubeInOut,
+						onComplete: function(twn:FlxTween)
+						{
+							remove(countdownReady);
+							countdownReady.destroy();
+						}
+					});
+
+					FlxG.sound.play(Paths.sound('intro2' + introSoundsSuffix), 0.6);
+				case 2:
+					var countdownSet = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
+					countdownSet.scrollFactor.set();
+
+					if (PlayState.isPixelStage)
+						countdownSet.setGraphicSize(Std.int(countdownSet.width * PlayState.daPixelZoom));
+
+					countdownSet.screenCenter();
+					countdownSet.antialiasing = antialias;
+					add(countdownSet);
+
+					FlxTween.tween(countdownSet, {alpha: 0}, Conductor.crochet / 1000, {
+						ease: FlxEase.cubeInOut,
+						onComplete: function(twn:FlxTween)
+						{
+							remove(countdownSet);
+							countdownSet.destroy();
+						}
+					});
+
+					FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
+				case 3:
+					var countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
+					countdownGo.scrollFactor.set();
+
+					if (PlayState.isPixelStage)
+						countdownGo.setGraphicSize(Std.int(countdownGo.width * PlayState.daPixelZoom));
+
+					countdownGo.updateHitbox();
+					countdownGo.screenCenter();
+					countdownGo.antialiasing = antialias;
+					add(countdownGo);
+
+					FlxTween.tween(countdownGo, {alpha: 0}, Conductor.crochet / 1000, {
+						ease: FlxEase.cubeInOut,
+						onComplete: function(twn:FlxTween)
+						{
+							remove(countdownGo);
+							countdownGo.destroy();
+						}
+					});
+
+					FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
+				case 4:
+					close();
+			}
+			swagCounter += 1;
+		}, 5);
+	}
+
 	public static function restartSong(noTrans:Bool = false)
 	{
 		PlayState.instance.paused = true; // For lua
@@ -390,6 +506,7 @@ class PauseSubState extends MusicBeatSubstate
 
 	override function destroy()
 	{
+		FlxTween.cancelTweensOf(pauseMusic);
 		pauseMusic.destroy();
 
 		super.destroy();

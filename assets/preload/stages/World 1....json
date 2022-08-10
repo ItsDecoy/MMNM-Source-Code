@@ -2,7 +2,7 @@
 	"directory": "",
 	"defaultZoom": 0.8,
 	"isPixelStage": false,
-	"isNESstage": true,
+	"stageStyle": "nes",
 
 	"boyfriend": [305, 360],
 	"girlfriend": [400, 370],
