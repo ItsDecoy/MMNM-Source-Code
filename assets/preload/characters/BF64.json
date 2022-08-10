@@ -133,7 +133,7 @@
 			"name": "BF64 dead"
 		}
 	],
-	"no_antialiasing": false,
+	"no_antialiasing": true,
 	"image": "characters/BF64",
 	"position": [
 		-330,

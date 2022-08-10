@@ -2921,6 +2921,25 @@ class PlayState extends MusicBeatState
 	public function triggerEventNote(eventName:String, value1:String, value2:String) {
 		switch(eventName)
 		{
+			case 'MX Stomp':
+				if(dad.curCharacter.toLowerCase() == 'mx')
+				{
+					dad.playAnim('Stomp');
+					dad.specialAnim = true;
+					dad.animation.finishCallback = function(name:String){
+						if(name.toLowerCase() == 'Stomp')
+						{
+							dad.specialAnim = false;
+						}
+					}
+				}
+			case 'Wario Slam':
+				var var1:Float = Std.parseFloat(value1);
+				if(Math.isNaN(var1)) var1 = 0;
+
+				camGame.shake(0.02, 0.1);
+				camHUD.shake(0.025, 0.1);
+				health -= var1;
 			case 'Hey!':
 				var value:Int = 2;
 				switch(value1.toLowerCase().trim()) {
@@ -3077,25 +3096,7 @@ class PlayState extends MusicBeatState
 
 			case 'Kill Henchmen':
 				killHenchmen();
-			case 'MX Stomp':
-				if(dad.curCharacter.toLowerCase() == 'mx')
-				{
-					dad.playAnim('Stomp');
-					dad.specialAnim = true;
-					dad.animation.finishCallback = function(name:String){
-						if(name.toLowerCase() == 'Stomp')
-						{
-							dad.specialAnim = false;
-						}
-					}
-				}
-			case 'Wario Slam':
-				var var1:Float = Std.parseFloat(value1);
-				if(Math.isNaN(var1)) var1 = 0;
 
-				camGame.shake(0.02, 0.1);
-				camHUD.shake(0.025, 0.1);
-				health = Math.max(health - var1, 0.05);
 			case 'Add Camera Zoom':
 				if(ClientPrefs.camZooms && FlxG.camera.zoom < 1.35) {
 					var camZoom:Float = Std.parseFloat(value1);
