@@ -336,7 +336,9 @@ class PauseSubState extends MusicBeatSubstate
 
 					FlxTween.tween(menu, {y: menu.y - 800}, 0.15, {ease: FlxEase.quartIn});
 					FlxTween.tween(pauseMusic, {volume: 0}, 0.5, {ease: FlxEase.linear});
-					startCountdown();
+					if (PlayState.instance.startingSong) new FlxTimer().start(0.3, function(tmr:FlxTimer) { close(); });
+					else startCountdown();
+					
 				case 'Change Difficulty':
 					menuItems = difficultyChoices;
 					regenMenu();
