@@ -67,36 +67,6 @@
 				]
 			],
 			[
-				9365.85365853659,
-				[
-					[
-						"Camera Fade",
-						"1",
-						"0"
-					],
-					[
-						"HUD Fade",
-						"1",
-						"0"
-					],
-					[
-						"Add Camera Zoom",
-						"0.5",
-						"0.5"
-					],
-					[
-						"Set Property",
-						"camZoomingDecay",
-						"2"
-					],
-					[
-						"Set Property",
-						"cameraSpeed",
-						"2"
-					]
-				]
-			],
-			[
 				9658.53658536585,
 				[
 					[
