@@ -20,20 +20,16 @@ function onCreatePost()
 	setObjectOrder('gfGroup', 5)
 end
 
+function onMoveCamera(focus)
+	if focus == 'dad' then
+		setProperty('defaultCamZoom', 0.85)
+	else
+		setProperty('defaultCamZoom', 0.7)
+	end
+end
+
 function onUpdate()
-	--triggerEvent('Camera Follow Pos', 520, 780)
-	
 	local dist = 1 - getProperty('health')
 	setProperty('dad.scale.x', dadScaleX + (dist))
 	setProperty('dad.scale.y', dadScaleY + (dist))
-	
-	--[[
-	if keyPressed('space') then
-		if keyPressed('up') then
-			setProperty('health', getProperty('health') + 0.005)
-		end
-		if keyPressed('down') then
-			setProperty('health', getProperty('health') - 0.005)
-		end
-	end]]--
 end
