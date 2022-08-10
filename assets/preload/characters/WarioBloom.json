@@ -1,58 +1,57 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-4,
 				-71
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "WarioBloom down"
+			"fps": 24,
+			"name": "WarioBloom down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-5,
 				47
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "WarioBloom up"
+			"fps": 24,
+			"name": "WarioBloom up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				45,
 				-46
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "WarioBloom left"
+			"fps": 24,
+			"name": "WarioBloom left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-68,
 				-17
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "WarioBloom right"
+			"fps": 24,
+			"name": "WarioBloom right",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "",
+			"loop": false,
 			"fps": 24,
-			"name": "",
+			"anim": "",
 			"indices": [
 				2,
 				3,
@@ -82,17 +81,17 @@
 				27,
 				28,
 				29
-			]
+			],
+			"name": ""
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-5,
 				0
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "WarioBloom idle",
+			"anim": "idle",
 			"indices": [
 				1,
 				2,
@@ -123,7 +122,8 @@
 				27,
 				28,
 				29
-			]
+			],
+			"name": "WarioBloom idle"
 		}
 	],
 	"no_antialiasing": false,
@@ -140,7 +140,7 @@
 		0
 	],
 	"camera_position": [
-		-610,
+		-615,
 		-110
 	],
 	"sing_duration": 4,
