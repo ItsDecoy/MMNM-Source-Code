@@ -22,8 +22,6 @@ function onCreatePost()
     setObjectCamera('red','other')
 	
 	setProperty('dad.visible',false);
-	
-	--addLuaScript('lua/CameraFollowPos')
 end
 
 function onSongStart()

@@ -1,6 +1,4 @@
 function onCreate()
-	addLuaScript('lua/CameraFollowPos')
-	
 	makeLuaSprite('damn', 'IHY/damnit', 270, 400);
 	addLuaSprite('damn', true);
     setObjectCamera('damn','other')
