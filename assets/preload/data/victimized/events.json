@@ -1,0 +1,40 @@
+{
+	"song": {
+		"player1": "bf-plumber",
+		"player2": "MARIO",
+		"events": [
+			[
+				100571.428571429,
+				[
+					[
+						"Change Character",
+						"dad",
+						"Victim"
+					],
+					[
+						"Camera Fade",
+						"0",
+						"0"
+					],
+					[
+						"Camera Fade",
+						"1",
+						"2"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"gfVersion": "gf-plumber-scaled",
+		"player3": "gf",
+		"mania": 3,
+		"splashSkin": "noteSplashes",
+		"song": "Victimized",
+		"stage": "Donut Plains",
+		"validScore": true,
+		"arrowSkin": "SMWNOTE_assets",
+		"needsVoices": true,
+		"speed": 2.5,
+		"bpm": 105
+	}
+}

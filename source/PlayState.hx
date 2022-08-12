@@ -257,10 +257,13 @@ class PlayState extends MusicBeatState
 	var bf_xCAM:Float = 0;
 	var bf_yCAM:Float = 0;
 
-	var camAmount:Float = 25;
+	var camAmount:Float = 15;
 
 	var dad_xCAM:Float = 0;
 	var dad_yCAM:Float = 0;
+
+	var gf_xCAM:Float = 0;
+	var gf_yCAM:Float = 0;
 
 	public var defaultCamZoom:Float = 1.05;
 	public var stageCamZoom:Float = 1;
@@ -3374,7 +3377,7 @@ class PlayState extends MusicBeatState
 
 		if (gf != null && SONG.notes[id].gfSection)
 		{
-			camFollow.set(gf.getMidpoint().x, gf.getMidpoint().y);
+			camFollow.set(gf.getMidpoint().x + gf_xCAM, gf.getMidpoint().y + gf_yCAM);
 			camFollow.x += gf.cameraPosition[0] + girlfriendCameraOffset[0];
 			camFollow.y += gf.cameraPosition[1] + girlfriendCameraOffset[1];
 			tweenCamIn();
@@ -4206,25 +4209,44 @@ class PlayState extends MusicBeatState
 			{
 				char.playAnim(animToPlay, true);
 				char.holdTimer = 0;
-			}
 
-			switch (Math.abs(note.noteData))
-			{
-				case 2:
-					dad_yCAM = -camAmount;
-					dad_xCAM = 0;
-				case 3:
-					dad_xCAM = camAmount;
-					dad_yCAM = 0;
-				case 1:
-					dad_yCAM = camAmount;
-					dad_xCAM = 0;
-				case 0:
-					dad_xCAM = -camAmount;
-					dad_yCAM = 0;
+				if (char == gf)
+				{
+					switch (Math.abs(note.noteData))
+					{
+						case 2:
+							gf_yCAM = -camAmount;
+							gf_xCAM = 0;
+						case 3:
+							gf_xCAM = camAmount;
+							gf_yCAM = 0;
+						case 1:
+							gf_yCAM = camAmount;
+							gf_xCAM = 0;
+						case 0:
+							gf_xCAM = -camAmount;
+							gf_yCAM = 0;
+					}
+				}
+				else
+				{
+					switch (Math.abs(note.noteData))
+					{
+						case 2:
+							dad_yCAM = -camAmount;
+							dad_xCAM = 0;
+						case 3:
+							dad_xCAM = camAmount;
+							dad_yCAM = 0;
+						case 1:
+							dad_yCAM = camAmount;
+							dad_xCAM = 0;
+						case 0:
+							dad_xCAM = -camAmount;
+							dad_yCAM = 0;
+					}
+				}
 			}
-
-			moveCameraSection(Std.int(curStep / 16));
 		}
 
 		if (SONG.needsVoices)
@@ -4336,12 +4358,43 @@ class PlayState extends MusicBeatState
 					{
 						gf.playAnim(animToPlay + daAlt, true);
 						gf.holdTimer = 0;
+						switch (Math.abs(note.noteData))
+						{
+							case 2:
+								gf_yCAM = -camAmount;
+								gf_xCAM = 0;
+							case 3:
+								gf_xCAM = camAmount;
+								gf_yCAM = 0;
+							case 1:
+								gf_yCAM = camAmount;
+								gf_xCAM = 0;
+							case 0:
+								gf_xCAM = -camAmount;
+								gf_yCAM = 0;
+						}
 					}
 				}
 				else
 				{
 					boyfriend.playAnim(animToPlay + daAlt, true);
 					boyfriend.holdTimer = 0;
+
+					switch (Math.abs(note.noteData))
+					{
+						case 2:
+							bf_yCAM = -camAmount;
+							bf_xCAM = 0;
+						case 3:
+							bf_xCAM = camAmount;
+							bf_yCAM = 0;
+						case 1:
+							bf_yCAM = camAmount;
+							bf_xCAM = 0;
+						case 0:
+							bf_xCAM = -camAmount;
+							bf_yCAM = 0;
+					}
 				}
 
 				if(note.noteType == 'Hey!') {
@@ -4357,25 +4410,6 @@ class PlayState extends MusicBeatState
 						gf.heyTimer = 0.6;
 					}
 				}
-
-				
-				switch (Math.abs(note.noteData))
-				{
-					case 2:
-						bf_yCAM = -camAmount;
-						bf_xCAM = 0;
-					case 3:
-						bf_xCAM = camAmount;
-						bf_yCAM = 0;
-					case 1:
-						bf_yCAM = camAmount;
-						bf_xCAM = 0;
-					case 0:
-						bf_xCAM = -camAmount;
-						bf_yCAM = 0;
-				}
-
-				moveCameraSection(Std.int(curStep / 16));
 			}
 
 			if(cpuControlled) {

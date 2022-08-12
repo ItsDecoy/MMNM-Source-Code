@@ -1,32 +1,42 @@
+flamesIsMyBestie = {{-80,321}, {575,318}, {1225,313}}
+
 function onCreate()
+	local folder = 'IHY/'
 
-	makeLuaSprite('Sky','mafio/Mafia_BG5', -750, -55);
-	addLuaSprite('Sky', false);
-	scaleObject('Sky',1.7,1.7);
-
-	makeLuaSprite('Floor(to piss on)','mafio/Mafia_BG4', -500, -100);
-	addLuaSprite('Floor(to piss on)', false);
-	scaleObject('Floor(to piss on)', 1.4,1.4)
-
-	makeLuaSprite('Cloud','mafio/Mafia_BG3',-480, -120);
-	addLuaSprite('Cloud', false);
-	scaleObject('Cloud',1.4,1.4)	
+	makeLuaSprite('Smoke', folder..'coughcough', -750, -100);
+	addLuaSprite('Smoke', false);
+	setScrollFactor('Smoke', 0.5, 0.5)
 	
-	makeLuaSprite('GoobShad','mafio/Mafia_BG2', -120, 80);
-	addLuaSprite('GoobShad', false);
-	scaleObject('GoobShad',1.2,1.2)	
+	makeLuaSprite('ManInTheMirror', folder..'TheWallsHaveEYes', -750, -150);
+	addLuaSprite('ManInTheMirror', false);
+	scaleObject('ManInTheMirror',0.65,0.65);
+	setScrollFactor('ManInTheMirror', 0.7, 0.7)
+	 
+	makeLuaSprite('Backdrop', folder..'In the back walls', -500, -150);
+	addLuaSprite('Backdrop', false);
+	scaleObject('Backdrop',0.55,0.55);
+	setScrollFactor('Backdrop', 0.7, 0.7)
 
-	makeLuaSprite('MarShad','mafio/Mafia_BG1', -320, 50);
-	addLuaSprite('MarShad', false);
-	scaleObject('MarShad',1.2,1.2)
-	
-	makeAnimatedLuaSprite('SecretLoog','mafio/LuigiMafia',200,500);
-	addAnimationByPrefix('SecretLoog','Idle','Loogi Idle',24,true);
-	addLuaSprite('SecretLoog')
-	scaleObject('SecretLoog',0.6,0.6)
-	addAnimationByPrefix('SecretLoog','Shoot','Loogi Shoot',24,false)
-	
+	makeLuaSprite('BridgeOfDeath', folder..'IHYourBridge', -500, -150);
+	addLuaSprite('BridgeOfDeath', false);
+	scaleObject('BridgeOfDeath',0.55,0.55);
 
-	close(true)
+	makeLuaSprite('cracked', folder..'bridgeCrack', -500, -150);
+	addLuaSprite('cracked', false);
+	scaleObject('cracked',0.55,0.55);
+	setProperty('cracked.visible', false);
 
+	makeLuaSprite('broke', folder..'bridgeBroken', -500, -150);
+	addLuaSprite('broke', false);
+	scaleObject('broke',0.55,0.55);
+	setProperty('broke.visible', false);
+
+	for i=1,#flamesIsMyBestie do
+		makeAnimatedLuaSprite('FlameMD'..i, folder..'fire',flamesIsMyBestie[i][1],flamesIsMyBestie[i][2]);
+		addAnimationByPrefix('FlameMD'..i, 'fireanim','penis', 24,true);
+		objectPlayAnimation('FlameMD'..i,'fireanime',true);
+		addLuaSprite('FlameMD'..i,false);
+		scaleObject('FlameMD'..i,0.65,0.65);
+		setScrollFactor('FlameMD'..i, 0.7, 0.7)
+	end	
 end

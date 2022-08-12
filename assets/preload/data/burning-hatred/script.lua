@@ -11,11 +11,14 @@ function onCreate()
 	scaleObject('hate',0.3,0.3);
 	setProperty('hate.alpha', 0)
 
-	makeLuaSprite('die', 'IHY/die', 0, -40);
+	makeLuaSprite('die', 'IHY/die', 0, 0);
 	addLuaSprite('die', true);
     setObjectCamera('die','other')
-	scaleObject('die', 0, 0);
 	setProperty('die.antialiasing', false);
+	
+	setProperty('die.x', (screenWidth/2) - (getProperty('die.width') / 2))
+	setProperty('die.y', (screenHeight/2) - (getProperty('die.height') / 2))
+	scaleObject('die', 0, 0);
 
     makeLuaText('itText', '',  1150, 3, 600);
     setTextSize('itText', 32);

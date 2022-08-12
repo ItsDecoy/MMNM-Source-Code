@@ -2,18 +2,7 @@
 	"song": {
 		"player1": "bf-plumber",
 		"player2": "MARIO",
-		"events": [
-			[
-				100571.428571429,
-				[
-					[
-						"Change Character",
-						"Dad",
-						"Victim"
-					]
-				]
-			]
-		],
+		"events": [],
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -2352,7 +2341,6 @@
 		"arrowSkin": "SMWNOTE_assets",
 		"needsVoices": true,
 		"speed": 2.5,
-		"bpm": 105,
-		"noteSkin": "SMWNOTE_assets"
+		"bpm": 105
 	}
 }
