@@ -58,7 +58,7 @@ class PauseSubState extends MusicBeatSubstate
 
 	var selectTimer:Float = 0;
 	var swagCounter:Int = 0;
-	var countdownStarted:Bool = false;
+	var closing:Bool = false;
 
 	public static var songName:String = '';
 
@@ -259,9 +259,9 @@ class PauseSubState extends MusicBeatSubstate
 
 		super.update(elapsed);
 
-		var upP = countdownStarted ? false : controls.UI_UP_P;
-		var downP = countdownStarted ? false : controls.UI_DOWN_P;
-		var accepted = countdownStarted ? false : controls.ACCEPT;
+		var upP = closing ? false : controls.UI_UP_P;
+		var downP = closing ? false : controls.UI_DOWN_P;
+		var accepted = closing ? false : controls.ACCEPT;
 
 		if (upP) if (changeSelection(-1)) FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
 		if (downP) if (changeSelection(1)) FlxG.sound.play(Paths.sound('scrollMenu' + prefix), 1);
@@ -344,7 +344,7 @@ class PauseSubState extends MusicBeatSubstate
 						new FlxTimer().start(0.3, function(tmr:FlxTimer) { close(); });
 					}
 					else startCountdown();
-					
+					closing = true;
 				case 'Change Difficulty':
 					menuItems = difficultyChoices;
 					regenMenu();
@@ -402,7 +402,6 @@ class PauseSubState extends MusicBeatSubstate
 
 	public function startCountdown()
 	{
-		countdownStarted = true;
 		FlxTween.tween(bg, {alpha: 0}, Conductor.crochet / 200, {ease: FlxEase.sineOut});
 		new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
 		{
