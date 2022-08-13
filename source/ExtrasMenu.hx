@@ -75,6 +75,13 @@ class ExtrasMenu extends MusicBeatState
         if(bg != null)
             bg.velocity.set(25, 0); 
 
+		if (controls.BACK)
+		{
+			persistentUpdate = false;
+			FlxG.sound.play(Paths.sound('cancelMenu'));
+			MusicBeatState.switchState(new MainMenuState());
+		}
+
         super.update(elapsed);
 
     }
