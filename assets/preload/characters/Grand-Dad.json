@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-250,
 				9
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Grand Dad Idle"
+			"fps": 24,
+			"name": "Grand Dad Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-121,
 				39
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "GD Left"
+			"fps": 24,
+			"name": "GD Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-91,
 				-410
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "GD Down"
+			"fps": 24,
+			"name": "GD Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-139,
 				39
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "GD Up"
+			"fps": 24,
+			"name": "GD Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-159,
 				-51
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "GD RIght"
+			"fps": 24,
+			"name": "GD RIght",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		0,
 		0
 	],
-	"healthicon": "icon-GD",
+	"healthicon": "icon-gd",
 	"flip_x": false,
 	"healthbar_colors": [
 		216,
