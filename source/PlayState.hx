@@ -3384,7 +3384,7 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					camHUD.alpha = 0;
+					gameFlashLayer.alpha = 0;
 				}
 			case 'Camera Zoom':
 				if (camTween != null)
