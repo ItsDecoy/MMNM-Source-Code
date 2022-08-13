@@ -1,0 +1,99 @@
+{
+	"song": {
+		"speed": 2.6,
+		"stage": "Outlook",
+		"player1": "bf-plumber-sh",
+		"player2": "SHM",
+		"player3": null,
+		"events": [
+			[
+				32383.4355828221,
+				[
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"2"
+					]
+				]
+			],
+			[
+				55944.0184049079,
+				[
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"2"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"2"
+					]
+				]
+			],
+			[
+				67720.8588957055,
+				[
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"2"
+					]
+				]
+			],
+			[
+				79502.3006134968,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					]
+				]
+			],
+			[
+				126614.263803681,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"4"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"1"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-plumber-sh",
+		"bpm": 163,
+		"arrowSkin": "SECRETNOTE_assets",
+		"needsVoices": true,
+		"song": "Cover Up"
+	}
+}

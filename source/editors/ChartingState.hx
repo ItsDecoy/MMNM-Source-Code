@@ -96,7 +96,7 @@ class ChartingState extends MusicBeatState
 		['HUD Fade', "Fades the HUD camera\n\nValue 1: Alpha\nValue 2: Duration"],
 		['Trigger Podoboos', "Makes Podoboos start jumping on screen\n\nUsed in Burning Hatred"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"],
-		['Stage Switch', "Used for example in Blinked and Vicimized\nfor transforming the stage\n\nValue 1: stage state"]
+		['Stage Phase', "Used for example in Blinked and Vicimized\nfor transforming the stage\n\nValue 1: Stage phase ID"]
 	];
 
 	var _file:FileReference;

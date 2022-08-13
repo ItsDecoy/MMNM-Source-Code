@@ -11,7 +11,7 @@ function onCreate()
 end
 
 function onEvent(name, value1, value2)
-	if name == 'Stage Switch' then
+	if name == 'Stage Phase' then
 		local isEvil = tonumber(value1) > 0
 		
 		setProperty('Whole-Ah Castle.visible', not isEvil);
