@@ -3331,7 +3331,7 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					camPreHUD.alpha = leAlpha;
+					gameBlackLayer.alpha = leAlpha;
 				}
 			case 'HUD Fade':
 				if (camHUDAlphaTween != null)
