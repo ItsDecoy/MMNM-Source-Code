@@ -33,6 +33,11 @@
 						"Set Property",
 						"camZoomingMult",
 						"2"
+					],
+					[
+						"Stage Switch",
+						"1",
+						""
 					]
 				]
 			],

@@ -93,8 +93,9 @@ class ChartingState extends MusicBeatState
 		['Camera Fade', "Fades the game camera\n\nValue 1: Alpha\nValue 2: Duration"],
 		['HUD Fade', "Fades the HUD camera\n\nValue 1: Alpha\nValue 2: Duration"],
 		['Zoom Camera', "Changes the Camera Zoom.\n\nValue 1: Zoom Multiplier (1 is default)\n\nIn case you want a tween, use Value 2 like this:\n\n\"3, elasticOut\"\n(Duration, Ease Type)"],
+		['Trigger Podoboos', "Makes Podoboos start jumping on screen\n\nUsed in Burning Hatred"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"],
-		['Environment Event', "Value 1: event Id"]
+		['Stage Switch', "Used for example in Blinked and Vicimized\nfor transforming the stage\n\nValue 1: stage state"]
 	];
 
 	var _file:FileReference;

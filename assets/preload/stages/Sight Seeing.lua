@@ -22,35 +22,49 @@ function onCreate()
 	
 	-- Evilness
 
-	makeLuaSprite('Sky2', folder..'daiseyebg2sky', -1050, -385);
-	addLuaSprite('Sky2', false);
-	scaleObject('Sky2',1.8,1.8);
-	setScrollFactor('Sky2',0.05,0.05);
+	makeLuaSprite('Sky_Evil', folder..'daiseyebg2sky', -1050, -385);
+	addLuaSprite('Sky_Evil', false);
+	scaleObject('Sky_Evil',1.8,1.8);
+	setScrollFactor('Sky_Evil',0.05,0.05);
 	
-	makeLuaSprite('Planetoid2', folder..'daiseyebg2plnaert', -340, -250);
-	addLuaSprite('Planetoid2', false);
-	setScrollFactor('Planetoid2',0.1,0.1);
-	setBlendMode('Planetoid2', 'lighten')
+	makeLuaSprite('Planetoid_Evil', folder..'daiseyebg2plnaert', -340, -250);
+	addLuaSprite('Planetoid_Evil', false);
+	setScrollFactor('Planetoid_Evil',0.1,0.1);
+	setBlendMode('Planetoid_Evil', 'lighten')
 
 	makeLuaSprite('Eye', folder..'daiseyebg2eye', -340, -250);
 	addLuaSprite('Eye',false);
-	setScrollFactor('Eye',0.1,0.1);
+	setScrollFactor('Eye',0.12,0.12);
 	
-	makeLuaSprite('Cloud2', folder..'daiseyebg2clouds', -700, -450);
-	addLuaSprite('Cloud2', false);	
-	scaleObject('Cloud2',1.4,1.4);
-	setScrollFactor('Cloud2',0.3,0.3);
+	makeLuaSprite('Cloud_Evil', folder..'daiseyebg2clouds', -700, -450);
+	addLuaSprite('Cloud_Evil', false);	
+	scaleObject('Cloud_Evil',1.4,1.4);
+	setScrollFactor('Cloud_Evil',0.3,0.3);
 
-	makeLuaSprite('Platforms2', folder..'daiseyebg2platforms', -450, -150);
-	addLuaSprite('Platforms2', false);
-	scaleObject('Platforms2', 1.1,1.1);
+	makeLuaSprite('Platforms_Evil', folder..'daiseyebg2platforms', -450, -150);
+	addLuaSprite('Platforms_Evil', false);
+	scaleObject('Platforms_Evil', 1.1,1.1);
 
-
-	setProperty('Sky2.visible',false);
-	setProperty('Cloud2.visible',false);
-	setProperty('Planetoid2.visible',false);
-	setProperty('Platforms2.visible',false);
+	setProperty('Sky_Evil.visible',false);
+	setProperty('Cloud_Evil.visible',false);
+	setProperty('Planetoid_Evil.visible',false);
+	setProperty('Platforms_Evil.visible',false);
 	setProperty('Eye.visible',false);
+end
 
-	close(true)
+function onEvent(name, value1, value2)
+	if name == 'Stage Switch' then
+		local isEvil = tonumber(value1) > 0
+		
+		setProperty('Sky.visible', not isEvil);
+		setProperty('Cloud.visible', not isEvil);
+		setProperty('Planetoid.visible', not isEvil);
+		setProperty('Platforms.visible', not isEvil);
+		
+		setProperty('Sky_Evil.visible',isEvil);
+		setProperty('Cloud_Evil.visible',isEvil);
+		setProperty('Planetoid_Evil.visible',isEvil);
+		setProperty('Platforms_Evil.visible',isEvil);
+		setProperty('Eye.visible',isEvil);
+	end
 end
