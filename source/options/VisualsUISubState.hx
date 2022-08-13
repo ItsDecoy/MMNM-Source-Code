@@ -99,14 +99,21 @@ class VisualsUISubState extends BaseOptionsMenu
 		option.onChange = onChangeFPSCounter;
 		#end
 		
-		var option:Option = new Option('Pause Screen Song:',
+		/*var option:Option = new Option('Pause Screen Song:',
 			"What song do you prefer for the Pause Screen?",
 			'pauseMusic',
 			'string',
 			'Tea Time',
 			['None', 'Breakfast', 'Tea Time']);
 		addOption(option);
-		option.onChange = onChangePauseMusic;
+		option.onChange = onChangePauseMusic;*/
+
+		var option:Option = new Option('Allow Pause Countdown',
+			'If checked, a countdown will start after pressing "Continue" during pause.',
+			'pauseCountdown',
+			'bool',
+			false);
+		addOption(option);
 
 		super();
 	}

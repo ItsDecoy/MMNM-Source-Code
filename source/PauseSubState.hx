@@ -46,6 +46,8 @@ class PauseSubState extends MusicBeatSubstate
 	var curTime:Float = Math.max(0, Conductor.songPosition);
 	var menu:FlxSpriteGroup;
 
+	var bg:FlxSprite;
+
 	var pageSprite:FlxSprite;
 	var pageColorSprite:FlxSprite;
 
@@ -71,7 +73,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		FlxG.sound.play(Paths.sound('pause' + prefix), 1);
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		bg = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		bg.alpha = 0;
 		bg.scrollFactor.set();
 		add(bg);
@@ -336,7 +338,11 @@ class PauseSubState extends MusicBeatSubstate
 
 					FlxTween.tween(menu, {y: menu.y - 800}, 0.15, {ease: FlxEase.quartIn});
 					FlxTween.tween(pauseMusic, {volume: 0}, 0.5, {ease: FlxEase.linear});
-					if (PlayState.instance.startingSong) new FlxTimer().start(0.3, function(tmr:FlxTimer) { close(); });
+					if (PlayState.instance.startingSong || !ClientPrefs.pauseCountdown)
+					{
+						FlxTween.tween(bg, {alpha: 0}, 0.2, {ease: FlxEase.quartInOut});
+						new FlxTimer().start(0.3, function(tmr:FlxTimer) { close(); });
+					}
 					else startCountdown();
 					
 				case 'Change Difficulty':
@@ -397,6 +403,7 @@ class PauseSubState extends MusicBeatSubstate
 	public function startCountdown()
 	{
 		countdownStarted = true;
+		FlxTween.tween(bg, {alpha: 0}, Conductor.crochet / 200, {ease: FlxEase.sineOut});
 		new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
 		{
 			var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
