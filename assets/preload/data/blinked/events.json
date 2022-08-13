@@ -1,0 +1,89 @@
+{
+	"song": {
+		"speed": 2.6,
+		"stage": "Sight Seeing",
+		"player1": "bf-plumber-scaled",
+		"player2": "peach",
+		"player3": null,
+		"events": [
+			[
+				82178.5714285714,
+				[
+					[
+						"Change Scroll Speed",
+						"1.16",
+						".1"
+					]
+				]
+			],
+			[
+				82285.7142857143,
+				[
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"3"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"2"
+					]
+				]
+			],
+			[
+				103042.471042471,
+				[
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"4"
+					]
+				]
+			],
+			[
+				112772.200772201,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				113096.525096525,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				113420.849420849,
+				[
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"2"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 140,
+		"arrowSkin": "DAISYNOTE_assets",
+		"needsVoices": true,
+		"song": "Blinked"
+	}
+}
