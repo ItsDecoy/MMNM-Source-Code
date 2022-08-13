@@ -90,6 +90,6 @@ class CRTShader extends FlxShader
 		resolution.value = [150, 75];
 		scanLineOpacity.value = [0.25, 0.25];
 		brightness.value = [1.5];
-		vignetteOpacity.value = [0.3];
+		vignetteOpacity.value = [0.4];
 	}
 }
