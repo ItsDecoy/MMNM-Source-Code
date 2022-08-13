@@ -80,7 +80,7 @@
 						"0.06"
 					],
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.3",
 						"0.15, sineOut"
 					]
@@ -90,7 +90,7 @@
 				48000,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1",
 						""
 					]
@@ -115,7 +115,7 @@
 						"0.1, 0.003"
 					],
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.1",
 						""
 					]
@@ -130,7 +130,7 @@
 						"1, 0.004"
 					],
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.2",
 						""
 					]
@@ -145,7 +145,7 @@
 						"IHYLuigi"
 					],
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.35",
 						"4.8,linear"
 					]
@@ -210,7 +210,7 @@
 						"0.03"
 					],
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1",
 						"4.5,linear"
 					],
@@ -310,7 +310,7 @@
 				94983.2512315271,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.2",
 						""
 					]
@@ -330,7 +330,7 @@
 				106983.251231527,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.2",
 						""
 					]
@@ -340,7 +340,7 @@
 				111783.251231527,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1",
 						"3, sineInOut"
 					]
@@ -410,7 +410,7 @@
 				126183.251231527,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.4",
 						"5,sineInOut"
 					],
@@ -475,7 +475,7 @@
 						"0.04"
 					],
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1",
 						""
 					],
@@ -505,7 +505,7 @@
 				134583.251231527,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.4",
 						"0.2,expoOut"
 					],
@@ -525,7 +525,7 @@
 				135183.251231527,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1",
 						"0.8,expoOut"
 					],
@@ -540,7 +540,7 @@
 				139383.251231527,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.4",
 						"0.2,expoOut"
 					]
@@ -550,7 +550,7 @@
 				139983.251231527,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1",
 						"0.8,expoOut"
 					]
@@ -570,7 +570,7 @@
 						"4"
 					],
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.2",
 						"0.3,cubeOut"
 					],
@@ -790,7 +790,7 @@
 						"0.7, 0.007"
 					],
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"2.7",
 						"0.1,cubeOut"
 					],
@@ -805,7 +805,7 @@
 				154908.251231527,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1",
 						"0.08,cubeIn"
 					]

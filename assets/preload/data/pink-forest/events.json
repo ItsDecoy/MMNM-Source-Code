@@ -10,7 +10,7 @@
 				0,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"2",
 						"0.1,linear"
 					]
@@ -25,7 +25,7 @@
 						"9"
 					],
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"3,2",
 						"50"
 					]
@@ -65,7 +65,7 @@
 				43636.3636363637,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.3",
 						"0.1,linear"
 					]
@@ -85,7 +85,7 @@
 				52363.6363636364,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1",
 						"16,sineOut"
 					],
@@ -860,7 +860,7 @@
 				122181.818181818,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.1",
 						""
 					]
@@ -870,7 +870,7 @@
 				139090.909090909,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.5",
 						"0.2,sineOut"
 					],
@@ -900,7 +900,7 @@
 				143454.545454545,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1",
 						"0.5,sineIn"
 					],

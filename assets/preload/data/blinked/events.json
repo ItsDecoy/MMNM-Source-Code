@@ -1,7 +1,7 @@
 {
 	"song": {
 		"speed": 2.6,
-		"stage": "Sight-Seeing",
+		"stage": "Sight Seeing",
 		"player1": "bf-plumber-scaled",
 		"player2": "peach",
 		"player3": null,
@@ -493,6 +493,16 @@
 						"Add Camera Zoom",
 						".025",
 						".04"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"4"
+					],
+					[
+						"Camera Zoom",
+						"1.1",
+						"0.2, expoOut"
 					]
 				]
 			],
@@ -503,6 +513,11 @@
 						"Add Camera Zoom",
 						".025",
 						".04"
+					],
+					[
+						"Camera Zoom",
+						"1.2",
+						"0.2, expoOut"
 					]
 				]
 			],
@@ -513,6 +528,21 @@
 						"Add Camera Zoom",
 						".025",
 						".04"
+					],
+					[
+						"Camera Zoom",
+						"1.3",
+						"0.2, expoOut"
+					]
+				]
+			],
+			[
+				81857.1428571429,
+				[
+					[
+						"Camera Zoom",
+						"2.5",
+						"0.4, expoIn"
 					]
 				]
 			],
@@ -633,6 +663,41 @@
 						"Add Camera Zoom",
 						"",
 						""
+					]
+				]
+			],
+			[
+				82285.7142857143,
+				[
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"3.5"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"2"
+					],
+					[
+						"Stage Switch",
+						"1",
+						""
+					],
+					[
+						"Camera Flash",
+						"red",
+						"0.4"
+					],
+					[
+						"Camera Zoom",
+						"1",
+						"0.3, expoOut"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"2"
 					]
 				]
 			],
@@ -2010,7 +2075,7 @@
 				148447.876447876,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.1",
 						".1, elasticInOut"
 					]
@@ -2040,7 +2105,7 @@
 				148772.200772201,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.2",
 						".1, elasticInOut"
 					]
@@ -2060,7 +2125,7 @@
 				148853.281853282,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.3",
 						".1, elasticInOut"
 					]
@@ -2080,7 +2145,7 @@
 				148934.362934363,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1.5",
 						".1, elasticInOut"
 					]
@@ -2090,7 +2155,7 @@
 				149096.525096525,
 				[
 					[
-						"Zoom Camera",
+						"Camera Zoom",
 						"1",
 						".1, elasticInOut"
 					],

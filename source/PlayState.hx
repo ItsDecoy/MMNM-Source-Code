@@ -153,7 +153,12 @@ class PlayState extends MusicBeatState
 
 	public var camTween:FlxTween;
 	public var camHUDAlphaTween:FlxTween;
-	public var camBlackAlphaTween:FlxTween;
+
+	public var gameBlackLayerAlphaTween:FlxTween;
+	public var gameFlashLayerAlphaTween:FlxTween;
+
+	public var gameBlackLayer:FlxSprite;
+	public var gameFlashLayer:FlxSprite;
 
 	private var curSong:String = "";
 
@@ -192,8 +197,9 @@ class PlayState extends MusicBeatState
 
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
+
+	public var camPreHUD:FlxCamera;
 	public var camHUD:FlxCamera;
-	public var camBlack:FlxCamera;
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
@@ -346,15 +352,15 @@ class PlayState extends MusicBeatState
 
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
-		camBlack = new FlxCamera();
+		camPreHUD = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
+		camPreHUD.bgColor.alpha = 0;
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
-		camBlack.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
-		FlxG.cameras.add(camBlack);
+		FlxG.cameras.add(camPreHUD);
 		FlxG.cameras.add(camHUD);
 		FlxG.cameras.add(camOther);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
@@ -1198,11 +1204,19 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 
-		var black = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		black.scrollFactor.set();
-		add(black);
+		gameBlackLayer = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		gameBlackLayer.scrollFactor.set();
+		add(gameBlackLayer);
 
-		black.cameras = [camBlack];
+		gameFlashLayer = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+		gameFlashLayer.scrollFactor.set();
+		add(gameFlashLayer);
+
+		gameBlackLayer.alpha = 0;
+		gameFlashLayer.alpha = 0;
+
+		gameBlackLayer.cameras = [camPreHUD];
+		gameFlashLayer.cameras = [camPreHUD];
 
 		startingSong = true;
 
@@ -2230,8 +2244,10 @@ class PlayState extends MusicBeatState
 				camTween.active = false;
 			if (camHUDAlphaTween != null)
 				camHUDAlphaTween.active = false;
-			if (camBlackAlphaTween != null)
-				camBlackAlphaTween.active = false;
+			if (gameBlackLayerAlphaTween != null)
+				gameBlackLayerAlphaTween.active = false;
+			if (gameFlashLayerAlphaTween != null)
+				gameFlashLayerAlphaTween.active = false;
 
 			if(blammedLightsBlackTween != null)
 				blammedLightsBlackTween.active = false;
@@ -2281,8 +2297,10 @@ class PlayState extends MusicBeatState
 				camTween.active = true;
 			if (camHUDAlphaTween != null)
 				camHUDAlphaTween.active = true;
-			if (camBlackAlphaTween != null)
-				camBlackAlphaTween.active = true;
+			if (gameBlackLayerAlphaTween != null)
+				gameBlackLayerAlphaTween.active = true;
+			if (gameFlashLayerAlphaTween != null)
+				gameFlashLayerAlphaTween.active = false;
 
 			if(blammedLightsBlackTween != null)
 				blammedLightsBlackTween.active = true;
@@ -3289,6 +3307,11 @@ class PlayState extends MusicBeatState
 					});
 				}
 			case 'Camera Fade':
+				if (gameBlackLayerAlphaTween != null)
+				{
+					gameBlackLayerAlphaTween.cancel();
+					gameBlackLayerAlphaTween = null;
+				}
 				var leAlpha:Float = Std.parseFloat(value1);
 				if(Math.isNaN(leAlpha)) leAlpha = 1;
 
@@ -3299,18 +3322,23 @@ class PlayState extends MusicBeatState
 
 				if (duration > 0)
 				{
-					camBlackAlphaTween = FlxTween.tween(camBlack, {alpha: leAlpha}, duration, {ease: FlxEase.linear, onComplete:
+					gameBlackLayerAlphaTween = FlxTween.tween(gameBlackLayer, {alpha: leAlpha}, duration, {ease: FlxEase.linear, onComplete:
 						function (twn:FlxTween)
 						{
-							camBlackAlphaTween = null;
+							gameBlackLayerAlphaTween = null;
 						}
 					});
 				}
 				else
 				{
-					camBlack.alpha = leAlpha;
+					camPreHUD.alpha = leAlpha;
 				}
 			case 'HUD Fade':
+				if (camHUDAlphaTween != null)
+				{
+					camHUDAlphaTween.cancel();
+					camHUDAlphaTween = null;
+				}
 				var leAlpha:Float = Std.parseFloat(value1);
 				if(Math.isNaN(leAlpha)) leAlpha = 1;
 
@@ -3330,7 +3358,35 @@ class PlayState extends MusicBeatState
 				{
 					camHUD.alpha = leAlpha;
 				}
-			case 'Zoom Camera':
+			case 'Camera Flash':
+				if (gameFlashLayerAlphaTween != null)
+				{
+					gameFlashLayerAlphaTween.cancel();
+					gameFlashLayerAlphaTween = null;
+				}
+				var color = FlxColor.fromString(value1);
+				if (color == null) color = FlxColor.WHITE;
+
+				var duration:Float = Std.parseFloat(value2);
+				if(Math.isNaN(duration)) duration = 0;
+
+				gameFlashLayer.color = color;
+				gameFlashLayer.alpha = 1;
+
+				if (duration > 0)
+				{
+					gameFlashLayerAlphaTween = FlxTween.tween(gameFlashLayer, {alpha: 0}, duration, {ease: FlxEase.linear, onComplete:
+						function (twn:FlxTween)
+						{
+							gameFlashLayerAlphaTween = null;
+						}
+					});
+				}
+				else
+				{
+					camHUD.alpha = 0;
+				}
+			case 'Camera Zoom':
 				if (camTween != null)
 				{
 					camTween.cancel();
