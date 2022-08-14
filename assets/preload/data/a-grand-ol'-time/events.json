@@ -1,0 +1,219 @@
+{
+	"song": {
+		"speed": 2.6,
+		"stage": "FLINTSTONES",
+		"player1": "bf-plumber",
+		"player2": "Grand-Dad",
+		"player3": null,
+		"events": [
+			[
+				13328.431372549,
+				[
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"2"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"1"
+					]
+				]
+			],
+			[
+				44019.6078431372,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"0"
+					]
+				]
+			],
+			[
+				44688.7254901961,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"2"
+					]
+				]
+			],
+			[
+				52132.3529411765,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"0"
+					]
+				]
+			],
+			[
+				52156.862745098,
+				[
+					[
+						"Add Camera Zoom",
+						"0.02",
+						"0.04"
+					]
+				]
+			],
+			[
+				53725.4901960784,
+				[
+					[
+						"Add Camera Zoom",
+						"0.02",
+						"0.04"
+					]
+				]
+			],
+			[
+				55294.1176470588,
+				[
+					[
+						"Add Camera Zoom",
+						"0.02",
+						"0.04"
+					],
+					[
+						"Camera Follow Pos",
+						"430",
+						"280"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"5"
+					],
+					[
+						"Camera Zoom",
+						"1.2",
+						"0.3, elasticOut"
+					]
+				]
+			],
+			[
+				56862.7450980392,
+				[
+					[
+						"Add Camera Zoom",
+						"0.02",
+						"0.04"
+					],
+					[
+						"Camera Follow Pos",
+						"1180",
+						"410"
+					]
+				]
+			],
+			[
+				58774.5098039216,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					]
+				]
+			],
+			[
+				58823.5294117647,
+				[
+					[
+						"Add Camera Zoom",
+						"0.02",
+						"0.04"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"1"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					],
+					[
+						"Camera Zoom",
+						"1",
+						""
+					],
+					[
+						"Camera Flash",
+						"",
+						"0.4"
+					]
+				]
+			],
+			[
+				83901.9607843137,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"2"
+					]
+				]
+			],
+			[
+				97254.9019607843,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					],
+					[
+						"Set Property",
+						"camZoomingSpeed",
+						"4"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"1"
+					]
+				]
+			],
+			[
+				98058.4733893557,
+				[
+					[
+						"Set Property",
+						"cameraSpeed",
+						"0.8"
+					],
+					[
+						"Camera Zoom",
+						"1.2",
+						""
+					]
+				]
+			],
+			[
+				123772.759103641,
+				[
+					[
+						"Camera Zoom",
+						"1",
+						"10,sineInOut"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "gf-plumber",
+		"bpm": 153,
+		"arrowSkin": "GRANDNOTE_assets",
+		"needsVoices": true,
+		"song": "a grand ol' time"
+	}
+}

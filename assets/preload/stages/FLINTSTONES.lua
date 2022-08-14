@@ -61,7 +61,15 @@ function onCreate()
 	scaleObject('Varg',0.65,0.65);
 end
 
+function onCountdownTick(counter)
+	boppersLol()
+end
+
 function onBeatHit()
+	boppersLol()
+end
+
+function boppersLol()
 	objectPlayAnimation('WEEGEE SANIC', 'WS Idle', true)
 	objectPlayAnimation('Troll', 'Troll Idle', true)
 	objectPlayAnimation('Nana', 'Nana Idle', true)
