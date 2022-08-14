@@ -3,7 +3,7 @@
 		{
 			"offsets": [
 				-12,
-				20
+				30
 			],
 			"loop": false,
 			"fps": 24,
@@ -14,7 +14,7 @@
 		{
 			"offsets": [
 				-3,
-				24
+				33
 			],
 			"loop": false,
 			"fps": 24,
@@ -25,7 +25,7 @@
 		{
 			"offsets": [
 				-19,
-				-22
+				-14
 			],
 			"loop": false,
 			"fps": 24,
@@ -36,7 +36,7 @@
 		{
 			"offsets": [
 				-36,
-				65
+				77
 			],
 			"loop": false,
 			"fps": 24,
@@ -47,20 +47,75 @@
 		{
 			"offsets": [
 				-52,
-				24
+				34
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
 			"name": "BF NOTE RIGHT0"
+		},
+		{
+			"offsets": [
+				-4,
+				58
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "BF NOTE LEFT MISS"
+		},
+		{
+			"offsets": [
+				-22,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "BF NOTE DOWN MISS"
+		},
+		{
+			"offsets": [
+				-36,
+				77
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "BF NOTE UP MISS"
+		},
+		{
+			"offsets": [
+				-52,
+				62
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BF NOTE RIGHT MISS"
+		},
+		{
+			"offsets": [
+				28,
+				54
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "BF HEY!!"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/PlumberBF_Assets",
 	"position": [
 		0,
-		340
+		350
 	],
 	"healthicon": "bf",
 	"flip_x": true,

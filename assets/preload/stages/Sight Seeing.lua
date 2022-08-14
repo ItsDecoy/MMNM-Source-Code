@@ -9,28 +9,30 @@ function onCreate()
 			sfix = 'evil/'
 		end
 		
-		makeLuaSprite('Sky'..fix, folder..sfix..'sky', -1050, -385);
+		makeLuaSprite('Sky'..fix, folder..sfix..'sky', -1050, -450);
 		scaleObject('Sky'..fix,1.8,1.8);
 		setScrollFactor('Sky'..fix,0.02,0.02);
 
-		makeLuaSprite('Planetoid'..fix, folder..sfix..'planet', -340, -250);
-		setScrollFactor('Planetoid'..fix,0.05,0.05);
+		makeLuaSprite('Planetoid'..fix, folder..sfix..'planet', -500, -350);
+		scaleObject('Planetoid'..fix,1.2,1.2);
+		setScrollFactor('Planetoid'..fix,0.04,0.04);
 		setBlendMode('Planetoid'..fix, 'lighten')
 		
-		makeLuaSprite('Cloud'..fix, folder..sfix..'clouds', -700, -450);
-		scaleObject('Cloud'..fix,1.4,1.4);
+		makeLuaSprite('Cloud'..fix, folder..sfix..'clouds', -720, -450);
+		scaleObject('Cloud'..fix,1.45,1.45);
 		setScrollFactor('Cloud'..fix,0.3,0.3);
 
-		makeLuaSprite('Platforms'..fix, folder..sfix..'platforms', -450, -150);
-		scaleObject('Platforms'..fix, 1.1,1.1);
+		makeLuaSprite('Platforms'..fix, folder..sfix..'platforms', -580, -250);
+		scaleObject('Platforms'..fix, 1.25,1.25);
 		
 		addLuaSprite('Sky'..fix, false);
 		addLuaSprite('Planetoid'..fix, false);
 		
 		if i == 2 then -- Makes the eye sprite
-			makeLuaSprite('Eye', folder..sfix..'eye', -340, -250);
+			makeLuaSprite('Eye', folder..sfix..'eye', getProperty('Planetoid.x'), getProperty('Planetoid.y'));
+			scaleObject('Eye', getProperty('Planetoid.scale.x'), getProperty('Planetoid.scale.y'));
 			addLuaSprite('Eye',false);
-			setScrollFactor('Eye',0.05,0.05);
+			setScrollFactor('Eye',0.04,0.04);
 			
 			setProperty('Eye.visible',false);
 		end
