@@ -82,14 +82,14 @@ class CRTShader extends FlxShader
 
         
 		')
-	public function new()
+	public function new(resolutionMult:Float)
 	{
 		super();
 		curvature.value = [3.5, 3.5];
-        screenResolution.value = [600, 480];
+        screenResolution.value = [1280 * resolutionMult, 720 * resolutionMult];
 		resolution.value = [150, 75];
-		scanLineOpacity.value = [0.25, 0.25];
+		scanLineOpacity.value = [0.3, 0.3];
 		brightness.value = [1.5];
-		vignetteOpacity.value = [0.4];
+		vignetteOpacity.value = [0.45];
 	}
 }

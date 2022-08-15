@@ -819,11 +819,10 @@ class PlayState extends MusicBeatState
 				add(pillar);	
 		}
 
-		if (stageStyle == 'nes' || stageStyle == 'n64')
+		if (ClientPrefs.shaders && (stageStyle == 'nes' || stageStyle == 'n64'))
 		{
-			var crt:CRTShader = new CRTShader();
-			camGame.setFilters([new ShaderFilter(crt)]);
-			camHUD.setFilters([new ShaderFilter(crt)]);
+			camGame.setFilters([new ShaderFilter(new CRTShader(0.31))]);
+			camHUD.setFilters([new ShaderFilter(new CRTShader(2))]);
 		}
 
 		if(isPixelStage) {
@@ -1013,7 +1012,7 @@ class PlayState extends MusicBeatState
 		timeTxt.setFormat(Paths.font("Pixel_NES.otf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
-		timeTxt.borderSize = 2;
+		timeTxt.borderSize = 4;
 		timeTxt.visible = showTime;
 		if(ClientPrefs.downScroll) timeTxt.y = FlxG.height - 44;
 
@@ -1168,14 +1167,14 @@ class PlayState extends MusicBeatState
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("Pixel_NES.otf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
-		scoreTxt.borderSize = 1.25;
+		scoreTxt.borderSize = 2;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("Pixel_NES.otf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
-		botplayTxt.borderSize = 1.25;
+		botplayTxt.borderSize = 3;
 		botplayTxt.visible = cpuControlled;
 		add(botplayTxt);
 		if(ClientPrefs.downScroll) {
