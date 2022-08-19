@@ -1189,19 +1189,6 @@ class PlayState extends MusicBeatState
 		peachGate.cameras = [camHUD];
 		add(peachGate);
 
-		bomb1 = new FlxSprite().loadGraphic(Paths.image('Bomb','shared'));
-		bomb1.scrollFactor.set();
-		bomb1.screenCenter();
-		bomb1.cameras = [camHUD];
-		add(bomb1);
-
-		
-		bomb2 = new FlxSprite().loadGraphic(Paths.image('Bomb2','shared'));
-		bomb2.scrollFactor.set();
-		bomb2.screenCenter();
-		bomb2.cameras = [camHUD];
-		add(bomb2);
-
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -2429,6 +2416,8 @@ class PlayState extends MusicBeatState
 		{
 			peachGate.y = peachValue;
 		}
+
+	
 		
 		callOnLuas('onUpdate', [elapsed]);
 
