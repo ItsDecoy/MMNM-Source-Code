@@ -4249,6 +4249,16 @@
 				"bpm": 153,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 153,
+				"changeBPM": false,
+				"mustHitSection": true
 			}
 		],
 		"gfVersion": "gf-plumber",
@@ -4266,6 +4276,7 @@
 		],
 		"player3": null,
 		"song": "a grand ol' time",
+		"arrowSkin": "GRANDNOTE_assets",
 		"stage": "FLINTSTONES",
 		"validScore": true,
 		"needsVoices": true,
