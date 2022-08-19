@@ -8,6 +8,7 @@ using StringTools;
 class HealthIcon extends FlxSprite
 {
 	public var sprTracker:FlxSprite;
+	public var hasWinningIcon = false;
 	private var isOldIcon:Bool = false;
 	private var isPlayer:Bool = false;
 	private var char:String = '';
@@ -43,10 +44,18 @@ class HealthIcon extends FlxSprite
 			var file:Dynamic = Paths.image(name);
 
 			loadGraphic(file); //Load stupidly first for getting the file size
-			loadGraphic(file, true, Math.floor(width / 3), Math.floor(height)); //Then load it fr
-			iconOffsets[0] = (width - 150) / 3;
-			iconOffsets[1] = (width - 150) / 3;
-			iconOffsets[2] = (width - 150) / 3;
+			var frameSplit = 2;
+			if (width >= 450)
+			{
+				frameSplit = 3;
+				hasWinningIcon = true;
+			}
+
+			loadGraphic(file, true, Math.floor(width / frameSplit), Math.floor(height)); //Then load it fr
+			iconOffsets[0] = (width - 150) / frameSplit;
+			iconOffsets[1] = (width - 150) / frameSplit;
+			if (hasWinningIcon) iconOffsets[2] = (width - 150) / frameSplit;
+			
 			updateHitbox();
 
 			animation.add(char, [0, 1, 2], 0, false, isPlayer);
