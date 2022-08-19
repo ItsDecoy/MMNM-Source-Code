@@ -1189,6 +1189,19 @@ class PlayState extends MusicBeatState
 		peachGate.cameras = [camHUD];
 		add(peachGate);
 
+		bomb1 = new FlxSprite().loadGraphic(Paths.image('Bomb','shared'));
+		bomb1.scrollFactor.set();
+		bomb1.screenCenter();
+		bomb1.cameras = [camHUD];
+		add(bomb1);
+
+		
+		bomb2 = new FlxSprite().loadGraphic(Paths.image('Bomb2','shared'));
+		bomb2.scrollFactor.set();
+		bomb2.screenCenter();
+		bomb2.cameras = [camHUD];
+		add(bomb2);
+
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -2619,14 +2632,14 @@ class PlayState extends MusicBeatState
 
 		if (healthBar.percent < 20)
 			iconP1.animation.curAnim.curFrame = 1;
-		else if (healthBar.percent > 80 && iconP1.hasWinningIcon)
+		else if (healthBar.percent > 80)
 			iconP1.animation.curAnim.curFrame = 2;
 		else
 			iconP1.animation.curAnim.curFrame = 0;
 
 		if (healthBar.percent > 80)
 			iconP2.animation.curAnim.curFrame = 1;
-		else if (healthBar.percent < 20 && iconP2.hasWinningIcon)
+		else if (healthBar.percent < 20)
 			iconP2.animation.curAnim.curFrame = 2;
 		else
 			iconP2.animation.curAnim.curFrame = 0;
@@ -4358,6 +4371,11 @@ class PlayState extends MusicBeatState
 							boyfriend.playAnim('hurt', true);
 							boyfriend.specialAnim = true;
 						}
+					case 'Bomb Note': //Tis the bombing note
+					
+						FlxG.camera.shake(0.02, 0.5);
+						camHUD.shake(0.01, 0.5);
+						camHUD.flash();
 				}
 				
 				note.wasGoodHit = true;

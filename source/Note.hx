@@ -98,6 +98,14 @@ class Note extends FlxSprite
 
 		if(noteData > -1 && noteType != value) {
 			switch(value) {
+				case 'Bomb Note':
+					ignoreNote = mustPress;
+					reloadNote('','JUMPNOTE_assets');
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+					missHealth = 0.2;
+					hitCausesMiss = true;
 				case 'Peach Note':
 					ignoreNote = mustPress;
 					reloadNote('', 'PEACHNOTE_assets');
