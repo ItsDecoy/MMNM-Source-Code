@@ -4281,7 +4281,6 @@
 		"validScore": true,
 		"needsVoices": true,
 		"speed": 2.6,
-		"bpm": 153,
-		"arrowSkin": "GRANDNOTE_assets"
+		"bpm": 153
 	}
 }
