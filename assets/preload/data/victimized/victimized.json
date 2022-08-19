@@ -1,7 +1,7 @@
 {
 	"song": {
-		"player1": "bf-plumber",
-		"gfVersion": "gf-plumber-scaled",
+		"player1": "goomba",
+		"gfVersion": "goomba",
 		"notes": [
 			{
 				"sectionNotes": [],
@@ -6094,27 +6094,14 @@
 				"mustHitSection": true
 			}
 		],
-		"events": [
-			[
-				100571.428571429,
-				[
-					[
-						"Change Character",
-						"dad",
-						"victim"
-					]
-				]
-			]
-		],
-		"player2": "MARIO",
-		"mania": 3,
-		"player3": "gf",
+		"player2": "goomba",
+		"player3": "goomba",
 		"splashSkin": "noteSplashes",
-		"song": "Victimized",
+		"song": "victimized",
 		"needsVoices": true,
-		"arrowSkin": "",
+		"arrowSkin": "SMWNOTE_assets",
 		"validScore": true,
-		"stage": "Donut Plains",
+		"stage": "The End",
 		"bpm": 105,
 		"speed": 2.5
 	}
