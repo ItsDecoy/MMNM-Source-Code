@@ -1,3 +1,4 @@
+local i = 0
 function onCreate()
 	local folder = 'grandDad/'
 
@@ -59,6 +60,9 @@ function onCreate()
     addAnimationByPrefix('Varg','Varg Idle','Vinesauce_Bopper',24,false);
 	addLuaSprite('Varg',false);
 	scaleObject('Varg',0.65,0.65);
+
+	
+
 end
 
 function onCountdownTick(counter)
