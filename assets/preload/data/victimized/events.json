@@ -1,7 +1,10 @@
 {
 	"song": {
+		"speed": 2.5,
+		"stage": "Donut Plains",
 		"player1": "bf-plumber",
 		"player2": "MARIO",
+		"player3": null,
 		"events": [
 			[
 				100571.428571429,
@@ -12,34 +15,45 @@
 						"Victim"
 					],
 					[
-						"Camera Fade",
-						"0",
-						"0"
-					],
-					[
-						"Camera Fade",
-						"1",
-						"2"
+						"Camera Flash",
+						"white",
+						"0.5"
 					],
 					[
 						"Stage Phase",
 						"1",
 						""
+					],
+					[
+						"Camera Fade",
+						"0",
+						"0"
+					],
+					[
+						"Change Scroll Speed",
+						"1.1",
+						"0.1"
+					]
+				]
+			],
+			[
+				101404.761904762,
+				[
+					[
+						"Camera Fade",
+						"1",
+						"2"
 					]
 				]
 			]
 		],
 		"notes": [],
-		"gfVersion": "gf-plumber-scaled",
-		"player3": "gf",
-		"mania": 3,
 		"splashSkin": "noteSplashes",
-		"song": "Victimized",
-		"stage": "Donut Plains",
-		"validScore": true,
+		"validScore": false,
+		"gfVersion": "gf-plumber-scaled",
+		"bpm": 105,
 		"arrowSkin": "SMWNOTE_assets",
 		"needsVoices": true,
-		"speed": 2.5,
-		"bpm": 105
+		"song": "Victimized"
 	}
 }
