@@ -4362,9 +4362,9 @@ class PlayState extends MusicBeatState
 						}
 					case 'Bomb Note': //Tis the bombing note
 					
-						FlxG.camera.shake(0.02, 0.5);
-						camHUD.shake(0.01, 0.5);
-						camHUD.flash();
+						FlxG.camera.shake(0.01, 0.3);
+						camHUD.shake(0.005, 0.3);
+						camHUD.flash(FlxColor.WHITE, 0.3, null, true);
 				}
 				
 				note.wasGoodHit = true;
