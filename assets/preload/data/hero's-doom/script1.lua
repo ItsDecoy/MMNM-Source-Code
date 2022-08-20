@@ -8,12 +8,7 @@ function onCreate()
 	
 	addLuaScript('lua/reverseStrum')
 
-    makeLuaText('rapTxt', "RAP!", 530, 400, 330);
-    setTextSize('rapTxt', 50);
-    addLuaText('rapTxt');
-    setTextColor('rapTxt', 'FFFFFF');
-    setObjectCamera('rapTxt', 'hud');
-    setProperty('rapTxt.visible', false);
+   
 
     makeLuaSprite('red', '', 0, 0);
     makeGraphic('red',1280,720,'ff0000')
@@ -71,7 +66,7 @@ function onStepHit()
 		setProperty('runTxt.visible', false);
     end
     if curStep == 2624 then
-        setProperty('rapTxt.visible', true);
+ 
         setProperty('red.visible', true);
     end 
         if curStep == 2625 then
