@@ -821,8 +821,8 @@ class PlayState extends MusicBeatState
 
 		if (ClientPrefs.shaders && (stageStyle == 'nes' || stageStyle == 'n64'))
 		{
-			camGame.setFilters([new ShaderFilter(new CRTShader(0.31))]);
-			camHUD.setFilters([new ShaderFilter(new CRTShader(2))]);
+			camGame.setFilters([new ShaderFilter(new CRTShader(0.4))]);
+			camHUD.setFilters([new ShaderFilter(new CRTShader(0.7))]);
 		}
 
 		if(isPixelStage) {
