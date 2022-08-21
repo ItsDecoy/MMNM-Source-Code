@@ -284,7 +284,8 @@ class MainMenuState extends MusicBeatState
 									case 'story_mode':
 										MusicBeatState.switchState(new FreeplayState());
 									case 'mx_mode':
-										MusicBeatState.switchState(new StoryMenuState());
+										FlxTransitionableState.skipNextTransOut = true;
+										MusicBeatState.switchState(new MXModeStart());
 									case 'awards':
 										MusicBeatState.switchState(new AchievementsMenuState());
 									case 'extras':
