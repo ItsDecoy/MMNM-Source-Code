@@ -50,6 +50,10 @@ class FreeplayState extends MusicBeatState
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
+	
+	var leftArrow:FlxSprite;
+	var rightArrow:FlxSprite;
+
 	var arts:FlxTypedGroup<FlxSprite>;
 	var artsSelect:FlxTypedGroup<FlxSprite>;
 	var nameArt:FlxSprite;
@@ -106,6 +110,43 @@ class FreeplayState extends MusicBeatState
 
 		artsSelect = new FlxTypedGroup<FlxSprite>();
 		add(artsSelect);
+
+		leftArrow = new FlxSprite();
+		leftArrow.frames = Paths.getSparrowAtlas('freeplay/left_arrow_');
+		leftArrow.animation.addByPrefix('idle', 'left_arrow_ idle', 24, false);
+		leftArrow.animation.addByPrefix('confirm', 'left_arrow_ press', 24, false);
+		leftArrow.animation.play('idle');
+		leftArrow.screenCenter();
+		leftArrow.scale.set(0.75, 0.75);
+		leftArrow.y += 275;
+		leftArrow.x -= 215;
+		leftArrow.animation.finishCallback = function(name:String)
+		{
+			if(name == 'confirm')
+			{
+				leftArrow.animation.play('idle');
+			}
+		}
+		add(leftArrow);
+
+		
+		rightArrow = new FlxSprite();
+		rightArrow.frames = Paths.getSparrowAtlas('freeplay/right_arrow_');
+		rightArrow.animation.addByPrefix('idle', 'right_arrow_ idle', 24, false);
+		rightArrow.animation.addByPrefix('confirm', 'right_arrow_ press', 24, false);
+		rightArrow.animation.play('idle');
+		rightArrow.screenCenter();
+		rightArrow.scale.set(0.75, 0.75);
+		rightArrow.y += 275;
+		rightArrow.x += 215;
+		rightArrow.animation.finishCallback = function(name:String)
+		{
+			if(name == 'confirm')
+			{
+				rightArrow.animation.play('idle');
+			}
+		}
+		add(rightArrow);
 		
 		for(i in 0...songs.length)
 		{
