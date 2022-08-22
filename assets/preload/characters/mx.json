@@ -1,48 +1,15 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				89,
-				231
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				238,
+				211
+			],
 			"anim": "idle",
-			"indices": [],
-			"name": "MX_Idle instance"
-		},
-		{
-			"offsets": [
-				499,
-				39
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "MX_Down instance"
-		},
-		{
-			"offsets": [
-				244,
-				423
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "MX_Up instance"
-		},
-		{
-			"offsets": [
-				694,
-				591
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "Stomp",
-			"indices": [],
-			"name": "MX_Stomp  instance"
+			"fps": 30,
+			"name": "MX_Idle instance",
+			"indices": []
 		},
 		{
 			"loop": false,
@@ -51,20 +18,53 @@
 				201
 			],
 			"anim": "singLEFT",
-			"fps": 24,
+			"fps": 30,
 			"name": "MX_Right instance",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				73,
-				187
+				509,
+				49
+			],
+			"anim": "singDOWN",
+			"fps": 30,
+			"name": "MX_Down instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				310,
+				360
+			],
+			"anim": "singUP",
+			"fps": 30,
+			"name": "MX_Up instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				122,
+				197
 			],
 			"anim": "singRIGHT",
-			"fps": 24,
+			"fps": 30,
 			"name": "MX_Left instance",
 			"indices": []
+		},
+		{
+			"offsets": [
+				684,
+				521
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "Stomp",
+			"indices": [],
+			"name": "MX_Stomp "
 		}
 	],
 	"no_antialiasing": false,
@@ -81,9 +81,9 @@
 		0
 	],
 	"camera_position": [
-		-1220,
-		-580
+		-1350,
+		-670
 	],
-	"sing_duration": 4,
+	"sing_duration": 6.1,
 	"scale": 2.5
 }
