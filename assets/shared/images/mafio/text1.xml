@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="text1.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="youText0000" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0001" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0002" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0003" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0004" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0005" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0006" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0007" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0008" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0009" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0010" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0011" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0012" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0013" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youText0014" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="youtriedText0000" x="5" y="139" width="1021" height="129"/>
+	<SubTexture name="youtriedtoText0000" x="5" y="273" width="1021" height="129"/>
+	<SubTexture name="youtriedtofuckText0000" x="5" y="407" width="1021" height="129"/>
+	<SubTexture name="youtriedtofuckmeText0000" x="5" y="541" width="1021" height="129"/>
+</TextureAtlas>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="text2.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="goodbyeText0000" x="5" y="5" width="1021" height="129"/>
+	<SubTexture name="goodbyeoldText0000" x="5" y="139" width="1021" height="129"/>
+	<SubTexture name="goodbyeoldfriendText0000" x="5" y="273" width="1021" height="129"/>
+</TextureAtlas>
