@@ -38,7 +38,6 @@ function onStepHit()
 		noteTweenAlpha('NoteFade1', 1, 0, 0.5, 'linear');
 		noteTweenAlpha('NoteFade2', 2, 0, 0.5, 'linear');
 		noteTweenAlpha('NoteFade3', 3, 0, 0.5, 'linear');
-		setProperty('defaultCamZoom', 1.3);
 		doTweenY('mafiotextTween', 'mafiotext', 600, 1, 'cubeInOut');
 		objectPlayAnimation('mafiotext','you', false)
 	end
@@ -53,6 +52,5 @@ function onStepHit()
 		noteTweenAlpha('NoteFade1', 1, 1, 0.5, 'linear');
 		noteTweenAlpha('NoteFade2', 2, 1, 0.5, 'linear');
 		noteTweenAlpha('NoteFade3', 3, 1, 0.5, 'linear');
-		setProperty('defaultCamZoom', 0.7);
 	end
 end

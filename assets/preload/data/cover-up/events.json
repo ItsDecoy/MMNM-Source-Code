@@ -7,6 +7,76 @@
 		"player3": null,
 		"events": [
 			[
+				26503.0674846626,
+				[
+					[
+						"Camera Follow Pos",
+						"610",
+						"640"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"0.8"
+					]
+				]
+			],
+			[
+				27239.263803681,
+				[
+					[
+						"Camera Zoom",
+						"1.6",
+						"3, sineInOut"
+					]
+				]
+			],
+			[
+				29263.8036809816,
+				[
+					[
+						"Camera Zoom",
+						"2.5",
+						"0.2, expoIn"
+					]
+				]
+			],
+			[
+				29447.8527607362,
+				[
+					[
+						"Camera Follow Pos",
+						"700",
+						"640"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"0.2"
+					]
+				]
+			],
+			[
+				32024.5398773006,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					],
+					[
+						"Camera Zoom",
+						"1",
+						"0.4, sineIn"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"1"
+					]
+				]
+			],
+			[
 				32383.4355828221,
 				[
 					[
