@@ -27,6 +27,7 @@ using StringTools;
 class FreeplayState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
+	var path = 'freeplay/';
 
 	var selector:FlxText;
 	private static var curSelected:Int = 0;
@@ -100,7 +101,7 @@ class FreeplayState extends MusicBeatState
 		}
 		WeekData.loadTheFirstEnabledMod();
 
-		bg = new FlxBackdrop(Paths.image('freeplay/loopingback', 'preload'), 1, 1, true, true);
+		bg = new FlxBackdrop(Paths.image(path + 'loopingback', 'preload'), 1, 1, true, true);
 		bg.scrollFactor.set();
 		bg.antialiasing = false;
 		add(bg);
@@ -111,48 +112,25 @@ class FreeplayState extends MusicBeatState
 		artsSelect = new FlxTypedGroup<FlxSprite>();
 		add(artsSelect);
 
-		leftArrow = new FlxSprite();
-		leftArrow.frames = Paths.getSparrowAtlas('freeplay/left_arrow_');
-		leftArrow.animation.addByPrefix('idle', 'left_arrow_ idle', 24, false);
-		leftArrow.animation.addByPrefix('confirm', 'left_arrow_ press', 24, false);
-		leftArrow.animation.play('idle');
+		leftArrow = new FlxSprite().loadGraphic(Paths.image(path + 'allstarsleftarrowbig', 'preload'));
 		leftArrow.screenCenter();
-		leftArrow.scale.set(0.75, 0.75);
+		leftArrow.scale.set(1, 1);
 		leftArrow.y += 275;
 		leftArrow.x -= 215;
-		leftArrow.animation.finishCallback = function(name:String)
-		{
-			if(name == 'confirm')
-			{
-				leftArrow.animation.play('idle');
-			}
-		}
 		add(leftArrow);
-
 		
-		rightArrow = new FlxSprite();
-		rightArrow.frames = Paths.getSparrowAtlas('freeplay/right_arrow_');
-		rightArrow.animation.addByPrefix('idle', 'right_arrow_ idle', 24, false);
-		rightArrow.animation.addByPrefix('confirm', 'right_arrow_ press', 24, false);
-		rightArrow.animation.play('idle');
+		rightArrow = new FlxSprite().loadGraphic(Paths.image(path + 'allstarsrightarrowbig', 'preload'));
 		rightArrow.screenCenter();
-		rightArrow.scale.set(0.75, 0.75);
+		rightArrow.scale.set(1, 1);
 		rightArrow.y += 275;
 		rightArrow.x += 215;
-		rightArrow.animation.finishCallback = function(name:String)
-		{
-			if(name == 'confirm')
-			{
-				rightArrow.animation.play('idle');
-			}
-		}
 		add(rightArrow);
 		
 		for(i in 0...songs.length)
 		{
-			trace('freeplay/art/' + songs[i].songName.toLowerCase() + '_idle');
+			trace(path + 'art/' + songs[i].songName.toLowerCase() + '_idle');
 
-			var artCover = new FlxSprite().loadGraphic(Paths.image('freeplay/art/' + songs[i].songName.toLowerCase() + '_idle', 'preload'));
+			var artCover = new FlxSprite().loadGraphic(Paths.image(path + 'art/' + songs[i].songName.toLowerCase() + '_idle', 'preload'));
 			artCover.scrollFactor.set();
 			artCover.screenCenter();
 			artCover.ID = i;
@@ -160,7 +138,7 @@ class FreeplayState extends MusicBeatState
 			artCover.antialiasing = ClientPrefs.globalAntialiasing;
 			arts.add(artCover);
 			
-			var artCoverSelect = new FlxSprite().loadGraphic(Paths.image('freeplay/art/' + songs[i].songName.toLowerCase() + '_select', 'preload'));
+			var artCoverSelect = new FlxSprite().loadGraphic(Paths.image(path + 'art/' + songs[i].songName.toLowerCase() + '_select', 'preload'));
 			artCoverSelect.scrollFactor.set();
 			artCoverSelect.screenCenter();
 			artCoverSelect.ID = i;
@@ -169,12 +147,12 @@ class FreeplayState extends MusicBeatState
 			artsSelect.add(artCoverSelect);
 		}
 
-		var select = new FlxSprite().loadGraphic(Paths.image('freeplay/select', 'preload'));
+		var select = new FlxSprite().loadGraphic(Paths.image(path + 'select', 'preload'));
 		select.screenCenter();
 		select.scrollFactor.set();
 		add(select);
 
-		nameArt = new FlxSprite().loadGraphic(Paths.image('freeplay/names/familiar_name'));
+		nameArt = new FlxSprite().loadGraphic(Paths.image(path + 'names/familiar_name'));
 		nameArt.screenCenter();
 		nameArt.scrollFactor.set();
 		add(nameArt);
@@ -268,38 +246,52 @@ class FreeplayState extends MusicBeatState
 			ratingSplit[1] += '0';
 		}
 
-		var upP = controls.UI_UP_P;
-		var downP = controls.UI_DOWN_P;
+		var leftP = controls.UI_LEFT_P;
+		var rightP = controls.UI_RIGHT_P;
+		var leftR = controls.UI_LEFT_R;
+		var rightR = controls.UI_RIGHT_R;
+
+		var leftHold = controls.UI_LEFT;
+		var rightHold = controls.UI_RIGHT;
 		var accepted = controls.ACCEPT;
 		var space = FlxG.keys.justPressed.SPACE;
 		var ctrl = FlxG.keys.justPressed.CONTROL;
 
 		var shiftMult:Int = 1;
-		if(FlxG.keys.pressed.SHIFT) shiftMult = 3;
+		if (FlxG.keys.pressed.SHIFT) shiftMult = 3;
 
-		if(songs.length > 1)
+		if (songs.length > 1)
 		{
-			if(controls.UI_DOWN || controls.UI_UP)
+			if (leftHold || rightHold)
 			{
 				var checkLastHold:Int = Math.floor((holdTime - 0.5) * 10);
 				holdTime += elapsed;
 				var checkNewHold:Int = Math.floor((holdTime - 0.5) * 10);
 
-				if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
+				if (holdTime > 0.5 && checkNewHold - checkLastHold > 0)
 				{
-					changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
-					changeDiff();
+					changeSelection((checkNewHold - checkLastHold) * (leftHold ? -shiftMult : shiftMult));
+					//changeDiff();
 				}
 			}
+			else holdTime = 0;
 		}
 
-		if (controls.UI_LEFT_P)
+		if (leftP)
+		{
 			//changeDiff(-1);
 			changeSelection(-1);
-		else if (controls.UI_RIGHT_P)
+			leftArrow.loadGraphic(Paths.image(path + 'allstarsleftarrowsmall', 'preload'));
+		}
+		else if (leftR) leftArrow.loadGraphic(Paths.image(path + 'allstarsleftarrowbig', 'preload'));
+
+		if (rightP)
+		{
 			//changeDiff(1);
 			changeSelection(1);
-		else if (upP || downP) changeDiff();
+			rightArrow.loadGraphic(Paths.image(path + 'allstarsrightarrowsmall', 'preload'));
+		}
+		else if (rightR) rightArrow.loadGraphic(Paths.image(path + 'allstarsrightarrowbig', 'preload'));
 
 		if (controls.BACK)
 		{
@@ -428,7 +420,7 @@ class FreeplayState extends MusicBeatState
 
 			if(curSelected == spr.ID)
 			{
-				nameArt.loadGraphic(Paths.image('freeplay/names/' + songs[spr.ID].songName.toLowerCase() + '_name'));
+				nameArt.loadGraphic(Paths.image(path + 'names/' + songs[spr.ID].songName.toLowerCase() + '_name'));
 				for(i in 0...artsSelect.members.length)
 				{
 					if(spr.ID == artsSelect.members[i].ID)
