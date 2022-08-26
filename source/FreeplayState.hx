@@ -111,20 +111,6 @@ class FreeplayState extends MusicBeatState
 
 		artsSelect = new FlxTypedGroup<FlxSprite>();
 		add(artsSelect);
-
-		leftArrow = new FlxSprite().loadGraphic(Paths.image(path + 'allstarsleftarrowbig', 'preload'));
-		leftArrow.screenCenter();
-		leftArrow.scale.set(1, 1);
-		leftArrow.y += 275;
-		leftArrow.x -= 215;
-		add(leftArrow);
-		
-		rightArrow = new FlxSprite().loadGraphic(Paths.image(path + 'allstarsrightarrowbig', 'preload'));
-		rightArrow.screenCenter();
-		rightArrow.scale.set(1, 1);
-		rightArrow.y += 275;
-		rightArrow.x += 215;
-		add(rightArrow);
 		
 		for(i in 0...songs.length)
 		{
@@ -153,9 +139,18 @@ class FreeplayState extends MusicBeatState
 		add(select);
 
 		nameArt = new FlxSprite().loadGraphic(Paths.image(path + 'names/familiar_name'));
-		nameArt.screenCenter();
 		nameArt.scrollFactor.set();
+		nameArt.setGraphicSize(Std.int(nameArt.width * 0.6));
+		nameArt.updateHitbox();
+		nameArt.screenCenter();
+		nameArt.y += FlxG.height * 0.4;
 		add(nameArt);
+
+		leftArrow = new FlxSprite(nameArt.x, nameArt.y + 10).loadGraphic(Paths.image(path + 'allstarsleftarrowbig', 'preload'));
+		add(leftArrow);
+		
+		rightArrow = new FlxSprite(nameArt.x + nameArt.frameWidth, leftArrow.y).loadGraphic(Paths.image(path + 'allstarsrightarrowbig', 'preload'));
+		add(rightArrow);
 
 		WeekData.setDirectoryFromWeek();
 
@@ -421,6 +416,10 @@ class FreeplayState extends MusicBeatState
 			if(curSelected == spr.ID)
 			{
 				nameArt.loadGraphic(Paths.image(path + 'names/' + songs[spr.ID].songName.toLowerCase() + '_name'));
+				nameArt.updateHitbox();
+				nameArt.screenCenter();
+				nameArt.y += FlxG.height * 0.4;
+
 				for(i in 0...artsSelect.members.length)
 				{
 					if(spr.ID == artsSelect.members[i].ID)
@@ -440,6 +439,11 @@ class FreeplayState extends MusicBeatState
 				spr.visible = true;
 			}
 		});
+		leftArrow.screenCenter(X);
+		leftArrow.x -= nameArt.width * 0.8;
+
+		rightArrow.screenCenter(X);
+		rightArrow.x += nameArt.width * 0.8;
 	}
 }
 
