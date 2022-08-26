@@ -99,7 +99,7 @@ class ChartingState extends MusicBeatState
 		['Trigger Podoboos', "Makes Podoboos start jumping on screen\n\nUsed in Burning Hatred"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"],
 		['Stage Phase', "Used for example in Blinked and Vicimized\nfor transforming the stage\n\nValue 1: Stage phase ID"],
-		['SHLuigi Shooting', "Used for Cover-Up\n\nValue 1: Use 0.5"]
+		['SHLuigi Shooting', "Used for Cover-Up\n\nValue 1: Shoot Time (default is 0.5)"]
 	];
 
 	var _file:FileReference;
