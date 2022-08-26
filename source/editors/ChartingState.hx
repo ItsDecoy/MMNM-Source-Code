@@ -65,7 +65,8 @@ class ChartingState extends MusicBeatState
 		'No Animation',
 		'Peach Note',
 		'Jump Note',
-		'Bomb Note'
+		'Bomb Note',
+	
 	];
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
 	private var noteTypeMap:Map<String, Null<Int>> = new Map<String, Null<Int>>();
@@ -97,8 +98,8 @@ class ChartingState extends MusicBeatState
 		['HUD Fade', "Fades the HUD camera\n\nValue 1: Alpha\nValue 2: Duration"],
 		['Trigger Podoboos', "Makes Podoboos start jumping on screen\n\nUsed in Burning Hatred"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"],
-		['Stage Phase', "Used for example in Blinked and Vicimized\nfor transforming the stage\n\nValue 1: Stage phase ID"]
-		
+		['Stage Phase', "Used for example in Blinked and Vicimized\nfor transforming the stage\n\nValue 1: Stage phase ID"],
+		['SHLuigi Shooting', "Used for Cover-Up\n\nValue 1: Use 0.5"]
 	];
 
 	var _file:FileReference;
