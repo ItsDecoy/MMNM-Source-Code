@@ -2299,7 +2299,7 @@ class PlayState extends MusicBeatState
 			if (gameBlackLayerAlphaTween != null)
 				gameBlackLayerAlphaTween.active = true;
 			if (gameFlashLayerAlphaTween != null)
-				gameFlashLayerAlphaTween.active = false;
+				gameFlashLayerAlphaTween.active = true;
 
 			if(blammedLightsBlackTween != null)
 				blammedLightsBlackTween.active = true;
@@ -3369,14 +3369,26 @@ class PlayState extends MusicBeatState
 					gameFlashLayerAlphaTween.cancel();
 					gameFlashLayerAlphaTween = null;
 				}
-				var color = FlxColor.fromString(value1);
-				if (color == null) color = FlxColor.WHITE;
+
+				var leColor:Null<FlxColor> = null;
+				var leAlpha:Float = 1;
+
+				if (value1 != '') 
+				{
+					var split = value1.split(',');
+					if(split[0] != null) leColor = FlxColor.fromString(split[0].trim());
+					if(split[1] != null) leAlpha = Std.parseFloat(split[1].trim());
+					if(Math.isNaN(leAlpha)) leAlpha = 1;
+				}
+
+				if (leColor == null)
+					leColor = FlxColor.WHITE;
 
 				var duration:Float = Std.parseFloat(value2);
 				if(Math.isNaN(duration)) duration = 0;
 
-				gameFlashLayer.color = color;
-				gameFlashLayer.alpha = 1;
+				gameFlashLayer.color = leColor;
+				gameFlashLayer.alpha = leAlpha;
 
 				if (duration > 0)
 				{

@@ -440,10 +440,10 @@ class FreeplayState extends MusicBeatState
 			}
 		});
 		leftArrow.screenCenter(X);
-		leftArrow.x -= nameArt.width * 0.8;
+		leftArrow.x -= (nameArt.width / 2) + 40;
 
 		rightArrow.screenCenter(X);
-		rightArrow.x += nameArt.width * 0.8;
+		rightArrow.x += (nameArt.width / 2) + 40;
 	}
 }
 
