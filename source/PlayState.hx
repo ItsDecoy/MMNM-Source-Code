@@ -252,8 +252,10 @@ class PlayState extends MusicBeatState
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
 	public var scoreTxt:FlxText;
+	public var missesTxt:FlxText;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
+	var missesTxtTween:FlxTween;
 
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
@@ -1012,7 +1014,7 @@ class PlayState extends MusicBeatState
 		timeTxt.setFormat(Paths.font("Pixel_NES.otf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
-		timeTxt.borderSize = 4;
+		timeTxt.borderSize = timeTxt.size / 10;
 		timeTxt.visible = showTime;
 		if(ClientPrefs.downScroll) timeTxt.y = FlxG.height - 44;
 
@@ -1155,26 +1157,43 @@ class PlayState extends MusicBeatState
 		iconP1.y = healthBar.y - 75;
 		iconP1.visible = !ClientPrefs.hideHud;
 		iconP1.alpha = ClientPrefs.healthBarAlpha;
-		add(iconP1);
 
 		iconP2 = new HealthIcon(dad.healthIcon, false);
 		iconP2.y = healthBar.y - 75;
 		iconP2.visible = !ClientPrefs.hideHud;
 		iconP2.alpha = ClientPrefs.healthBarAlpha;
-		add(iconP2);
+		
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("Pixel_NES.otf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt = new FlxText(0, healthBarBG.y + 20, FlxG.width, "", 40);
+		scoreTxt.setFormat(Paths.font("Pixel_NES.otf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
-		scoreTxt.borderSize = 2;
+		scoreTxt.borderSize = scoreTxt.size / 10;
 		scoreTxt.visible = !ClientPrefs.hideHud;
+
+		missesTxt = new FlxText(healthBarBG.x, healthBarBG.y - 54, healthBarBG.width / 2, "Misses", 40);
+		missesTxt.setFormat(Paths.font("Pixel_NES.otf"), 40, FlxColor.RED, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		missesTxt.scrollFactor.set();
+		missesTxt.x = healthBarBG.x + healthBarBG.width - missesTxt.width;
+		missesTxt.borderSize = missesTxt.size / 10;
+		missesTxt.visible = !ClientPrefs.hideHud;
+		missesTxt.alpha = 0;
+
+		if (ClientPrefs.downScroll)
+		{
+			scoreTxt.y -= 84;
+			missesTxt.y += 70;
+		}
+
 		add(scoreTxt);
+		add(missesTxt);
+		add(iconP1);
+		add(iconP2);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("Pixel_NES.otf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
-		botplayTxt.borderSize = 3;
+		botplayTxt.borderSize = botplayTxt.size / 10;
 		botplayTxt.visible = cpuControlled;
 		add(botplayTxt);
 		if(ClientPrefs.downScroll) {
@@ -1197,6 +1216,7 @@ class PlayState extends MusicBeatState
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
+		missesTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
 		timeBarBG.cameras = [camHUD];
@@ -1253,6 +1273,8 @@ class PlayState extends MusicBeatState
 				iconP2.flipX = true;
 
 				healthBar.fillDirection = LEFT_TO_RIGHT;
+				missesTxt.alignment = LEFT;
+				missesTxt.x = healthBarBG.x;
 		}
 
 		var daSong:String = Paths.formatToSongPath(curSong);
@@ -2548,11 +2570,11 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		if(ratingName == '?') {
+		/*if(ratingName == '?') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
 		} else {
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
-		}
+		}*/
 
 		if(botplayTxt.visible) {
 			botplaySine += 180 * elapsed;
@@ -3814,6 +3836,8 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+		updateScoreText();
+
 		/* if (combo > 60)
 				daRating = 'sick';
 			else if (combo > 12)
@@ -3945,6 +3969,18 @@ class PlayState extends MusicBeatState
 			},
 			startDelay: Conductor.crochet * 0.001
 		});
+	}
+
+	private function updateScoreText()
+	{
+		scoreTxt.text = '';
+		var dumbScoreText:String = '1';
+		for (i in 0...6)
+		{
+			scoreTxt.text = (Math.floor(songScore / Std.parseFloat(dumbScoreText)) % 10) + scoreTxt.text;
+			dumbScoreText = dumbScoreText + '0';
+		}
+		scoreTxt.text = 'Score: ' + scoreTxt.text;
 	}
 
 	private function onKeyPress(event:KeyboardEvent):Void
@@ -4133,6 +4169,43 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	function missesTxtPopUp()
+	{
+		missesTxt.alpha = 1;
+		missesTxt.text = "Misses: " + songMisses;
+		if(ClientPrefs.scoreZoom)
+		{
+			if(missesTxtTween != null)
+				missesTxtTween.cancel();
+
+			missesTxt.scale.x = 1.2;
+			missesTxt.scale.y = 1.2;
+			missesTxtTween = FlxTween.tween(missesTxt.scale, {x: 1, y: 1}, 0.2, {onComplete:
+				function(twn:FlxTween)
+				{
+					missesTxtTween = FlxTween.tween(missesTxt, {alpha: 0}, 0.4, {onComplete:
+						function(twn:FlxTween)
+						{
+							missesTxtTween = null;
+						}
+					, startDelay: 2});
+				}
+			, ease: FlxEase.bounceOut});
+		}
+		else
+		{
+			if(missesTxtTween != null)
+				missesTxtTween.cancel();
+
+			missesTxtTween = FlxTween.tween(missesTxt, {alpha: 0}, 0.4, {onComplete:
+				function(twn:FlxTween)
+				{
+					missesTxtTween = null;
+				}
+			, startDelay: 2.2});
+		}
+	}
+
 	function noteMiss(daNote:Note):Void { //You didn't hit the key and let it go offscreen, also used by Hurt Notes
 		//Dupe note remove
 		notes.forEachAlive(function(note:Note) {
@@ -4189,6 +4262,9 @@ class PlayState extends MusicBeatState
 		
 		totalPlayed++;
 		RecalculateRating();
+		updateScoreText();
+
+		missesTxtPopUp();
 
 		var char:Character = boyfriend;
 		if(daNote.gfNote) {
@@ -4232,6 +4308,8 @@ class PlayState extends MusicBeatState
 			}
 			totalPlayed++;
 			RecalculateRating();
+			updateScoreText();
+			missesTxtPopUp();
 
 			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
 			// FlxG.sound.play(Paths.sound('missnote1'), 1, false);
