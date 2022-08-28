@@ -35,7 +35,7 @@ class VisualsUISubState extends BaseOptionsMenu
 		rpcTitle = 'Visuals & UI Settings Menu'; //for Discord Rich Presence
 
 		var option:Option = new Option('Screen Shaders',
-			"Disable if you don't want any screen shader.",
+			"Disable if you don't want any screen shaders.     (Can inprove FPS on low-end PCs)",
 			'shaders',
 			'bool',
 			false);
