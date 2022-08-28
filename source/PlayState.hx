@@ -3974,11 +3974,21 @@ class PlayState extends MusicBeatState
 	private function updateScoreText()
 	{
 		scoreTxt.text = '';
+		scoreTxt.color = FlxColor.WHITE;
+
 		var dumbScoreText:String = '1';
 		for (i in 0...6)
 		{
-			scoreTxt.text = (Math.floor(songScore / Std.parseFloat(dumbScoreText)) % 10) + scoreTxt.text;
+			var curScore = songScore;
+			if (curScore < 0) curScore = -curScore;
+			scoreTxt.text = (Math.floor(curScore / Std.parseFloat(dumbScoreText)) % 10) + scoreTxt.text;
 			dumbScoreText = dumbScoreText + '0';
+		}
+
+		if (songScore < 0)
+		{
+			scoreTxt.text = '-' + scoreTxt.text;
+			scoreTxt.color = FlxColor.RED;
 		}
 		scoreTxt.text = 'Score: ' + scoreTxt.text;
 	}
