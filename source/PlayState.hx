@@ -116,6 +116,7 @@ class PlayState extends MusicBeatState
 	public static var curStage:String = '';
 	public static var isPixelStage:Bool = false;
 	public static var stageStyle:String = '';
+	public static var isReversed:Bool = false;
 	public static var SONG:SwagSong = null;
 	public static var songAuthor:String = 'unknown';
 	public static var isStoryMode:Bool = false;
@@ -445,6 +446,7 @@ class PlayState extends MusicBeatState
 				defaultZoom: 0.9,
 				isPixelStage: false,
 				stageStyle: "",
+				isReversed: false,
 			
 				boyfriend: [770, 100],
 				girlfriend: [400, 130],
@@ -463,6 +465,7 @@ class PlayState extends MusicBeatState
 		defaultCamZoom = stageCamZoom;
 		isPixelStage = stageData.isPixelStage;
 		stageStyle = stageData.stageStyle.toLowerCase();
+		isReversed = stageData.isReversed;
 		BF_X = stageData.boyfriend[0];
 		BF_Y = stageData.boyfriend[1];
 		GF_X = stageData.girlfriend[0];
@@ -1152,16 +1155,19 @@ class PlayState extends MusicBeatState
 		healthBar.alpha = ClientPrefs.healthBarAlpha;
 		add(healthBar);
 		healthBarBG.sprTracker = healthBar;
+		if (isReversed) healthBar.fillDirection = LEFT_TO_RIGHT;
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
 		iconP1.visible = !ClientPrefs.hideHud;
 		iconP1.alpha = ClientPrefs.healthBarAlpha;
+		iconP1.flipX = isReversed;
 
 		iconP2 = new HealthIcon(dad.healthIcon, false);
 		iconP2.y = healthBar.y - 75;
 		iconP2.visible = !ClientPrefs.hideHud;
 		iconP2.alpha = ClientPrefs.healthBarAlpha;
+		iconP2.flipX = isReversed;
 		
 		reloadHealthBarColors();
 
@@ -1178,6 +1184,12 @@ class PlayState extends MusicBeatState
 		missesTxt.borderSize = missesTxt.size / 10;
 		missesTxt.visible = !ClientPrefs.hideHud;
 		missesTxt.alpha = 0;
+
+		if (isReversed)
+		{
+			missesTxt.alignment = LEFT;
+			missesTxt.x = healthBarBG.x;
+		}
 
 		if (ClientPrefs.downScroll)
 		{
@@ -1265,17 +1277,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 		#end
-		
-		switch(curStage)
-		{
-			case 'World 1-1' | 'World 1...':
-				iconP1.flipX = true;
-				iconP2.flipX = true;
-
-				healthBar.fillDirection = LEFT_TO_RIGHT;
-				missesTxt.alignment = LEFT;
-				missesTxt.x = healthBarBG.x;
-		}
 
 		var daSong:String = Paths.formatToSongPath(curSong);
 		if (isStoryMode && !seenCutscene)
@@ -2207,7 +2208,10 @@ class PlayState extends MusicBeatState
 			var targetAlpha:Float = 1;
 			if (player < 1 && ClientPrefs.middleScroll) targetAlpha = 0.35;
 
-			var babyArrow:StrumNote = new StrumNote(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, strumLine.y, i, player);
+			var targetPlayer = player;
+			if (isReversed && !ClientPrefs.middleScroll) targetPlayer = 1 - player;
+
+			var babyArrow:StrumNote = new StrumNote(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, strumLine.y, i, targetPlayer);
 			babyArrow.downScroll = ClientPrefs.downScroll;
 			if (!isStoryMode && !skipArrowStartTween)
 			{
@@ -2628,14 +2632,15 @@ class PlayState extends MusicBeatState
 
 		var iconOffset:Int = 26;
 
-		switch(curStage)
+		if (isReversed)
 		{
-			case 'World 1-1' | 'World 1...':
-				iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 100, 0, 100, 0) * 0.01)) + (150 * iconP2.scale.x - 150) / 2 - iconOffset;
-				iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 100, 0, 100, 0) * 0.01)) - (150 * iconP1.scale.x) / 2 - iconOffset * 2;
-			default:
-				iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
-				iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
+			iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 100, 0, 100, 0) * 0.01)) + (150 * iconP2.scale.x - 150) / 2 - iconOffset;
+			iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 100, 0, 100, 0) * 0.01)) - (150 * iconP1.scale.x) / 2 - iconOffset * 2;
+		}
+		else
+		{
+			iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
+			iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
 		}
 
 		if (health > 2)

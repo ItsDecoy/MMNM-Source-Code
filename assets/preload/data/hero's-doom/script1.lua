@@ -4,11 +4,7 @@ function onCreate()
     addLuaText('runTxt');
     setTextColor('runTxt', 'ffffff');
 	setObjectCamera('runTxt', 'hud');
-	setProperty('runTxt.visible', false);
-	
-	addLuaScript('lua/reverseStrum')
-
-   
+	setProperty('runTxt.visible', false)
 
     makeLuaSprite('red', '', 0, 0);
     makeGraphic('red',1280,720,'ff0000')

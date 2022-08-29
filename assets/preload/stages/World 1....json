@@ -3,6 +3,7 @@
 	"defaultZoom": 0.8,
 	"isPixelStage": false,
 	"stageStyle": "nes",
+	"isReversed": true,
 
 	"boyfriend": [305, 360],
 	"girlfriend": [400, 370],

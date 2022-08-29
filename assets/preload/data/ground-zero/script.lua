@@ -1,10 +1,6 @@
 local barScale = 1
 local slamHealthGain = 1
 
-function onCreate()
-	addLuaScript('lua/reverseStrum')
-end
-
 function onCreatePost()
 	slamHealthGain = getProperty('healthGain')
 	if slamHealthGain > 1 then
