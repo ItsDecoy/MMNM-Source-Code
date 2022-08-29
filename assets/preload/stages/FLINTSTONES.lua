@@ -62,7 +62,11 @@ function onCreate()
 	scaleObject('Varg',0.65,0.65);
 
 	
-
+	makeLuaSprite('Virus', folder..'virus detected', 325, 50);
+	setObjectCamera('Virus', 'other');
+	addLuaSprite('Virus', true);
+	setProperty('Virus.visible',false);
+	scaleObject('Virus',0.5, 0.5);
 end
 
 function onCountdownTick(counter)

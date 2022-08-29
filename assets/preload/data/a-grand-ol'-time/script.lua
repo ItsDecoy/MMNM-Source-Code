@@ -30,6 +30,17 @@ function onBeatHit()
 		else setProperty('camHUD.angle', 1.5) end
 		doTweenAngle('camHUDangleTween', 'camHUD', 0, crochet / 1000, 'expoIn')
 	end
+	
+	if curBeat == 254 then 
+	setProperty('Virus.visible', true);
+	
+	end
+
+	if curBeat == 264 then
+	setProperty('Virus.visible', false);
+	
+	end
+	
 end
 
 function switchStrums(strums, angle)
