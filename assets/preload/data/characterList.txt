@@ -1,5 +1,2 @@
 bf
 gf
-bf-pixel
-bf-pixel-opponent
-gf-pixel
