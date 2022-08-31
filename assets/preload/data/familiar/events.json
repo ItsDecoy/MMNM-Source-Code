@@ -1,0 +1,34 @@
+{
+	"song": {
+		"speed": 2.4,
+		"stage": "World 1...",
+		"player1": "bf-plumber-flipped",
+		"player2": "FalseHero",
+		"player3": null,
+		"events": [
+			[
+				186947.368421052,
+				[
+					[
+						"Camera Fade",
+						"0",
+						"0"
+					],
+					[
+						"HUD Fade",
+						"0",
+						"0"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "gf-plumber",
+		"bpm": 95,
+		"arrowSkin": "NESNOTE_assets",
+		"needsVoices": true,
+		"song": "Familiar"
+	}
+}
