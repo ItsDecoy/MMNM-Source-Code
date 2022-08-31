@@ -43,6 +43,10 @@ function onCreate()
 	
 	makeLuaSprite('DeadToadAlert','MX/mxbgmmnm_pole',-750,50);
 	addLuaSprite('DeadToadAlert',false);
+
+	makeLuaSprite('Toad','MX/deadtoad',1350, 750);
+	addLuaSprite('Toad',false);
+	scaleObject('Toad',1.1,1.1);
 		
 	makeLuaSprite('Dead','MX/mxbgmmnm_wall',-220,50);
 	addLuaSprite('Dead',false);
