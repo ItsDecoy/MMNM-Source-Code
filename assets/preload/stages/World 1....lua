@@ -56,6 +56,10 @@ function onCreate()
 		addLuaSprite('DeadToadAlert2',false);
 		scaleObject('DeadToadAlert2',0.8,0.8);
 
+	makeAnimatedLuaSprite('Lucas','falseHero/Lucas_FalseH', -100, 500);
+	addAnimationByPrefix('Lucas','idle','Lucas Dance',24,true);
+		addLuaSprite('Lucas', false);
+		scaleObject('Lucas', 0.8, 0.8);
 
 
 

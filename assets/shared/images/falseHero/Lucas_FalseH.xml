@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Lucas_FalseH.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Lucas Dance0000" x="5" y="5" width="428" height="738" frameX="0" frameY="-6" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0001" x="5" y="5" width="428" height="738" frameX="0" frameY="-6" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0002" x="5" y="5" width="428" height="738" frameX="0" frameY="-6" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0003" x="438" y="5" width="413" height="737" frameX="-6" frameY="-7" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0004" x="438" y="5" width="413" height="737" frameX="-6" frameY="-7" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0005" x="438" y="5" width="413" height="737" frameX="-6" frameY="-7" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0006" x="856" y="5" width="395" height="742" frameX="-17" frameY="-2" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0007" x="856" y="5" width="395" height="742" frameX="-17" frameY="-2" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0008" x="856" y="5" width="395" height="742" frameX="-17" frameY="-2" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0009" x="1256" y="5" width="389" height="744" frameX="-22" frameY="0" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0010" x="1256" y="5" width="389" height="744" frameX="-22" frameY="0" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0011" x="1256" y="5" width="389" height="744" frameX="-22" frameY="0" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0012" x="1256" y="5" width="389" height="744" frameX="-22" frameY="0" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0013" x="1256" y="5" width="389" height="744" frameX="-22" frameY="0" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0014" x="1256" y="5" width="389" height="744" frameX="-22" frameY="0" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0015" x="1256" y="5" width="389" height="744" frameX="-22" frameY="0" frameWidth="428" frameHeight="744"/>
+	<SubTexture name="Lucas Dance0016" x="1256" y="5" width="389" height="744" frameX="-22" frameY="0" frameWidth="428" frameHeight="744"/>
+</TextureAtlas>
