@@ -9,11 +9,15 @@ class Highscore
 	#if (haxe >= "4.0.0")
 	public static var weekScores:Map<String, Int> = new Map();
 	public static var songScores:Map<String, Int> = new Map();
+	public static var songMisses:Map<String, Int> = new Map();
 	public static var songRating:Map<String, Float> = new Map();
+	public static var songGrades:Map<String, String> = new Map();
 	#else
 	public static var weekScores:Map<String, Int> = new Map();
 	public static var songScores:Map<String, Int> = new Map<String, Int>();
+	public static var songMisses:Map<String, Int> = new Map<String, Int>();
 	public static var songRating:Map<String, Float> = new Map<String, Float>();
+	public static var songGrades:Map<String, String> = new Map<String, String>();
 	#end
 
 
@@ -46,19 +50,22 @@ class Highscore
 		return newValue / tempMult;
 	}
 
-	public static function saveScore(song:String, score:Int = 0, ?diff:Int = 0, ?rating:Float = -1):Void
+	public static function saveScore(song:String, score:Int = 0, ?diff:Int = 0, ?misses:Int = 0, ?rating:Float = -1, ?grade:String = 'Clear'):Void
 	{
 		var daSong:String = formatSong(song, diff);
 
 		if (songScores.exists(daSong)) {
 			if (songScores.get(daSong) < score) {
 				setScore(daSong, score);
+				songMisses.set(song, misses);
 				if(rating >= 0) setRating(daSong, rating);
+				setGrade(daSong, grade);
 			}
 		}
 		else {
 			setScore(daSong, score);
 			if(rating >= 0) setRating(daSong, rating);
+			setGrade(daSong, grade);
 		}
 	}
 
@@ -85,6 +92,14 @@ class Highscore
 		FlxG.save.data.songScores = songScores;
 		FlxG.save.flush();
 	}
+
+	static function setMisses(song:String, misses:Int):Void
+	{
+		// Reminder that I don't need to format this song, it should come formatted!
+		songMisses.set(song, misses);
+		FlxG.save.data.songMisses = songMisses;
+		FlxG.save.flush();
+	}
 	static function setWeekScore(week:String, score:Int):Void
 	{
 		// Reminder that I don't need to format this song, it should come formatted!
@@ -98,6 +113,13 @@ class Highscore
 		// Reminder that I don't need to format this song, it should come formatted!
 		songRating.set(song, rating);
 		FlxG.save.data.songRating = songRating;
+		FlxG.save.flush();
+	}
+
+	static function setGrade(song:String, grade:String):Void
+	{
+		songGrades.set(song, grade);
+		FlxG.save.data.songGrades = songGrades;
 		FlxG.save.flush();
 	}
 
@@ -135,17 +157,10 @@ class Highscore
 
 	public static function load():Void
 	{
-		if (FlxG.save.data.weekScores != null)
-		{
-			weekScores = FlxG.save.data.weekScores;
-		}
-		if (FlxG.save.data.songScores != null)
-		{
-			songScores = FlxG.save.data.songScores;
-		}
-		if (FlxG.save.data.songRating != null)
-		{
-			songRating = FlxG.save.data.songRating;
-		}
+		if (FlxG.save.data.weekScores != null) weekScores = FlxG.save.data.weekScores;
+		if (FlxG.save.data.songScores != null) songScores = FlxG.save.data.songScores;
+		if (FlxG.save.data.songMisses != null) songMisses = FlxG.save.data.songMisses;
+		if (FlxG.save.data.songRating != null) songRating = FlxG.save.data.songRating;
+		if (FlxG.save.data.songGrades != null) songGrades = FlxG.save.data.songGrades;
 	}
 }

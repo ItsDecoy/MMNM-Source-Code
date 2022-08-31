@@ -1,32 +1,32 @@
 {
-	"songs": [
-		[
-			"Cover Up",
-			"icon-shm",
-			[
-				38,
-				24,
-				24
-			]
-		]
-	],
-	"hiddenUntilUnlocked": false,
+	"storyName": "Blink and you'll miss it",
+	"difficulties": "Normal",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
-	"difficulties": "Normal",
-	"weekCharacters": [
-		"dad",
-		"bf",
-		"gf"
-	],
-	"storyName": "You tried to fuck me!",
-	"weekName": "Custom Week",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"startUnlocked": true,
 	"hideStoryMode": false,
-	"weekBefore": "tutorial",
-	"startUnlocked": true
+	"songs": [
+		[
+			"Blinked",
+			"icon-eye",
+			[
+				56,
+				31,
+				3
+			]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
 }

@@ -8,6 +8,15 @@
 				52,
 				31
 			]
+		],
+		[
+			"Hero's Doom",
+			"icon-mx",
+			[
+				81,
+				9,
+				3
+			]
 		]
 	],
 	"hiddenUntilUnlocked": false,
@@ -20,7 +29,7 @@
 		"gf"
 	],
 	"storyName": "Mario...?",
-	"weekName": "Custom Week",
+	"weekName": "MX Week",
 	"freeplayColor": [
 		146,
 		113,

@@ -72,6 +72,7 @@ class MXModeStart extends MusicBeatState
     var title:FlxSprite;
     var mushcursor:FlxSprite;
     var merio:FlxSprite;
+    var weekScoreTxt:FlxText;
     var spriteScale = 3;
 
     var acceptedYourFate = false;
@@ -98,6 +99,12 @@ class MXModeStart extends MusicBeatState
         mushcursor.scrollFactor.set();
         mushcursor.x += 72 * spriteScale;
         add(mushcursor);
+
+        weekScoreTxt = new FlxText(title.x, title.y, 0, "Week Score\n000000\n", 8, true);
+        weekScoreTxt.setFormat(Paths.font('Pixel_NES.otf'), 10 * spriteScale, FlxColor.WHITE, LEFT);
+        weekScoreTxt.x += 24 * spriteScale;
+        weekScoreTxt.y += 16 * spriteScale;
+        add(weekScoreTxt);
 
         for (i in 0...options.length)
         {
@@ -166,6 +173,8 @@ class MXModeStart extends MusicBeatState
                     PlayState.storyPlaylist = mxModeSongList;
                     PlayState.isStoryMode = true;
                     PlayState.chartingMode = false;
+
+                    trace(WeekData.getWeekFileName());
 
                     var diffic = CoolUtil.getDifficultyFilePath(1);
                     if(diffic == null) diffic = '';

@@ -1,15 +1,16 @@
 {
 	"songs": [
 		[
-			"Ground Zero",
-			"wario",
+			"Pink Forest",
+			"icon-p",
 			[
-				153,
-				128,
-				47
+				181,
+				49,
+				83
 			]
 		]
 	],
+	"hiddenUntilUnlocked": false,
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"difficulties": "Normal",
@@ -18,8 +19,8 @@
 		"bf",
 		"gf"
 	],
-	"storyName": "You want fun? WARIO SHOW YOU FUN!",
-	"weekName": "Massacre",
+	"storyName": "Again?",
+	"weekName": "Pink Forest",
 	"freeplayColor": [
 		146,
 		113,

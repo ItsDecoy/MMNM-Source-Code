@@ -1,16 +1,15 @@
 {
 	"songs": [
 		[
-			"Burning Hatred",
-			"icon-ihy",
+			"Ground Zero",
+			"wario",
 			[
-				12,
+				153,
 				128,
-				58
+				47
 			]
 		]
 	],
-	"hiddenUntilUnlocked": false,
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"difficulties": "Normal",
@@ -19,8 +18,8 @@
 		"bf",
 		"gf"
 	],
-	"storyName": "Angry Brother",
-	"weekName": "Custom Week",
+	"storyName": "You want fun? WARIO SHOW YOU FUN!",
+	"weekName": "Wario Week",
 	"freeplayColor": [
 		146,
 		113,

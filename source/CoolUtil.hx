@@ -23,6 +23,18 @@ class CoolUtil
 
 	public static var difficulties:Array<String> = [];
 
+	public static var grades:Array<String> = ["SFC", "GFC", "FC", "SDCB", "Clear"];
+
+	public static function gradeInt(gradeIn:String):Int
+	{
+		for (i in 0...grades.length)
+		{
+			if (grades[i] == gradeIn)
+				return i;
+		}
+		return grades.length-1;
+	}
+
 	public static function getDifficultyFilePath(num:Null<Int> = null)
 	{
 		if(num == null) num = PlayState.storyDifficulty;

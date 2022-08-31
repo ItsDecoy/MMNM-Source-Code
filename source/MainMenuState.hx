@@ -1,5 +1,6 @@
 package;
 
+import openfl.system.System;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -183,7 +184,7 @@ class MainMenuState extends MusicBeatState
 		#if ACHIEVEMENTS_ALLOWED
 		Achievements.loadAchievements();
 		var leDate = Date.now();
-		if (leDate.getDay() == 5 && leDate.getHours() >= 18) {
+		if (leDate.getDay() == 1 && leDate.getHours() >= 18) {
 			var achieveID:Int = Achievements.getAchievementIndex('friday_night_play');
 			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) { //It's a friday night. WEEEEEEEEEEEEEEEEEE
 				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
@@ -226,7 +227,12 @@ class MainMenuState extends MusicBeatState
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
-		
+		// THIS IS A DEBUG FEATURE. You shouldn't be able to do this in the final game.
+		if (controls.UI_DOWN && controls.RESET)
+		{
+			FlxG.save.erase();
+			System.exit(0);
+		}
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));

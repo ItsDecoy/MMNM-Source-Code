@@ -1,12 +1,12 @@
 {
 	"songs": [
 		[
-			"Hero's Doom",
-			"icon-MX",
+			"Burning Hatred",
+			"icon-ihy",
 			[
-				81,
-				9,
-				3
+				12,
+				128,
+				58
 			]
 		]
 	],
@@ -19,8 +19,8 @@
 		"bf",
 		"gf"
 	],
-	"storyName": "INNOCENCE CRUSHER",
-	"weekName": "Custom Week",
+	"storyName": "Angry Brother",
+	"weekName": "IHY Week",
 	"freeplayColor": [
 		146,
 		113,

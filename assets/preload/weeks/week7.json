@@ -1,32 +1,32 @@
 {
-	"storyName": "Blink and you'll miss it",
-	"difficulties": "Normal",
-	"hideFreeplay": false,
-	"weekBackground": "stage",
-	"weekBefore": "tutorial",
-	"freeplayColor": [
-		146,
-		113,
-		253
-	],
-	"startUnlocked": true,
-	"hideStoryMode": false,
 	"songs": [
 		[
-			"Blinked",
-			"icon-eye",
+			"Victimized",
+			"icon-MAR",
 			[
-				56,
-				31,
-				3
+				141,
+				69,
+				103
 			]
 		]
 	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "Normal",
 	"weekCharacters": [
 		"dad",
 		"bf",
 		"gf"
 	],
-	"hiddenUntilUnlocked": false,
-	"weekName": "Custom Week"
+	"storyName": "Castle go BOOM",
+	"weekName": "Custom Week",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
 }
