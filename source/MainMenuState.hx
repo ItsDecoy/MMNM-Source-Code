@@ -37,14 +37,6 @@ class MainMenuState extends MusicBeatState
 	
 	var optionShit:Array<String> = [
 		'mx_mode',
-		'story_mode',
-		'extras',
-		'options'
-	];
-
-	var artList:Array<String> = [
-		'mx_mode',
-		'all_stars',
 		'extras',
 		'options'
 	];
@@ -60,13 +52,20 @@ class MainMenuState extends MusicBeatState
 	var ca_pos:FlxPoint;
 	var ca_pos2:FlxPoint;
 
+	var bg:FlxSprite;
+	var blackSide:FlxSprite;
+	var logoTHING:FlxSprite;
+
 	var ready:Bool = true;
 
 	var xPos:Float = 0;
 
 	override function create()
 	{
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
 		WeekData.loadTheFirstEnabledMod();
+        WeekData.reloadWeekFiles(false);
 
 		#if desktop
 		// Updating Discord Rich Presence
@@ -87,13 +86,34 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_BACKGROUND'));
-		bg.scrollFactor.set(0, 0);
-		bg.setGraphicSize(Std.int(bg.width * 1.025));
+		bg = new FlxSprite(0, -120).loadGraphic(Paths.image('mainmenustuff/background'));
+		bg.scrollFactor.set(0, 0.3);
+		bg.setGraphicSize(Std.int(bg.width * 1.2));
 		bg.updateHitbox();
-		bg.screenCenter();
+		bg.screenCenter(X);
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
+
+		coverART2 = new FlxSprite(645, 130);
+		coverART2.scrollFactor.set();
+		coverART2.antialiasing = ClientPrefs.globalAntialiasing;
+		ca_pos2 = new FlxPoint(coverART2.x, coverART2.y);
+		add(coverART2);
+
+		coverART = new FlxSprite(645, 130);
+		coverART.scrollFactor.set();
+		coverART.antialiasing = ClientPrefs.globalAntialiasing;
+		ca_pos = new FlxPoint(coverART.x, coverART.y);
+		add(coverART);
+
+		blackSide = new FlxSprite().loadGraphic(Paths.image('mainmenustuff/sideThing'));
+		blackSide.scrollFactor.set(0, 0);
+		blackSide.setGraphicSize(Std.int(blackSide.width * 1.025));
+		blackSide.updateHitbox();
+		blackSide.screenCenter();
+		blackSide.x -= 800;
+		blackSide.antialiasing = ClientPrefs.globalAntialiasing;
+		add(blackSide);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollowPos = new FlxObject(0, 0, 1, 1);
@@ -103,29 +123,23 @@ class MainMenuState extends MusicBeatState
 		pipes = new FlxTypedGroup<FlxSprite>();
 		add(pipes);
 
-		for (i in 0...optionShit.length)
+		if (StoryMenuState.weekCompleted.exists(WeekData.weeksList[0]) || StoryMenuState.weekCompleted.get(WeekData.weeksList[0]))
 		{
-			var offset:Float = 160 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var thingCursor2 = new FlxSprite(-100, (i * 125)  + offset).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_PIPE', 'preload'));
-			thingCursor2.scrollFactor.set();
-			
-			pipes.add(thingCursor2);
-			
-			switch(i)
-			{
-				case 0:
-					thingCursor2.y -= 10;
-				case 1:
-					thingCursor2.y -= 15;
-				case 2:
-					thingCursor2.y -= 10;
-				case 3:
-					thingCursor2.y -= 5;
-			}
+			optionShit.insert(1, 'all_stars');
 		}
 
-		thingCursor = new FlxSprite().loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_CURSOR', 'preload'));
+		for (i in 0...optionShit.length)
+		{
+			var offset = 130;
+			var pipe = new FlxSprite(-100, 360 - (offset / 2) * (optionShit.length-1)).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_PIPE', 'preload'));
+			pipe.y += offset * i;
+			pipe.scrollFactor.set();
+			pipes.add(pipe);
+		}
+
+		thingCursor = new FlxSprite(410, 0).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_CURSOR', 'preload'));
 		thingCursor.scrollFactor.set();
+		thingCursor.antialiasing = ClientPrefs.globalAntialiasing;
 		add(thingCursor);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
@@ -135,49 +149,28 @@ class MainMenuState extends MusicBeatState
 
 		for (i in 0...optionShit.length)
 		{
-			var offset:Float = 160 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(xPos, (i * 125)  + offset).loadGraphic(Paths.image('mainmenustuff/' + optionShit[i], 'preload'));
-			if(i == 1)
-			{
-				menuItem.y -= 50;
-			}
+			var menuItem:FlxSprite = new FlxSprite(xPos, pipes.members[i].y + pipes.members[i].height / 2).loadGraphic(Paths.image('mainmenustuff/' + optionShit[i], 'preload'));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
+			menuItem.updateHitbox();
+			menuItem.y -= menuItem.height / 2;
+			menuItem.scrollFactor.set(0, 0);
+			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			menuItem.ID = i;
 			menuItems.add(menuItem);
-			var scr:Float = (optionShit.length - 4) * 0.135;
-			if(optionShit.length < 6) scr = 0;
-			menuItem.scrollFactor.set(0, scr);
-			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
-			menuItem.updateHitbox();
 		}
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
-		/*var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 48, 0, "(NOTE: THIS FEATURE SHOULD BE REMOVED BEFORE THE FINAL RELEASE)\nPress 7 to unlock all stars automatically / Press 0 to close and erase data.\n", 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' v" + Application.current.meta.get('version'), 12);
-		versionShit.scrollFactor.set();
-		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShit);*/
 
-		coverART2 = new FlxSprite(625, 100);
-		coverART2.scrollFactor.set();
-		ca_pos2 = new FlxPoint(coverART2.x, coverART2.y);
-		add(coverART2);
-
-		coverART = new FlxSprite(625, 100);
-		coverART.scrollFactor.set();
-		ca_pos = new FlxPoint(coverART.x, coverART.y);
-		add(coverART);
-
-		var logoTHING:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_LOGO', 'preload'));
+		logoTHING = new FlxSprite(10, 0).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_LOGO', 'preload'));
 		logoTHING.scrollFactor.set();
 		logoTHING.antialiasing = ClientPrefs.globalAntialiasing;
 		add(logoTHING);
-
 
 		changeItem();
 
@@ -228,10 +221,16 @@ class MainMenuState extends MusicBeatState
 		}
 
 		// THIS IS A DEBUG FEATURE. You shouldn't be able to do this in the final game.
-		if (controls.UI_DOWN && controls.RESET)
+		if (FlxG.keys.pressed.ZERO)
 		{
 			FlxG.save.erase();
 			System.exit(0);
+		}
+		else if (FlxG.keys.pressed.SEVEN)
+		{
+			StoryMenuState.weekCompleted.set('week1', true);
+			FlxG.sound.play(Paths.sound('confirmMenu'), 0.8);
+			MusicBeatState.switchState(new MainMenuState());
 		}
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
@@ -265,44 +264,46 @@ class MainMenuState extends MusicBeatState
 				else
 				{
 					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'));
+					FlxG.sound.play(Paths.sound('MenuPipe'), 0.8);
 
 					menuItems.forEach(function(spr:FlxSprite)
 					{
-						if (curSelected != spr.ID)
+						var lePipe:FlxSprite = pipes.members[spr.ID];
+						var leStartDelay = 0.05 * spr.ID;
+						if (curSelected == spr.ID)
 						{
-							FlxTween.tween(spr, {alpha: 0}, 0.4, {
-								ease: FlxEase.quadOut,
-								onComplete: function(twn:FlxTween)
-								{
-									spr.kill();
-								}
-							});
-						}
-						else
-						{
+							FlxFlicker.flicker(thingCursor, 0.5, 0.06, false, false);
 							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
 							{
 								var daChoice:String = optionShit[curSelected];
 
 								switch (daChoice)
 								{
-									case 'story_mode':
-										MusicBeatState.switchState(new FreeplayState());
 									case 'mx_mode':
 										FlxTransitionableState.skipNextTransOut = true;
 										MusicBeatState.switchState(new MXModeStart());
-									case 'awards':
-										MusicBeatState.switchState(new AchievementsMenuState());
+									case 'all_stars':
+										FlxTransitionableState.skipNextTransOut = true;
+										MusicBeatState.switchState(new FreeplayState());
 									case 'extras':
+										FlxTransitionableState.skipNextTransOut = true;
 										MusicBeatState.switchState(new ExtrasMenu());
-									case 'credits':
-										MusicBeatState.switchState(new CreditsState());
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
 								}
 							});
+							leStartDelay = 0.5;
 						}
+
+						// HOLY SHIT THIS ARE SO MANY TWEENS!!1114SDFSDAF
+						FlxTween.tween(lePipe, {x: lePipe.x - 800}, 0.4, {ease: FlxEase.backIn, startDelay: leStartDelay});
+						FlxTween.tween(spr, {x: spr.x - 800}, 0.4, {ease: FlxEase.backIn, startDelay: leStartDelay});
+						FlxTween.tween(blackSide, {x: 0}, 0.5, {ease: FlxEase.expoIn, startDelay: 0.5});
+						FlxTween.tween(logoTHING, {y: logoTHING.y - 300}, 0.5, {ease: FlxEase.expoIn, startDelay: 0.5});
+						FlxTween.tween(bg.scale, {x: 1.3, y: 1.3}, 1, {ease: FlxEase.expoIn});
+						FlxTween.tween(coverART.scale, {x: 2.5, y: 2.5}, 1, {ease: FlxEase.expoIn});
+						FlxTween.tween(coverART, {angle: 4}, 1, {ease: FlxEase.expoIn});
+						FlxTween.color(coverART, 1, FlxColor.WHITE, FlxColor.GRAY, {ease: FlxEase.expoIn});
 					});
 				}
 			}
@@ -318,47 +319,20 @@ class MainMenuState extends MusicBeatState
 		menuItems.forEach(function(spr:FlxSprite){
 			if(spr.ID == curSelected)
 			{
-				coverART2.x = FlxMath.lerp(coverART2.x, ca_pos2.x, CoolUtil.boundTo(elapsed * 5, 0, 1));
-				coverART2.y = FlxMath.lerp(coverART2.y, ca_pos2.y, CoolUtil.boundTo(elapsed * 5, 0, 1));
+				coverART2.y = FlxMath.lerp(coverART2.y, ca_pos2.y, CoolUtil.boundTo(elapsed * 8, 0, 1));
 
-				coverART.loadGraphic(Paths.image('mainmenustuff/art/' + artList[spr.ID]));
+				coverART.loadGraphic(Paths.image('mainmenustuff/art/' + optionShit[spr.ID]));
 				switch(spr.ID)
 				{
 					case 0:
-						coverART.x = FlxMath.lerp(coverART.x, ca_pos.x + 6, CoolUtil.boundTo(elapsed * 5, 0, 1));
-						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y - 8, CoolUtil.boundTo(elapsed * 5, 0, 1));
+						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y - 8, CoolUtil.boundTo(elapsed * 8, 0, 1));
 					case 1:
-						coverART.x = FlxMath.lerp(coverART.x, ca_pos.x, CoolUtil.boundTo(elapsed * 5, 0, 1));
-						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y, CoolUtil.boundTo(elapsed * 5, 0, 1));
+						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y, CoolUtil.boundTo(elapsed * 8, 0, 1));
 					case 2:
-						coverART.x = FlxMath.lerp(coverART.x, ca_pos.x + 6, CoolUtil.boundTo(elapsed * 5, 0, 1));
-						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y - 8, CoolUtil.boundTo(elapsed * 5, 0, 1));
+						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y - 8, CoolUtil.boundTo(elapsed * 8, 0, 1));
 					case 3:
-						coverART.x = FlxMath.lerp(coverART.x, ca_pos.x, CoolUtil.boundTo(elapsed * 5, 0, 1));
-						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y, CoolUtil.boundTo(elapsed * 5, 0, 1));
+						coverART.y = FlxMath.lerp(coverART.y, ca_pos.y, CoolUtil.boundTo(elapsed * 8, 0, 1));
 				}
-
-
-				spr.x = FlxMath.lerp(spr.x, xPos + 35, CoolUtil.boundTo(elapsed * 5, 0, 1));
-				var addition = 0;
-				switch(spr.ID)
-				{
-					case 0:
-						addition = 20;
-					case 1:
-						addition = 70;
-					case 2:
-						addition = 25;
-					case 3:
-						addition = 30;
-
-				}
-				thingCursor.y = FlxMath.lerp(thingCursor.y, spr.y + addition, CoolUtil.boundTo(elapsed * 10, 0, 1));
-				thingCursor.x = 410;
-			}
-			else
-			{
-				spr.x = FlxMath.lerp(spr.x, xPos, CoolUtil.boundTo(elapsed * 5, 0, 1));
 			}
 		});
 		
@@ -378,6 +352,9 @@ class MainMenuState extends MusicBeatState
 			if (curSelected < 0)
 				curSelected = menuItems.length - 1;
 
+			var pipe:FlxSprite = pipes.members[curSelected];
+			FlxTween.tween(thingCursor, {y: pipe.y + (pipe.height / 2) - thingCursor.height / 2}, 0.2, {ease: FlxEase.sineOut});
+
 			menuItems.forEach(function(spr:FlxSprite)
 			{
 				spr.updateHitbox();
@@ -389,6 +366,7 @@ class MainMenuState extends MusicBeatState
 						ca_pos2.set(ca_pos.x, ca_pos.y + 750);
 						coverART.y = ca_pos.y - 750;
 						coverART2.loadGraphicFromSprite(coverART);
+						
 					}
 					else
 					{
@@ -397,14 +375,19 @@ class MainMenuState extends MusicBeatState
 						coverART.y = ca_pos.y + 750;
 						coverART2.loadGraphicFromSprite(coverART);
 					}
+					FlxTween.tween(spr, {x: xPos + 32}, 0.2, {ease: FlxEase.sineOut});
 					spr.centerOffsets();
+					camFollow.y = spr.ID * 100;
+				}
+				else
+				{
+					FlxTween.tween(spr, {x: xPos}, 0.2, {ease: FlxEase.sineOut});
 				}
 			});
-			new FlxTimer().start(0.2, function(tmr:FlxTimer)
+			new FlxTimer().start(0.15, function(tmr:FlxTimer)
 			{
 				ready = true;
 			});
 		}
-
 	}
 }

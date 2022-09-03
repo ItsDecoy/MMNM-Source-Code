@@ -62,27 +62,23 @@ using StringTools;
 
 class MXModeStart extends MusicBeatState
 {
-    static var mxModeSongList = ['Familiar', "Hero's Doom"];
-
     var path = 'mxstart/';
 
     var options:Array<String> = ['Play Game', 'Exit'];
     var optionSprGroup:FlxSpriteGroup;
+    var bfScoreGroup:FlxSpriteGroup;
+    var highscoreGroup:FlxSpriteGroup;
     var curSelect = 0;
     var title:FlxSprite;
     var mushcursor:FlxSprite;
     var merio:FlxSprite;
-    var weekScoreTxt:FlxText;
+    var boyfriendTxt:FlxSprite;
     var spriteScale = 3;
 
     var acceptedYourFate = false;
 
     override function create()
     {
-		Paths.clearStoredMemory();
-		Paths.clearUnusedMemory();
-        WeekData.reloadWeekFiles(false);
-
         title = new FlxSprite().loadGraphic(Paths.image(path + 'title', 'preload'));
         title.setGraphicSize(Std.int(title.width * spriteScale));
         title.updateHitbox();
@@ -100,11 +96,19 @@ class MXModeStart extends MusicBeatState
         mushcursor.x += 72 * spriteScale;
         add(mushcursor);
 
-        weekScoreTxt = new FlxText(title.x, title.y, 0, "Week Score\n000000\n", 8, true);
-        weekScoreTxt.setFormat(Paths.font('Pixel_NES.otf'), 10 * spriteScale, FlxColor.WHITE, LEFT);
-        weekScoreTxt.x += 24 * spriteScale;
-        weekScoreTxt.y += 16 * spriteScale;
-        add(weekScoreTxt);
+        boyfriendTxt = new FlxSprite(title.x, title.y).loadGraphic(Paths.image(path + 'boyfriend', 'preload'));
+        boyfriendTxt.setGraphicSize(Std.int(boyfriendTxt.width * spriteScale));
+        boyfriendTxt.updateHitbox();
+        boyfriendTxt.scrollFactor.set();
+        boyfriendTxt.x += 24 * spriteScale;
+        boyfriendTxt.y += 16 * spriteScale;
+        add(boyfriendTxt);
+
+        var highscore = Highscore.getWeekScore('week1', 1);
+        bfScoreGroup = makeNumbers(title.x + (24 * spriteScale), title.y + (24 * spriteScale), 0, 6);
+        highscoreGroup = makeNumbers(title.x + (129 * spriteScale), title.y + (184 * spriteScale), highscore, 7);
+        add(bfScoreGroup);
+        add(highscoreGroup);
 
         for (i in 0...options.length)
         {
@@ -132,6 +136,33 @@ class MXModeStart extends MusicBeatState
         FlxG.camera.setFilters([new ShaderFilter(new CRTShader(1))]);
 
         super.create();
+    }
+
+    private function makeNumbers(x:Float, y:Float, num:Float, maxDig:Int):FlxSpriteGroup
+    {
+        var spriteGroup:FlxSpriteGroup = new FlxSpriteGroup(x, y);
+		for (i in 0...maxDig)
+		{
+			var dibb:Float = 1;
+            for (j in 1...maxDig - i)
+                dibb *= 10;
+
+            var num:Int = Std.int(Math.floor(num / dibb) % 10);
+
+            var numSpr:FlxSprite = new FlxSprite(0 + (i * 8 * spriteScale), 0);
+            numSpr.loadGraphic(Paths.image(path + 'nums'));
+            numSpr.loadGraphic(Paths.image(path + 'nums'), true, Math.floor(numSpr.width / 10), Math.floor(numSpr.height));
+
+            for (k in 0...10)
+                numSpr.animation.add(Std.string(k), [k], 0, false);
+
+            numSpr.animation.play(Std.string(num));
+            numSpr.setGraphicSize(Std.int(numSpr.width * spriteScale));
+            numSpr.updateHitbox();
+            numSpr.scrollFactor.set();
+            spriteGroup.add(numSpr);
+		}
+        return spriteGroup;
     }
 
     override function update(elapsed:Float)
@@ -170,11 +201,18 @@ class MXModeStart extends MusicBeatState
             {
                 case 'Play Game':
                     PlayState.storyWeek = 0;
-                    PlayState.storyPlaylist = mxModeSongList;
+                    
+                    // We can't use Dynamic Array .copy() because that crashes HTML5, here's a workaround.
+                    var songArray:Array<String> = [];
+                    var leWeek:Array<Dynamic> = WeekData.weeksLoaded.get(WeekData.weeksList[0]).songs;
+                    for (i in 0...leWeek.length) {
+                        songArray.push(leWeek[i][0]);
+                    }
+
+                    // Nevermind that's stupid lmao
+                    PlayState.storyPlaylist = songArray;
                     PlayState.isStoryMode = true;
                     PlayState.chartingMode = false;
-
-                    trace(WeekData.getWeekFileName());
 
                     var diffic = CoolUtil.getDifficultyFilePath(1);
                     if(diffic == null) diffic = '';
@@ -185,6 +223,7 @@ class MXModeStart extends MusicBeatState
                     PlayState.campaignScore = 0;
                     PlayState.campaignMisses = 0;
 
+                    FreeplayState.destroyFreeplayVocals();
                     FlxG.sound.playMusic(Paths.sound('mxModeStart'), 1, false);
                     var dumbtime = FlxG.sound.music.length / 1000;
 
@@ -203,6 +242,12 @@ class MXModeStart extends MusicBeatState
                             FlxTween.color(spr, dumbtime, FlxColor.WHITE, dark);
                         }
                     }
+
+                    FlxTween.color(boyfriendTxt, dumbtime, FlxColor.WHITE, dark);
+                    for (spr in bfScoreGroup)
+                        FlxTween.color(spr, dumbtime, FlxColor.WHITE, dark);
+                    for (spr in highscoreGroup)
+                        FlxTween.color(spr, dumbtime, FlxColor.WHITE, dark);
                     
                     FlxG.sound.music.onComplete = function()
                     {

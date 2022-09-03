@@ -26,6 +26,6 @@
 		253
 	],
 	"hideStoryMode": false,
-	"weekBefore": "tutorial",
-	"startUnlocked": true
+	"weekBefore": "week2",
+	"startUnlocked": false
 }
