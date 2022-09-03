@@ -124,23 +124,19 @@ class FreeplayState extends MusicBeatState
 			artCover.scrollFactor.set();
 			artCover.screenCenter();
 			artCover.ID = i;
-			artCover.x += i * 575;
+			artCover.x += (i + curSelected) * 575;
 			artCover.antialiasing = ClientPrefs.globalAntialiasing;
 			arts.add(artCover);
 			
-			var artCoverSelect = new FlxSprite().loadGraphic(Paths.image(path + 'art/' + songs[i].songName.toLowerCase() + '_select', 'preload'));
+			var artCoverSelect = new FlxSprite(artCover.x, artCover.y).loadGraphic(Paths.image(path + 'art/' + songs[i].songName.toLowerCase() + '_select', 'preload'));
 			artCoverSelect.scrollFactor.set();
-			artCoverSelect.screenCenter();
 			artCoverSelect.ID = i;
-			artCoverSelect.x += i * 575;
 			artCoverSelect.antialiasing = false;
 			artsSelect.add(artCoverSelect);
 
-			var lock = new FlxSprite().loadGraphic(Paths.image(path + 'art/lock', 'preload'));
+			var lock = new FlxSprite(artCover.x, artCover.y).loadGraphic(Paths.image(path + 'art/lock', 'preload'));
 			lock.scrollFactor.set();
-			lock.screenCenter();
 			lock.ID = i;
-			lock.x += i * 575;
 			lock.antialiasing = ClientPrefs.globalAntialiasing;
 			locks.add(lock);
 			lock.visible = songs[i].locked;
@@ -222,7 +218,7 @@ class FreeplayState extends MusicBeatState
 			{
 				spr.scale.x = FlxMath.lerp(spr.scale.x, 1, CoolUtil.boundTo(elapsed * speed, 0, 1));
 				spr.scale.y = FlxMath.lerp(spr.scale.y, 1, CoolUtil.boundTo(elapsed * speed, 0, 1));
-				spr.y = (Math.sin(timeElapsed * 3) * 8);
+				spr.y = Math.sin(timeElapsed * 3) * 8;
 			}
 			else
 			{

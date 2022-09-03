@@ -283,10 +283,8 @@ class MainMenuState extends MusicBeatState
 										FlxTransitionableState.skipNextTransOut = true;
 										MusicBeatState.switchState(new MXModeStart());
 									case 'all_stars':
-										FlxTransitionableState.skipNextTransOut = true;
 										MusicBeatState.switchState(new FreeplayState());
 									case 'extras':
-										FlxTransitionableState.skipNextTransOut = true;
 										MusicBeatState.switchState(new ExtrasMenu());
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
@@ -303,7 +301,7 @@ class MainMenuState extends MusicBeatState
 						FlxTween.tween(bg.scale, {x: 1.3, y: 1.3}, 1, {ease: FlxEase.expoIn});
 						FlxTween.tween(coverART.scale, {x: 2.5, y: 2.5}, 1, {ease: FlxEase.expoIn});
 						FlxTween.tween(coverART, {angle: 4}, 1, {ease: FlxEase.expoIn});
-						FlxTween.color(coverART, 1, FlxColor.WHITE, FlxColor.GRAY, {ease: FlxEase.expoIn});
+						FlxTween.color(coverART, 1, FlxColor.WHITE, FlxColor.BLACK, {ease: FlxEase.expoIn});
 					});
 				}
 			}
