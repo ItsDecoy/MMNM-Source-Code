@@ -36,6 +36,11 @@ function onCreate()
 	addLuaSprite('Floor', false);
 	scaleObject('Floor',0.95,0.95);
 	
+	makeAnimatedLuaSprite('Shoop', folder..'Shoop_Bopper',100,-100);
+    addAnimationByPrefix('Shoop','Shoop Idle','shoop_da_whoop',24,false);
+	addLuaSprite('Shoop',false);
+	scaleObject('Shoop',0.65,0.65);
+	
 	makeAnimatedLuaSprite('WEEGEE SANIC', folder..'Sanic_and_Weegee_boppers',-220,50)
     addAnimationByPrefix('WEEGEE SANIC','WS Idle','sanic_weegee_boppers',24,false);
 	addLuaSprite('WEEGEE SANIC',false);
@@ -83,4 +88,5 @@ function boppersLol()
 	objectPlayAnimation('Nana', 'Nana Idle', true)
 	objectPlayAnimation('Nyan', 'Nyan Idle', true)
 	objectPlayAnimation('Varg', 'Varg Idle', true)
+	objectPlayAnimation('Shoop', 'Shoop Idle', true)
 end

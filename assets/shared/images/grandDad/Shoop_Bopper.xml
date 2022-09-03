@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Shoop_Bopper.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="shoop_da_whoop0000" x="5" y="5" width="347" height="364" frameX="-18" frameY="-36" frameWidth="365" frameHeight="403"/>
+	<SubTexture name="shoop_da_whoop0001" x="5" y="5" width="347" height="364" frameX="-18" frameY="-36" frameWidth="365" frameHeight="403"/>
+	<SubTexture name="shoop_da_whoop0002" x="357" y="5" width="346" height="371" frameX="-14" frameY="-32" frameWidth="365" frameHeight="403"/>
+	<SubTexture name="shoop_da_whoop0003" x="357" y="5" width="346" height="371" frameX="-14" frameY="-32" frameWidth="365" frameHeight="403"/>
+	<SubTexture name="shoop_da_whoop0004" x="5" y="381" width="333" height="366" frameX="-2" frameY="-4" frameWidth="365" frameHeight="403"/>
+	<SubTexture name="shoop_da_whoop0005" x="5" y="381" width="333" height="366" frameX="-2" frameY="-4" frameWidth="365" frameHeight="403"/>
+	<SubTexture name="shoop_da_whoop0006" x="343" y="381" width="331" height="361" frameX="0" frameY="0" frameWidth="365" frameHeight="403"/>
+	<SubTexture name="shoop_da_whoop0007" x="343" y="381" width="331" height="361" frameX="0" frameY="0" frameWidth="365" frameHeight="403"/>
+</TextureAtlas>
