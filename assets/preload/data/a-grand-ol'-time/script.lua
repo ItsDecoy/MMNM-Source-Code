@@ -31,14 +31,12 @@ function onBeatHit()
 		doTweenAngle('camHUDangleTween', 'camHUD', 0, crochet / 1000, 'expoIn')
 	end
 	
-	if curBeat == 254 then 
-	setProperty('Virus.visible', true);
-	
+	if curBeat == 250 then 
+		setProperty('Virus.visible', true);
 	end
 
-	if curBeat == 264 then
-	setProperty('Virus.visible', false);
-	
+	if curBeat == 260 then
+		setProperty('Virus.visible', false);
 	end
 	
 end

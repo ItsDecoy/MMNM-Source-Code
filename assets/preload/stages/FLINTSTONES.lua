@@ -65,7 +65,6 @@ function onCreate()
     addAnimationByPrefix('Varg','Varg Idle','Vinesauce_Bopper',24,false);
 	addLuaSprite('Varg',false);
 	scaleObject('Varg',0.65,0.65);
-
 	
 	makeLuaSprite('Virus', folder..'virus detected', 325, 50);
 	setObjectCamera('Virus', 'other');
