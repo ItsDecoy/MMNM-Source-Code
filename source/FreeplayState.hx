@@ -260,6 +260,17 @@ class FreeplayState extends MusicBeatState
 			ratingSplit[1] += '0';
 		}
 
+		if (FlxG.keys.pressed.THREE)
+		{
+			ResultsState.AddSongStats(
+				songs[curSelected].songName,
+				Highscore.getScore(songs[curSelected].songName, 1),
+				Highscore.getMisses(songs[curSelected].songName, 1),
+				Highscore.getRating(songs[curSelected].songName, 1),
+				Highscore.getGrade(songs[curSelected].songName, 1));
+			MusicBeatState.switchState(new ResultsState());
+		}
+
 		var leftP = controls.UI_LEFT_P;
 		var rightP = controls.UI_RIGHT_P;
 		var leftR = controls.UI_LEFT_R;

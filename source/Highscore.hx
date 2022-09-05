@@ -57,7 +57,7 @@ class Highscore
 		if (songScores.exists(daSong)) {
 			if (songScores.get(daSong) < score) {
 				setScore(daSong, score);
-				songMisses.set(song, misses);
+				songMisses.set(daSong, misses);
 				if(rating >= 0) setRating(daSong, rating);
 				setGrade(daSong, grade);
 			}
@@ -144,6 +144,24 @@ class Highscore
 			setRating(daSong, 0);
 
 		return songRating.get(daSong);
+	}
+
+	public static function getMisses(song:String, diff:Int):Int
+	{
+		var daSong:String = formatSong(song, diff);
+		if (!songMisses.exists(daSong))
+			setMisses(daSong, 0);
+
+		return songMisses.get(daSong);
+	}
+
+	public static function getGrade(song:String, diff:Int):String
+	{
+		var daSong:String = formatSong(song, diff);
+		if (!songGrades.exists(daSong))
+			setGrade(daSong, 'Clear');
+
+		return songGrades.get(daSong);
 	}
 
 	public static function getWeekScore(week:String, diff:Int):Int
