@@ -21,52 +21,52 @@ function onCreatePost()
 end
 
 function onStepHit()
-	if curStep == 2200 then
+	if curStep == 2224 then
         doTweenColor('timeBar', 'timeBar', 'fc0303', 0.3, 'linear');
 	    doTweenColor('timeTxt', 'timeTxt', 'fc0303', 0.3, linear);
     end
-	if curStep == 2204 then
+	if curStep == 2228 then
         doTweenColor('timeBar', 'timeBar', 'ffffff', 0.3, 'linear');
 	    doTweenColor('timeTxt', 'timeTxt', 'ffffff', 0.3, linear);	
     end
-	if curStep == 2208 then
+	if curStep == 2232 then
         doTweenColor('timeBar', 'timeBar', 'fc0303', 0.3, 'linear');
 	    doTweenColor('timeTxt', 'timeTxt', 'fc0303', 0.3, linear);
     end
 
-	if curStep == 2212 then
+	if curStep == 2236 then
         doTweenColor('timeBar', 'timeBar', 'ffffff', 0.3, 'linear');
 	    doTweenColor('timeTxt', 'timeTxt', 'ffffff', 0.3, linear);
     end
 
-	if curStep == 2216 then
+	if curStep == 2240 then
         doTweenColor('timeBar', 'timeBar', 'fc0303', 0.3, 'linear');
 	    doTweenColor('timeTxt', 'timeTxt', 'fc0303', 0.3, linear);
     end
 
-	if curStep == 2220 then
+	if curStep == 2244 then
         doTweenColor('timeBar', 'timeBar', 'ffffff', 0.3, 'linear');
 	    doTweenColor('timeTxt', 'timeTxt', 'ffffff', 0.3, linear);
     end
 
-	if curStep == 2224 then
+	if curStep == 2248 then
         doTweenColor('timeBar', 'timeBar', 'fc0303', 1.2, 'linear');
 	    doTweenColor('timeTxt', 'timeTxt', 'fc0303', 1.2, linear);
     end
 
-	if curStep == 2624 then
+	if curStep == 2528 then
 	    setProperty('runTxt.visible', true);
     end
 
-	if curStep == 2752 then
+	if curStep == 2656 then
 		setProperty('runTxt.visible', false);
     end
 	
-    if (curStep >= 2624 and curStep < 2751) and flashingLights then
+    if (curStep >= 2528 and curStep < 2656) and flashingLights then
         setProperty('red.visible', curStep % 2 == 0)
     end 
 	
-    if curStep == 2751 then
+    if curStep == 2656 then
         setProperty('rapTxt.visible', false);
         setProperty('red.visible', false);
     end
