@@ -59,7 +59,7 @@ class Highscore
 		if (songScores.exists(daSong)) {
 			if (songScores.get(daSong) < score) {
 				setScore(daSong, score);
-				songMisses.set(daSong, misses);
+				setMisses(daSong, misses);
 				if(rating >= 0) setRating(daSong, rating);
 				setGrade(daSong, grade);
 			}
