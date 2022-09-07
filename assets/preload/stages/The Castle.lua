@@ -17,6 +17,20 @@ function onCreate()
 	scaleObject('Backdrop',0.55,0.55);
 	setScrollFactor('Backdrop', 0.7, 0.7)
 
+	for i=1,#flamesIsMyBestie do
+		makeAnimatedLuaSprite('FlameMD'..i, folder..'fire',flamesIsMyBestie[i][1],flamesIsMyBestie[i][2]);
+		addAnimationByPrefix('FlameMD'..i, 'fireanim','penis', 24,true);
+		objectPlayAnimation('FlameMD'..i,'fireanime',true);
+		addLuaSprite('FlameMD'..i,false);
+		scaleObject('FlameMD'..i,0.65,0.65);
+		setScrollFactor('FlameMD'..i, 0.7, 0.7)
+	end	
+
+	makeLuaSprite('torchHot', folder..'ihybgtorhc', -500, -150);
+	addLuaSprite('torchHot',false);
+	scaleObject('torchHot', 0.55, 0.55);
+	setScrollFactor('torchHot', 0.7, 0.7);
+
 	makeLuaSprite('BridgeOfDeath', folder..'IHYourBridge', -500, -150);
 	addLuaSprite('BridgeOfDeath', false);
 	scaleObject('BridgeOfDeath',0.55,0.55);
@@ -31,12 +45,7 @@ function onCreate()
 	scaleObject('broke',0.55,0.55);
 	setProperty('broke.visible', false);
 
-	for i=1,#flamesIsMyBestie do
-		makeAnimatedLuaSprite('FlameMD'..i, folder..'fire',flamesIsMyBestie[i][1],flamesIsMyBestie[i][2]);
-		addAnimationByPrefix('FlameMD'..i, 'fireanim','penis', 24,true);
-		objectPlayAnimation('FlameMD'..i,'fireanime',true);
-		addLuaSprite('FlameMD'..i,false);
-		scaleObject('FlameMD'..i,0.65,0.65);
-		setScrollFactor('FlameMD'..i, 0.7, 0.7)
-	end	
+
+
+
 end
