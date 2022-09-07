@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				235,
-				269
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				132,
+				278
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Daiseye Note Down"
+			"fps": 24,
+			"name": "Daiseye Note Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				198,
 				725
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Daiseye Note Up"
+			"fps": 24,
+			"name": "Daiseye Note Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				235,
 				611
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Daiseye Idle"
+			"fps": 24,
+			"name": "Daiseye Idle",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				167,
 				483
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Daiseye Note Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Daiseye Note Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				105,
 				532
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Daiseye Note Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Daiseye Note Right"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Dais-eye",
 	"position": [
-		0,
-		350
+		-10,
+		360
 	],
 	"healthicon": "icon-eye",
 	"flip_x": false,
