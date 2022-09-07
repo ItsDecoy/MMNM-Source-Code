@@ -66,6 +66,7 @@ class Highscore
 		}
 		else {
 			setScore(daSong, score);
+			setMisses(daSong, misses);
 			if(rating >= 0) setRating(daSong, rating);
 			setGrade(daSong, grade);
 		}
