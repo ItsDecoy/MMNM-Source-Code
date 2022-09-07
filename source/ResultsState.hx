@@ -14,7 +14,7 @@ class ResultsState extends MusicBeatState
     var path = 'resultScreen/';
 
     private static var statsList:Array<SongStats> = [];
-    public static var allStarsCutscene = false;
+    public static var cutscene:String = '';
 
     var accepted = false;
 
@@ -106,15 +106,14 @@ class ResultsState extends MusicBeatState
         {
             accepted = true;
 
-            if (allStarsCutscene)
+            if (cutscene != '')
             {
                 FlxG.camera.visible = false;
-                (new FlxVideo(Paths.video('all_stars_cutscene_sound'))).finishCallback = function()
+                (new FlxVideo(Paths.video(cutscene))).finishCallback = function()
                 {
-                    allStarsCutscene = false;
-                    MainMenuState.curSelected = 1;
                     moveOn();
                 }
+                cutscene = '';
             }
             else
                 moveOn();

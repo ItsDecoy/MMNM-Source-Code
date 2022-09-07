@@ -171,6 +171,7 @@ class MXModeStart extends MusicBeatState
         var down = controls.UI_DOWN_P && !acceptedYourFate;
         var back = controls.BACK && !acceptedYourFate;
         var accept = controls.ACCEPT && !acceptedYourFate;
+        var ctrl = FlxG.keys.justPressed.CONTROL && !acceptedYourFate;
 
         if (up)
         {
@@ -272,6 +273,12 @@ class MXModeStart extends MusicBeatState
                     MusicBeatState.switchState(new MainMenuState());
             }
         }
+
+		if(ctrl)
+		{
+			persistentUpdate = false;
+			openSubState(new GameplayChangersSubstate());
+		}
 
         super.update(elapsed);
     }

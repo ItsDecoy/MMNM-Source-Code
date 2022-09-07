@@ -25,7 +25,9 @@ class Highscore
 	{
 		var daSong:String = formatSong(song, diff);
 		setScore(daSong, 0);
+		setMisses(daSong, 0);
 		setRating(daSong, 0);
+		setGrade(daSong, '---');
 	}
 
 	public static function resetWeek(week:String, diff:Int = 0):Void
@@ -159,7 +161,7 @@ class Highscore
 	{
 		var daSong:String = formatSong(song, diff);
 		if (!songGrades.exists(daSong))
-			setGrade(daSong, 'Clear');
+			setGrade(daSong, '---');
 
 		return songGrades.get(daSong);
 	}

@@ -3668,7 +3668,7 @@ class PlayState extends MusicBeatState
 						if (SONG.validScore)
 						{
 							if (!StoryMenuState.weekCompleted.get(WeekData.getWeekFileName()) && storyWeek == 0)
-								ResultsState.allStarsCutscene = true;
+								ResultsState.cutscene = 'all_stars_cutscene_sound';
 							
 							Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
 						}
