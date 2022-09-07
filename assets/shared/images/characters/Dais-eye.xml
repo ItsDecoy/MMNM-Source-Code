@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Dais-eye.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Daiseye Idle0000" x="5" y="4832" width="992" height="1192" frameX="-33" frameY="-24" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0001" x="5" y="4832" width="992" height="1192" frameX="-33" frameY="-24" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0002" x="5" y="1206" width="1043" height="1182" frameX="-9" frameY="-34" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0003" x="5" y="1206" width="1043" height="1182" frameX="-9" frameY="-34" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0004" x="5" y="5" width="1049" height="1196" frameX="0" frameY="-20" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0005" x="5" y="5" width="1049" height="1196" frameX="0" frameY="-20" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0006" x="5" y="2393" width="993" height="1216" frameX="-45" frameY="0" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0007" x="5" y="2393" width="993" height="1216" frameX="-45" frameY="0" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0008" x="5" y="3614" width="980" height="1213" frameX="-47" frameY="-3" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0009" x="5" y="3614" width="980" height="1213" frameX="-47" frameY="-3" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0010" x="990" y="3614" width="979" height="1204" frameX="-45" frameY="-12" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0011" x="990" y="3614" width="979" height="1204" frameX="-45" frameY="-12" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0012" x="1003" y="2393" width="977" height="1202" frameX="-45" frameY="-14" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0013" x="1003" y="2393" width="977" height="1202" frameX="-45" frameY="-14" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0014" x="5" y="6029" width="977" height="1201" frameX="-44" frameY="-15" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0015" x="5" y="6029" width="977" height="1201" frameX="-44" frameY="-15" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0016" x="987" y="6029" width="977" height="1201" frameX="-44" frameY="-15" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0017" x="987" y="6029" width="977" height="1201" frameX="-44" frameY="-15" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0018" x="1002" y="4823" width="977" height="1201" frameX="-44" frameY="-15" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0019" x="1002" y="4823" width="977" height="1201" frameX="-44" frameY="-15" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0020" x="1974" y="3600" width="977" height="1201" frameX="-44" frameY="-15" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0021" x="1974" y="3600" width="977" height="1201" frameX="-44" frameY="-15" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0022" x="1969" y="6029" width="977" height="1201" frameX="-44" frameY="-15" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Idle0023" x="1969" y="6029" width="977" height="1201" frameX="-44" frameY="-15" frameWidth="1052" frameHeight="1216"/>
+	<SubTexture name="Daiseye Note Down0000" x="5" y="7321" width="901" height="799" frameX="0" frameY="-14" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0001" x="911" y="7321" width="901" height="799" frameX="0" frameY="-14" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0002" x="1817" y="7321" width="891" height="806" frameX="-5" frameY="-9" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0003" x="2713" y="7321" width="891" height="806" frameX="-5" frameY="-9" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0004" x="5363" y="7321" width="875" height="811" frameX="-13" frameY="-6" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0005" x="6243" y="6125" width="875" height="811" frameX="-13" frameY="-6" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0006" x="7300" y="5105" width="872" height="818" frameX="-14" frameY="0" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0007" x="7300" y="5928" width="872" height="818" frameX="-14" frameY="0" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0008" x="3609" y="7321" width="872" height="818" frameX="-14" frameY="0" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0009" x="4486" y="7321" width="872" height="818" frameX="-14" frameY="0" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0010" x="7300" y="5105" width="872" height="818" frameX="-14" frameY="0" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0011" x="7300" y="5928" width="872" height="818" frameX="-14" frameY="0" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0012" x="3609" y="7321" width="872" height="818" frameX="-14" frameY="0" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Down0013" x="4486" y="7321" width="872" height="818" frameX="-14" frameY="0" frameWidth="901" frameHeight="818"/>
+	<SubTexture name="Daiseye Note Left0000" x="3953" y="5225" width="903" height="1044"/>
+	<SubTexture name="Daiseye Note Left0001" x="3953" y="5225" width="903" height="1044"/>
+	<SubTexture name="Daiseye Note Left0002" x="3953" y="6274" width="886" height="1042" frameX="-8" frameY="-2" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0003" x="4844" y="6274" width="886" height="1042" frameX="-8" frameY="-2" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0004" x="5373" y="3813" width="812" height="1018" frameX="-33" frameY="-26" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0005" x="6043" y="2525" width="812" height="1018" frameX="-33" frameY="-26" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0006" x="4861" y="5101" width="826" height="1015" frameX="-17" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0007" x="7137" y="5" width="826" height="1015" frameX="-17" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0008" x="7137" y="1025" width="821" height="1015" frameX="-22" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0009" x="6240" y="1270" width="821" height="1015" frameX="-22" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0010" x="7066" y="2045" width="799" height="1015" frameX="-44" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0011" x="5692" y="4836" width="799" height="1015" frameX="-44" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0012" x="6190" y="3548" width="799" height="1015" frameX="-44" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0013" x="6994" y="3065" width="799" height="1015" frameX="-44" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0014" x="6994" y="4085" width="799" height="1015" frameX="-44" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0015" x="6496" y="5105" width="799" height="1015" frameX="-44" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0016" x="6190" y="3548" width="799" height="1015" frameX="-44" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Left0017" x="6994" y="3065" width="799" height="1015" frameX="-44" frameY="-29" frameWidth="903" frameHeight="1044"/>
+	<SubTexture name="Daiseye Note Right0000" x="1059" y="5" width="1015" height="1109" frameX="0" frameY="-6" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0001" x="1053" y="1206" width="1019" height="1115"/>
+	<SubTexture name="Daiseye Note Right0002" x="2951" y="6202" width="997" height="1091" frameX="0" frameY="-24" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0003" x="2079" y="5" width="1002" height="1098" frameX="0" frameY="-17" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0004" x="1985" y="2517" width="931" height="1037" frameX="0" frameY="-78" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0005" x="1984" y="4806" width="932" height="1044" frameX="0" frameY="-71" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0006" x="3086" y="5" width="926" height="1038" frameX="0" frameY="-77" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0007" x="3738" y="3137" width="921" height="1039" frameX="0" frameY="-76" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0008" x="4017" y="5" width="917" height="1035" frameX="0" frameY="-80" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0009" x="3738" y="2091" width="922" height="1041" frameX="0" frameY="-74" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0010" x="3666" y="1048" width="926" height="1038" frameX="0" frameY="-77" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0011" x="3758" y="4181" width="921" height="1039" frameX="0" frameY="-76" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0012" x="4017" y="5" width="917" height="1035" frameX="0" frameY="-80" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Right0013" x="3738" y="2091" width="922" height="1041" frameX="0" frameY="-74" frameWidth="1019" frameHeight="1115"/>
+	<SubTexture name="Daiseye Note Up0000" x="2951" y="4806" width="802" height="1391" frameX="0" frameY="-2" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0001" x="2077" y="1119" width="802" height="1393" frameX="0" frameY="0" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0002" x="2884" y="1108" width="777" height="1364" frameX="-16" frameY="-30" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0003" x="2956" y="2477" width="777" height="1354" frameX="-16" frameY="-40" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0004" x="4939" y="5" width="707" height="1240" frameX="-69" frameY="-153" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0005" x="5735" y="5" width="707" height="1242" frameX="-69" frameY="-151" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0006" x="5550" y="1252" width="685" height="1268" frameX="-84" frameY="-125" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0007" x="6447" y="5" width="685" height="1260" frameX="-84" frameY="-133" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0008" x="4684" y="3819" width="684" height="1277" frameX="-83" frameY="-116" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0009" x="4665" y="2536" width="684" height="1278" frameX="-83" frameY="-115" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0010" x="4861" y="1250" width="684" height="1281" frameX="-83" frameY="-112" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0011" x="5354" y="2536" width="684" height="1272" frameX="-83" frameY="-121" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0012" x="4684" y="3819" width="684" height="1277" frameX="-83" frameY="-116" frameWidth="802" frameHeight="1394"/>
+	<SubTexture name="Daiseye Note Up0013" x="4665" y="2536" width="684" height="1278" frameX="-83" frameY="-115" frameWidth="802" frameHeight="1394"/>
+</TextureAtlas>
