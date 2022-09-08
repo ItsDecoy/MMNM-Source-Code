@@ -84,10 +84,10 @@ class CreditsState extends MusicBeatState
 			['MMNM Team'],
 			['Inferno',		'shadowmario',		'Creator, Director, Artist, Pixel Artist\nMade: MX, IHY Luigi, Coronation Peach, Pissed Goomba, Menus, Cutscene Sprites, Icons, and Minigame Art',							'https://twitter.com/Inferno_Plumber',	'444444'],
 			['Decoy',			'riveroaken',		'Charter and Coder\nCharted: Burning Hatred, Pink Forest',						'https://twitter.com/Yoshinova_',		'C30085'],
-			['Elie',				'Elie',			'Charter\n Charted: Ground Zero',					'https://twitter.com/Elie_EETHELI',			'279ADC'],
+			['Elie',				'Elie',			'Beta Charter',					'https://twitter.com/Elie_EETHELI',			'279ADC'],
 			['Anticrista',			'bb-panzu',			'Charter',							'https://twitter.com/anticristadamon',			'389A58'],
-			['Comic',				'Comic_Icon',			'Charter and Coder\nCharted: A Grand Ol Time, Familiar',	'https://twitter.com/ComicTheHero',			'AA32FE'],
-			['Fredrick',			'Fredrick',			'Charter\nCharted: Blinked, Pink Forest, Heros Doom',						'https://twitter.com/FredrickFunny',			'FF9300'],
+			['Comic',				'Comic_Icon',			'Charter and Coder\nCharted: A Grand Ol Time and Familiar',	'https://twitter.com/ComicTheHero',			'AA32FE'],
+			['Fredrick',			'Fredrick',			'Charter\nCharted: Blinked, Pink Forest, Heros Doom, and Ground Zero',						'https://twitter.com/FredrickFunny',			'FF9300'],
 			['willisaclown',		'Willisaclown',	'Composer and Charter\n Composed: Pink Forest, Heros Doom and Victimized\n Charted: Victimized, Cover-Up, and Pissed',								'https://twitter.com/willisaclown',	'FFEAA6'],
 			['Anti',				'keoiki',			'Note Splash Animations',									'https://twitter.com/Antimation_real',			'FFFFFF'],
 			['Nom_lol',				'smokey',			'Coder',								'https://twitter.com/NomNom_Lol',		'4D5DBD'],
@@ -104,18 +104,17 @@ class CreditsState extends MusicBeatState
 			['Nylonic',				'Nylonic',			'',								'https://twitter.com/ArtNylonic',		'4D5DBD'],
 			['Elias',				'Elias',			'',								'https://twitter.com/elias60985444',		'4D5DBD'],
 			['OscaRaczo',				'Icon_OscaRaczo-2',			'Artist\n Made: SH Mario Background, Plumber GF, Grand Dad, Grand Dad Background, and Victim Icons',								'https://twitter.com/osca_raczo',		'4D5DBD'],
-			['ScrubbDubb',				'',			'Artist\n Made: Most Icons',								'https://twitter.com/ScrubbDubb',		'4D5DBD'],
+			['ScrubbDubb',				'scrubb',			'Artist\n Made: Most Icons *wouldnt give me icon so*',								'https://twitter.com/ScrubbDubb',		'4D5DBD'],
 			['DexCord',				'Dex',			'3D Moddeler\n Modled: Wario Head',								'',		'4D5DBD'],
 			['mar.',				'Mar',			'3D Moddeler\n Modled: N64 Mario, BF, and the BG',								'https://twitter.com/YourOPlayz',		'4D5DBD'],
-			['SlushyAnime',				'Slush',			'',								'https://twitter.com/Slushy_Anime',		'4D5DBD'],
-			['MD',				'flamesmd',			'',								'https://twitter.com/FlamesMDRP',		'4D5DBD'],
+			['SlushyAnime',				'Slush',			'Helped with Ground Zero backround',								'https://twitter.com/Slushy_Anime',		'4D5DBD'],
 			['AG_Coffee',				'',			'Animator\n Animated: ',								'',		'4D5DBD'],
 			['FuriousAntz',				'FuriousAntz',			'Antimator\n Animated: False Hero sprites, Lucas sprites, Cutscenes',								'',		'4D5DBD'],
 			['marky',				'Marky',			'Voice Actor\n Played: MX',								'',		'4D5DBD'],
 			['2ToriL',				'',			'Voice Actor\n Played: Coronation Day Peach?',								'',		'4D5DBD'],
 			['mostrolavelocita',				'',			'Voice Actor\n Played: IHY Luigi',								'',		'4D5DBD'],
 			['Sunset',				'',			'Voice Actor\n Played: MX',								'',		'4D5DBD'],
-			['Cattinscool1002',				'',			'Artist and Animator\n Made: SH Mario sprites, Pissing Mario sprites\n',								'https://twitter.com/Cattinscool1001',		'4D5DBD'],
+			['Cattinscool1002',				'',			'Artist and Animator\n Made: SH Mario sprites, Pissing Mario sprites\nAnimated: IHY, MX, Goomba, and Grand Dad',								'https://twitter.com/Cattinscool1001',		'4D5DBD'],
 			['Scrumbo_',				'scrumbo-icon',			'Artist\n Made: False Hero, MX, Coronation Day, and IHY BGs',								'',		'4D5DBD'],
 			[''],
 			['Psych Engine Team'],
@@ -187,7 +186,7 @@ class CreditsState extends MusicBeatState
 		add(descBox);
 
 		descText = new FlxText(50, FlxG.height + offsetThing - 25, 1180, "", 32);
-		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER/*, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK*/);
+		descText.setFormat(Paths.font("Pixel_NES.otf"), 32, FlxColor.WHITE, CENTER/*, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK*/);
 		descText.scrollFactor.set();
 		//descText.borderSize = 2.4;
 		descBox.sprTracker = descText;
