@@ -94,17 +94,37 @@ class CreditsState extends MusicBeatState
 			['TeuCleM',				'smokey',			'Spritemap Texture Support',								'https://twitter.com/TeiClemus',		'4D5DBD'],
 			['Polar Vortex',				'smokey',			'Spritemap Texture Support',								'https://twitter.com/_Polar_Vortex',		'4D5DBD'],
 			['MorenoTheCappuccinoChugger',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",						'https://twitter.com/the_chugger',	'F73838'],
-			['Ighby',		'Ighby',	"Animator of Friday Night Funkin'",							'https://twitter.com/Ighby_Guy',	'FFBB1B'],
-			['https://twitter.com/Chase_R_Music_',			'Chase',			"Artist of Friday Night Funkin'",							'https://twitter.com/Chase_R_Music_',			'53E52C'],
-			['glowylikesdoom',			'Glowy',		"Composer of Friday Night Funkin'",							'https://twitter.com/galwholikesdoom',		'6475F3']
+			['Ighby',		'ighby',	"Animator of Friday Night Funkin'",							'https://twitter.com/Ighby_Guy',	'FFBB1B'],
+			['Chase Redding',			'Chase',			"Artist of Friday Night Funkin'",							'https://twitter.com/Chase_R_Music_',			'53E52C'],
+			['glowylikesdoom',			'Glowy',		"Composer of Friday Night Funkin'",							'https://twitter.com/galwholikesdoom',		'6475F3'],
 			['Frog',				'frog',			'Spritemap Texture Support',								'https://twitter.com/yoshi_epic',		'4D5DBD'],
 			['thesmallerestguy',				'Smallerest',			'Spritemap Texture Support',								'NA',		'4D5DBD'],
 			['Mystica',				'Icon_Mystic',			'Spritemap Texture Support',								'https://twitter.com/Mystic69691',		'4D5DBD'],
 			['Floofs',				'Floofs',			'Spritemap Texture Support',								'https://twitter.com/FloofsFr',		'4D5DBD'],
 			['Nylonic',				'Nylonic',			'Spritemap Texture Support',								'https://twitter.com/ArtNylonic',		'4D5DBD'],
-			['Elias',				'elias',			'Spritemap Texture Support',								'https://twitter.com/elias60985444',		'4D5DBD'],
-			['OscaRaczo',				'Icon_OscaRaczo-2',			'Spritemap Texture Support',								'https://twitter.com/osca_raczo',		'4D5DBD']
-			
+			['Elias',				'Elias',			'Spritemap Texture Support',								'https://twitter.com/elias60985444',		'4D5DBD'],
+			['OscaRaczo',				'Icon_OscaRaczo-2',			'Spritemap Texture Support',								'https://twitter.com/osca_raczo',		'4D5DBD'],
+			[''],
+			['Psych Engine Team'],
+			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],
+			['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',						'https://twitter.com/RiverOaken',		'C30085'],
+			['shubs',				'shubs',			'Additional Programmer of Psych Engine',					'https://twitter.com/yoshubs',			'279ADC'],
+			[''],
+			['Former Engine Members'],
+			['bb-panzu',			'bb-panzu',			'Ex-Programmer of Psych Engine',							'https://twitter.com/bbsub3',			'389A58'],
+			[''],
+			['Engine Contributors'],
+			['iFlicky',				'iflicky',			'Composer of Psync and Tea Time\nMade the Dialogue Sounds',	'https://twitter.com/flicky_i',			'AA32FE'],
+			['SqirraRNG',			'gedehari',			'Chart Editor\'s Sound Waveform base',						'https://twitter.com/gedehari',			'FF9300'],
+			['PolybiusProxy',		'polybiusproxy',	'.MP4 Video Loader Extension',								'https://twitter.com/polybiusproxy',	'FFEAA6'],
+			['Keoiki',				'keoiki',			'Note Splash Animations',									'https://twitter.com/Keoiki_',			'FFFFFF'],
+			['Smokey',				'smokey',			'Spritemap Texture Support',								'https://twitter.com/Smokey_5_',		'4D5DBD'],
+			[''],
+			["Funkin' Crew"],
+			['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",						'https://twitter.com/ninja_muffin99',	'F73838'],
+			['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",							'https://twitter.com/PhantomArcade3K',	'FFBB1B'],
+			['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",							'https://twitter.com/evilsk8r',			'53E52C'],
+			['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",							'https://twitter.com/kawaisprite',		'6475F3']
 		];
 		
 		for(i in pisspoop){

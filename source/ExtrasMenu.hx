@@ -58,22 +58,72 @@ import flixel.addons.display.FlxBackdrop;
 
 class ExtrasMenu extends MusicBeatState
 {
+    static var path:String = 'extrasmenu/';
     var bg:FlxBackdrop;
 
+    static var curSelect:Int = 0;
+
+    var options:Array<String> = ['minigames', 'credits'];
+    var optionSprites:FlxSpriteGroup;
+
     //IM ADDING THIS IN DO NOT WORRY, Hi I'm paul :)
-    override function create(){
+    override function create()
+    {
+        optionSprites = new FlxSpriteGroup();
+
         bg = new FlxBackdrop(Paths.image('freeplay/loopingback','preload'), 1, 1, true, true);
         bg.scrollFactor.set();
         bg.antialiasing = false;
         add(bg);
 
+        for (i in 0...options.length)
+        {
+            // ñ
+            var offset = 170;
+            var opt = new FlxSprite().loadGraphic(Paths.image(path + options[i] + '_idle', 'preload'));
+            opt.setGraphicSize(Std.int(opt.width * 0.9));
+            opt.antialiasing = ClientPrefs.globalAntialiasing;
+            opt.screenCenter();
+            opt.y += (offset * i) - ((offset / 2) * (options.length-1));
+            opt.ID = i;
+            optionSprites.add(opt);
+        }
+
+        add(optionSprites);
+        changeSelection(0);
 
         super.create();
     }
 
-    override function update(elapsed:Float) {
+    override function update(elapsed:Float)
+    {
         if(bg != null)
-            bg.velocity.set(25, 0); 
+            bg.velocity.set(25, 0);
+
+        if (controls.UI_UP_P)
+        {
+            changeSelection(-1);
+            FlxG.sound.play(Paths.sound('scrollMenu'), 0.8);
+        }
+        if (controls.UI_DOWN_P)
+        {
+            changeSelection(1);
+            FlxG.sound.play(Paths.sound('scrollMenu'), 0.8);
+        }
+
+        if (controls.ACCEPT)
+        {
+            switch (options[curSelect])
+            {
+                case 'minigames':
+                    trace('nothing lol');
+                case 'credits':
+                    FlxG.sound.play(Paths.sound('scrollMenu'), 0.8);
+                    FlxTransitionableState.skipNextTransIn = true;
+                    FlxTransitionableState.skipNextTransOut = true;
+                    MusicBeatState.switchState(new CreditsState());
+            }
+        }
 
 		if (controls.BACK)
 		{
@@ -83,7 +133,18 @@ class ExtrasMenu extends MusicBeatState
 		}
 
         super.update(elapsed);
-
     }
 
+    private function changeSelection(int:Int)
+    {
+        curSelect += int;
+        if (curSelect >= options.length) curSelect = 0;
+        if (curSelect < 0) curSelect = options.length-1;
+
+        optionSprites.forEachAlive(function(spr:FlxSprite)
+        {
+            if (spr.ID == curSelect) spr.loadGraphic(Paths.image(path + options[spr.ID] + '_select', 'preload'));
+            else spr.loadGraphic(Paths.image(path + options[spr.ID] + '_idle', 'preload'));
+        });
+    }
 }
