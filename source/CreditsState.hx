@@ -88,7 +88,7 @@ class CreditsState extends MusicBeatState
 			['Anticrista',			'bb-panzu',			'Charter',							'https://twitter.com/anticristadamon',			'389A58'],
 			['Comic',				'Comic_Icon',			'Charted A Grand Ol Time\nFamiliar and Coded all stages',	'https://twitter.com/ComicTheHero',			'AA32FE'],
 			['Fredrick',			'Fredrick',			'Charted Blinked, Pink Forest\nand Heros Doom, added events',						'https://twitter.com/FredrickFunny',			'FF9300'],
-			['willisaclown',		'willisaclown',	'Composed Pink Forest, Heros Doom\nand Victimized, charted Victimized and Cover-Up',								'https://twitter.com/willisaclown',	'FFEAA6'],
+			['willisaclown',		'Willisaclown',	'Composed Pink Forest, Heros Doom\nand Victimized, charted Victimized and Cover-Up',								'https://twitter.com/willisaclown',	'FFEAA6'],
 			['Anti',				'keoiki',			'Note Splash Animations',									'https://twitter.com/Antimation_real',			'FFFFFF'],
 			['Nom_lol',				'smokey',			'Spritemap Texture Support',								'https://twitter.com/NomNom_Lol',		'4D5DBD'],
 			['TeuCleM',				'smokey',			'Spritemap Texture Support',								'https://twitter.com/TeiClemus',		'4D5DBD'],
