@@ -94,7 +94,7 @@ class CreditsState extends MusicBeatState
 			['TeuCleM',				'smokey',			'Coder',								'https://twitter.com/TeiClemus',		'4D5DBD'],
 			['Polar Vortex',				'smokey',			'Coder',								'https://twitter.com/_Polar_Vortex',		'4D5DBD'],
 			['MorenoTheCappuccinoChugger',		'ninjamuffin99',	"Coder'",						'https://twitter.com/the_chugger',	'F73838'],
-			['Ighby',		'ighby',	"'Holy shit he's an awesome coder'",							'https://twitter.com/Ighby_Guy',	'B22222'],
+			['Ighby',		'ighby',	"\"Holy shit he's an awesome coder\"\nMade plumber BF sprites.",							'https://twitter.com/Ighby_Guy',	'B22222'],
 			['Chase Redding',			'Chase',			"Composer\nComposed: Burning Hatred'",							'https://twitter.com/Chase_R_Music_',			'808080'],
 			['glowylikesdoom',			'Glowy',		"Musician\nComposed: Familiar, Blinked, Pissed, and Wanted\nCredit to @genesismobie for icon",							'https://twitter.com/galwholikesdoom',		'808080'],
 			['Frog',				'frog',			'Composer\n Composed: Ground Zero and Victimized',								'https://twitter.com/yoshi_epic',		'00CCFF'],
