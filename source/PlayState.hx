@@ -1171,7 +1171,7 @@ class PlayState extends MusicBeatState
 		
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(0, healthBarBG.y + 20, FlxG.width, "", 40);
+		scoreTxt = new FlxText(400, healthBarBG.y + 20, FlxG.width, "", 40);
 		scoreTxt.setFormat(Paths.font("Pixel_NES.otf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = scoreTxt.size / 10;
@@ -1189,6 +1189,7 @@ class PlayState extends MusicBeatState
 		{
 			missesTxt.alignment = LEFT;
 			missesTxt.x = healthBarBG.x;
+			scoreTxt.x = -400;
 		}
 
 		if (ClientPrefs.downScroll)
