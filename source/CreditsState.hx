@@ -82,7 +82,7 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			['MMNM Team'],
-			['Inferno',		'shadowmario',		'Creator, Director, Artist, Pixel Artist\nMade: MX, IHY Luigi, Coronation Peach, Pissed Goomba, Menus, Cutscene Sprites, Icons, and Minigame Art',							'https://twitter.com/Inferno_Plumber',	'8B0000'],
+			['Inferno',		'inferno',		'Creator, Director, Artist, Pixel Artist\nMade: MX, IHY Luigi, Coronation Peach, Pissed Goomba, Menus, Cutscene Sprites, Icons, and Minigame Art',							'https://twitter.com/Inferno_Plumber',	'8B0000'],
 			['Decoy',			'riveroaken',		'Charter and Coder\nCharted: Burning Hatred, Pink Forest',						'https://twitter.com/Yoshinova_',		'C30085'],
 			['Elie',				'Elie',			'Beta Charter',					'https://twitter.com/Elie_EETHELI',			'279ADC'],
 			['Anticrista',			'bb-panzu',			'Charter',							'https://twitter.com/anticristadamon',			'389A58'],
