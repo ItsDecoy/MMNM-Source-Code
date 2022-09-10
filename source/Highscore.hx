@@ -158,6 +158,9 @@ class Highscore
 		return songMisses.get(daSong);
 	}
 
+	/**
+	 * If this song wasn't beaten, it will return '---'
+	 */
 	public static function getGrade(song:String, diff:Int):String
 	{
 		var daSong:String = formatSong(song, diff);

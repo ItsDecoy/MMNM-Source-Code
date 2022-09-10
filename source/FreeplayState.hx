@@ -1,5 +1,6 @@
 package;
 
+import flixel.tweens.FlxEase;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -59,6 +60,8 @@ class FreeplayState extends MusicBeatState
 	var artsSelect:FlxTypedGroup<FlxSprite>;
 	var locks:FlxTypedGroup<FlxSprite>;
 	var nameArt:FlxSprite;
+
+	var gradeSprite:FlxSprite;
 
 	var timeElapsed:Float = 0;
 
@@ -160,6 +163,13 @@ class FreeplayState extends MusicBeatState
 		nameArt.screenCenter();
 		nameArt.y += FlxG.height * 0.4;
 		add(nameArt);
+
+		gradeSprite = new FlxSprite(FlxG.width * 0.80, 10).loadGraphic(Paths.image(path + 'rating/pfc'));
+		gradeSprite.scrollFactor.set();
+		gradeSprite.setGraphicSize(Std.int(gradeSprite.width * 0.6));
+		gradeSprite.updateHitbox();
+		gradeSprite.antialiasing = ClientPrefs.globalAntialiasing;
+		add(gradeSprite);
 
 		leftArrow = new FlxSprite(nameArt.x, nameArt.y + 10).loadGraphic(Paths.image(path + 'allstarsleftarrowbig', 'preload'));
 		add(leftArrow);
@@ -483,6 +493,17 @@ class FreeplayState extends MusicBeatState
 
 		rightArrow.screenCenter(X);
 		rightArrow.x += (nameArt.width / 2) + 40;
+
+		FlxTween.cancelTweensOf(gradeSprite);
+		gradeSprite.alpha = 0;
+		var songGrade = Highscore.getGrade(songs[curSelected].songName, curDifficulty);
+
+		if (songGrade != '---')
+		{
+			gradeSprite.y = -10;
+			gradeSprite.loadGraphic(Paths.image(path + 'rating/' + songGrade.toLowerCase(), 'preload'));
+			FlxTween.tween(gradeSprite, {y : 10, alpha : 1}, 0.15, {ease: FlxEase.sineOut});
+		}
 	}
 }
 
