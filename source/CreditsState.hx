@@ -110,7 +110,7 @@ class CreditsState extends MusicBeatState
 			['FuriousAntz',				'FuriousAntz',			'Antimator\n Animated: False Hero sprites, Lucas sprites, Cutscenes',								'',		'4D5DBD'],
 			['marky',				'Marky',			'Voice Actor\n Played: MX',								'',		'4D5DBD'],
 			['2ToriL',				'',			'Voice Actor\n Played: Coronation Day Peach?',								'',		'4D5DBD'],
-			['mostrolavelocita',				'',			'Voice Actor\n Played: IHY Luigi',								'',		'4D5DBD'],
+			['mostrolavelocita',				'mostrolavelocita',			'Voice Actor\n Played: IHY Luigi',								'',		'4D5DBD'],
 			['Sunset',				'Sunset',			'Voice Actor\n Played: MX',								'',		'4D5DBD'],
 			['Cattinscool1002',				'',			'Artist and Animator\n Made: SH Mario sprites, Pissing Mario sprites\nAnimated: IHY, MX, Goomba, and Grand Dad',								'https://twitter.com/Cattinscool1001',		'4D5DBD'],
 			['Scrumbo_',				'scrumbo-icon',			'Artist\n Made: False Hero, MX, Coronation Day, and IHY BGs',								'',		'4D5DBD'],
