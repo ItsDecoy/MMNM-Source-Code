@@ -88,7 +88,7 @@ class CreditsState extends MusicBeatState
 			['Comic',				'Comic_Icon',			'Charter and Coder\nCharted: A Grand Ol Time and Familiar',	'https://twitter.com/ComicTheHero',			'AA32FE'],
 			['Fredrick',			'Fredrick',			'Charter\nCharted: Blinked, Pink Forest, Heros Doom, and Ground Zero',						'https://twitter.com/FredrickFunny',			'00CED1'],
 			['willisaclown',		'Willisaclown',	'Composer and Charter\n Composed: Pink Forest, Heros Doom and Victimized\n Charted: Victimized, Cover-Up, and Pissed',								'https://twitter.com/willisaclown',	'FF1493'],
-			['Anti',				'anti',			'Note Splash Animations',									'https://twitter.com/Antimation_real',			'FFFFFF'],
+			['Anti',				'anti',			'Chromatic Maker',									'https://twitter.com/Antimation_real',			'FFFFFF'],
 			['TeuCleM',				'smokey',			'Coder',								'https://twitter.com/TeiClemus',		'4D5DBD'],
 			['Polar Vortex',				'smokey',			'Coder',								'https://twitter.com/_Polar_Vortex',		'4D5DBD'],
 			['MorenoTheCappuccinoChugger',		'ninjamuffin99',	"Coder'",						'https://twitter.com/the_chugger',	'F73838'],
