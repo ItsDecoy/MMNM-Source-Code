@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Lucas_HerosDoom.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Lucas Scared sad0000" x="5" y="5" width="473" height="762" frameX="0" frameY="-2" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0001" x="483" y="5" width="473" height="761" frameX="0" frameY="-3" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0002" x="961" y="5" width="473" height="764"/>
+	<SubTexture name="Lucas Scared sad0003" x="1439" y="5" width="471" height="762" frameX="0" frameY="-2" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0004" x="1915" y="5" width="469" height="763" frameX="0" frameY="-1" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0005" x="2389" y="5" width="469" height="762" frameX="0" frameY="-2" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0006" x="2863" y="5" width="468" height="764" frameX="0" frameY="0" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0007" x="3336" y="5" width="470" height="763" frameX="0" frameY="-1" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0008" x="5" y="774" width="461" height="762" frameX="0" frameY="-2" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0009" x="471" y="774" width="462" height="761" frameX="0" frameY="-3" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0010" x="938" y="774" width="461" height="763" frameX="0" frameY="-1" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0011" x="1404" y="774" width="460" height="762" frameX="0" frameY="-2" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0012" x="1869" y="774" width="451" height="757" frameX="0" frameY="-7" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0013" x="2325" y="774" width="452" height="756" frameX="0" frameY="-8" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0014" x="2782" y="774" width="451" height="757" frameX="0" frameY="-7" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0015" x="3238" y="774" width="450" height="757" frameX="0" frameY="-7" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0016" x="5" y="1542" width="451" height="756" frameX="0" frameY="-8" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0017" x="461" y="1542" width="452" height="755" frameX="0" frameY="-9" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0018" x="918" y="1542" width="451" height="757" frameX="0" frameY="-7" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0019" x="1374" y="1542" width="450" height="756" frameX="0" frameY="-8" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0020" x="5" y="1542" width="451" height="756" frameX="0" frameY="-8" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0021" x="461" y="1542" width="452" height="755" frameX="0" frameY="-9" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0022" x="918" y="1542" width="451" height="757" frameX="0" frameY="-7" frameWidth="473" frameHeight="764"/>
+	<SubTexture name="Lucas Scared sad0023" x="1374" y="1542" width="450" height="756" frameX="0" frameY="-8" frameWidth="473" frameHeight="764"/>
+</TextureAtlas>

@@ -47,15 +47,28 @@ function onCreate()
 	makeLuaSprite('Toad','MX/deadtoad',1350, 750);
 	addLuaSprite('Toad',false);
 	scaleObject('Toad',1.1,1.1);
+
+	makeAnimatedLuaSprite('Lucas', 'MX/Lucas_HerosDoom', -20, 910);
+	addAnimationByPrefix('Lucas', 'idleScared','Lucas Scared sad', 24, true);
+	addLuaSprite('Lucas',false);
+	scaleObject('Lucas', 0.8,0.8)
+	setScrollFactor('Lucas', 0.95, 0.95)
 		
 	makeLuaSprite('Dead','MX/mxbgmmnm_wall',-220,50);
 	addLuaSprite('Dead',false);
 	scaleObject('Dead',1,1);
 	setScrollFactor('Dead',0.95,0.95)
 
+	makeLuaSprite('Hand', 'MX/handofgod', -95, 750);
+	addLuaSprite('Hand',false);
+	scaleObject('Hand', 0.8, 0.8);
+	setScrollFactor('Hand',0.95, 0.95 )
+	
+
 	makeLuaSprite('Shadow1','falseHero/mxfalse_hero_bg_shador',-100,780);
 	addLuaSprite('Shadow1',false);
 	scaleObject('Shadow1',0.58,0.58);
+
 end
 	
 function onMoveCamera(MX)
