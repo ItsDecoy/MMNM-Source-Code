@@ -3668,12 +3668,13 @@ class PlayState extends MusicBeatState
 					{
 						if (SONG.validScore)
 						{
+							// If MX week has been beaten, the all stars cutscene plays.
 							if (!StoryMenuState.weekCompleted.get(WeekData.getWeekFileName()) && storyWeek == 0)
 							{
 								ResultsState.cutscene = 'all_stars_cutscene_sound';
 								MainMenuState.curSelected = 1;
 							}
-							
+							checkForFinalCutscene();
 							Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
 						}
 
@@ -3714,10 +3715,29 @@ class PlayState extends MusicBeatState
 				MusicBeatState.switchState(new ResultsState());
 				changedDifficulty = false;
 
+				checkForFinalCutscene();
 				StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
 			}
+
 			transitioning = true;
 		}
+	}
+
+	private function checkForFinalCutscene()
+	{
+		var completedWeeks:Int = 0;
+		for (i in 0...WeekData.weeksList.length)
+		{
+			if (StoryMenuState.weekCompleted.get(WeekData.weeksList[i]))
+			{
+				completedWeeks += 1;
+				trace(WeekData.weeksList[i] + ' Previously Completed!');
+			}
+		}
+
+		// Previous songs have been beaten and the current song is about to be too. The final cutscene plays
+		if (completedWeeks == WeekData.weeksList.length-1)
+			ResultsState.cutscene = 'MMNM_MX_FINAL_CUTSCENE-2';
 	}
 
 	#if ACHIEVEMENTS_ALLOWED

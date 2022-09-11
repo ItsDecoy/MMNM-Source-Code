@@ -1,5 +1,6 @@
 package;
 
+import flixel.group.FlxSpriteGroup;
 import flixel.tweens.FlxEase;
 #if desktop
 import Discord.DiscordClient;
@@ -61,7 +62,7 @@ class FreeplayState extends MusicBeatState
 	var locks:FlxTypedGroup<FlxSprite>;
 	var nameArt:FlxSprite;
 
-	var gradeSprite:FlxSprite;
+	var gradeSprites:FlxSpriteGroup;
 
 	var timeElapsed:Float = 0;
 
@@ -164,12 +165,30 @@ class FreeplayState extends MusicBeatState
 		nameArt.y += FlxG.height * 0.4;
 		add(nameArt);
 
-		gradeSprite = new FlxSprite(FlxG.width * 0.80, 10).loadGraphic(Paths.image(path + 'rating/pfc'));
-		gradeSprite.scrollFactor.set();
-		gradeSprite.setGraphicSize(Std.int(gradeSprite.width * 0.6));
-		gradeSprite.updateHitbox();
-		gradeSprite.antialiasing = ClientPrefs.globalAntialiasing;
-		add(gradeSprite);
+		gradeSprites = new FlxSpriteGroup();
+		add(gradeSprites);
+
+		for (i in 0...songs.length)
+		{
+			var grade:String = Highscore.getGrade(songs[i].songName, 1).toLowerCase();
+
+			var spr:FlxSprite = new FlxSprite((FlxG.width * 0.80) + 100 * (i - curSelected), 10);
+
+			if (grade != '---') spr.loadGraphic(Paths.image(path + 'rating/' + grade));
+			else
+			{
+				spr.loadGraphic(Paths.image(path + 'rating/clear'));
+				spr.visible = false;
+			}
+
+			spr.scrollFactor.set();
+			spr.setGraphicSize(Std.int(spr.width * 0.6));
+			spr.updateHitbox();
+			spr.antialiasing = ClientPrefs.globalAntialiasing;
+			spr.ID = i;
+			gradeSprites.add(spr);
+		}
+
 
 		leftArrow = new FlxSprite(nameArt.x, nameArt.y + 10).loadGraphic(Paths.image(path + 'allstarsleftarrowbig', 'preload'));
 		add(leftArrow);
@@ -187,13 +206,25 @@ class FreeplayState extends MusicBeatState
 		}
 		curDifficulty = Math.round(Math.max(0, CoolUtil.defaultDifficulties.indexOf(lastDifficultyName)));
 		
-		changeSelection();
+		changeSelection(0, false);
 		changeDiff();
 		super.create();
 	}
 
-	override function closeSubState() {
+	override function closeSubState()
+	{
 		changeSelection(0, false);
+
+		// REFRESHES THE RATING ICON
+		var grade:String = Highscore.getGrade(songs[curSelected].songName, 1).toLowerCase();
+
+		if (grade != '---') gradeSprites.members[curSelected].loadGraphic(Paths.image(path + 'rating/' + grade));
+		else
+		{
+			gradeSprites.members[curSelected].loadGraphic(Paths.image(path + 'rating/clear'));
+			gradeSprites.members[curSelected].visible = false;
+		}
+		
 		persistentUpdate = true;
 		super.closeSubState();
 	}
@@ -221,7 +252,8 @@ class FreeplayState extends MusicBeatState
 			bg.velocity.set(25, 0);
 
 		var speed = 12;
-		arts.forEach(function(spr:FlxSprite){
+		arts.forEach(function(spr:FlxSprite)
+		{
 			var x:Float = ((FlxG.width / 2) - spr.frameWidth / 2) + (575 * (spr.ID - curSelected));
 			
 			if(spr.ID == curSelected)
@@ -238,6 +270,14 @@ class FreeplayState extends MusicBeatState
 			}
 
 			spr.x = FlxMath.lerp(spr.x, x, CoolUtil.boundTo(elapsed * speed, 0, 1));
+
+			var gradeTargetX = FlxG.width * 0.80;
+			var gradeX = gradeTargetX + 100 * (spr.ID - curSelected);
+			gradeSprites.members[spr.ID].x = FlxMath.lerp(gradeSprites.members[spr.ID].x, gradeX, CoolUtil.boundTo(elapsed * speed * 2, 0, 1));
+			
+			var gradeTargetAlpha = gradeSprites.members[spr.ID].x - gradeTargetX;
+			gradeTargetAlpha = Math.max(gradeTargetAlpha, -gradeTargetAlpha);
+			gradeSprites.members[spr.ID].alpha = Math.max(0, 1 - gradeTargetAlpha * 0.01);
 
 			artsSelect.members[spr.ID].x = spr.x;
 			artsSelect.members[spr.ID].y = spr.y;
@@ -493,17 +533,6 @@ class FreeplayState extends MusicBeatState
 
 		rightArrow.screenCenter(X);
 		rightArrow.x += (nameArt.width / 2) + 40;
-
-		FlxTween.cancelTweensOf(gradeSprite);
-		gradeSprite.alpha = 0;
-		var songGrade = Highscore.getGrade(songs[curSelected].songName, curDifficulty);
-
-		if (songGrade != '---')
-		{
-			gradeSprite.y = -10;
-			gradeSprite.loadGraphic(Paths.image(path + 'rating/' + songGrade.toLowerCase(), 'preload'));
-			FlxTween.tween(gradeSprite, {y : 10, alpha : 1}, 0.15, {ease: FlxEase.sineOut});
-		}
 	}
 }
 
