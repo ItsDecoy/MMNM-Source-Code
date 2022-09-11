@@ -1534,7 +1534,7 @@ class PlayState extends MusicBeatState
 
 		if(foundFile) {
 			inCutscene = true;
-			if (ClientPrefs.showFPS) Main.fpsVar.visible = false;
+			Main.fpsVar.visible = false;
 			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 			bg.scrollFactor.set();
 			bg.cameras = [camHUD];
@@ -1543,7 +1543,7 @@ class PlayState extends MusicBeatState
 			(new FlxVideo(fileName)).finishCallback = function() {
 				remove(bg);
 				startAndEnd();
-				if (ClientPrefs.showFPS) Main.fpsVar.visible = true;
+				Main.fpsVar.visible = ClientPrefs.showFPS;
 			}
 			return;
 		}
@@ -3737,7 +3737,10 @@ class PlayState extends MusicBeatState
 
 		// Previous songs have been beaten and the current song is about to be too. The final cutscene plays
 		if (completedWeeks == WeekData.weeksList.length-1)
+		{
 			ResultsState.cutscene = 'MMNM_MX_FINAL_CUTSCENE-2';
+			ResultsState.showThanksScreen = true;
+		}
 	}
 
 	#if ACHIEVEMENTS_ALLOWED

@@ -9,17 +9,18 @@ import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.text.FlxText;
 
+// Coded by Ighby
 class ResultsState extends MusicBeatState
 {
     var path = 'resultScreen/';
 
     private static var statsList:Array<SongStats> = [];
     public static var cutscene:String = '';
+    public static var showThanksScreen = false;
 
     var accepted = false;
 
     var titleCharList:FlxSpriteGroup;
-
     var timeElapsed:Float;
 
     override public function new()
@@ -109,8 +110,10 @@ class ResultsState extends MusicBeatState
             if (cutscene != '')
             {
                 FlxG.camera.visible = false;
+                Main.fpsVar.visible = false;
                 (new FlxVideo(Paths.video(cutscene))).finishCallback = function()
                 {
+                    Main.fpsVar.visible = ClientPrefs.showFPS;
                     moveOn();
                 }
                 cutscene = '';
@@ -124,12 +127,22 @@ class ResultsState extends MusicBeatState
 
     public function moveOn()
     {
-        FlxG.sound.playMusic(Paths.music('freakyMenu'));
-
-        if (PlayState.isStoryMode)
-            MusicBeatState.switchState(new MainMenuState());
+        if (showThanksScreen)
+        {
+			FlxTransitionableState.skipNextTransIn = true;
+			FlxTransitionableState.skipNextTransOut = true;
+            MusicBeatState.switchState(new ThanksState());
+            showThanksScreen = false;
+        }
         else
-            MusicBeatState.switchState(new FreeplayState());
+        {
+            FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+            if (PlayState.isStoryMode)
+                MusicBeatState.switchState(new MainMenuState());
+            else
+                MusicBeatState.switchState(new FreeplayState());
+        }
 
         statsList = [];
     }
