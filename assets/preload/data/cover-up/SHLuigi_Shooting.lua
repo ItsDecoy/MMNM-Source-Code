@@ -1,4 +1,5 @@
 --variables
+activated = false
 canDodge = false
 
 function onCreate()
@@ -15,37 +16,37 @@ end
 function onEvent(name, value1, value2)
     if name == "SHLuigi Shooting" then		
 		--Get Dodge time
-		local dodgeTime = 0.5
+		local dodgeTime = (crochet / 1000) * 1
 		if not (value1 == '') then
-			dodgeTime = tonumber(value1)
+			dodgeTime = (crochet / 1000) * tonumber(value1)
 		end
 		
 		-- if this event was triggered previously and still active, Luigi shoots automatically
-		if canDodge then
+		if activated then
 			removeLuaSprite('spacebar', true);
 			cancelTimer('Died')
-			hit()
+			loogiShoot()
 		end
 	
 		--Set values so you can dodge
+		activated = true
 		canDodge = true;
 		runTimer('Died', dodgeTime);
+
 		makeAnimatedLuaSprite('spacebar', 'mafio/DodgeMechs', 400, 450)
 		setObjectCamera('spacebar', 'other');
 		scaleObject('spacebar', 0.58, 0.58);
 		addLuaSprite('spacebar', true)
-		
 		setProperty('spacebar.visible', not botPlay)
 	end
 end
 
 function onUpdate()
     if canDodge and keyJustPressed('space') and not botPlay then -- This code is where you are successful to dodge
+		playSound('switch', 0.6)
 		dodge()
-		canDodge = false
 		
-	    removeLuaSprite('spacebar', true);
-		cancelTimer('Died')
+	    setProperty('spacebar.alpha', 0.4)
     end
 end
 
@@ -53,13 +54,12 @@ function hit() -- This is code where you are unsuccessful to dodge
 	setProperty('health', getProperty('health') -0.7); -- change the -0.5 if you want to change the amount of damage you take
 	characterPlayAnim('boyfriend', 'hurt', true);
 	setProperty('boyfriend.specialAnim', true);
-	loogiShoot()
 end
 
 function dodge()
 	characterPlayAnim('boyfriend', 'dodge', true);
 	setProperty('boyfriend.specialAnim', true);
-	loogiShoot()
+	canDodge = false
 end
 
 function loogiShoot()
@@ -67,19 +67,23 @@ function loogiShoot()
 	setProperty('SecretLoog.y', 375);
 	objectPlayAnimation('SecretLoog', 'Shoot', true)
 	runTimer('Dance', 0.5);
+
+	if botPlay then
+		dodge()
+	else
+		if canDodge then
+			hit()
+		end
+	end
+	canDodge = false
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
     if tag == 'Died' then
 		removeLuaSprite('spacebar', true);
-		canDodge = false
-		
-		if botPlay then
-			dodge()
-		else
-			hit()
-		end
-			
+		loogiShoot()
+		activated = false
+
     elseif tag == 'Dance' then
 	 	objectPlayAnimation('SecretLoog', 'Idle', true)
 	 	setProperty('SecretLoog.y', 445);
