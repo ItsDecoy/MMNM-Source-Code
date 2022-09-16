@@ -3989,7 +3989,7 @@ class PlayState extends MusicBeatState
 		});
 	}
 
-	private function updateScoreText()
+	public function updateScoreText()
 	{
 		scoreTxt.text = '';
 		scoreTxt.color = FlxColor.WHITE;

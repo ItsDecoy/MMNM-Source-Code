@@ -679,6 +679,7 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "addScore", function(value:Int = 0) {
 			PlayState.instance.songScore += value;
 			PlayState.instance.RecalculateRating();
+			PlayState.instance.updateScoreText();
 		});
 		Lua_helper.add_callback(lua, "addMisses", function(value:Int = 0) {
 			PlayState.instance.songMisses += value;
@@ -691,6 +692,7 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "setScore", function(value:Int = 0) {
 			PlayState.instance.songScore = value;
 			PlayState.instance.RecalculateRating();
+			PlayState.instance.updateScoreText();
 		});
 		Lua_helper.add_callback(lua, "setMisses", function(value:Int = 0) {
 			PlayState.instance.songMisses = value;

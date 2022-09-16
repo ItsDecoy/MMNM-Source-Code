@@ -2,6 +2,8 @@
 activated = false
 canDodge = false
 
+spaceFlashSpeed = 0.05
+
 function onCreate()
 	precacheImage('mafio/DodgeMechs');
 	getPropertyFromClass('Controls', 'var DODGE')
@@ -31,27 +33,32 @@ function onEvent(name, value1, value2)
 		--Set values so you can dodge
 		activated = true
 		canDodge = true;
-		runTimer('Died', dodgeTime);
-
+		
 		makeAnimatedLuaSprite('spacebar', 'mafio/DodgeMechs', 400, 450)
 		setObjectCamera('spacebar', 'other');
 		scaleObject('spacebar', 0.58, 0.58);
 		addLuaSprite('spacebar', true)
 		setProperty('spacebar.visible', not botPlay)
+
+		runTimer('Died', dodgeTime);
 	end
 end
 
 function onUpdate()
     if canDodge and keyJustPressed('space') and not botPlay then -- This code is where you are successful to dodge
 		playSound('switch', 0.6)
-		dodge()
+		canDodge = false
 		
-	    setProperty('spacebar.alpha', 0.4)
+	    setProperty('spacebar.visible', false)
+		runTimer('spaceBlinkIn', spaceFlashSpeed)
     end
 end
 
 function hit() -- This is code where you are unsuccessful to dodge
 	setProperty('health', getProperty('health') -0.7); -- change the -0.5 if you want to change the amount of damage you take
+	setProperty('combo', 0);
+	addScore(-1050)
+
 	characterPlayAnim('boyfriend', 'hurt', true);
 	setProperty('boyfriend.specialAnim', true);
 end
@@ -59,7 +66,6 @@ end
 function dodge()
 	characterPlayAnim('boyfriend', 'dodge', true);
 	setProperty('boyfriend.specialAnim', true);
-	canDodge = false
 end
 
 function loogiShoot()
@@ -68,25 +74,38 @@ function loogiShoot()
 	objectPlayAnimation('SecretLoog', 'Shoot', true)
 	runTimer('Dance', 0.5);
 
-	if botPlay then
+	if botPlay or not canDodge then
 		dodge()
 	else
-		if canDodge then
-			hit()
-		end
+		hit()
 	end
 	canDodge = false
+
+	cameraShake('camGame', 0.01, 0.04)
+	cameraShake('camHUD', 0.01, 0.04)
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
     if tag == 'Died' then
+		cancelTimer('spaceBlinkIn')
+		cancelTimer('spaceBlinkOut')
 		removeLuaSprite('spacebar', true);
 		loogiShoot()
 		activated = false
+	end
 
-    elseif tag == 'Dance' then
+    if tag == 'Dance' then
 	 	objectPlayAnimation('SecretLoog', 'Idle', true)
 	 	setProperty('SecretLoog.y', 445);
+    end
+
+    if tag == 'spaceBlinkIn' then
+		setProperty('spacebar.visible', true)
+		runTimer('spaceBlinkOut', spaceFlashSpeed)
+    end
+    if tag == 'spaceBlinkOut' then
+		setProperty('spacebar.visible', false)
+		runTimer('spaceBlinkIn', spaceFlashSpeed)
     end
 end
 
