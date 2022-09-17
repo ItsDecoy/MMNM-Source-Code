@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="super.png">
+	<SubTexture name="super0000" x="0" y="0" width="53" height="12"/>
+	<SubTexture name="super0001" x="0" y="12" width="53" height="12"/>
+	<SubTexture name="super0002" x="0" y="24" width="53" height="12"/>
+	<SubTexture name="super0004" x="0" y="36" width="53" height="12"/>
+	<SubTexture name="super0004" x="0" y="48" width="53" height="12"/>
+</TextureAtlas>

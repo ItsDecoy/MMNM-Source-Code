@@ -2,6 +2,9 @@
 activated = false
 canDodge = false
 
+spacePressed = false
+dodgeTimer = 0
+
 spaceFlashSpeed = 0.05
 
 function onCreate()
@@ -32,7 +35,8 @@ function onEvent(name, value1, value2)
 	
 		--Set values so you can dodge
 		activated = true
-		canDodge = true;
+		canDodge = true
+		spacePressed = false
 		
 		makeAnimatedLuaSprite('spacebar', 'mafio/DodgeMechs', 400, 450)
 		setObjectCamera('spacebar', 'other');
@@ -44,23 +48,30 @@ function onEvent(name, value1, value2)
 	end
 end
 
-function onUpdate()
-    if canDodge and keyJustPressed('space') and not botPlay then -- This code is where you are successful to dodge
-		playSound('switch', 0.6)
-		canDodge = false
-		
-	    setProperty('spacebar.visible', false)
-		runTimer('spaceBlinkIn', spaceFlashSpeed)
+function onUpdate(elapsed)
+    if canDodge and not botPlay then
+		if keyJustPressed('space') and not spacePressed then -- This code is where you are successful to dodge
+			playSound('switch', 0.6)
+			setProperty('spacebar.visible', false)
+			runTimer('spaceBlinkIn', spaceFlashSpeed)
+			dodgeTimer = 0
+
+			spacePressed = true
+		end
+
+		if spacePressed then
+			dodgeTimer = dodgeTimer + elapsed
+		end
     end
 end
 
 function hit() -- This is code where you are unsuccessful to dodge
 	setProperty('health', getProperty('health') -0.7); -- change the -0.5 if you want to change the amount of damage you take
-	setProperty('combo', 0);
-	addScore(-1050)
+	addScore(-1000)
 
 	characterPlayAnim('boyfriend', 'hurt', true);
 	setProperty('boyfriend.specialAnim', true);
+	triggerEvent('Camera Flash', 'red, 0.5', '0.3')
 end
 
 function dodge()
@@ -74,12 +85,45 @@ function loogiShoot()
 	objectPlayAnimation('SecretLoog', 'Shoot', true)
 	runTimer('Dance', 0.5);
 
-	if botPlay or not canDodge then
-		dodge()
+	if not botPlay then
+		if spacePressed then
+			if dodgeTimer < 0.1 then
+				addScore(5000)
+				playSound('coin-special', 0.8)
+				runTimer('bfHey', 0.3);
+				
+				makeAnimatedLuaSprite('superSprite', 'super', getProperty('boyfriend.x') + 50, getProperty('boyfriend.y')-120)
+				addAnimationByPrefix('superSprite','super','super', 14, true);
+				scaleObject('superSprite', 6, 6)
+				updateHitbox('superSprite')
+				setProperty('superSprite.antialiasing', false)
+				setProperty('superSprite.acceleration.y', 1300)
+				setProperty('superSprite.velocity.y', -400)
+				setObjectOrder('superSprite', getObjectOrder('boyfriendGroup'))
+				doTweenAlpha('superSpriteAlpha', 'superSprite', 0, 0.6, 'easeIn')
+				addLuaSprite('superSprite', true)
+			end
+			dodge()
+			
+			makeLuaSprite('dodgedSprite', 'dodged', getProperty('boyfriend.x') + 50, getProperty('boyfriend.y')-50)
+			scaleObject('dodgedSprite', 6, 6)
+			updateHitbox('dodgedSprite')
+			setProperty('dodgedSprite.antialiasing', false)
+			setProperty('dodgedSprite.acceleration.y', 1300)
+			setProperty('dodgedSprite.velocity.y', -300)
+			setObjectOrder('dodgedSprite', getObjectOrder('boyfriendGroup'))
+			doTweenAlpha('dodgedSpriteAlpha', 'dodgedSprite', 0, 1, 'easeIn')
+			addLuaSprite('dodgedSprite', true)
+		else
+			hit()
+		end
 	else
-		hit()
+		dodge()
 	end
+
 	canDodge = false
+	spacePressed = false
+	dodgeTimer = 0
 
 	cameraShake('camGame', 0.01, 0.04)
 	cameraShake('camHUD', 0.01, 0.04)
@@ -107,6 +151,21 @@ function onTimerCompleted(tag, loops, loopsLeft)
 		setProperty('spacebar.visible', false)
 		runTimer('spaceBlinkIn', spaceFlashSpeed)
     end
+    if tag == 'bfHey' then
+		setProperty('boyfriend.specialAnim', false)
+		characterPlayAnim('boyfriend', 'hey', true)
+		setProperty('boyfriend.specialAnim', true)
+		setProperty('boyfriend.heyTimer', 0.6)
+    end
+end
+
+function onTweenCompleted(tag)
+	if tag == 'superSpriteAlpha' then
+		removeLuaSprite('superSprite', true)
+	end
+	if tag == 'dodgedSpriteAlpha' then
+		removeLuaSprite('dodgedSprite', true)
+	end
 end
 
 function onCountdownTick(counter)
