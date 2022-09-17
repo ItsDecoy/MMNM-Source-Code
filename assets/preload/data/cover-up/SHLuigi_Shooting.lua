@@ -69,12 +69,14 @@ function hit() -- This is code where you are unsuccessful to dodge
 	setProperty('health', getProperty('health') -0.7); -- change the -0.5 if you want to change the amount of damage you take
 	addScore(-1000)
 
+	setProperty('boyfriend.specialAnim', false)
 	characterPlayAnim('boyfriend', 'hurt', true);
 	setProperty('boyfriend.specialAnim', true);
 	triggerEvent('Camera Flash', 'red, 0.5', '0.3')
 end
 
 function dodge()
+	setProperty('boyfriend.specialAnim', false)
 	characterPlayAnim('boyfriend', 'dodge', true);
 	setProperty('boyfriend.specialAnim', true);
 end
@@ -92,7 +94,7 @@ function loogiShoot()
 				playSound('coin-special', 0.8)
 				runTimer('bfHey', 0.3);
 				
-				makeAnimatedLuaSprite('superSprite', 'super', getProperty('boyfriend.x') + 50, getProperty('boyfriend.y')-120)
+				makeAnimatedLuaSprite('superSprite', 'super', getProperty('boyfriend.x') - 150, getProperty('boyfriend.y')-60)
 				addAnimationByPrefix('superSprite','super','super', 14, true);
 				scaleObject('superSprite', 6, 6)
 				updateHitbox('superSprite')
@@ -104,8 +106,13 @@ function loogiShoot()
 				addLuaSprite('superSprite', true)
 			end
 			dodge()
+
+			setProperty('gf.specialAnim', false)
+			characterPlayAnim('gf', 'cheer', true)
+			setProperty('gf.specialAnim', true)
+			setProperty('gf.heyTimer', 0.6)
 			
-			makeLuaSprite('dodgedSprite', 'dodged', getProperty('boyfriend.x') + 50, getProperty('boyfriend.y')-50)
+			makeLuaSprite('dodgedSprite', 'dodged', getProperty('boyfriend.x') - 150, getProperty('boyfriend.y'))
 			scaleObject('dodgedSprite', 6, 6)
 			updateHitbox('dodgedSprite')
 			setProperty('dodgedSprite.antialiasing', false)
@@ -115,6 +122,9 @@ function loogiShoot()
 			doTweenAlpha('dodgedSpriteAlpha', 'dodgedSprite', 0, 1, 'easeIn')
 			addLuaSprite('dodgedSprite', true)
 		else
+			setProperty('gf.specialAnim', false)
+			characterPlayAnim('gf', 'sad', true)
+			setProperty('gf.specialAnim', true)
 			hit()
 		end
 	else
