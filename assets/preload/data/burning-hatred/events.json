@@ -1,7 +1,7 @@
 {
 	"song": {
 		"speed": 2.5,
-		"stage": "That Mario Guy SMH",
+		"stage": "The Castle",
 		"player1": "bf-plumber",
 		"player2": "NormLoogi",
 		"player3": null,
@@ -122,6 +122,16 @@
 				]
 			],
 			[
+				58285.7142857143,
+				[
+					[
+						"Camera Fade",
+						"0",
+						"4"
+					]
+				]
+			],
+			[
 				60000,
 				[
 					[
@@ -188,6 +198,16 @@
 						"Screen Shake",
 						"2.5, 0.005",
 						"2.5, 0.005"
+					]
+				]
+			],
+			[
+				65583.2512315271,
+				[
+					[
+						"Camera Fade",
+						"1",
+						"2"
 					]
 				]
 			],
@@ -867,8 +887,8 @@
 		"validScore": false,
 		"gfVersion": "gf-plumber",
 		"bpm": 140,
-		"arrowSkin": "",
+		"arrowSkin": "SMWNOTE_assets",
 		"needsVoices": true,
-		"song": "Burning-Hatred"
+		"song": "Burning Hatred"
 	}
 }

@@ -52,6 +52,10 @@ function onStepHit()
 		setProperty('cracked.visible', false);
 			setProperty('broke.visible', true);
 	end
+	if curStep == 603 then	
+		setProperty('BridgeOfDeath.visible',true);
+		setProperty('broke.visible', false);
+	end
 	if curStep == 616 then
 		doTweenAlpha('hate', 'hate', 1, 2, linear);
 	end
