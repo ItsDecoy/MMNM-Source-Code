@@ -1,136 +1,136 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-145,
 				239
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Mario_Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Mario_Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-190,
 				220
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Mario_Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Mario_Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-99,
 				229
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Mario_Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Mario_Down"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-177,
 				305
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Mario_Up"
+			"fps": 24,
+			"name": "Mario_Up",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-213,
-				296
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-214,
+				300
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Mario_ Right"
+			"fps": 24,
+			"name": "Mario_ Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-100,
 				80
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "misleft"
+			"fps": 24,
+			"name": "misleft",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-100,
 				80
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "msido"
+			"fps": 24,
+			"name": "msido",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-100,
 				80
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "missip"
+			"fps": 24,
+			"name": "missip",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-100,
 				80
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "missright"
+			"fps": 24,
+			"name": "missright",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-14,
 				-90
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "firstDeath",
-			"indices": [],
-			"name": "the inevitable fate of death"
-		},
-		{
-			"offsets": [
-				-14,
-				-90
-			],
-			"loop": true,
 			"fps": 24,
-			"anim": "deathLoop",
-			"indices": [],
-			"name": "the inevitable fate of death"
+			"name": "the inevitable fate of death",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-14,
 				-90
 			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "the inevitable fate of death",
+			"indices": []
+		},
+		{
 			"loop": false,
-			"fps": 25,
+			"offsets": [
+				-14,
+				-90
+			],
 			"anim": "deathConfirm",
-			"indices": [],
-			"name": "the inevitable fate of death"
+			"fps": 25,
+			"name": "the inevitable fate of death",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

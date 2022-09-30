@@ -1,10 +1,44 @@
 {
-	"animations": [],
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "game over"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "game over"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "game over"
+		}
+	],
 	"no_antialiasing": false,
 	"image": "characters/mato",
 	"position": [
-		0,
-		350
+		-200,
+		30
 	],
 	"healthicon": "bf",
 	"flip_x": true,
@@ -14,8 +48,8 @@
 		209
 	],
 	"camera_position": [
-		0,
-		0
+		-180,
+		160
 	],
 	"sing_duration": 4,
 	"scale": 1
