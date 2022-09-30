@@ -4,3 +4,10 @@ function onCreate()
 	setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'gameOver');
 	setPropertyFromClass('GameOverSubstate', 'endSoundName', 'gameOverEnd');
 end
+
+function onUpdatePost()
+	if inGameOver then
+		setProperty('updateCamera', false)
+		screenCenter('boyfriend')
+	end
+end
