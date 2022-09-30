@@ -1,65 +1,65 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-50,
 				39
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Luigi_Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Luigi_Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-46,
 				43
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Luigi_Left",
-			"indices": []
+			"indices": [],
+			"name": "Luigi_Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-51,
-				31
+				-49,
+				33
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Luigi_Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Luigi_Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-52,
 				55
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Luigi_Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Luigi_Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-52,
-				32
+				-51,
+				35
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Luigi_Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Luigi_Right"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/NormalLoogi",
 	"position": [
-		0,
+		-30,
 		0
 	],
 	"healthicon": "icon-norm",
@@ -70,8 +70,8 @@
 		58
 	],
 	"camera_position": [
-		-60,
-		60
+		-50,
+		40
 	],
 	"sing_duration": 6.1,
 	"scale": 0.9
