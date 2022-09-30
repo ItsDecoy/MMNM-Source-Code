@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				132,
 				278
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Daiseye Note Down"
+			"fps": 24,
+			"name": "Daiseye Note Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				192,
 				736
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Daiseye Note Up"
+			"fps": 24,
+			"name": "Daiseye Note Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				235,
 				611
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Daiseye Idle"
+			"fps": 24,
+			"name": "Daiseye Idle",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
-				166,
-				491
+				168,
+				492
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Daiseye Note Left",
-			"indices": []
+			"indices": [],
+			"name": "Daiseye Note Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				115,
-				541
+				114,
+				545
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Daiseye Note Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Daiseye Note Right"
 		}
 	],
 	"no_antialiasing": false,

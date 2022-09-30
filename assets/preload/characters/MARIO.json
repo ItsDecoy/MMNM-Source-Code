@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				108,
-				-62
+				110,
+				-61
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "mario_left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "mario_left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				33,
+				31,
 				-50
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "mario_down",
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "mario_down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				-29
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "mario_up",
 			"indices": []
 		},
 		{
-			"offsets": [
-				1,
-				-33
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "mario_up"
-		},
-		{
 			"offsets": [
-				-2,
-				-64
+				-1,
+				-63
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "mario_right"
+			"fps": 24,
+			"name": "mario_right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-30
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "mario_idle"
+			"fps": 24,
+			"name": "mario_idle",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
