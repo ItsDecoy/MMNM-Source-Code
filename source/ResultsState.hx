@@ -44,6 +44,8 @@ class ResultsState extends MusicBeatState
         wall.x += wall.width;
         add(wall);
 
+        FlxG.sound.play(Paths.sound('results/victoryTheme'));
+
         titleCharList = new FlxSpriteGroup(FlxG.width/2, 0);
         add(titleCharList);
 
