@@ -100,7 +100,7 @@ class Note extends FlxSprite
 			switch(value) {
 				case 'Bomb Note':
 					ignoreNote = mustPress;
-					reloadNote('','JUMPNOTE_assets');
+					reloadNote('','Detonator_Note_Thing');
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;
