@@ -36,6 +36,17 @@ function onCreate()
 			
 			setProperty('Eye.visible',false);
 		end
+
+		if i == 2 then --Makes the eyeball
+			makeAnimatedLuaSprite('Ball', folder..sfix..'eyeea', 550, 50);
+		
+			addAnimationByPrefix('Ball','stare','sxasxAZ', 24, true);
+			addLuaSprite('Ball',false);
+			setScrollFactor('Ball', 0.03, 0.03);
+
+			setProperty('Ball.visible',false);
+		end
+
 		
 		addLuaSprite('Cloud'..fix, false);	
 		addLuaSprite('Platforms'..fix, false);
@@ -62,6 +73,7 @@ function onEvent(name, value1, value2)
 			setProperty('Planetoid'..fix..'.visible', isGood);
 			setProperty('Platforms'..fix..'.visible', isGood);
 			setProperty('Eye.visible', isGood);
+			setProperty('Ball.visible', isGood);
 		end
 	end
 end

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="eyeea.png">
+	<!-- Created with Adobe Animate version 21.0.12.42687 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sxasxAZ0000" x="10" y="10" width="203" height="197" frameX="0" frameY="-2" frameWidth="203" frameHeight="200"/>
+	<SubTexture name="sxasxAZ0001" x="10" y="10" width="203" height="197" frameX="0" frameY="-2" frameWidth="203" frameHeight="200"/>
+	<SubTexture name="sxasxAZ0002" x="223" y="10" width="203" height="197" frameX="0" frameY="-2" frameWidth="203" frameHeight="200"/>
+	<SubTexture name="sxasxAZ0003" x="223" y="10" width="203" height="197" frameX="0" frameY="-2" frameWidth="203" frameHeight="200"/>
+	<SubTexture name="sxasxAZ0004" x="436" y="10" width="203" height="197" frameX="0" frameY="-2" frameWidth="203" frameHeight="200"/>
+	<SubTexture name="sxasxAZ0005" x="436" y="10" width="203" height="197" frameX="0" frameY="-2" frameWidth="203" frameHeight="200"/>
+	<SubTexture name="sxasxAZ0006" x="649" y="10" width="200" height="200" frameX="-2" frameY="0" frameWidth="203" frameHeight="200"/>
+	<SubTexture name="sxasxAZ0007" x="649" y="10" width="200" height="200" frameX="-2" frameY="0" frameWidth="203" frameHeight="200"/>
+	<SubTexture name="sxasxAZ0008" x="10" y="220" width="203" height="198" frameX="0" frameY="-1" frameWidth="203" frameHeight="200"/>
+	<SubTexture name="sxasxAZ0009" x="10" y="220" width="203" height="198" frameX="0" frameY="-1" frameWidth="203" frameHeight="200"/>
+</TextureAtlas>
