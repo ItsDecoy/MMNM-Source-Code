@@ -73,7 +73,7 @@ end
 	
 function onMoveCamera(MX)
 	if MX == 'dad' then
-		setProperty('defaultCamZoom',0.4);
+		setProperty('defaultCamZoom',0.42);
 	else
 		setProperty('defaultCamZoom',0.7);
 	end
