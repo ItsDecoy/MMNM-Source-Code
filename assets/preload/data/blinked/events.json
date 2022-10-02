@@ -2,8 +2,8 @@
 	"song": {
 		"speed": 2.6,
 		"stage": "Sight Seeing",
-		"player1": "bf-plumber-scaled",
-		"player2": "peach",
+		"player1": "bf-plumber",
+		"player2": "TrophyForm",
 		"player3": null,
 		"events": [
 			[

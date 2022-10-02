@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="thunder-thighs.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Daiseye Anim Laugh0000" x="5" y="5" width="801" height="1507" frameX="0" frameY="-2" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0001" x="811" y="5" width="801" height="1498" frameX="0" frameY="-11" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0002" x="1617" y="5" width="776" height="1475" frameX="-11" frameY="-34" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0003" x="2398" y="5" width="776" height="1479" frameX="-11" frameY="-30" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0004" x="3179" y="5" width="717" height="1363" frameX="-51" frameY="-146" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0005" x="3901" y="5" width="717" height="1355" frameX="-51" frameY="-154" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0006" x="4623" y="5" width="684" height="1310" frameX="-70" frameY="-199" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0007" x="5312" y="5" width="684" height="1313" frameX="-70" frameY="-196" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0008" x="6001" y="5" width="684" height="1311" frameX="-70" frameY="-198" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0009" x="6690" y="5" width="684" height="1304" frameX="-70" frameY="-205" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0010" x="4623" y="5" width="684" height="1310" frameX="-70" frameY="-199" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0011" x="5312" y="5" width="684" height="1313" frameX="-70" frameY="-196" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0012" x="6001" y="5" width="684" height="1311" frameX="-70" frameY="-198" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0013" x="6690" y="5" width="684" height="1304" frameX="-70" frameY="-205" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0014" x="4623" y="5" width="684" height="1310" frameX="-70" frameY="-199" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0015" x="5312" y="5" width="684" height="1313" frameX="-70" frameY="-196" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0016" x="6001" y="5" width="684" height="1311" frameX="-70" frameY="-198" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0017" x="6690" y="5" width="684" height="1304" frameX="-70" frameY="-205" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0018" x="4623" y="5" width="684" height="1310" frameX="-70" frameY="-199" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0019" x="5312" y="5" width="684" height="1313" frameX="-70" frameY="-196" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0020" x="6001" y="5" width="684" height="1311" frameX="-70" frameY="-198" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0021" x="6690" y="5" width="684" height="1304" frameX="-70" frameY="-205" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0022" x="4623" y="5" width="684" height="1310" frameX="-70" frameY="-199" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0023" x="5312" y="5" width="684" height="1313" frameX="-70" frameY="-196" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0024" x="6001" y="5" width="684" height="1311" frameX="-70" frameY="-198" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0025" x="6690" y="5" width="684" height="1304" frameX="-70" frameY="-205" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0026" x="4623" y="5" width="684" height="1310" frameX="-70" frameY="-199" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0027" x="5312" y="5" width="684" height="1313" frameX="-70" frameY="-196" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0028" x="6001" y="5" width="684" height="1311" frameX="-70" frameY="-198" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0029" x="6690" y="5" width="684" height="1304" frameX="-70" frameY="-205" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0030" x="4623" y="5" width="684" height="1310" frameX="-70" frameY="-199" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0031" x="5312" y="5" width="684" height="1313" frameX="-70" frameY="-196" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0032" x="6001" y="5" width="684" height="1311" frameX="-70" frameY="-198" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0033" x="6690" y="5" width="684" height="1304" frameX="-70" frameY="-205" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0034" x="4623" y="5" width="684" height="1310" frameX="-70" frameY="-199" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0035" x="5312" y="5" width="684" height="1313" frameX="-70" frameY="-196" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0036" x="6001" y="5" width="684" height="1311" frameX="-70" frameY="-198" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0037" x="6690" y="5" width="684" height="1304" frameX="-70" frameY="-205" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0038" x="4623" y="5" width="684" height="1310" frameX="-70" frameY="-199" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0039" x="5312" y="5" width="684" height="1313" frameX="-70" frameY="-196" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daiseye Anim Laugh0040" x="6001" y="5" width="684" height="1311" frameX="-70" frameY="-198" frameWidth="801" frameHeight="1509"/>
+	<SubTexture name="Daisy Faker Idle0000" x="7379" y="5" width="661" height="1268" frameX="-8" frameY="-20" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0001" x="7379" y="5" width="661" height="1268" frameX="-8" frameY="-20" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0002" x="5" y="1517" width="680" height="1258" frameX="0" frameY="-30" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0003" x="5" y="1517" width="680" height="1258" frameX="0" frameY="-30" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0004" x="5" y="1517" width="680" height="1258" frameX="0" frameY="-30" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0005" x="690" y="1517" width="678" height="1268" frameX="-5" frameY="-21" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0006" x="690" y="1517" width="678" height="1268" frameX="-5" frameY="-21" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0007" x="690" y="1517" width="678" height="1268" frameX="-5" frameY="-21" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0008" x="1373" y="1517" width="674" height="1288" frameX="-9" frameY="0" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0009" x="1373" y="1517" width="674" height="1288" frameX="-9" frameY="0" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0010" x="1373" y="1517" width="674" height="1288" frameX="-9" frameY="0" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0011" x="2052" y="1517" width="653" height="1278" frameX="-12" frameY="-10" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0012" x="2052" y="1517" width="653" height="1278" frameX="-12" frameY="-10" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0013" x="2052" y="1517" width="653" height="1278" frameX="-12" frameY="-10" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0014" x="2710" y="1517" width="649" height="1275" frameX="-12" frameY="-13" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0015" x="2710" y="1517" width="649" height="1275" frameX="-12" frameY="-13" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0016" x="3364" y="1517" width="649" height="1274" frameX="-12" frameY="-14" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0017" x="3364" y="1517" width="649" height="1274" frameX="-12" frameY="-14" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0018" x="3364" y="1517" width="649" height="1274" frameX="-12" frameY="-14" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0019" x="3364" y="1517" width="649" height="1274" frameX="-12" frameY="-14" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0020" x="3364" y="1517" width="649" height="1274" frameX="-12" frameY="-14" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0021" x="3364" y="1517" width="649" height="1274" frameX="-12" frameY="-14" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0022" x="3364" y="1517" width="649" height="1274" frameX="-12" frameY="-14" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0023" x="3364" y="1517" width="649" height="1274" frameX="-12" frameY="-14" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0024" x="3364" y="1517" width="649" height="1274" frameX="-12" frameY="-14" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Idle0025" x="3364" y="1517" width="649" height="1274" frameX="-12" frameY="-14" frameWidth="683" frameHeight="1289"/>
+	<SubTexture name="Daisy Faker Note Down0000" x="4018" y="1517" width="659" height="1229" frameX="0" frameY="-14" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0001" x="4018" y="1517" width="659" height="1229" frameX="0" frameY="-14" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0002" x="4682" y="1517" width="637" height="1243" frameX="-8" frameY="0" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0003" x="4682" y="1517" width="637" height="1243" frameX="-8" frameY="0" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0004" x="5324" y="1517" width="608" height="1238" frameX="-18" frameY="-5" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0005" x="5324" y="1517" width="608" height="1238" frameX="-18" frameY="-5" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0006" x="5937" y="1517" width="596" height="1242" frameX="-19" frameY="-1" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0007" x="5937" y="1517" width="596" height="1242" frameX="-19" frameY="-1" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0008" x="5937" y="1517" width="596" height="1242" frameX="-19" frameY="-1" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0009" x="5937" y="1517" width="596" height="1242" frameX="-19" frameY="-1" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0010" x="5937" y="1517" width="596" height="1242" frameX="-19" frameY="-1" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0011" x="5937" y="1517" width="596" height="1242" frameX="-19" frameY="-1" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0012" x="5937" y="1517" width="596" height="1242" frameX="-19" frameY="-1" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Down0013" x="5937" y="1517" width="596" height="1242" frameX="-19" frameY="-1" frameWidth="659" frameHeight="1243"/>
+	<SubTexture name="Daisy Faker Note Left0000" x="6538" y="1517" width="732" height="1296"/>
+	<SubTexture name="Daisy Faker Note Left0001" x="6538" y="1517" width="732" height="1296"/>
+	<SubTexture name="Daisy Faker Note Left0002" x="7275" y="1517" width="716" height="1291" frameX="-16" frameY="-5" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0003" x="7275" y="1517" width="716" height="1291" frameX="-16" frameY="-5" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0004" x="5" y="2818" width="677" height="1260" frameX="-55" frameY="-36" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0005" x="5" y="2818" width="677" height="1260" frameX="-55" frameY="-36" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0006" x="687" y="2818" width="671" height="1252" frameX="-61" frameY="-44" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0007" x="687" y="2818" width="671" height="1252" frameX="-61" frameY="-44" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0008" x="1363" y="2818" width="671" height="1252" frameX="-61" frameY="-44" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0009" x="1363" y="2818" width="671" height="1252" frameX="-61" frameY="-44" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0010" x="2039" y="2818" width="671" height="1252" frameX="-61" frameY="-44" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0011" x="2039" y="2818" width="671" height="1252" frameX="-61" frameY="-44" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0012" x="2039" y="2818" width="671" height="1252" frameX="-61" frameY="-44" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Left0013" x="2039" y="2818" width="671" height="1252" frameX="-61" frameY="-44" frameWidth="732" frameHeight="1296"/>
+	<SubTexture name="Daisy Faker Note Right0000" x="2715" y="2818" width="928" height="1290"/>
+	<SubTexture name="Daisy Faker Note Right0001" x="2715" y="2818" width="928" height="1290"/>
+	<SubTexture name="Daisy Faker Note Right0002" x="3648" y="2818" width="919" height="1285" frameX="0" frameY="-5" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0003" x="3648" y="2818" width="919" height="1285" frameX="0" frameY="-5" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0004" x="4572" y="2818" width="885" height="1276" frameX="0" frameY="-14" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0005" x="4572" y="2818" width="885" height="1276" frameX="0" frameY="-14" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0006" x="5462" y="2818" width="876" height="1272" frameX="0" frameY="-18" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0007" x="5462" y="2818" width="876" height="1272" frameX="0" frameY="-18" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0008" x="6343" y="2818" width="876" height="1272" frameX="0" frameY="-18" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0009" x="6343" y="2818" width="876" height="1272" frameX="0" frameY="-18" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0010" x="7224" y="2818" width="876" height="1272" frameX="0" frameY="-18" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0011" x="7224" y="2818" width="876" height="1272" frameX="0" frameY="-18" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0012" x="5" y="4113" width="876" height="1272" frameX="0" frameY="-18" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Right0013" x="5" y="4113" width="876" height="1272" frameX="0" frameY="-18" frameWidth="928" frameHeight="1290"/>
+	<SubTexture name="Daisy Faker Note Up0000" x="886" y="4113" width="750" height="1374"/>
+	<SubTexture name="Daisy Faker Note Up0001" x="886" y="4113" width="750" height="1374"/>
+	<SubTexture name="Daisy Faker Note Up0002" x="1641" y="4113" width="749" height="1364" frameX="0" frameY="-10" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0003" x="1641" y="4113" width="749" height="1364" frameX="0" frameY="-10" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0004" x="2395" y="4113" width="742" height="1316" frameX="0" frameY="-58" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0005" x="2395" y="4113" width="742" height="1316" frameX="0" frameY="-58" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0006" x="3142" y="4113" width="739" height="1310" frameX="0" frameY="-64" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0007" x="3142" y="4113" width="739" height="1310" frameX="0" frameY="-64" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0008" x="3142" y="4113" width="739" height="1310" frameX="0" frameY="-64" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0009" x="3142" y="4113" width="739" height="1310" frameX="0" frameY="-64" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0010" x="3142" y="4113" width="739" height="1310" frameX="0" frameY="-64" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0011" x="3142" y="4113" width="739" height="1310" frameX="0" frameY="-64" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0012" x="3142" y="4113" width="739" height="1310" frameX="0" frameY="-64" frameWidth="750" frameHeight="1374"/>
+	<SubTexture name="Daisy Faker Note Up0013" x="3142" y="4113" width="739" height="1310" frameX="0" frameY="-64" frameWidth="750" frameHeight="1374"/>
+</TextureAtlas>
