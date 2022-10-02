@@ -1,71 +1,53 @@
 local i = 0
-local getReal = false
-
 function onCreatePost()
-	setProperty('iconP1.visible', false);
-	setProperty('iconP2.visible', false);
-	setProperty('healthBar.visible', false);
-	setProperty('healthBarBG.visible', false);
-	setProperty('scoreTxt.visible', false);
-	
+
 	triggerEvent('Camera Fade', '0', '0')
 	triggerEvent('HUD Fade', '0', '0')
 	
-	makeLuaSprite('love','Coronation/love', 360, 400);
-	addLuaSprite('love', false);
-	scaleObject('love',0.3,0.3)
-    setObjectCamera('love','other')
-	
-	makeLuaSprite('red','Coronation/red', 360, 400);
-	addLuaSprite('red', false);
-	scaleObject('red',0.3,0.3)
-    setObjectCamera('red','other')
-	
-	setProperty('dad.visible',false);
-end
+	makeLuaSprite('God', 'Coronation/God', 240, 200);
+	addLuaSprite('God', true);
+    setObjectCamera('God','other')
+	scaleObject('God',0.7,0.7);
+	setProperty('God.alpha', 0)
 
-function onSongStart()
-	-- Putting this outside onCreatePost just in case
-	for i = 0,3 do
-		setPropertyFromGroup('opponentStrums', i, 'visible', false);
-	end
+	makeLuaSprite('are', 'Coronation/are', 240, 200);
+	addLuaSprite('are', true);
+    setObjectCamera('are','other')
+	scaleObject('are',0.7,0.7);
+	setProperty('are.alpha', 0)
+
+	makeLuaSprite('Iam', 'Coronation/Iam', 240, 200);
+	addLuaSprite('Iam', true);
+    setObjectCamera('Iam','other')
+	scaleObject('Iam',0.7,0.7);
+	setProperty('Iam.alpha', 0)
+	  
 end
 
 function onUpdate(elapsed)
 	i = i + elapsed
 	setProperty('dad.y', (math.sin(i * 1.2)*80) + 320)
-	
-	if curStep >= 320 and not getReal then
-		if not hideHud then
-			setProperty('iconP1.visible', true);
-			setProperty('iconP2.visible', true);
-			setProperty('healthBar.visible', true);
-			setProperty('healthBarBG.visible', true);
-			setProperty('scoreTxt.visible', true);
-			setProperty('opponentStrums.visible', true);
-			for i = 0,3 do
-				setPropertyFromGroup('opponentStrums', i, 'visible', true);
-			end
-		end
-		setProperty('dad.visible',true);
-		getReal = true
-	end
 end
 
 function onStepHit()
-	-- She loves...
-	if curStep == 292 then
-		doTweenY('lovey', 'love', 0, 0.5, 'sineOut')
+	if curStep == 1375 then
+	doTweenAlpha('God', 'God', 1, 1, linear);
+	end	
+	if curStep == 1406 then
+		doTweenAlpha('God', 'God', 0, 0.5, linear);
 	end
-	
-	-- RED.
-	if curStep == 308 then
-		doTweenY('redy', 'red', 0, 0.9, 'sineOut')
+	if curStep == 1424 then
+	doTweenAlpha('are', 'are', 1, 0.5, linear);
 	end
-	
-	-- Text goes away (also Peach is visible now)
-	if curStep == 320 then
-		doTweenY('redy', 'red', 400, 0.9, 'sineOut')
-		doTweenY('lovey', 'love', 400, 0.9, 'sineOut')
+	if curStep == 1438 then
+	doTweenAlpha('are', 'are', 0, 0.5, linear);
 	end
+	if curStep == 1451 then
+		
+		doTweenAlpha('Iam', 'Iam', 1, 0.5, linear);
+end
+	if curStep == 1488 then
+		
+		setProperty('Iam.visible', false);
+end
 end
