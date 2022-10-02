@@ -37,7 +37,7 @@ function onCreate()
 	addLuaSprite('Floor',false);
 	setScrollFactor('Floor',0.99,0.99);
 
-	makeLuaSprite('Shadow2','falseHero/mxfalse_hero_bg_shador2',-2650,-1405);
+	makeLuaSprite('Shadow2','falseHero/mxfalse_hero_bg_shador2',-2600,-1405);
 	addLuaSprite('Shadow2',false);
 	scaleObject('Shadow2',1.85,1.85);
 	
