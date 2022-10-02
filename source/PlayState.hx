@@ -1137,41 +1137,47 @@ class PlayState extends MusicBeatState
 		FlxG.fixedTimestep = false;
 		moveCameraSection(0);
 
+		var barXAdd = 37;
+		var barYAdd = 16;
+
 		healthBarBG = new AttachedSprite('healthBar');
-		healthBarBG.y = FlxG.height * 0.89;
+		healthBarBG.y = FlxG.height * 0.85;
 		healthBarBG.screenCenter(X);
 		healthBarBG.scrollFactor.set();
 		healthBarBG.visible = !ClientPrefs.hideHud;
-		healthBarBG.xAdd = -4;
-		healthBarBG.yAdd = -4;
-		add(healthBarBG);
-		if(ClientPrefs.downScroll) healthBarBG.y = 0.11 * FlxG.height;
+		healthBarBG.xAdd = -barXAdd;
+		healthBarBG.yAdd = -barYAdd;
+		
+		if(ClientPrefs.downScroll) healthBarBG.y = 0.07 * FlxG.height;
 
-		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
+		healthBar = new FlxBar(healthBarBG.x + barXAdd, healthBarBG.y + barYAdd, RIGHT_TO_LEFT, Std.int(healthBarBG.width - (barXAdd*2)), Std.int(healthBarBG.height - (barYAdd*2)), this,
 			'health', 0, 2);
 		healthBar.scrollFactor.set();
 		// healthBar
 		healthBar.visible = !ClientPrefs.hideHud;
 		healthBar.alpha = ClientPrefs.healthBarAlpha;
-		add(healthBar);
+		
 		healthBarBG.sprTracker = healthBar;
 		if (isReversed) healthBar.fillDirection = LEFT_TO_RIGHT;
 
+		add(healthBar);
+		add(healthBarBG);
+
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
-		iconP1.y = healthBar.y - 75;
+		iconP1.y = healthBar.y - 60;
 		iconP1.visible = !ClientPrefs.hideHud;
 		iconP1.alpha = ClientPrefs.healthBarAlpha;
 		iconP1.flipX = isReversed;
 
 		iconP2 = new HealthIcon(dad.healthIcon, false);
-		iconP2.y = healthBar.y - 75;
+		iconP2.y = healthBar.y - 60;
 		iconP2.visible = !ClientPrefs.hideHud;
 		iconP2.alpha = ClientPrefs.healthBarAlpha;
 		iconP2.flipX = isReversed;
 		
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(FlxG.width/2, healthBarBG.y + 20, FlxG.width/2, "", 40);
+		scoreTxt = new FlxText(0, healthBarBG.y + 48, FlxG.width, "", 40);
 		scoreTxt.setFormat(Paths.font("Pixel_NES.otf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = scoreTxt.size / 10;
@@ -1189,19 +1195,18 @@ class PlayState extends MusicBeatState
 		{
 			missesTxt.alignment = LEFT;
 			missesTxt.x = healthBarBG.x;
-			scoreTxt.x = 0;
 		}
 
 		if (ClientPrefs.downScroll)
 		{
-			scoreTxt.y -= 84;
-			missesTxt.y += 70;
+			scoreTxt.y = healthBarBG.y - 46;
+			missesTxt.y += healthBarBG.y + healthBarBG.height + 2;
 		}
 
-		add(scoreTxt);
-		add(missesTxt);
 		add(iconP1);
 		add(iconP2);
+		add(scoreTxt);
+		add(missesTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("Pixel_NES.otf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -2276,6 +2281,8 @@ class PlayState extends MusicBeatState
 				gameBlackLayerAlphaTween.active = false;
 			if (gameFlashLayerAlphaTween != null)
 				gameFlashLayerAlphaTween.active = false;
+			if (missesTxtTween != null)
+				missesTxtTween.active = false;
 
 			if(blammedLightsBlackTween != null)
 				blammedLightsBlackTween.active = false;
@@ -2329,6 +2336,8 @@ class PlayState extends MusicBeatState
 				gameBlackLayerAlphaTween.active = true;
 			if (gameFlashLayerAlphaTween != null)
 				gameFlashLayerAlphaTween.active = true;
+			if (missesTxtTween != null)
+				missesTxtTween.active = true;
 
 			if(blammedLightsBlackTween != null)
 				blammedLightsBlackTween.active = true;

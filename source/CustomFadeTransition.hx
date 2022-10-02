@@ -55,11 +55,11 @@ class CustomFadeTransition extends MusicBeatSubstate
 				if (startDelay < 0) startDelay = -startDelay;
 				startDelay += delB;
 
-				startDelay /= 5;
+				startDelay /= 3.1;
 
 				if (isTransIn)
 				{
-					FlxTween.tween(square.scale, {x: 0, y: 0}, tweenDuration*8, {ease: FlxEase.linear, startDelay: startDelay,
+					FlxTween.tween(square.scale, {x: 0, y: 0}, tweenDuration*5, {ease: FlxEase.linear, startDelay: startDelay,
 					onComplete: function(twn:FlxTween)
 					{
 						remove(square);
@@ -70,7 +70,7 @@ class CustomFadeTransition extends MusicBeatSubstate
 				{
 					square.scale.x = 0;
 					square.scale.y = 0;
-					FlxTween.tween(square.scale, {x: 1, y: 1}, tweenDuration*8, {ease: FlxEase.linear, startDelay: startDelay});
+					FlxTween.tween(square.scale, {x: 1, y: 1}, tweenDuration*5, {ease: FlxEase.linear, startDelay: startDelay});
 				}
 
 				if(nextCamera != null)

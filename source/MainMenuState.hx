@@ -162,10 +162,10 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 48, 0, "(NOTE: THIS FEATURE SHOULD BE REMOVED BEFORE THE FINAL RELEASE)\nPress 7 to unlock all stars automatically / Press 0 to close and erase data.\n", 12);
+		/*var versionShit:FlxText = new FlxText(12, FlxG.height - 48, 0, "(NOTE: THIS FEATURE SHOULD BE REMOVED BEFORE THE FINAL RELEASE)\nPress 7 to unlock all stars automatically / Press 0 to close and erase data.\n", 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShit);
+		add(versionShit);*/
 
 		logoTHING = new FlxSprite(10, 0).loadGraphic(Paths.image('mainmenustuff/MMNM_MENU_LOGO', 'preload'));
 		logoTHING.scrollFactor.set();
@@ -221,7 +221,7 @@ class MainMenuState extends MusicBeatState
 		}
 
 		// THIS IS A DEBUG FEATURE. You shouldn't be able to do this in the final game.
-		if (FlxG.keys.pressed.ZERO)
+		/*if (FlxG.keys.pressed.ZERO)
 		{
 			FlxG.save.erase();
 			System.exit(0);
@@ -231,7 +231,7 @@ class MainMenuState extends MusicBeatState
 			StoryMenuState.weekCompleted.set('week1', true);
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.8);
 			MusicBeatState.switchState(new MainMenuState());
-		}
+		}*/
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
