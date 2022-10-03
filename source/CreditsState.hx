@@ -94,7 +94,7 @@ class CreditsState extends MusicBeatState
 			['MorenoTheCappuccinoChugger',		'ninjamuffin99',	"Coder'",						'https://twitter.com/the_chugger',	'F73838'],
 			['Ighby',		'ighby',	"\"Holy shit he's an awesome coder\"\nMade plumber BF sprites.",							'https://twitter.com/Ighby_Guy',	'B22222'],
 			['Chase Redding',			'Chase',			"Composer\nComposed: Burning Hatred'",							'https://twitter.com/Chase_R_Music_',			'808080'],
-			['glowylikesdoom',			'Glowy',		"Musician\nComposed: Familiar, Blinked, Pissed, and Wanted\nCredit to @genesismobie for icon",							'https://twitter.com/glowylikesdoom',		'808080'],
+			['glowylikesdoom',			'Glowy',		"Musician\nComposed: Familiar, Blinked, Pissed, and Wanted\nCredit to @genesismobie for icon",							'https://twitter.com/galwholikesdoom',		'808080'],
 			['Frog',				'frog',			'Composer\n Composed: Ground Zero and Victimized',								'https://twitter.com/yoshi_epic',		'00CCFF'],
 			['thesmallerestguy',				'Smallerest',			'Composer\n Composed: A Grand Ol Time, and many other misc sounds/songs',								'NA',		'3333FF'],
 			['Mystica',				'Icon_Mystic',			'Composer\n Composed: Cover-Up',								'https://twitter.com/Mystic69691',		'4D5DBD'],
