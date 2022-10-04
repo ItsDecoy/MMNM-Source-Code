@@ -4520,9 +4520,6 @@ class PlayState extends MusicBeatState
 						boyfriend.y = curPosBF;
 					}
 
-					FlxG.camera.shake(0.01, 0.1);
-					camHUD.shake(0.0075, 0.1);
-
 					curPosBF = boyfriend.y;
 
 					bf_tween = FlxTween.tween(boyfriend, {y: curPosBF - 150}, 0.25, {ease: FlxEase.quintOut, onComplete:function(twn:FlxTween){
