@@ -18,6 +18,16 @@ function onCreatePost()
 	dadScaleY = getProperty('dad.scale.y')
 	
 	setObjectOrder('gfGroup', 5)
+--Middle Scroll Code
+	noteTweenX('goodybearrow1', 0, -200, 0.01, 'linear')
+        noteTweenX('goodybearrow2', 1, -200, 0.01, 'linear')
+        noteTweenX('goodybearrow3', 2, -200, 0.01, 'linear')
+        noteTweenX('goodybearrow4', 3, -200, 0.01, 'linear')
+--Middle
+	noteTweenX('Moved1', 4, 414, 0.01, 'linear')
+        noteTweenX('Moved2', 5, 527, 0.01, 'linear')
+        noteTweenX('Moved3', 6, 637, 0.01, 'linear')
+        noteTweenX('Moved4', 7, 750, 0.01, 'linear')
 end
 
 function onMoveCamera(focus)
