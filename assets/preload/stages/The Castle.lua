@@ -3,9 +3,10 @@ flamesIsMyBestie = {{-80,321}, {575,318}, {1225,313}}
 function onCreate()
 	local folder = 'IHY/'
 
-	makeLuaSprite('Smoke', folder..'coughcough', -750, -150);
+	makeLuaSprite('Smoke', folder..'coughcough', -500, -150);
 	addLuaSprite('Smoke', false);
-	setScrollFactor('Smoke', 0.5, 0.5)
+	scaleObject('Smoke',0.55,0.55);
+		setScrollFactor('Smoke', 0.7, 0.7)
 	
 	makeLuaSprite('ManInTheMirror', folder..'TheWallsHaveEYes', -750, -150);
 	addLuaSprite('ManInTheMirror', false);
@@ -44,6 +45,7 @@ function onCreate()
 	addLuaSprite('broke', false);
 	scaleObject('broke',0.55,0.55);
 	setProperty('broke.visible', false);
+
 
 
 
