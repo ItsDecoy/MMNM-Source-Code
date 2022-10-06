@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				30,
 				-251
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Goomb Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Goomb Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				49,
 				-241
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Goomb Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Goomb Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				39,
 				-250
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Goomb Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Goomb Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				9,
 				-191
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Goomb Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Goomb Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				21,
 				-241
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Goomb Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Goomb Right"
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		-20,
 		120
 	],
-	"healthicon": "icon-goomb",
+	"healthicon": "goomb",
 	"flip_x": false,
 	"healthbar_colors": [
 		158,

@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				238,
 				211
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "idle",
-			"indices": [],
-			"name": "MX Idle Dance"
+			"fps": 30,
+			"name": "MX Idle Dance",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				349,
 				-24
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "MX Note Down"
+			"fps": 30,
+			"name": "MX Note Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				275,
 				470
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "singUP",
-			"indices": [],
-			"name": "MX Note Up"
+			"fps": 30,
+			"name": "MX Note Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				882,
 				521
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "Stomp",
-			"indices": [],
-			"name": "MX Note Stomp"
+			"fps": 30,
+			"name": "MX Note Stomp",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				740,
 				271
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "MX Note Right"
+			"fps": 30,
+			"name": "MX Note Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				232,
 				187
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "MX Note Left"
+			"fps": 30,
+			"name": "MX Note Left",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -73,7 +73,7 @@
 		-210,
 		-490
 	],
-	"healthicon": "icon-mx",
+	"healthicon": "mx",
 	"flip_x": true,
 	"healthbar_colors": [
 		83,

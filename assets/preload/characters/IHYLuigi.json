@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-50,
 				39
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "IHY_Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "IHY_Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				153,
 				27
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "IHY_Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "IHY_Left"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				135,
 				-59
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "IHY_Down"
+			"fps": 24,
+			"name": "IHY_Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				28,
 				53
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "IHY_Up"
+			"fps": 24,
+			"name": "IHY_Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-19,
 				16
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "IHY_Right"
+			"fps": 24,
+			"name": "IHY_Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		-170,
 		-50
 	],
-	"healthicon": "icon-ihy",
+	"healthicon": "ihy",
 	"flip_x": false,
 	"healthbar_colors": [
 		12,

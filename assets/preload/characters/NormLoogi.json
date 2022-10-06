@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-50,
 				39
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Luigi_Idle"
+			"fps": 24,
+			"name": "Luigi_Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-46,
 				43
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Luigi_Left"
+			"fps": 24,
+			"name": "Luigi_Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-49,
 				33
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Luigi_Down"
+			"fps": 24,
+			"name": "Luigi_Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-52,
 				55
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Luigi_Up"
+			"fps": 24,
+			"name": "Luigi_Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-51,
 				35
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Luigi_Right"
+			"fps": 24,
+			"name": "Luigi_Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		-30,
 		0
 	],
-	"healthicon": "icon-norm",
+	"healthicon": "norm",
 	"flip_x": false,
 	"healthbar_colors": [
 		12,

@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				30,
 				103
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "mario idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "mario idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				34,
 				91
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "mario left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "mario left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				30,
 				91
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "mario down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "mario down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				173,
 				131
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "mario up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "mario up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				30,
 				83
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "mario right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "mario right"
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		0,
 		0
 	],
-	"healthicon": "icon-shm",
+	"healthicon": "shm",
 	"flip_x": false,
 	"healthbar_colors": [
 		97,

@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-10,
 				89
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Peach_Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Peach_Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				55,
 				153
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Peach_Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Peach_Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				8,
 				107
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Peach_Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Peach_Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				109,
 				120
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Peach_Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Peach_Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				48,
 				110
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Peach_Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Peach_Right"
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		0,
 		0
 	],
-	"healthicon": "icon-p",
+	"healthicon": "p",
 	"flip_x": false,
 	"healthbar_colors": [
 		155,

@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				241,
 				580
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Daisy Faker Note Down"
+			"fps": 24,
+			"name": "Daisy Faker Note Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				231,
 				670
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Daisy Faker Note Up"
+			"fps": 24,
+			"name": "Daisy Faker Note Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				235,
 				611
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Daisy Faker Idle"
+			"fps": 24,
+			"name": "Daisy Faker Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				336,
 				618
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Daisy Faker Note Left"
+			"fps": 24,
+			"name": "Daisy Faker Note Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				224,
 				612
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Daisy Faker Note Right"
+			"fps": 24,
+			"name": "Daisy Faker Note Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				300,
 				760
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "laugh",
-			"indices": [],
-			"name": "Daiseye Anim Laugh"
+			"fps": 24,
+			"name": "Daiseye Anim Laugh",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -73,7 +73,7 @@
 		160,
 		260
 	],
-	"healthicon": "icon-eye",
+	"healthicon": "eye",
 	"flip_x": false,
 	"healthbar_colors": [
 		145,

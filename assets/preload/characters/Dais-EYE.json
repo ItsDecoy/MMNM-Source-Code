@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				132,
 				278
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Daiseye Note Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Daiseye Note Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				192,
 				736
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Daiseye Note Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Daiseye Note Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				235,
 				611
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Daiseye Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Daiseye Idle"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				168,
 				492
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Daiseye Note Left"
+			"fps": 24,
+			"name": "Daiseye Note Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				114,
 				545
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Daiseye Note Right"
+			"fps": 24,
+			"name": "Daiseye Note Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		-10,
 		360
 	],
-	"healthicon": "icon-eye",
+	"healthicon": "eye",
 	"flip_x": false,
 	"healthbar_colors": [
 		145,
