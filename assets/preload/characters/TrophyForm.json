@@ -73,7 +73,7 @@
 		160,
 		260
 	],
-	"healthicon": "eye",
+	"healthicon": "fakeeye",
 	"flip_x": false,
 	"healthbar_colors": [
 		145,
