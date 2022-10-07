@@ -14,8 +14,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				349,
-				-24
+				344,
+				-7
 			],
 			"anim": "singDOWN",
 			"fps": 30,
@@ -26,7 +26,7 @@
 			"loop": false,
 			"offsets": [
 				275,
-				470
+				450
 			],
 			"anim": "singUP",
 			"fps": 30,
@@ -36,8 +36,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				882,
-				521
+				840,
+				499
 			],
 			"anim": "Stomp",
 			"fps": 30,
@@ -47,8 +47,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				740,
-				271
+				708,
+				259
 			],
 			"anim": "singLEFT",
 			"fps": 30,
@@ -58,7 +58,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				232,
+				221,
 				187
 			],
 			"anim": "singRIGHT",
@@ -70,8 +70,8 @@
 	"no_antialiasing": false,
 	"image": "characters/msex",
 	"position": [
-		-210,
-		-490
+		-180,
+		-450
 	],
 	"healthicon": "mx",
 	"flip_x": true,
@@ -81,9 +81,9 @@
 		0
 	],
 	"camera_position": [
-		-850,
-		-740
+		-700,
+		-660
 	],
 	"sing_duration": 6.1,
-	"scale": 1.5
+	"scale": 1.4
 }
