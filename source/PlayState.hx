@@ -2432,10 +2432,10 @@ class PlayState extends MusicBeatState
 			iconP1.swapOldIcon();
 		}*/
 		
-		if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
+		/*if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
 		{
 			moveCameraSection(Std.int(curStep / 16));
-		}
+		}*/
 
 		if(dodgeTimer > 0)
 		{
@@ -2573,7 +2573,29 @@ class PlayState extends MusicBeatState
 
 		if(!inCutscene) {
 			var lerpVal:Float = CoolUtil.boundTo(elapsed * 2.4 * cameraSpeed, 0, 1);
-			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
+			var xAdd:Float = 0;
+			var yAdd:Float = 0;
+			var section:SwagSection = SONG.notes[Std.int(curStep / 16)];
+
+			if (generatedMusic && section != null && !endingSong && !isCameraOnForcedPos)
+			{
+				if (section.gfSection)
+				{
+					xAdd = gf_xCAM;
+					yAdd = gf_yCAM;
+				}
+				else if (section.mustHitSection)
+				{
+					xAdd = bf_xCAM;
+					yAdd = bf_yCAM;
+				}
+				else
+				{
+					xAdd = dad_xCAM;
+					yAdd = dad_yCAM;
+				}
+			}
+			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x + xAdd, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y + yAdd, lerpVal));
 			if(!startingSong && !endingSong && boyfriend.animation.curAnim.name.startsWith('idle')) {
 				boyfriendIdleTime += elapsed;
 				if(boyfriendIdleTime >= 0.15) { // Kind of a mercy thing for making the achievement easier to get as it's apparently frustrating to some playerss
@@ -3207,11 +3229,15 @@ class PlayState extends MusicBeatState
 				if(Math.isNaN(val1)) val1 = 0;
 				if(Math.isNaN(val2)) val2 = 0;
 
-				isCameraOnForcedPos = false;
 				if(!Math.isNaN(Std.parseFloat(value1)) || !Math.isNaN(Std.parseFloat(value2))) {
 					camFollow.x = val1;
 					camFollow.y = val2;
 					isCameraOnForcedPos = true;
+				}
+				else
+				{
+					isCameraOnForcedPos = false;
+					moveCameraSection(Std.int(curStep / 16));
 				}
 
 			case 'Alt Idle Animation':
@@ -3489,7 +3515,7 @@ class PlayState extends MusicBeatState
 
 		if (gf != null && SONG.notes[id].gfSection)
 		{
-			camFollow.set(gf.getMidpoint().x + gf_xCAM, gf.getMidpoint().y + gf_yCAM);
+			camFollow.set(gf.getMidpoint().x, gf.getMidpoint().y);
 			camFollow.x += gf.cameraPosition[0] + girlfriendCameraOffset[0];
 			camFollow.y += gf.cameraPosition[1] + girlfriendCameraOffset[1];
 			tweenCamIn();
@@ -3514,14 +3540,14 @@ class PlayState extends MusicBeatState
 	{
 		if(isDad)
 		{
-			camFollow.set(dad.getMidpoint().x + 150 + dad_xCAM, dad.getMidpoint().y - 100 + dad_yCAM);
+			camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
 			camFollow.x += dad.cameraPosition[0] + opponentCameraOffset[0];
 			camFollow.y += dad.cameraPosition[1] + opponentCameraOffset[1];
 			tweenCamIn();
 		}
 		else
 		{
-			camFollow.set(boyfriend.getMidpoint().x - 100 + bf_xCAM, boyfriend.getMidpoint().y - 100 + bf_yCAM);
+			camFollow.set(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
 			camFollow.x -= boyfriend.cameraPosition[0] - boyfriendCameraOffset[0];
 			camFollow.y += boyfriend.cameraPosition[1] + boyfriendCameraOffset[1];
 

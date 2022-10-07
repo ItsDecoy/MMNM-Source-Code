@@ -1,11 +1,4 @@
 function onCreate()
-    makeLuaText('runTxt', "RAP!", 530, 400, 330);
-    setTextSize('runTxt', 50);
-    addLuaText('runTxt');
-    setTextColor('runTxt', 'ffffff');
-	setObjectCamera('runTxt', 'hud');
-	setProperty('runTxt.visible', false)
-
     makeLuaSprite('red', '', 0, 0);
     makeGraphic('red',1280,720,'ff0000')
     setProperty('red.scale.x',4)
@@ -17,7 +10,14 @@ function onCreate()
 end
 
 function onCreatePost()
+    makeLuaText('runTxt', "RAP!", 530, 400, 330);
+    setTextSize('runTxt', 50);
+    addLuaText('runTxt');
+    setTextColor('runTxt', 'ffffff');
+	setObjectCamera('runTxt', 'hud');
+	setProperty('runTxt.visible', false)
     setTextFont('runTxt', 'Pixel_NES.otf')
+    setTextBorder('runTxt', getTextSize('runTxt') / 10, '000000')
 end
 
 function onStepHit()

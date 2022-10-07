@@ -1907,21 +1907,81 @@
 				]
 			],
 			[
-				161853.658536585,
+				162731.707317073,
 				[
 					[
-						"HUD Fade",
-						"0",
-						".4"
+						"Camera Follow Pos",
+						"2050",
+						"420"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"2"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"0"
+					],
+					[
+						"Camera Zoom",
+						"0.7",
+						"1, expoOut"
+					],
+					[
+						"Screen Shake",
+						"0.8, 0.01",
+						"0.8, 0.01"
 					]
 				]
 			],
 			[
-				165073.170731707,
+				163902.43902439,
 				[
 					[
-						"HUD Fade",
-						"1",
+						"Screen Shake",
+						"0.2, 0.01",
+						"0.2, 0.01"
+					]
+				]
+			],
+			[
+				164341.463414634,
+				[
+					[
+						"Screen Shake",
+						"0.2, 0.01",
+						"0.2, 0.01"
+					]
+				]
+			],
+			[
+				165000,
+				[
+					[
+						"Screen Shake",
+						"0.9, 0.01",
+						"0.9, 0.01"
+					]
+				]
+			],
+			[
+				166243.902439025,
+				[
+					[
+						"Set Property",
+						"cameraSpeed",
+						"1"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
 						"1"
 					]
 				]

@@ -273,14 +273,14 @@ class MainMenuState extends MusicBeatState
 						if (curSelected == spr.ID)
 						{
 							FlxFlicker.flicker(thingCursor, 0.5, 0.06, false, false);
-							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
+							FlxFlicker.flicker(spr, 1.1, 0.06, false, false, function(flick:FlxFlicker)
 							{
 								var daChoice:String = optionShit[curSelected];
+								FlxTransitionableState.skipNextTransIn = true;
 
 								switch (daChoice)
 								{
 									case 'mx_mode':
-										FlxTransitionableState.skipNextTransOut = true;
 										MusicBeatState.switchState(new MXModeStart());
 									case 'all_stars':
 										MusicBeatState.switchState(new FreeplayState());
