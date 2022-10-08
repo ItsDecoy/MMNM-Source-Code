@@ -43,7 +43,7 @@ function onCreate()
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
-	if curBeat >= 164 then
+	if curBeat >= 450 then
 		addHealth(-0.009)
 		if getHealth() < 0.01 then
 			setHealth(0.01)
