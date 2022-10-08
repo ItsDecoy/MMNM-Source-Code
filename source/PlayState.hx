@@ -2467,6 +2467,7 @@ class PlayState extends MusicBeatState
 				lePodoboo.x -= lePodoboo.width / 2;
 				this.insert(podobooBackgroundLayer, lePodoboo);
 				backgroundPodoboos.add(lePodoboo);
+				FlxG.sound.play(Paths.sound('podoboo'), FlxG.random.float(0.1, 0.3));
 			}
 		}
 
@@ -2494,7 +2495,6 @@ class PlayState extends MusicBeatState
 				scrPodoboo.cameras = [camHUD];
 				add(scrPodoboo);
 				screenPodoboos.add(scrPodoboo);
-				FlxG.sound.play(Paths.sound('podoboo'), FlxG.random.float(0.1, 0.3));
 			}
 		});
 

@@ -96,7 +96,7 @@ end
 
 function onEvent(name, value1, value2)
 	if name == 'Trigger Podoboos' then
-		if value1 == '25' then
+		if value1 == '35' then
 			makeLuaSprite('light', '', 0, 0);
 			makeGraphic('light',1280,720,'FF6A00')
 			setProperty('light.scale.x',4)
@@ -114,6 +114,8 @@ function onEvent(name, value1, value2)
 			doTweenColor('BackdropColor', 'Backdrop', '404040', 0.5, 'linear')
 			doTweenColor('torchHotColor', 'torchHot', '404040', 0.5, 'linear')
 			doTweenAlpha('lightColor', 'light', '1', 0.5, 'linear')
+			setProperty('podobooSpawnMinX', -300)
+			setProperty('podobooSpawnMaxX', 800)
 		end
 	end
 end
