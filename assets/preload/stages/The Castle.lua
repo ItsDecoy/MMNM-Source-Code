@@ -45,9 +45,6 @@ function onCreate()
 	addLuaSprite('broke', false);
 	scaleObject('broke',0.55,0.55);
 	setProperty('broke.visible', false);
-
-
-
-
-
+	
+	setProperty('podobooBackgroundLayer', 7)
 end

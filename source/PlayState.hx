@@ -2425,6 +2425,17 @@ class PlayState extends MusicBeatState
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
 
+	public var podobooSpawnRate:Float = 0;
+
+	public var podobooBackgroundLayer:Int = 1;
+	public var podobooMaxHeight:Float = -300;
+	public var podobooSpawnMinX:Float = -500;
+	public var podobooSpawnMaxX:Float = 1400;
+	public var podobooSpawnY:Float = 720;
+
+	var backgroundPodoboos:FlxTypedGroup<Podoboo> = new FlxTypedGroup<Podoboo>(); // The podoboos from the background
+	var screenPodoboos:FlxTypedGroup<Podoboo> = new FlxTypedGroup<Podoboo>(); // the podoboos on screen
+
 	override public function update(elapsed:Float)
 	{
 		/*if (FlxG.keys.justPressed.NINE)
@@ -2447,6 +2458,57 @@ class PlayState extends MusicBeatState
 		{
 			dodging = false;
 		}
+
+		if (podobooSpawnRate > 0)
+		{
+			if (FlxG.random.bool(podobooSpawnRate))
+			{
+				var lePodoboo = new Podoboo(FlxG.random.float(podobooSpawnMinX, podobooSpawnMaxX), podobooSpawnY, this, -podobooMaxHeight / 100);
+				lePodoboo.x -= lePodoboo.width / 2;
+				this.insert(podobooBackgroundLayer, lePodoboo);
+				backgroundPodoboos.add(lePodoboo);
+			}
+		}
+
+		// The podoboos From the background
+		backgroundPodoboos.forEachAlive(function(podoboo:Podoboo)
+		{
+			if (podoboo.y < podobooMaxHeight)
+			{
+				podoboo.kill();
+				remove(podoboo, true);
+				backgroundPodoboos.remove(podoboo, true);
+				podoboo.destroy();
+
+				// Spawns the podoboo from the screen
+				var minX:Float = FlxG.width * 0.5;
+				var maxX:Float = FlxG.width;
+				if (ClientPrefs.middleScroll)
+				{
+					minX = FlxG.width * 0.3;
+					maxX = FlxG.width * 0.7;
+				}
+				var scrPodoboo = new Podoboo(FlxG.random.float(minX, maxX), 0, this, 0);
+				scrPodoboo.x -= scrPodoboo.width / 2;
+				scrPodoboo.y -= scrPodoboo.height + 10;
+				scrPodoboo.cameras = [camHUD];
+				add(scrPodoboo);
+				screenPodoboos.add(scrPodoboo);
+				FlxG.sound.play(Paths.sound('podoboo'), FlxG.random.float(0.1, 0.3));
+			}
+		});
+
+		// The podoboos From the screen
+		screenPodoboos.forEachAlive(function(podoboo:Podoboo)
+		{
+			if (podoboo.y > FlxG.height)
+			{
+				podoboo.kill();
+				remove(podoboo, true);
+				screenPodoboos.remove(podoboo, true);
+				podoboo.destroy();
+			}
+		});
 
 		peachGate.y = FlxMath.lerp(peachGate.y, peachValue + FlxG.height, CoolUtil.boundTo(elapsed * 0.125, 0, 1));
 
@@ -3502,6 +3564,10 @@ class PlayState extends MusicBeatState
 					}
 				}
 				defaultCamZoom = targetZoom;
+			case 'Trigger Podoboos':
+				var val1:Float = Std.parseFloat(value1);
+				if(Math.isNaN(val1)) val1 = 0;
+				podobooSpawnRate = val1;
 			case 'Set Property':
 				var killMe:Array<String> = value1.split('.');
 				if(killMe.length > 1) FunkinLua.setVarInArray(FunkinLua.getPropertyLoopThingWhatever(killMe, true, true), killMe[killMe.length-1], value2);

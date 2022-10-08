@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="podoboo_assets.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="podoboo0000" x="5" y="5" width="268" height="294" frameX="0" frameY="-2" frameWidth="268" frameHeight="303"/>
+	<SubTexture name="podoboo0001" x="5" y="5" width="268" height="294" frameX="0" frameY="-2" frameWidth="268" frameHeight="303"/>
+	<SubTexture name="podoboo0002" x="278" y="5" width="266" height="297" frameX="-1" frameY="-1" frameWidth="268" frameHeight="303"/>
+	<SubTexture name="podoboo0003" x="278" y="5" width="266" height="297" frameX="-1" frameY="-1" frameWidth="268" frameHeight="303"/>
+	<SubTexture name="podoboo0004" x="549" y="5" width="263" height="303" frameX="-3" frameY="0" frameWidth="268" frameHeight="303"/>
+	<SubTexture name="podoboo0005" x="549" y="5" width="263" height="303" frameX="-3" frameY="0" frameWidth="268" frameHeight="303"/>
+	<SubTexture name="podoboo0006" x="5" y="313" width="264" height="301" frameX="-2" frameY="-1" frameWidth="268" frameHeight="303"/>
+	<SubTexture name="podoboo0007" x="5" y="313" width="264" height="301" frameX="-2" frameY="-1" frameWidth="268" frameHeight="303"/>
+	<SubTexture name="podoboo_bubble0000" x="274" y="313" width="92" height="89"/>
+	<SubTexture name="podoboo_bubble0001" x="274" y="313" width="92" height="89"/>
+	<SubTexture name="podoboo_bubble0002" x="371" y="313" width="88" height="86" frameX="-2" frameY="-1" frameWidth="92" frameHeight="89"/>
+	<SubTexture name="podoboo_bubble0003" x="371" y="313" width="88" height="86" frameX="-2" frameY="-1" frameWidth="92" frameHeight="89"/>
+	<SubTexture name="podoboo_bubble0004" x="464" y="313" width="82" height="80" frameX="-5" frameY="-4" frameWidth="92" frameHeight="89"/>
+	<SubTexture name="podoboo_bubble0005" x="464" y="313" width="82" height="80" frameX="-5" frameY="-4" frameWidth="92" frameHeight="89"/>
+	<SubTexture name="podoboo_bubble0006" x="551" y="313" width="61" height="60" frameX="-16" frameY="-15" frameWidth="92" frameHeight="89"/>
+	<SubTexture name="podoboo_bubble0007" x="551" y="313" width="61" height="60" frameX="-16" frameY="-15" frameWidth="92" frameHeight="89"/>
+	<SubTexture name="podoboo_bubble0008" x="617" y="313" width="21" height="20" frameX="-34" frameY="-33" frameWidth="92" frameHeight="89"/>
+	<SubTexture name="podoboo_bubble0009" x="617" y="313" width="21" height="20" frameX="-34" frameY="-33" frameWidth="92" frameHeight="89"/>
+</TextureAtlas>

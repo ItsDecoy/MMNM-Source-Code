@@ -12,15 +12,14 @@ function onCreate()
 	setProperty('hate.alpha', 0)
 
 	makeLuaSprite('die', 'IHY/die', 0, 0);
-	addLuaSprite('die', true);
-    setObjectCamera('die','other')
+	addLuaSprite('die', false);
+    setObjectCamera('die','camHUD')
 	setProperty('die.antialiasing', false);
-	
-	setProperty('die.x', (screenWidth/2) - (getProperty('die.width') / 2))
-	setProperty('die.y', (screenHeight/2) - (getProperty('die.height') / 2))
-	scaleObject('die', 0, 0);
+	screenCenter('die')
+	setProperty('die.scale.x', 0)
+	setProperty('die.scale.y', 0)
 
-    makeLuaText('itText', '',  1150, 3, 600);
+    makeLuaText('itText', '',  1100, 3, 600);
     setTextSize('itText', 32);
 	setTextColor('itText', 'ffffff')
     addLuaText('itText');
@@ -28,6 +27,8 @@ function onCreate()
 	setTextString('itText', "IT");
 	setTextFont('itText', 'Super-Mario-World.ttf')
 	setProperty('itText.alpha', 0)
+	screenCenter('itText', 'y')
+	setTextBorder('itText', getTextSize('itText') / 10, '000000')
 
     makeLuaText('burnText', '',  1400, 3, 600);
     setTextSize('burnText', 32);
@@ -37,6 +38,17 @@ function onCreate()
     setTextFont('burnText', 'Super-Mario-World.ttf')
 	setProperty('burnText.alpha', 0)
 	setTextString('burnText', "BURNS!"); 
+	screenCenter('burnText', 'y')
+	setTextBorder('burnText', getTextSize('burnText') / 10, '000000')
+end
+
+function opponentNoteHit(id, direction, noteType, isSustainNote)
+	if curBeat >= 164 then
+		addHealth(-0.009)
+		if getHealth() < 0.01 then
+			setHealth(0.01)
+		end
+	end
 end
 
 function onStepHit()
@@ -77,7 +89,37 @@ function onStepHit()
 		doTweenAlpha('burnText', 'burnText', 1, 1.2, linear);
 	end
 	if curStep == 2160 then
-		doTweenAlpha('burnText', 'burnText', 0, 1.2, linear);
-		doTweenAlpha('itText', 'itText', 0, 1.2, linear);
+		doTweenAlpha('burnText', 'burnText', 0, 3.2, linear);
+		doTweenAlpha('itText', 'itText', 0, 3.2, linear);
+	end
+end
+
+function onEvent(name, value1, value2)
+	if name == 'Trigger Podoboos' then
+		if value1 == '25' then
+			makeLuaSprite('light', '', 0, 0);
+			makeGraphic('light',1280,720,'FF6A00')
+			setProperty('light.scale.x',4)
+			setProperty('light.scale.y',4)
+			setLuaSpriteScrollFactor('light',0,0)
+			addLuaSprite('light', false);
+			setObjectOrder('light', getObjectOrder('torchHot')+1);
+			setBlendMode('light', 'lighten')
+			setProperty('light.alpha', 0)
+			
+			doTweenColor('dadColor', 'dad', '000000', 0.5, 'linear')
+			doTweenColor('bfColor', 'boyfriend', '000000', 0.5, 'linear')
+			doTweenColor('gfColor', 'gf', '000000', 0.5, 'linear')
+			doTweenColor('BridgeOfDeathColor', 'BridgeOfDeath', '000000', 0.5, 'linear')
+			doTweenColor('BackdropColor', 'Backdrop', '404040', 0.5, 'linear')
+			doTweenColor('torchHotColor', 'torchHot', '404040', 0.5, 'linear')
+			doTweenAlpha('lightColor', 'light', '1', 0.5, 'linear')
+		end
+	end
+end
+
+function onTweenCompleted(tag)
+	if tag == 'lightColor' then
+		doTweenAlpha('lightColor2', 'light', '0', 5, 'linear')
 	end
 end

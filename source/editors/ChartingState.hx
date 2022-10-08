@@ -96,7 +96,7 @@ class ChartingState extends MusicBeatState
 		['Change Character', "Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"],
 		['Change Scroll Speed', "Value 1: Scroll Speed Multiplier (1 is default)\nValue 2: Time it takes to change fully in seconds."],
 		['HUD Fade', "Fades the HUD camera\n\nValue 1: Alpha\nValue 2: Duration"],
-		['Trigger Podoboos', "Makes Podoboos start jumping on screen\n\nUsed in Burning Hatred"],
+		['Trigger Podoboos', "Used in Burning Hatred\nSpawns Podoboos that will cover you screen\n\nValue 1: Spawning Chance (0 to 100)\nLeave at 0 or in blank to disable\n\n(HIGHLY RECOMMENDED)\nuse values from 0 to 1 only (with decimals)\nunless you wanna make this game more\nunplayable than SNS lmao"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"],
 		['Stage Phase', "Used for example in Blinked and Vicimized\nfor transforming the stage\n\nValue 1: Stage phase ID"],
 		['SHLuigi Shooting', "Used for Cover-Up\n\nValue 1: Time in song beats\n(1 = one beat, default is 1)"]
