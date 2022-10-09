@@ -34,6 +34,11 @@ class NoteSplash extends FlxSprite
 			if(PlayState.SONG.splashSkin != null && PlayState.SONG.splashSkin.length > 0) texture = PlayState.SONG.splashSkin;
 		}
 
+		if(texture == 'blood splats') {
+            alpha = 1;
+            setPosition(x - Note.swagWidth + -460, y - Note.swagWidth - 270);
+        }
+
 		if(textureLoaded != texture) {
 			loadAnims(texture);
 		}
