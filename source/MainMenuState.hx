@@ -212,6 +212,7 @@ class MainMenuState extends MusicBeatState
 	}
 
 	var selectedSomethin:Bool = false;
+	var cheatTimer:FlxTimer = new FlxTimer();
 
 	override function update(elapsed:Float)
 	{
@@ -220,18 +221,30 @@ class MainMenuState extends MusicBeatState
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
-		// THIS IS A DEBUG FEATURE. You shouldn't be able to do this in the final game.
-		/*if (FlxG.keys.pressed.ZERO)
+		if (FlxG.keys.justPressed.B)
 		{
-			FlxG.save.erase();
-			System.exit(0);
+			cheatTimer.start(4, function(tmr:FlxTimer)
+			{
+				if (FlxG.keys.pressed.SHIFT)
+				{
+					FlxG.save.erase();
+					System.exit(0);
+				}
+				else
+				{
+					if (!StoryMenuState.weekCompleted.exists('week1'))
+					{
+						StoryMenuState.weekCompleted.set('week1', true);
+						FlxG.sound.play(Paths.sound('confirmMenu'), 0.8);
+						MusicBeatState.switchState(new MainMenuState());
+					}
+				}
+			});
 		}
-		else if (FlxG.keys.pressed.SEVEN)
+		else if (FlxG.keys.justReleased.B && cheatTimer != null)
 		{
-			StoryMenuState.weekCompleted.set('week1', true);
-			FlxG.sound.play(Paths.sound('confirmMenu'), 0.8);
-			MusicBeatState.switchState(new MainMenuState());
-		}*/
+			cheatTimer.cancel();
+		}
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
