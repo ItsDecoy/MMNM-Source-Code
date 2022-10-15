@@ -1,0 +1,54 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-50,
+				39
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [
+				172,
+				173,
+				174,
+				175,
+				176,
+				177,
+				178,
+				179
+			],
+			"name": "ihy Anim damn"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				39
+			],
+			"anim": "death",
+			"fps": 23,
+			"name": "ihy Anim damn",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Luigi_Falls",
+	"position": [
+		-505,
+		-120
+	],
+	"healthicon": "norm",
+	"flip_x": false,
+	"healthbar_colors": [
+		12,
+		148,
+		58
+	],
+	"camera_position": [
+		110,
+		120
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}
