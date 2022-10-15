@@ -2461,7 +2461,7 @@ class PlayState extends MusicBeatState
 
 		if (podobooSpawnRate > 0)
 		{
-			if (FlxG.random.bool(podobooSpawnRate))
+			if (FlxG.random.bool(podobooSpawnRate * elapsed * 240))
 			{
 				var lePodoboo = new Podoboo(FlxG.random.float(podobooSpawnMinX, podobooSpawnMaxX), podobooSpawnY, this, -podobooMaxHeight / 100);
 				lePodoboo.x -= lePodoboo.width / 2;
