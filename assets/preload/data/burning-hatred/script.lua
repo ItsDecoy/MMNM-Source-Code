@@ -63,6 +63,8 @@ function onStepHit()
 	if curStep == 560 then
 		setProperty('cracked.visible', false);
 			setProperty('broke.visible', true);
+	doTweenY('dadJumpBackY', 'dad', defaultBoyfriendY + 1650, 0.5, 'cubeIn')
+	--doTweenY('dadJumpY', 'dad', defaultBoyfriendY - 200, 0.3, 'cubeOut')
 	end
 	if curStep == 603 then	
 		setProperty('BridgeOfDeath.visible',true);
