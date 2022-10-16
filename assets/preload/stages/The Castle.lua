@@ -32,18 +32,20 @@ function onCreate()
 	scaleObject('torchHot', 0.55, 0.55);
 	setScrollFactor('torchHot', 0.7, 0.7);
 
-	makeLuaSprite('BridgeOfDeath', folder..'IHYourBridge', -500, -150);
+	local bridgeScale = 0.65
+	
+	makeLuaSprite('BridgeOfDeath', folder..'IHYourBridge', -600, -320);
 	addLuaSprite('BridgeOfDeath', false);
-	scaleObject('BridgeOfDeath',0.55,0.55);
+	scaleObject('BridgeOfDeath',bridgeScale,bridgeScale);
 
-	makeLuaSprite('cracked', folder..'bridgeCrack', -500, -150);
+	makeLuaSprite('cracked', folder..'bridgeCrack', getProperty('BridgeOfDeath.x'), getProperty('BridgeOfDeath.y'));
 	addLuaSprite('cracked', false);
-	scaleObject('cracked',0.55,0.55);
+	scaleObject('cracked',bridgeScale,bridgeScale);
 	setProperty('cracked.visible', false);
 
-	makeLuaSprite('broke', folder..'bridgeBroken', -500, -150);
+	makeLuaSprite('broke', folder..'bridgeBroken', getProperty('BridgeOfDeath.x'), getProperty('BridgeOfDeath.y'));
 	addLuaSprite('broke', false);
-	scaleObject('broke',0.55,0.55);
+	scaleObject('broke',bridgeScale,bridgeScale);
 	setProperty('broke.visible', false);
 	
 	setProperty('podobooBackgroundLayer', 7)
