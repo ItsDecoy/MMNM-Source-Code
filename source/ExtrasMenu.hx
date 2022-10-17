@@ -117,6 +117,10 @@ class ExtrasMenu extends MusicBeatState
             {
                 case 'minigames':
                     trace('nothing lol');
+                    FlxG.sound.play(Paths.sound('scrollMenu'), 0.8);
+                    FlxTransitionableState.skipNextTransIn = true;
+                    FlxTransitionableState.skipNextTransOut = true;
+                    MusicBeatState.switchState(new Runlucasrun());
                 case 'credits':
                     FlxG.sound.play(Paths.sound('scrollMenu'), 0.8);
                     FlxTransitionableState.skipNextTransIn = true;
