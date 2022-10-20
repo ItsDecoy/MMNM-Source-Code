@@ -175,7 +175,7 @@ function onStepHit()
 		stepHitFuncs[curStep]() -- Executes function at curStep in stepHitFuncs
 	end
 	
-	if curStep >= 592 and curStep <= 600 then	
+	if curStep >= 592 and curStep <= 598 then	
 		setProperty('BridgeOfDeath.visible', curStep % 2 == 0);
 		setProperty('broke.visible', curStep % 2 == 1);
 	end
