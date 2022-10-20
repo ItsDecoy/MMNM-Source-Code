@@ -33,15 +33,15 @@ function onCreate()
 	setTextColor('IT', 'ffffff')
 	screenCenter('IT', 'y')
 	
-	makeText('BURNS!', 600, 600, 40)
-	setTextColor('BURNS!', 'fc0303')
-	screenCenter('BURNS!', 'y')
+	makeText('BURNS', 600, 600, 40)
+	setTextColor('BURNS', 'fc0303')
+	screenCenter('BURNS', 'y')
 	
 	setProperty('IT.alpha', 0)
-	setProperty('BURNS!.alpha', 0)
+	setProperty('BURNS.alpha', 0)
 	
 	table.insert(shakyThings, {'IT', getProperty('IT.x'), getProperty('IT.y')})
-	table.insert(shakyThings, {'BURNS!', getProperty('BURNS!.x'), getProperty('BURNS!.y')})
+	table.insert(shakyThings, {'BURNS', getProperty('BURNS.x'), getProperty('BURNS.y')})
 end
 
 function makeText(text, x, y, size)
@@ -175,7 +175,7 @@ function onStepHit()
 		stepHitFuncs[curStep]() -- Executes function at curStep in stepHitFuncs
 	end
 	
-	if curStep >= 599 and curStep <= 610 then	
+	if curStep >= 592 and curStep <= 600 then	
 		setProperty('BridgeOfDeath.visible', curStep % 2 == 0);
 		setProperty('broke.visible', curStep % 2 == 1);
 	end
