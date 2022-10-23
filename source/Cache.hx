@@ -28,7 +28,8 @@ import sys.io.File;
 
 using StringTools;
 
-
+//Thanks to Ash and the original author :)
+//Comic stole this <3
 class Cache extends MusicBeatState
 {
 	public static var bitmapData:Map<String,FlxGraphic>;
@@ -48,7 +49,7 @@ class Cache extends MusicBeatState
 		bitmapData = new Map<String,FlxGraphic>();
 		bitmapData2 = new Map<String,FlxGraphic>();
 
-		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('loadingScreens/loadingscreen-' + FlxG.random.int(1, 1)));
+		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('loadingScreens/loadingscreen-' + FlxG.random.int(1, 2)));
 		menuBG.screenCenter();
 		add(menuBG);
 
