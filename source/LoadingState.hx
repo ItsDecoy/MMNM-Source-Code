@@ -47,7 +47,7 @@ class LoadingState extends MusicBeatState
 	var shitz:FlxText;
 	override function create()
 	{
-		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('loadingScreens/loadingscreen-' + FlxG.random.int(1, 1)));
+		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('loadingScreens/loadingscreen-' + FlxG.random.int(1, 2)));
 		menuBG.screenCenter();
 		add(menuBG);
 
