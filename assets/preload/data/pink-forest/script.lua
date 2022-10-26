@@ -21,6 +21,16 @@ function onCreatePost()
     setObjectCamera('Iam','other')
 	scaleObject('Iam',0.7,0.7);
 	setProperty('Iam.alpha', 0)
+
+	makeAnimatedLuaSprite('Glitch', 'Coronation/glitch', 820, 400);
+	addAnimationByPrefix('Glitch', 'text', 'glitch', 24, true )
+	addLuaSprite('Glitch', true);
+    setObjectCamera('Glitch','other')
+	scaleObject('Glitch',1.7 ,1.7);
+	setProperty('Glitch.alpha', 0)
+	setProperty('Glitch.antialiasing', false)
+
+	
 	  
 end
 
@@ -45,9 +55,11 @@ function onStepHit()
 	if curStep == 1451 then
 		
 		doTweenAlpha('Iam', 'Iam', 1, 0.5, linear);
+		doTweenAlpha('Glitch', 'Glitch', 1, 0.5, linear);
 end
 	if curStep == 1488 then
 		
 		setProperty('Iam.visible', false);
+		setProperty('Glitch.visible', false);
 end
 end

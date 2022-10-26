@@ -1,75 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="Grand Dad.png">
-	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+<TextureAtlas imagePath="Grand_Dad.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="GD Down0000" x="0" y="0" width="786" height="297" frameX="0" frameY="-17" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0001" x="0" y="0" width="786" height="297" frameX="0" frameY="-17" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0002" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0003" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0004" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0005" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0006" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0007" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0008" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0009" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0010" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0011" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0012" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Down0013" x="786" y="0" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
-	<SubTexture name="GD Left0000" x="1511" y="0" width="599" height="771" frameX="0" frameY="0" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0001" x="1511" y="0" width="599" height="771" frameX="0" frameY="0" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0002" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0003" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0004" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0005" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0006" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0007" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0008" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0009" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0010" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0011" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0012" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD Left0013" x="2110" y="0" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
-	<SubTexture name="GD RIght0000" x="2685" y="0" width="594" height="673" frameX="0" frameY="0" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0001" x="2685" y="0" width="594" height="673" frameX="0" frameY="0" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0002" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0003" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0004" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0005" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0006" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0007" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0008" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0009" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0010" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0011" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0012" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD RIght0013" x="3279" y="0" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
-	<SubTexture name="GD Up0000" x="3868" y="0" width="649" height="644" frameX="0" frameY="0" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0001" x="3868" y="0" width="649" height="644" frameX="0" frameY="0" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0002" x="4517" y="0" width="641" height="613" frameX="-16" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0003" x="4517" y="0" width="641" height="613" frameX="-16" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0004" x="5158" y="0" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0005" x="5158" y="0" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0006" x="5158" y="0" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0007" x="5158" y="0" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0008" x="5158" y="0" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0009" x="5158" y="0" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0010" x="5158" y="0" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0011" x="5158" y="0" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0012" x="5158" y="0" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="GD Up0013" x="5158" y="0" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
-	<SubTexture name="Grand Dad Idle0000" x="5796" y="0" width="459" height="738" frameX="0" frameY="-5" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0001" x="5796" y="0" width="459" height="738" frameX="0" frameY="-5" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0002" x="6255" y="0" width="459" height="743"/>
-	<SubTexture name="Grand Dad Idle0003" x="6255" y="0" width="459" height="743"/>
-	<SubTexture name="Grand Dad Idle0004" x="0" y="771" width="459" height="738" frameX="0" frameY="-5" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0005" x="0" y="771" width="459" height="738" frameX="0" frameY="-5" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0006" x="459" y="771" width="459" height="736" frameX="0" frameY="-7" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0007" x="459" y="771" width="459" height="736" frameX="0" frameY="-7" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0008" x="918" y="771" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0009" x="918" y="771" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0010" x="918" y="771" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0011" x="918" y="771" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0012" x="918" y="771" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
-	<SubTexture name="Grand Dad Idle0013" x="918" y="771" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="GD Down0000" x="5" y="5" width="786" height="297" frameX="0" frameY="-17" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0001" x="5" y="5" width="786" height="297" frameX="0" frameY="-17" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0002" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0003" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0004" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0005" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0006" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0007" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0008" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0009" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0010" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0011" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0012" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Down0013" x="796" y="5" width="725" height="316" frameX="-33" frameY="0" frameWidth="786" frameHeight="316"/>
+	<SubTexture name="GD Left0000" x="1526" y="5" width="599" height="771" frameX="0" frameY="0" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0001" x="1526" y="5" width="599" height="771" frameX="0" frameY="0" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0002" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0003" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0004" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0005" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0006" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0007" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0008" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0009" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0010" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0011" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0012" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD Left0013" x="2130" y="5" width="575" height="741" frameX="-35" frameY="-30" frameWidth="610" frameHeight="771"/>
+	<SubTexture name="GD RIght0000" x="2710" y="5" width="594" height="673" frameX="0" frameY="0" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0001" x="2710" y="5" width="594" height="673" frameX="0" frameY="0" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0002" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0003" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0004" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0005" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0006" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0007" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0008" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0009" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0010" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0011" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0012" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD RIght0013" x="3309" y="5" width="589" height="659" frameX="-12" frameY="-14" frameWidth="601" frameHeight="673"/>
+	<SubTexture name="GD Up0000" x="5" y="781" width="649" height="644" frameX="0" frameY="0" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0001" x="5" y="781" width="649" height="644" frameX="0" frameY="0" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0002" x="659" y="781" width="641" height="613" frameX="-16" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0003" x="659" y="781" width="641" height="613" frameX="-16" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0004" x="1305" y="781" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0005" x="1305" y="781" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0006" x="1305" y="781" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0007" x="1305" y="781" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0008" x="1305" y="781" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0009" x="1305" y="781" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0010" x="1305" y="781" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0011" x="1305" y="781" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0012" x="1305" y="781" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="GD Up0013" x="1305" y="781" width="638" height="613" frameX="-19" frameY="-30" frameWidth="657" frameHeight="644"/>
+	<SubTexture name="Grand Dad Idle0000" x="1948" y="781" width="459" height="738" frameX="0" frameY="-5" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0001" x="1948" y="781" width="459" height="738" frameX="0" frameY="-5" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0002" x="2412" y="781" width="459" height="743"/>
+	<SubTexture name="Grand Dad Idle0003" x="2412" y="781" width="459" height="743"/>
+	<SubTexture name="Grand Dad Idle0004" x="2876" y="781" width="459" height="738" frameX="0" frameY="-5" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0005" x="2876" y="781" width="459" height="738" frameX="0" frameY="-5" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0006" x="3340" y="781" width="459" height="736" frameX="0" frameY="-7" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0007" x="3340" y="781" width="459" height="736" frameX="0" frameY="-7" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0008" x="5" y="1529" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0009" x="5" y="1529" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0010" x="5" y="1529" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0011" x="5" y="1529" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0012" x="5" y="1529" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
+	<SubTexture name="Grand Dad Idle0013" x="5" y="1529" width="459" height="735" frameX="0" frameY="-8" frameWidth="459" frameHeight="743"/>
 </TextureAtlas>

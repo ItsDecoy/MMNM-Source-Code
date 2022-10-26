@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-250,
 				9
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Grand Dad Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Grand Dad Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-121,
 				39
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "GD Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "GD Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-91,
 				-410
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "GD Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "GD Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-139,
 				39
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "GD Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "GD Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-159,
+				-239,
 				-51
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "GD RIght",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "GD RIght"
 		}
 	],
 	"no_antialiasing": false,
