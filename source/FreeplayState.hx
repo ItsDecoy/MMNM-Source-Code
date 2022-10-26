@@ -423,12 +423,13 @@ class FreeplayState extends MusicBeatState
 			}
 		}
 
-		if (FlxG.keys.justPressed.SEVEN && WeekData.AllWeeksCompleted([grandDadWeek]) && !ClientPrefs.unlockedGrandDad)
+		if (FlxG.keys.justPressed.SEVEN && WeekData.AllWeeksCompleted([grandDadWeek]))
 		{
-			FlxG.sound.play(Paths.sound('scrollMenu'), 1);
-			
-			ClientPrefs.unlockedGrandDad = true;
-			LoadingState.loadAndSwitchState(new FreeplayState(), true);
+			FlxG.sound.play(Paths.sound('Bump'));
+			FlxG.camera.visible = false;
+			FlxTransitionableState.skipNextTransOut = true;
+			FlxG.sound.music.stop();
+			MusicBeatState.switchState(new MarioSevenStart());
 		}
 
 		else if (accepted)

@@ -60,6 +60,7 @@ import flixel.addons.display.FlxBackdrop;
 
 using StringTools;
 
+// Programmed by Ighby
 class MXModeStart extends MusicBeatState
 {
     var path = 'mxstart/';
