@@ -1,9 +1,11 @@
 function onCreate()
-	makeLuaSprite('Whole-Ah Castle', 'victim/mariobg', -550, -400);
+	local location = 'stages/victim/'
+	
+	makeLuaSprite('Whole-Ah Castle', location..'mariobg', -550, -400);
 	addLuaSprite('Whole-Ah Castle', false);
 	scaleObject('Whole-Ah Castle', 0.7, 0.7);
 
-	makeLuaSprite('Whole-Ah Castle2', 'victim/victimbg', -550, -400);
+	makeLuaSprite('Whole-Ah Castle2', location..'victimbg', -550, -400);
 	addLuaSprite('Whole-Ah Castle2', false);
 	scaleObject('Whole-Ah Castle2', 0.7, 0.7);
 	

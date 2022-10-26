@@ -1,13 +1,14 @@
 local fx = 0
 function onCreatePost()
+	local location = 'misc/daiseye/'
     for i=1,3 do
-        makeLuaSprite('eye'..i, 'daiseye/Eye'..i, 0, 0)
+        makeLuaSprite('eye'..i, location..'Eye'..i, 0, 0)
         scaleObject('eye'..i, 1.4, 1.4)
         setObjectCamera('eye'..i, 'hud')
         screenCenter('eye'..i, 'xy')
         addLuaSprite('eye'..i, true)
 
-        makeLuaSprite('pupil'..i, 'daiseye/Pupil', 0, 0)
+        makeLuaSprite('pupil'..i, location..'Pupil', 0, 0)
         scaleObject('pupil'..i, 1.4, 1.4)
         setObjectCamera('pupil'..i, 'hud')
         screenCenter('pupil'..i, 'xy')

@@ -1,7 +1,7 @@
 flamesIsMyBestie = {{-80,321}, {575,318}, {1225,313}}
 
 function onCreate()
-	local folder = 'IHY/'
+	local folder = 'stages/ihateyou/'
 
 	makeLuaSprite('Smoke', folder..'coughcough', -500, -150);
 	addLuaSprite('Smoke', false);

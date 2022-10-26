@@ -1,5 +1,5 @@
 function onCreate()
-	local folder = 'daiseye/'
+	local folder = 'stages/daiseye/'
 
 	for i=1,2 do
 		fix = ''

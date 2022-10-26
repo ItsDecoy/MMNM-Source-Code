@@ -1,6 +1,6 @@
 local i = 0
 function onCreate()
-	local folder = 'grandDad/'
+	local folder = 'stages/granddad/'
 
 	makeLuaSprite('Sky', folder..'Grand_Dad_BG2_7', -250, -225);
 	addLuaSprite('Sky', false);

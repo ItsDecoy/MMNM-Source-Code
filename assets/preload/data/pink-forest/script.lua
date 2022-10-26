@@ -1,37 +1,33 @@
 local i = 0
 function onCreatePost()
-
 	triggerEvent('Camera Fade', '0', '0')
 	triggerEvent('HUD Fade', '0', '0')
 	
-	makeLuaSprite('God', 'Coronation/God', 240, 200);
+	makeLuaSprite('God', 'misc/coronation/God', 240, 200);
 	addLuaSprite('God', true);
     setObjectCamera('God','other')
 	scaleObject('God',0.7,0.7);
 	setProperty('God.alpha', 0)
 
-	makeLuaSprite('are', 'Coronation/are', 240, 200);
+	makeLuaSprite('are', 'misc/coronation/are', 240, 200);
 	addLuaSprite('are', true);
     setObjectCamera('are','other')
 	scaleObject('are',0.7,0.7);
 	setProperty('are.alpha', 0)
 
-	makeLuaSprite('Iam', 'Coronation/Iam', 240, 200);
+	makeLuaSprite('Iam', 'misc/coronation/Iam', 240, 200);
 	addLuaSprite('Iam', true);
     setObjectCamera('Iam','other')
 	scaleObject('Iam',0.7,0.7);
 	setProperty('Iam.alpha', 0)
 
-	makeAnimatedLuaSprite('Glitch', 'Coronation/glitch', 820, 400);
+	makeAnimatedLuaSprite('Glitch', 'misc/coronation/glitch', 820, 400);
 	addAnimationByPrefix('Glitch', 'text', 'glitch', 24, true )
 	addLuaSprite('Glitch', true);
     setObjectCamera('Glitch','other')
 	scaleObject('Glitch',1.7 ,1.7);
 	setProperty('Glitch.alpha', 0)
 	setProperty('Glitch.antialiasing', false)
-
-	
-	  
 end
 
 function onUpdate(elapsed)

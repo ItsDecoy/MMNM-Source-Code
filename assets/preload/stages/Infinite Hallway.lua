@@ -2,7 +2,7 @@ local dadScaleX = 1
 local dadScaleY = 1
 
 function onCreate()
-	local location = 'hallway/'
+	local location = 'stages/hallway/'
 	
 	makeAnimatedLuaSprite('hall', location..'Hallway', -500, 180);
 	addAnimationByPrefix('hall', 'idle', 'Hallway idle', 60, true)

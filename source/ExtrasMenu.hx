@@ -63,7 +63,7 @@ class ExtrasMenu extends MusicBeatState
 
     static var curSelect:Int = 0;
 
-    var options:Array<String> = ['minigames', 'credits'];
+    var options:Array<String> = ['credits'];
     var optionSprites:FlxSpriteGroup;
 
     //IM ADDING THIS IN DO NOT WORRY, Hi I'm paul :)

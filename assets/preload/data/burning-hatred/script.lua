@@ -1,11 +1,20 @@
 shakyThings = {}
 
 function onCreate()
-	makeLuaSprite('damn', 'IHY/damnit', 270, 400);
-	addLuaSprite('damn', true);
-    setObjectCamera('damn','other')
-	scaleObject('damn',0.3,0.3);
-	setProperty('damn.alpha', 0)
+	-- GRAH! God Damn It!
+	xs = 400
+	makeText('GRAH!', xs, 600, 32)
+	xs = xs + 150
+	makeText('God', xs, 600, 32)
+	xs = xs + 110
+	makeText('Damn', xs, 600, 32)
+	xs = xs + 145
+	makeText('It!', xs, 600, 32)
+	
+	setProperty('GRAH!.alpha', 0)
+	setProperty('God.alpha', 0)
+	setProperty('Damn.alpha', 0)
+	setProperty('It!.alpha', 0)
 
 	-- I HATE YOU.
     makeText('I', 470, 600, 32)
@@ -15,12 +24,12 @@ function onCreate()
 	setProperty('I.alpha', 0)
 	setProperty('HATE.alpha', 0)
 	setProperty('YOU!!.alpha', 0)
-	table.insert(shakyThings, {'I', getProperty('I.x'), getProperty('I.y')})
-	table.insert(shakyThings, {'HATE', getProperty('HATE.x'), getProperty('HATE.y')})
-	table.insert(shakyThings, {'YOU!!', getProperty('YOU!!.x'), getProperty('YOU!!.y')})
+	addShake('I', 4)
+	addShake('HATE', 4)
+	addShake('YOU!!', 4)
 
 	-- DIE
-	makeLuaSprite('die', 'IHY/die', 0, 0);
+	makeLuaSprite('die', 'misc/ihateyou/die', 0, 0);
 	addLuaSprite('die', false);
     setObjectCamera('die','camHUD')
 	setProperty('die.antialiasing', false);
@@ -40,8 +49,12 @@ function onCreate()
 	setProperty('IT.alpha', 0)
 	setProperty('BURNS.alpha', 0)
 	
-	table.insert(shakyThings, {'IT', getProperty('IT.x'), getProperty('IT.y')})
-	table.insert(shakyThings, {'BURNS', getProperty('BURNS.x'), getProperty('BURNS.y')})
+	addShake('IT', 4)
+	addShake('BURNS', 4)
+end
+
+function addShake(spr, shakeIntensity)
+	table.insert(shakyThings, {spr, getProperty(spr..'.x'), getProperty(spr..'.y'), shakeIntensity})
 end
 
 function makeText(text, x, y, size)
@@ -66,23 +79,39 @@ end
 
 function onUpdate(elapsed)
 	for i = 1,#shakyThings do
-		setProperty(shakyThings[i][1]..'.x', shakyThings[i][2] + getRandomFloat(-4, 4))
-		setProperty(shakyThings[i][1]..'.y', shakyThings[i][3] + getRandomFloat(-4, 4))
+		local leSh = shakyThings[i][4]
+		setProperty(shakyThings[i][1]..'.x', shakyThings[i][2] + getRandomFloat(-leSh, leSh))
+		setProperty(shakyThings[i][1]..'.y', shakyThings[i][3] + getRandomFloat(-leSh, leSh))
 	end
 end
 
--- I copied step hit functions structure from Singstar Challenge LMAO
+-- I copied step hit functions structure, totally not stolen from Singstar Challenge mod :D
 -- Ighby
 
 stepHitFuncs = {
 	[512] = function()
-		doTweenAlpha('damnfade', 'damn', 1, 0.3, linear);
+		setProperty('GRAH!.alpha', 1)
+	end,
+	
+	[526] = function()
+		setProperty('God.alpha', 1)
+	end,
+	
+	[531] = function()
+		setProperty('Damn.alpha', 1)
+	end,
+	
+	[533] = function()
+		setProperty('It!.alpha', 1)
 	end,
 	
 	[537] = function()
 		setProperty('BridgeOfDeath.visible', false);
-		doTweenAlpha('damnfade', 'damn', 0, 0.3, linear);
 		setProperty('cracked.visible', true);
+		setProperty('GRAH!.alpha', 0)
+		setProperty('God.alpha', 0)
+		setProperty('Damn.alpha', 0)
+		setProperty('It!.alpha', 0)
 	end,
 	
 	[560] = function()

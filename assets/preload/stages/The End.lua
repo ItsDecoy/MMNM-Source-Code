@@ -1,5 +1,5 @@
 function onCreate()
-	local folder = 'piss/'
+	local folder = 'stages/piss/'
 
 	makeLuaSprite('Sky', folder..'Bg-sky', -170, -120);
 	addLuaSprite('Sky', false);

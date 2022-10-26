@@ -224,6 +224,41 @@ class WeekData {
 		return null;
 	}
 
+	public static function getWeekCompleted(weekName:String):Bool
+	{
+		if (!StoryMenuState.weekCompleted.exists(weekName))
+		{
+			return false;
+		}
+		return StoryMenuState.weekCompleted.get(weekName);
+	}
+
+	public static function AllWeeksCompleted(excluded:Array<String> = null):Bool
+	{
+		for (i in 0...weeksList.length)
+		{
+			if (!getWeekCompleted(weeksList[i])) // The week isn't completed
+			{
+				if (excluded != null)
+				{
+					for (j in 0...excluded.length)
+					{
+						if (weeksList[i] != excluded[j]) // The week isn't excluded
+						{
+							return false;
+						}
+					}
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+
+		return true;
+	}
+
 	//   FUNCTIONS YOU WILL PROBABLY NEVER NEED TO USE
 
 	//To use on PlayState.hx or Highscore stuff

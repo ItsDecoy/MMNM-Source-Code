@@ -1,5 +1,5 @@
 function onCreate()
-	local folder = 'Coronation/'
+	local folder = 'stages/coronation/'
 	
 	makeLuaSprite('Sky', folder..'coronation_bg_sky', -650, -325);
 	addLuaSprite('Sky', false);

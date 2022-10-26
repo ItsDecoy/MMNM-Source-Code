@@ -3769,8 +3769,8 @@ class PlayState extends MusicBeatState
 					{
 						if (SONG.validScore)
 						{
-							// If MX week has been beaten, the all stars cutscene plays.
-							if (!StoryMenuState.weekCompleted.get(WeekData.getWeekFileName()) && storyWeek == 0)
+							// If MX week is beaten by the first time. it shows the all-stars cutscene
+							if (!WeekData.getWeekCompleted(WeekData.getWeekFileName()) && storyWeek == 0)
 							{
 								ResultsState.cutscene = 'all_stars_cutscene_sound';
 								MainMenuState.curSelected = 1;
@@ -3818,6 +3818,9 @@ class PlayState extends MusicBeatState
 
 				checkForFinalCutscene();
 				StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
+
+				FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
+				FlxG.save.flush();
 			}
 
 			transitioning = true;
@@ -3826,18 +3829,7 @@ class PlayState extends MusicBeatState
 
 	private function checkForFinalCutscene()
 	{
-		var completedWeeks:Int = 0;
-		for (i in 0...WeekData.weeksList.length)
-		{
-			if (StoryMenuState.weekCompleted.get(WeekData.weeksList[i]))
-			{
-				completedWeeks += 1;
-				trace(WeekData.weeksList[i] + ' Previously Completed!');
-			}
-		}
-
-		// Previous songs have been beaten and the current song is about to be too. The final cutscene plays
-		if (completedWeeks == WeekData.weeksList.length-1)
+		if (WeekData.AllWeeksCompleted())
 		{
 			ResultsState.cutscene = 'MMNM_MX_FINAL_CUTSCENE-2';
 			ResultsState.showThanksScreen = true;
@@ -3880,6 +3872,9 @@ class PlayState extends MusicBeatState
 
 	public var showCombo:Bool = true;
 	public var showRating:Bool = true;
+
+	public var judgePrefix:String = "judges/";
+	public var judgeFix:String = '';
 
 	private function popUpScore(note:Note = null):Void
 	{
@@ -3965,16 +3960,13 @@ class PlayState extends MusicBeatState
 				daRating = 'bad';
 		 */
 
-		var pixelShitPart1:String = "";
-		var pixelShitPart2:String = '';
-
 		if (PlayState.isPixelStage)
 		{
-			pixelShitPart1 = 'pixelUI/';
-			pixelShitPart2 = '-pixel';
+			judgePrefix = 'pixelUI/';
+			judgeFix = '-pixel';
 		}
 
-		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
+		rating.loadGraphic(Paths.image(judgePrefix + daRating + judgeFix));
 		rating.cameras = [camHUD];
 		rating.screenCenter();
 		rating.x = coolText.x - 40;
@@ -3986,7 +3978,7 @@ class PlayState extends MusicBeatState
 		rating.x += ClientPrefs.comboOffset[0];
 		rating.y -= ClientPrefs.comboOffset[1];
 
-		var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
+		var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(judgePrefix + 'combo' + judgeFix));
 		comboSpr.cameras = [camHUD];
 		comboSpr.screenCenter();
 		comboSpr.x = coolText.x;
@@ -4028,7 +4020,7 @@ class PlayState extends MusicBeatState
 		var daLoop:Int = 0;
 		for (i in seperatedScore)
 		{
-			var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'num' + Std.int(i) + pixelShitPart2));
+			var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(judgePrefix + 'num' + Std.int(i) + judgeFix));
 			numScore.cameras = [camHUD];
 			numScore.screenCenter();
 			numScore.x = coolText.x + (43 * daLoop) - 90;

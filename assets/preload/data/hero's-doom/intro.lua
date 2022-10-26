@@ -6,7 +6,7 @@ function onCreatePost()
 	triggerEvent('HUD Fade', '0', '0')
 	
 	for i=1,#mxLines do
-		makeLuaSprite('mxLine'..i,'MX/'..mxLines[i],225,100);
+		makeLuaSprite('mxLine'..i,'misc/mx/'..mxLines[i],225,100);
 		addLuaSprite('mxLine'..i,true);
 		scaleObject('mxLine'..i,1,1);
 		setObjectCamera('mxLine'..i,'other');

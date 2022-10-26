@@ -1,18 +1,18 @@
+loc = 'misc/mafio/'
+
 function onCreate()
-	precacheImage('UpperBar');
-	makeLuaSprite('UpperBar', 'mafio/CinematicUpperBar', 0, 800);
+	makeLuaSprite('UpperBar', loc..'CinematicUpperBar', 0, 800);
 	addLuaSprite('UpperBar');
 	setObjectCamera('UpperBar', 'other');
 	scaleObject('UpperBar', 0.9, 0.9);
 
-	precacheImage('DownBar');
-	makeLuaSprite('DownBar', 'mafio/CinematicDownerBar', 0, -200);
+	makeLuaSprite('DownBar', loc..'CinematicDownerBar', 0, -200);
 	addLuaSprite('DownBar');
 	setObjectCamera('DownBar', 'other');
 	scaleObject('DownBar', 0.9, 0.9);
 
-	precacheImage('mafiotext');
-	makeAnimatedLuaSprite('mafiotext','mafio/text1',400, 750);
+	precacheImage(loc..'text1');
+	makeAnimatedLuaSprite('mafiotext',loc..'text1',400, 750);
 	addAnimationByPrefix('mafiotext','you','youText',24,false);
 	addAnimationByPrefix('mafiotext','youtried','youtriedText',24,false);
 	addAnimationByPrefix('mafiotext','youtriedto','youtriedtoText',24,false);
@@ -22,8 +22,8 @@ function onCreate()
 	setObjectCamera('mafiotext', 'other');
 	scaleObject('mafiotext', 0.45, 0.45);
 
-	precacheImage('mafiotextSECOND');
-	makeAnimatedLuaSprite('mafiotextSECOND','mafio/text2',420, 600);
+	precacheImage(loc..'text2');
+	makeAnimatedLuaSprite('mafiotextSECOND',loc..'text2',420, 600);
 	addAnimationByPrefix('mafiotextSECOND','goodbye','goodbyeText',24,false);
 	addAnimationByPrefix('mafiotextSECOND','goodbyeold','goodbyeoldText',24,false);
 	addAnimationByPrefix('mafiotextSECOND','goodbyeoldfriend','goodbyeoldfriendText',24,false);

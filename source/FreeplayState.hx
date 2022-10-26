@@ -66,6 +66,8 @@ class FreeplayState extends MusicBeatState
 
 	var timeElapsed:Float = 0;
 
+	var grandDadWeek:String;
+
 	override function create()
 	{
 		Paths.clearStoredMemory();
@@ -101,7 +103,19 @@ class FreeplayState extends MusicBeatState
 				{
 					colors = [146, 113, 253];
 				}
-				addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]), weekIsLocked);
+				var formatName:String = Highscore.formatSong(song[0], 1);
+				if (formatName == "a-grand-ol'-time")
+				{
+					grandDadWeek = WeekData.weeksList[i];
+					if (ClientPrefs.unlockedGrandDad)
+					{
+						addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]), false);
+					}
+				}
+				else
+				{
+					addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]), weekIsLocked);
+				}
 			}
 		}
 		WeekData.loadTheFirstEnabledMod();
@@ -407,6 +421,14 @@ class FreeplayState extends MusicBeatState
 				instPlaying = curSelected;
 				#end
 			}
+		}
+
+		if (FlxG.keys.justPressed.SEVEN && WeekData.AllWeeksCompleted([grandDadWeek]) && !ClientPrefs.unlockedGrandDad)
+		{
+			FlxG.sound.play(Paths.sound('scrollMenu'), 1);
+			
+			ClientPrefs.unlockedGrandDad = true;
+			LoadingState.loadAndSwitchState(new FreeplayState(), true);
 		}
 
 		else if (accepted)

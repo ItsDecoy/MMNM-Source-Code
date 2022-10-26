@@ -7,15 +7,10 @@ dodgeTimer = 0
 
 spaceFlashSpeed = 0.05
 
-function onCreate()
-	precacheImage('mafio/DodgeMechs');
-	getPropertyFromClass('Controls', 'var DODGE')
+loc = 'misc/mafio/'
 
-	makeAnimatedLuaSprite('SecretLoog','mafio/LuigiMafia', 200, 450);
-	addAnimationByPrefix('SecretLoog','Idle','Loogi Idle', 34,false);
-	addAnimationByPrefix('SecretLoog','Shoot','Loogi Shoot', 34,false);
-	addLuaSprite('SecretLoog',true);
-	scaleObject('SecretLoog',0.65,0.65);
+function onCreate()
+	getPropertyFromClass('Controls', 'var DODGE')
 end
 
 function onEvent(name, value1, value2)
@@ -38,10 +33,11 @@ function onEvent(name, value1, value2)
 		canDodge = true
 		spacePressed = false
 		
-		makeAnimatedLuaSprite('spacebar', 'mafio/DodgeMechs', 400, 450)
+		makeLuaSprite('spacebar', loc..'DodgeMechs', 400, 480)
 		setObjectCamera('spacebar', 'other');
 		scaleObject('spacebar', 0.58, 0.58);
 		addLuaSprite('spacebar', true)
+		screenCenter('spacebar', 'x')
 		setProperty('spacebar.visible', not botPlay)
 
 		runTimer('Died', dodgeTime);
@@ -94,7 +90,7 @@ function loogiShoot()
 				playSound('coin-special', 0.8)
 				runTimer('bfHey', 0.3);
 				
-				makeAnimatedLuaSprite('superSprite', 'super', getProperty('boyfriend.x') - 150, getProperty('boyfriend.y')-60)
+				makeAnimatedLuaSprite('superSprite', loc..'super', getProperty('boyfriend.x') - 150, getProperty('boyfriend.y')-60)
 				addAnimationByPrefix('superSprite','super','super', 14, true);
 				scaleObject('superSprite', 6, 6)
 				updateHitbox('superSprite')
@@ -112,7 +108,7 @@ function loogiShoot()
 			setProperty('gf.specialAnim', true)
 			setProperty('gf.heyTimer', 0.6)
 			
-			makeLuaSprite('dodgedSprite', 'dodged', getProperty('boyfriend.x') - 150, getProperty('boyfriend.y'))
+			makeLuaSprite('dodgedSprite', loc..'dodged', getProperty('boyfriend.x') - 150, getProperty('boyfriend.y'))
 			scaleObject('dodgedSprite', 6, 6)
 			updateHitbox('dodgedSprite')
 			setProperty('dodgedSprite.antialiasing', false)
