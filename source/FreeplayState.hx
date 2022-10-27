@@ -429,6 +429,7 @@ class FreeplayState extends MusicBeatState
 			FlxG.camera.visible = false;
 			FlxTransitionableState.skipNextTransOut = true;
 			FlxG.sound.music.stop();
+			destroyFreeplayVocals();
 			MusicBeatState.switchState(new MarioSevenStart());
 		}
 

@@ -41,10 +41,10 @@ function onCreate()
 	addLuaSprite('Shoop',false);
 	scaleObject('Shoop',0.65,0.65);
 	
-	makeAnimatedLuaSprite('WEEGEE SANIC', folder..'Sanic_and_Weegee_boppers',-220,50)
-    addAnimationByPrefix('WEEGEE SANIC','WS Idle','sanic_weegee_boppers',24,false);
-	addLuaSprite('WEEGEE SANIC',false);
-	scaleObject('WEEGEE SANIC',0.65,0.65);
+	makeAnimatedLuaSprite('WeegeeSanic', folder..'Sanic_and_Weegee_boppers',-220,50)
+    addAnimationByPrefix('WeegeeSanic','WS Idle','sanic_weegee_boppers',24,false);
+	addLuaSprite('WeegeeSanic',false);
+	scaleObject('WeegeeSanic',0.65,0.65);
 
 	makeAnimatedLuaSprite('Troll', folder..'Troll_Bopper',1300,130);
     addAnimationByPrefix('Troll','Troll Idle','troll_bopper',24,false);
@@ -82,7 +82,7 @@ function onBeatHit()
 end
 
 function boppersLol()
-	objectPlayAnimation('WEEGEE SANIC', 'WS Idle', true)
+	objectPlayAnimation('WeegeeSanic', 'WS Idle', true)
 	objectPlayAnimation('Troll', 'Troll Idle', true)
 	objectPlayAnimation('Nana', 'Nana Idle', true)
 	objectPlayAnimation('Nyan', 'Nyan Idle', true)

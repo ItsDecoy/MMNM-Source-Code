@@ -45,21 +45,24 @@ class LoadingState extends MusicBeatState
 	var funkay:FlxSprite;
 	var loadBar:FlxSprite;
 	var shitz:FlxText;
+
+	static var defaultloadingImage:String = 'loadingscreen-1';
+	public static var loadingImage:String = 'loadingscreen-1';
+	public static var showLoading:Bool = true;
+
 	override function create()
 	{
-		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('loadingScreens/loadingscreen-' + FlxG.random.int(1, 2)));
+		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('loadingScreens/' + loadingImage));
 		menuBG.screenCenter();
 		add(menuBG);
-
-		shitz = new FlxText(12, 630, 300, "Loading...", 12);
-		shitz.scrollFactor.set();
-		shitz.setFormat("VCR OSD Mono", 50, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		//add(shitz);
 
 		loadBar = new FlxSprite(0, FlxG.height - 20).makeGraphic(FlxG.width, 10, 0xFFFFFF00);
 		loadBar.screenCenter(X);
 		loadBar.antialiasing = ClientPrefs.globalAntialiasing;
 		add(loadBar);
+
+		menuBG.visible = showLoading;
+		loadBar.visible = showLoading;
 		
 		initSongsManifest().onComplete
 		(
@@ -82,6 +85,8 @@ class LoadingState extends MusicBeatState
 				new FlxTimer().start(fadeTime + MIN_TIME, function(_) introComplete());
 			}
 		);
+		loadingImage = defaultloadingImage;
+		showLoading = true;
 	}
 	
 	function checkLoadSong(path:String)

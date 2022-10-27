@@ -3829,7 +3829,7 @@ class PlayState extends MusicBeatState
 
 	private function checkForFinalCutscene()
 	{
-		if (WeekData.AllWeeksCompleted())
+		if (WeekData.AllWeeksCompleted([WeekData.weeksList[WeekData.weeksList.length-1]]))
 		{
 			ResultsState.cutscene = 'MMNM_MX_FINAL_CUTSCENE-2';
 			ResultsState.showThanksScreen = true;

@@ -1,5 +1,7 @@
 package;
 
+import flixel.system.FlxSound;
+import flixel.util.FlxTimer;
 import flixel.util.FlxColor;
 import flixel.tweens.FlxTween;
 import flixel.addons.transition.FlxTransitionableState;
@@ -89,7 +91,21 @@ class MarioSevenStart extends MusicBeatState
         {
             switch (options[curSelect])
             {
-                // "Mario 7? that's the one I played? well let's check it out-"
+                // At least these are funnier than NHJ
+                case "Mario 3":
+                    FlxG.sound.play(Paths.sound('funny/boom'));
+                case "Mario 5":
+                    FlxG.sound.play(Paths.sound('funny/ding'));
+                case "Mario Missing":
+                    FlxG.sound.play(Paths.sound('funny/mim'));
+                case "Mario 10":
+                    FlxG.sound.play(Paths.sound('funny/bruh'));
+                case "Mario 11":
+                    FlxG.sound.play(Paths.sound('funny/cartoon_run'));
+                case "Mario 14":
+                    FlxG.sound.play(Paths.sound('funny/boing'));
+                
+                    // "Mario 7? that's the one I played? well let's check it out-"
                 case 'Mario 7':
                     PlayState.storyWeek = 8;
                     
@@ -100,7 +116,7 @@ class MarioSevenStart extends MusicBeatState
                     }
 
                     PlayState.storyPlaylist = songArray;
-                    PlayState.isStoryMode = false;
+                    PlayState.isStoryMode = true;
                     PlayState.chartingMode = false;
 
                     var diffic = CoolUtil.getDifficultyFilePath(1);
@@ -112,11 +128,33 @@ class MarioSevenStart extends MusicBeatState
                     PlayState.campaignScore = 0;
                     PlayState.campaignMisses = 0;
 
+                    ClientPrefs.unlockedGrandDad = true;
+                    FlxG.save.data.unlockedGrandDad = ClientPrefs.unlockedGrandDad;
+                    FlxG.save.flush();
+                    
                     caninteract = false;
 
-                    FreeplayState.destroyFreeplayVocals();
-                    FlxTransitionableState.skipNextTransIn = true;
-                    LoadingState.loadAndSwitchState(new PlayState());
+                    FlxG.sound.list.forEachAlive(function(sound:FlxSound)
+                    {
+                        sound.stop();
+                    });
+
+                    FlxG.sound.play(Paths.sound('funny/marioseven'));
+                    new FlxTimer().start(3.5, function(timer:FlxTimer)
+                    {
+                        SevCursor.visible = false;
+                        var tweenTime = 0.2;
+                        FlxTween.color(title, tweenTime/2, FlxColor.WHITE, FlxColor.ORANGE, {onComplete: function(twn:FlxTween)
+                        {
+                            FlxTween.color(title, tweenTime/2, FlxColor.ORANGE, FlxColor.BLACK, {onComplete: function(twn:FlxTween)
+                            {
+                                FlxTransitionableState.skipNextTransIn = true;
+                                LoadingState.showLoading = false;
+                                LoadingState.loadAndSwitchState(new PlayState());
+                            }});
+                        }});
+                    });
+
             }
         }
 
