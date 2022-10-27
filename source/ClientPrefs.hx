@@ -61,6 +61,7 @@ class ClientPrefs {
 	public static var safeFrames:Float = 10;
 
 	public static var unlockedGrandDad = false;
+	public static var showedFinalCutscene = false;
 
 	//Every key has two binds, add your key bind down here and then add your control on options/ControlsSubState.hx and Controls.hx
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
@@ -132,6 +133,7 @@ class ClientPrefs {
 		FlxG.save.data.shaders = shaders;
 
 		FlxG.save.data.unlockedGrandDad = unlockedGrandDad;
+		FlxG.save.data.showedFinalCutscene = showedFinalCutscene;
 	
 		FlxG.save.flush();
 
@@ -246,6 +248,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.unlockedGrandDad != null) {
 			unlockedGrandDad = FlxG.save.data.unlockedGrandDad;
+		}
+		if(FlxG.save.data.showedFinalCutscene != null) {
+			showedFinalCutscene = FlxG.save.data.showedFinalCutscene;
 		}
 		if(FlxG.save.data.gameplaySettings != null)
 		{

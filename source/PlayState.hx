@@ -3775,7 +3775,6 @@ class PlayState extends MusicBeatState
 								ResultsState.cutscene = 'all_stars_cutscene_sound';
 								MainMenuState.curSelected = 1;
 							}
-							checkForFinalCutscene();
 							Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
 						}
 
@@ -3783,6 +3782,8 @@ class PlayState extends MusicBeatState
 
 						FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
 						FlxG.save.flush();
+						
+						checkForFinalCutscene();
 					}
 					changedDifficulty = false;
 					MusicBeatState.switchState(new ResultsState());
@@ -3816,11 +3817,12 @@ class PlayState extends MusicBeatState
 				MusicBeatState.switchState(new ResultsState());
 				changedDifficulty = false;
 
-				checkForFinalCutscene();
 				StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
 
 				FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
 				FlxG.save.flush();
+
+				checkForFinalCutscene();
 			}
 
 			transitioning = true;
@@ -3829,10 +3831,14 @@ class PlayState extends MusicBeatState
 
 	private function checkForFinalCutscene()
 	{
-		if (WeekData.AllWeeksCompleted([WeekData.weeksList[WeekData.weeksList.length-1]]))
+		if (WeekData.AllWeeksCompleted() && !ClientPrefs.showedFinalCutscene)
 		{
 			ResultsState.cutscene = 'MMNM_MX_FINAL_CUTSCENE-2';
 			ResultsState.showThanksScreen = true;
+
+			ClientPrefs.showedFinalCutscene = true;
+			FlxG.save.data.showedFinalCutscene = ClientPrefs.showedFinalCutscene;
+			FlxG.save.flush();
 		}
 	}
 
