@@ -456,6 +456,15 @@ class FreeplayState extends MusicBeatState
 				PlayState.storyDifficulty = curDifficulty;
 				PlayState.storyWeek = songs[curSelected].week;
 
+				// HARDCODING BECAUSE IM STUPID AS HELL - ighby
+				var loadImage:String = 'loadingscreen-1';
+				switch (poop)
+				{
+					case 'pissed':
+						loadImage = 'lodaing';
+				}
+				LoadingState.loadingImage = loadImage;
+
 				trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
 				if(colorTween != null) {
 					colorTween.cancel();

@@ -46,7 +46,6 @@ class LoadingState extends MusicBeatState
 	var loadBar:FlxSprite;
 	var shitz:FlxText;
 
-	static var defaultloadingImage:String = 'loadingscreen-1';
 	public static var loadingImage:String = 'loadingscreen-1';
 	public static var showLoading:Bool = true;
 
@@ -85,7 +84,6 @@ class LoadingState extends MusicBeatState
 				new FlxTimer().start(fadeTime + MIN_TIME, function(_) introComplete());
 			}
 		);
-		loadingImage = defaultloadingImage;
 		showLoading = true;
 	}
 	

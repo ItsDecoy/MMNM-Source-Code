@@ -1,108 +1,133 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-2,
 				60
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "gf idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "gf idle"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				62,
 				12
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "gf down0"
-		},
-		{
-			"offsets": [
-				-27,
-				77
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "gf left0"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				62,
-				40
-			],
-			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "gf down miss",
-			"indices": [
-				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13
-			]
-		},
-		{
-			"loop": false,
-			"offsets": [
-				78,
-				102
-			],
-			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "gf up miss",
-			"indices": [
-				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13
-			]
-		},
-		{
-			"loop": false,
-			"offsets": [
-				81,
-				102
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "gf up0",
+			"name": "gf down0",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
+				-27,
+				77
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "gf left0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				62,
+				40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "gf down miss"
+		},
+		{
+			"offsets": [
+				78,
+				102
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "gf up miss"
+		},
+		{
+			"offsets": [
+				81,
+				102
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "gf up0"
+		},
+		{
+			"offsets": [
 				-21,
 				3
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "gf right miss",
+			"anim": "singLEFTmiss",
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "gf right miss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				76
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "gf left miss",
 			"indices": [
 				1,
 				2,
@@ -121,38 +146,12 @@
 		},
 		{
 			"offsets": [
-				-30,
-				76
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHTmiss",
-			"indices": [
-				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13
-			],
-			"name": "gf left miss"
-		},
-		{
-			"loop": false,
-			"offsets": [
 				313,
 				180
 			],
-			"anim": "deathConfirm",
+			"loop": false,
 			"fps": 24,
-			"name": "gf death confirm",
+			"anim": "deathConfirm",
 			"indices": [
 				0,
 				1,
@@ -179,17 +178,29 @@
 				22,
 				23,
 				24
-			]
+			],
+			"name": "gf death confirm"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-30,
 				20
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "gf right0",
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "gf right0"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				311,
+				80
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "gf death loop",
 			"indices": []
 		},
 		{
@@ -197,9 +208,6 @@
 				343,
 				48
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "firstDeath",
 			"indices": [
 				0,
 				1,
@@ -301,18 +309,10 @@
 				104,
 				105
 			],
+			"fps": 34,
+			"anim": "firstDeath",
+			"loop": false,
 			"name": "gf death intro"
-		},
-		{
-			"offsets": [
-				311,
-				80
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "deathLoop",
-			"loop": true,
-			"name": "gf death loop"
 		}
 	],
 	"no_antialiasing": false,

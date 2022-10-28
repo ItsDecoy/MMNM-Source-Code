@@ -254,8 +254,9 @@ class MXModeStart extends MusicBeatState
                     FlxG.sound.music.onComplete = function()
                     {
                         FlxG.camera.visible = false;
-                        new FlxTimer().start(1.5, function(timer:FlxTimer)
+                        new FlxTimer().start(1, function(timer:FlxTimer)
                         {
+                            LoadingState.loadingImage = 'loadingscreen-1';
                             LoadingState.loadAndSwitchState(new PlayState());
                         });
                     };
