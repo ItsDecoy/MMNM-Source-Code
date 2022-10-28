@@ -16,7 +16,7 @@ function onCreate()
 	scaleObject('Room',1,1);
 	setScrollFactor('Room',0.95,0.95);	
 	
-	makeLuaSprite('Block',location..'Mafia_BG1', -500, -130);
+	makeLuaSprite('Block',location..'Mafia_BG1', -500, -100);
 	addLuaSprite('Block', false);
 	scaleObject('Block',1,1);
 	setScrollFactor('Block',0.95,0.95);
