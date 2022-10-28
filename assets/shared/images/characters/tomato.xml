@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tomato.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Mario Idle0000" x="40" y="40" width="429" height="471" frameX="0" frameY="-16" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0001" x="40" y="40" width="429" height="471" frameX="0" frameY="-16" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0002" x="40" y="40" width="429" height="471" frameX="0" frameY="-16" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0003" x="509" y="40" width="421" height="472" frameX="-5" frameY="-15" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0004" x="509" y="40" width="421" height="472" frameX="-5" frameY="-15" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0005" x="509" y="40" width="421" height="472" frameX="-5" frameY="-15" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0006" x="970" y="40" width="415" height="473" frameX="-8" frameY="-14" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0007" x="970" y="40" width="415" height="473" frameX="-8" frameY="-14" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0008" x="970" y="40" width="415" height="473" frameX="-8" frameY="-14" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0009" x="1425" y="40" width="389" height="485" frameX="-33" frameY="-3" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0010" x="1425" y="40" width="389" height="485" frameX="-33" frameY="-3" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0011" x="1854" y="40" width="387" height="488" frameX="-34" frameY="0" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0012" x="1854" y="40" width="387" height="488" frameX="-34" frameY="0" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0013" x="2281" y="40" width="387" height="488" frameX="-34" frameY="0" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0014" x="2281" y="40" width="387" height="488" frameX="-34" frameY="0" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0015" x="2708" y="40" width="387" height="488" frameX="-34" frameY="0" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0016" x="2708" y="40" width="387" height="488" frameX="-34" frameY="0" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0017" x="3135" y="40" width="387" height="488" frameX="-34" frameY="0" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0018" x="3135" y="40" width="387" height="488" frameX="-34" frameY="0" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0019" x="3135" y="40" width="387" height="488" frameX="-34" frameY="0" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Idle0020" x="3135" y="40" width="387" height="488" frameX="-34" frameY="0" frameWidth="429" frameHeight="488"/>
+	<SubTexture name="Mario Note Down0000" x="3562" y="40" width="443" height="486" frameX="0" frameY="-29" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0001" x="3562" y="40" width="443" height="486" frameX="0" frameY="-29" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0002" x="40" y="568" width="436" height="490" frameX="-5" frameY="-22" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0003" x="40" y="568" width="436" height="490" frameX="-5" frameY="-22" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0004" x="516" y="568" width="422" height="498" frameX="-15" frameY="-4" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0005" x="516" y="568" width="422" height="498" frameX="-15" frameY="-4" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0006" x="978" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0007" x="978" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0008" x="1433" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0009" x="1433" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0010" x="1888" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0011" x="1888" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0012" x="2343" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0013" x="2343" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0014" x="2343" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0015" x="2343" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0016" x="2343" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0017" x="2343" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0018" x="2343" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0019" x="2343" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Down0020" x="2343" y="568" width="415" height="502" frameX="-22" frameY="0" frameWidth="443" frameHeight="515"/>
+	<SubTexture name="Mario Note Left0000" x="2798" y="568" width="424" height="562" frameX="-21" frameY="-3" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0001" x="2798" y="568" width="424" height="562" frameX="-21" frameY="-3" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0002" x="3262" y="568" width="427" height="563" frameX="-19" frameY="-2" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0003" x="3262" y="568" width="427" height="563" frameX="-19" frameY="-2" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0004" x="40" y="1171" width="445" height="568" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0005" x="40" y="1171" width="445" height="568" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0006" x="525" y="1171" width="449" height="561" frameX="0" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0007" x="525" y="1171" width="449" height="561" frameX="0" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0008" x="1014" y="1171" width="448" height="561" frameX="-1" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0009" x="1014" y="1171" width="448" height="561" frameX="-1" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0010" x="1502" y="1171" width="446" height="561" frameX="-3" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0011" x="1502" y="1171" width="446" height="561" frameX="-3" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0012" x="1988" y="1171" width="445" height="561" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0013" x="1988" y="1171" width="445" height="561" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0014" x="1988" y="1171" width="445" height="561" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0015" x="1988" y="1171" width="445" height="561" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0016" x="1988" y="1171" width="445" height="561" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0017" x="1988" y="1171" width="445" height="561" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0018" x="1988" y="1171" width="445" height="561" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0019" x="1988" y="1171" width="445" height="561" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Left0020" x="1988" y="1171" width="445" height="561" frameX="-4" frameY="0" frameWidth="449" frameHeight="568"/>
+	<SubTexture name="Mario Note Right0000" x="2473" y="1171" width="487" height="556" frameX="-2" frameY="0" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0001" x="2473" y="1171" width="487" height="556" frameX="-2" frameY="0" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0002" x="3000" y="1171" width="486" height="555" frameX="0" frameY="-1" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0003" x="3000" y="1171" width="486" height="555" frameX="0" frameY="-1" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0004" x="3526" y="1171" width="464" height="552" frameX="-15" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0005" x="3526" y="1171" width="464" height="552" frameX="-15" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0006" x="40" y="1779" width="460" height="552" frameX="-16" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0007" x="40" y="1779" width="460" height="552" frameX="-16" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0008" x="540" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0009" x="540" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0010" x="1039" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0011" x="1039" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0012" x="1538" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0013" x="1538" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0014" x="1538" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0015" x="1538" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0016" x="1538" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0017" x="1538" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0018" x="1538" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0019" x="1538" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Right0020" x="1538" y="1779" width="459" height="552" frameX="-17" frameY="-4" frameWidth="489" frameHeight="556"/>
+	<SubTexture name="Mario Note Up0000" x="2037" y="1779" width="353" height="593" frameX="-8" frameY="0" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0001" x="2037" y="1779" width="353" height="593" frameX="-8" frameY="0" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0002" x="2430" y="1779" width="354" height="589" frameX="-7" frameY="-4" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0003" x="2430" y="1779" width="354" height="589" frameX="-7" frameY="-4" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0004" x="2824" y="1779" width="358" height="577" frameX="-2" frameY="-16" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0005" x="2824" y="1779" width="358" height="577" frameX="-2" frameY="-16" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0006" x="3222" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0007" x="3222" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0008" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0009" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0010" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0011" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0012" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0013" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0014" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0015" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0016" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0017" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0018" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0019" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+	<SubTexture name="Mario Note Up0020" x="3621" y="1779" width="359" height="574" frameX="0" frameY="-19" frameWidth="361" frameHeight="593"/>
+</TextureAtlas>

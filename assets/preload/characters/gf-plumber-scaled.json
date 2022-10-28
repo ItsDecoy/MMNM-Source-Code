@@ -2,38 +2,9 @@
 	"animations": [
 		{
 			"offsets": [
-				-1,
-				56
-			],
-			"loop": false,
-			"anim": "sad",
-			"fps": 24,
-			"name": "gf sad",
-			"indices": [
-				0,
-				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12
-			]
-		},
-		{
-			"offsets": [
 				0,
 				61
 			],
-			"loop": false,
-			"anim": "danceLeft",
-			"fps": 24,
-			"name": "GF Dancing Beat",
 			"indices": [
 				30,
 				0,
@@ -51,17 +22,17 @@
 				12,
 				13,
 				14
-			]
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "Egg on da speaker"
 		},
 		{
 			"offsets": [
 				0,
 				61
 			],
-			"loop": false,
-			"anim": "danceRight",
-			"fps": 24,
-			"name": "GF Dancing Beat",
 			"indices": [
 				15,
 				16,
@@ -78,14 +49,18 @@
 				27,
 				28,
 				29
-			]
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "Egg on da speaker"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/PlumberGF_assets",
+	"image": "characters/Victim_EggBopper",
 	"position": [
 		0,
-		0
+		80
 	],
 	"healthicon": "gf",
 	"flip_x": false,

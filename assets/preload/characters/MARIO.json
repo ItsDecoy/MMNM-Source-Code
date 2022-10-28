@@ -1,50 +1,6 @@
 {
 	"animations": [
 		{
-			"loop": false,
-			"offsets": [
-				110,
-				-61
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "mario_left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				31,
-				-50
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "mario_down",
-			"indices": []
-		},
-		{
-			"offsets": [
-				3,
-				-29
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "mario_up"
-		},
-		{
-			"offsets": [
-				-1,
-				-63
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "mario_right"
-		},
-		{
 			"offsets": [
 				0,
 				-30
@@ -53,14 +9,58 @@
 			"fps": 24,
 			"anim": "idle",
 			"indices": [],
-			"name": "mario_idle"
+			"name": "Mario Idle"
+		},
+		{
+			"offsets": [
+				69,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Mario Note Left"
+		},
+		{
+			"offsets": [
+				-9,
+				-14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Mario Note Down"
+		},
+		{
+			"offsets": [
+				-42,
+				86
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Mario Note Up"
+		},
+		{
+			"offsets": [
+				-51,
+				37
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Mario Note Right"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/RECUP_RECUP_RECUP_RECUP_VICTM",
+	"image": "characters/tomato",
 	"position": [
 		0,
-		20
+		160
 	],
 	"healthicon": "MAR",
 	"flip_x": false,
@@ -70,9 +70,9 @@
 		103
 	],
 	"camera_position": [
-		-150,
-		110
+		-70,
+		80
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 1.1
 }

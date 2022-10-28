@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Victim_EggBopper.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Egg on da speaker0000" x="0" y="0" width="704" height="600"/>
+	<SubTexture name="Egg on da speaker0001" x="0" y="0" width="704" height="600"/>
+	<SubTexture name="Egg on da speaker0002" x="734" y="0" width="700" height="593" frameX="-2" frameY="-7" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0003" x="1464" y="0" width="700" height="593" frameX="-2" frameY="-7" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0004" x="2194" y="0" width="700" height="591" frameX="-2" frameY="-9" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0005" x="2194" y="0" width="700" height="591" frameX="-2" frameY="-9" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0006" x="2924" y="0" width="700" height="590" frameX="-2" frameY="-10" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0007" x="2924" y="0" width="700" height="590" frameX="-2" frameY="-10" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0008" x="2924" y="0" width="700" height="590" frameX="-2" frameY="-10" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0009" x="2924" y="0" width="700" height="590" frameX="-2" frameY="-10" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0010" x="2924" y="0" width="700" height="590" frameX="-2" frameY="-10" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0011" x="2924" y="0" width="700" height="590" frameX="-2" frameY="-10" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0012" x="2924" y="0" width="700" height="590" frameX="-2" frameY="-10" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0013" x="2924" y="0" width="700" height="590" frameX="-2" frameY="-10" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0014" x="2924" y="0" width="700" height="590" frameX="-2" frameY="-10" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0015" x="0" y="630" width="700" height="594" frameX="-2" frameY="-6" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0016" x="730" y="630" width="704" height="594" frameX="0" frameY="-6" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0017" x="1464" y="630" width="704" height="591" frameX="0" frameY="-9" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0018" x="2198" y="630" width="700" height="591" frameX="-2" frameY="-9" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0019" x="2928" y="630" width="700" height="592" frameX="-2" frameY="-8" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0020" x="2928" y="630" width="700" height="592" frameX="-2" frameY="-8" frameWidth="704" frameHeight="600"/>
+	<SubTexture name="Egg on da speaker0021" x="2924" y="0" width="700" height="590" frameX="-2" frameY="-10" frameWidth="704" frameHeight="600"/>
+</TextureAtlas>
