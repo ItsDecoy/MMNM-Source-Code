@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Victim.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Vic Idle0000" x="40" y="40" width="458" height="521" frameX="-2" frameY="-6" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0001" x="538" y="40" width="458" height="519" frameX="-2" frameY="-8" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0002" x="538" y="40" width="458" height="519" frameX="-2" frameY="-8" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0003" x="1036" y="40" width="455" height="526" frameX="-3" frameY="-1" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0004" x="1036" y="40" width="455" height="526" frameX="-3" frameY="-2" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0005" x="1036" y="40" width="455" height="526" frameX="-3" frameY="-2" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0006" x="1531" y="40" width="456" height="525" frameX="0" frameY="-2" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0007" x="2027" y="40" width="456" height="525" frameX="0" frameY="-2" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0008" x="2027" y="40" width="456" height="525" frameX="0" frameY="-2" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0009" x="2523" y="40" width="460" height="527"/>
+	<SubTexture name="Vic Idle0010" x="3023" y="40" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0011" x="3023" y="40" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0012" x="3518" y="40" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0013" x="3518" y="40" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0014" x="3518" y="40" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0015" x="40" y="607" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0016" x="40" y="607" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0017" x="40" y="607" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0018" x="40" y="607" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0019" x="40" y="607" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Idle0020" x="40" y="607" width="455" height="527" frameX="0" frameY="0" frameWidth="460" frameHeight="527"/>
+	<SubTexture name="Vic Note Down0000" x="535" y="607" width="433" height="463" frameX="0" frameY="-30" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0001" x="535" y="607" width="433" height="463" frameX="0" frameY="-30" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0002" x="1008" y="607" width="424" height="466" frameX="-8" frameY="-27" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0003" x="1008" y="607" width="424" height="466" frameX="-8" frameY="-27" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0004" x="1472" y="607" width="414" height="486" frameX="-19" frameY="-7" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0005" x="1472" y="607" width="414" height="486" frameX="-19" frameY="-7" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0006" x="1926" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0007" x="2379" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0008" x="2832" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0009" x="3285" y="607" width="414" height="493" frameX="-19" frameY="0" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0010" x="1926" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0011" x="2379" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0012" x="2832" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0013" x="3285" y="607" width="414" height="493" frameX="-19" frameY="0" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0014" x="1926" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0015" x="2379" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0016" x="2832" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0017" x="3285" y="607" width="414" height="493" frameX="-19" frameY="0" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0018" x="1926" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0019" x="2379" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Down0020" x="2832" y="607" width="413" height="492" frameX="-19" frameY="-1" frameWidth="433" frameHeight="493"/>
+	<SubTexture name="Vic Note Left0000" x="40" y="1174" width="597" height="504" frameX="0" frameY="-19" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0001" x="40" y="1174" width="597" height="504" frameX="0" frameY="-19" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0002" x="677" y="1174" width="594" height="510" frameX="-4" frameY="-13" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0003" x="677" y="1174" width="594" height="510" frameX="-4" frameY="-13" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0004" x="1311" y="1174" width="577" height="523" frameX="-25" frameY="0" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0005" x="1311" y="1174" width="577" height="523" frameX="-25" frameY="0" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0006" x="1928" y="1174" width="574" height="519" frameX="-30" frameY="-4" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0007" x="2542" y="1174" width="574" height="521" frameX="-30" frameY="-2" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0008" x="3156" y="1174" width="574" height="519" frameX="-30" frameY="-4" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0009" x="40" y="1737" width="574" height="521" frameX="-30" frameY="-2" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0010" x="654" y="1737" width="574" height="520" frameX="-30" frameY="-3" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0011" x="3156" y="1174" width="574" height="519" frameX="-30" frameY="-4" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0012" x="3156" y="1174" width="574" height="519" frameX="-30" frameY="-4" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0013" x="40" y="1737" width="574" height="521" frameX="-30" frameY="-2" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0014" x="654" y="1737" width="574" height="520" frameX="-30" frameY="-3" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0015" x="3156" y="1174" width="574" height="519" frameX="-30" frameY="-4" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0016" x="3156" y="1174" width="574" height="519" frameX="-30" frameY="-4" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0017" x="40" y="1737" width="574" height="521" frameX="-30" frameY="-2" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0018" x="654" y="1737" width="574" height="520" frameX="-30" frameY="-3" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0019" x="3156" y="1174" width="574" height="519" frameX="-30" frameY="-4" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Left0020" x="3156" y="1174" width="574" height="519" frameX="-30" frameY="-4" frameWidth="604" frameHeight="523"/>
+	<SubTexture name="Vic Note Right0000" x="1268" y="1737" width="546" height="516" frameX="-3" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0001" x="1268" y="1737" width="546" height="516" frameX="-3" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0002" x="1854" y="1737" width="542" height="516" frameX="-2" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0003" x="1854" y="1737" width="542" height="516" frameX="-2" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0004" x="2436" y="1737" width="524" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0005" x="2436" y="1737" width="524" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0006" x="3000" y="1737" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0007" x="40" y="2298" width="521" height="517" frameX="0" frameY="0" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0008" x="601" y="2298" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0009" x="1162" y="2298" width="521" height="517" frameX="0" frameY="0" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0010" x="601" y="2298" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0011" x="1723" y="2298" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0012" x="601" y="2298" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0013" x="1162" y="2298" width="521" height="517" frameX="0" frameY="0" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0014" x="601" y="2298" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0015" x="1723" y="2298" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0016" x="601" y="2298" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0017" x="1162" y="2298" width="521" height="517" frameX="0" frameY="0" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0018" x="601" y="2298" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0019" x="1723" y="2298" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Right0020" x="601" y="2298" width="521" height="516" frameX="0" frameY="-1" frameWidth="549" frameHeight="517"/>
+	<SubTexture name="Vic Note Up0000" x="2284" y="2298" width="394" height="726" frameX="-8" frameY="0" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0001" x="2284" y="2298" width="394" height="726" frameX="-8" frameY="0" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0002" x="2718" y="2298" width="398" height="714" frameX="-6" frameY="-12" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0003" x="2718" y="2298" width="398" height="714" frameX="-6" frameY="-12" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0004" x="3156" y="2298" width="408" height="678" frameX="-1" frameY="-48" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0005" x="3156" y="2298" width="408" height="678" frameX="-1" frameY="-48" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0006" x="3604" y="2298" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0007" x="40" y="3064" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0008" x="490" y="3064" width="410" height="676" frameX="0" frameY="-50" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0009" x="940" y="3064" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0010" x="3604" y="2298" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0011" x="40" y="3064" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0012" x="490" y="3064" width="410" height="676" frameX="0" frameY="-50" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0013" x="940" y="3064" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0014" x="3604" y="2298" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0015" x="40" y="3064" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0016" x="490" y="3064" width="410" height="676" frameX="0" frameY="-50" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0017" x="940" y="3064" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0018" x="3604" y="2298" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0019" x="40" y="3064" width="410" height="674" frameX="0" frameY="-52" frameWidth="410" frameHeight="726"/>
+	<SubTexture name="Vic Note Up0020" x="490" y="3064" width="410" height="676" frameX="0" frameY="-50" frameWidth="410" frameHeight="726"/>
+</TextureAtlas>

@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-30
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Mario Idle"
+			"fps": 24,
+			"name": "Mario Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				69,
 				15
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Mario Note Left"
-		},
-		{
-			"offsets": [
-				-9,
-				-14
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "Mario Note Down"
+			"name": "Mario Note Left",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				42,
+				-25
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Mario Note Down",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				-42,
 				86
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Mario Note Up"
+			"fps": 24,
+			"name": "Mario Note Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-51,
-				37
+				17
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Mario Note Right"
+			"fps": 24,
+			"name": "Mario Note Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

@@ -9,58 +9,58 @@
 			"fps": 24,
 			"anim": "idle",
 			"indices": [],
-			"name": "victim idle"
+			"name": "Vic Idle"
 		},
 		{
 			"offsets": [
-				279,
-				-5
+				329,
+				5
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "victim_left"
+			"name": "Vic Note Left"
 		},
 		{
 			"offsets": [
-				109,
-				-18
+				69,
+				-82
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "victim_down"
+			"name": "Vic Note Down"
 		},
 		{
 			"offsets": [
-				119,
-				119
+				89,
+				239
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "victim_up"
+			"name": "Vic Note Up"
 		},
 		{
 			"offsets": [
-				81,
-				-91
+				91,
+				-11
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "victim_right"
+			"name": "Vic Note Right"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/RECUP_RECUP_RECUP_RECUP_VICTIM",
+	"image": "characters/Victim",
 	"position": [
-		0,
-		0
+		10,
+		50
 	],
 	"healthicon": "vic",
 	"flip_x": false,
@@ -70,9 +70,9 @@
 		44
 	],
 	"camera_position": [
-		-240,
-		0
+		-230,
+		-90
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 1.3
 }
