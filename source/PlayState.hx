@@ -3741,7 +3741,7 @@ class PlayState extends MusicBeatState
 				if(Math.isNaN(percent)) percent = 0;
 				Highscore.saveScore(SONG.song, songScore, storyDifficulty, songMisses, percent, ratingFC);
 
-				ResultsState.AddSongStats(SONG.song, songScore, songMisses, percent, ratingFC);
+				ResultsState.AddSongStats(SONG.song, songScore, songMisses, percent, ratingFC, dad.healthIcon);
 				#end
 			}
 

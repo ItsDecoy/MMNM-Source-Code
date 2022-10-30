@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				11
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "bf mx death loop",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				37,
+				11
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "bf mx death loop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				159,
+				180
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "bf mx death confirm",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/PlumberBF_mxGameOver",
+	"position": [
+		50,
+		120
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

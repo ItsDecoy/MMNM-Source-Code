@@ -324,14 +324,41 @@ class FreeplayState extends MusicBeatState
 			ratingSplit[1] += '0';
 		}
 
-		if (FlxG.keys.pressed.THREE)
+		if (FlxG.keys.justPressed.THREE)
+		{
+			ResultsState.AddSongStats(
+				"Balls",
+				69420,
+				0,
+				90.5,
+				"GFC");
+			MusicBeatState.switchState(new ResultsState());
+		}
+		else if (FlxG.keys.justPressed.FOUR)
+		{
+			ResultsState.AddSongStats(
+				"Balls",
+				69420,
+				0,
+				90.5,
+				"GFC");
+			ResultsState.AddSongStats(
+				"Dick",
+				888888,
+				4,
+				76.03,
+				"FC");
+			MusicBeatState.switchState(new ResultsState());
+		}
+		else if (FlxG.keys.justPressed.FIVE)
 		{
 			ResultsState.AddSongStats(
 				songs[curSelected].songName,
 				Highscore.getScore(songs[curSelected].songName, 1),
 				Highscore.getMisses(songs[curSelected].songName, 1),
 				Highscore.getRating(songs[curSelected].songName, 1),
-				Highscore.getGrade(songs[curSelected].songName, 1));
+				Highscore.getGrade(songs[curSelected].songName, 1),
+				songs[curSelected].songCharacter);
 			MusicBeatState.switchState(new ResultsState());
 		}
 

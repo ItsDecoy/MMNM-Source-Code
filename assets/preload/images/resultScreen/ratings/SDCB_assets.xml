@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SDCB_assets.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SDCB_animation0000" x="5" y="5" width="188" height="186" frameX="-234" frameY="-153" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0001" x="5" y="5" width="188" height="186" frameX="-234" frameY="-153" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0002" x="198" y="5" width="307" height="303" frameX="-175" frameY="-95" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0003" x="198" y="5" width="307" height="303" frameX="-175" frameY="-95" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0004" x="510" y="5" width="285" height="284" frameX="-186" frameY="-104" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0005" x="800" y="5" width="254" height="252" frameX="-201" frameY="-120" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0006" x="1059" y="5" width="260" height="218" frameX="-231" frameY="-139" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0007" x="1324" y="5" width="295" height="497" frameX="-183" frameY="0" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0008" x="1624" y="5" width="375" height="405" frameX="-143" frameY="-46" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0009" x="5" y="507" width="449" height="405" frameX="-106" frameY="-46" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0010" x="459" y="507" width="477" height="379" frameX="-92" frameY="-59" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0011" x="941" y="507" width="547" height="379" frameX="-57" frameY="-59" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0012" x="5" y="917" width="661" height="290" frameX="0" frameY="-103" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0013" x="671" y="917" width="233" height="211" frameX="-234" frameY="-153" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0014" x="671" y="917" width="233" height="211" frameX="-234" frameY="-153" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0015" x="671" y="917" width="233" height="211" frameX="-234" frameY="-153" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0016" x="671" y="917" width="233" height="211" frameX="-234" frameY="-153" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0017" x="671" y="917" width="233" height="211" frameX="-234" frameY="-153" frameWidth="661" frameHeight="497"/>
+	<SubTexture name="SDCB_animation0018" x="671" y="917" width="233" height="211" frameX="-234" frameY="-153" frameWidth="661" frameHeight="497"/>
+</TextureAtlas>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SFC_assets.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SFC_animation0000" x="5" y="5" width="262" height="288" frameX="-235" frameY="-150" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0001" x="5" y="5" width="262" height="288" frameX="-235" frameY="-150" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0002" x="272" y="5" width="429" height="473" frameX="-152" frameY="-58" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0003" x="272" y="5" width="429" height="473" frameX="-152" frameY="-58" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0004" x="706" y="5" width="400" height="439" frameX="-166" frameY="-75" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0005" x="1111" y="5" width="355" height="391" frameX="-189" frameY="-99" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0006" x="1471" y="5" width="266" height="303" frameX="-242" frameY="-145" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0007" x="5" y="483" width="372" height="592" frameX="-182" frameY="0" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0008" x="382" y="483" width="448" height="509" frameX="-144" frameY="-42" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0009" x="835" y="483" width="522" height="509" frameX="-107" frameY="-42" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0010" x="1362" y="483" width="554" height="481" frameX="-91" frameY="-55" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0011" x="5" y="1080" width="624" height="481" frameX="-56" frameY="-55" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0012" x="634" y="1080" width="736" height="392" frameX="0" frameY="-100" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0013" x="1375" y="1080" width="262" height="288" frameX="-235" frameY="-150" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0014" x="1375" y="1080" width="262" height="288" frameX="-235" frameY="-150" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0015" x="1375" y="1080" width="262" height="288" frameX="-235" frameY="-150" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0016" x="1375" y="1080" width="262" height="288" frameX="-235" frameY="-150" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0017" x="1375" y="1080" width="262" height="288" frameX="-235" frameY="-150" frameWidth="736" frameHeight="592"/>
+	<SubTexture name="SFC_animation0018" x="1375" y="1080" width="262" height="288" frameX="-235" frameY="-150" frameWidth="736" frameHeight="592"/>
+</TextureAtlas>

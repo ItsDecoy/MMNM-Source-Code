@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="PlumberBF_mxGameOver.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bf mx death confirm0000" x="5" y="5" width="314" height="651" frameX="-149" frameY="-175" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0001" x="324" y="5" width="378" height="648" frameX="-117" frameY="-178" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0002" x="707" y="5" width="314" height="826" frameX="-149" frameY="0" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0003" x="1026" y="5" width="314" height="770" frameX="-149" frameY="-56" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0004" x="1345" y="5" width="398" height="658" frameX="-107" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0005" x="1345" y="5" width="398" height="658" frameX="-107" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0006" x="1748" y="5" width="444" height="659" frameX="-84" frameY="-167" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0007" x="2197" y="5" width="484" height="659" frameX="-64" frameY="-167" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0008" x="2686" y="5" width="514" height="658" frameX="-49" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0009" x="3205" y="5" width="536" height="658" frameX="-38" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0010" x="5" y="836" width="550" height="658" frameX="-31" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0011" x="560" y="836" width="562" height="658" frameX="-25" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0012" x="1127" y="836" width="572" height="658" frameX="-20" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0013" x="1704" y="836" width="580" height="658" frameX="-16" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0014" x="2289" y="836" width="584" height="658" frameX="-14" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0015" x="2878" y="836" width="590" height="658" frameX="-11" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0016" x="3473" y="836" width="592" height="658" frameX="-10" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0017" x="3473" y="836" width="592" height="658" frameX="-8" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0018" x="5" y="1499" width="598" height="658" frameX="-7" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0019" x="5" y="1499" width="598" height="658" frameX="-6" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0020" x="608" y="1499" width="602" height="658" frameX="-5" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0021" x="608" y="1499" width="602" height="658" frameX="-5" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0022" x="1215" y="1499" width="604" height="658" frameX="-4" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0023" x="1824" y="1499" width="606" height="658" frameX="-3" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0024" x="1215" y="1499" width="604" height="658" frameX="-3" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0025" x="2435" y="1499" width="608" height="658" frameX="-2" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0026" x="3048" y="1499" width="608" height="658" frameX="-2" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0027" x="5" y="2162" width="610" height="658" frameX="-1" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0028" x="620" y="2162" width="612" height="658" frameX="0" frameY="-168" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0029" x="1237" y="2162" width="263" height="567" frameX="-187" frameY="-259" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0030" x="1237" y="2162" width="263" height="567" frameX="-187" frameY="-259" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0031" x="1237" y="2162" width="263" height="567" frameX="-187" frameY="-259" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0032" x="1237" y="2162" width="263" height="567" frameX="-187" frameY="-259" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0033" x="1237" y="2162" width="263" height="567" frameX="-187" frameY="-259" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0034" x="1237" y="2162" width="263" height="567" frameX="-187" frameY="-259" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0035" x="1237" y="2162" width="263" height="567" frameX="-187" frameY="-259" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0036" x="1237" y="2162" width="263" height="567" frameX="-187" frameY="-259" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0037" x="1237" y="2162" width="263" height="567" frameX="-187" frameY="-259" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death confirm0038" x="1237" y="2162" width="263" height="567" frameX="-187" frameY="-259" frameWidth="612" frameHeight="826"/>
+	<SubTexture name="bf mx death loop0000" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0001" x="1806" y="2162" width="288" height="651" frameX="-40" frameY="-6" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0002" x="2099" y="2162" width="368" height="657"/>
+	<SubTexture name="bf mx death loop0003" x="2099" y="2162" width="368" height="657"/>
+	<SubTexture name="bf mx death loop0004" x="2472" y="2162" width="366" height="657" frameX="-1" frameY="0" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0005" x="2472" y="2162" width="366" height="657" frameX="-1" frameY="0" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0006" x="2843" y="2162" width="316" height="653" frameX="-26" frameY="-4" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0007" x="3164" y="2162" width="302" height="652" frameX="-32" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0008" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0009" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0010" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0011" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0012" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0013" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0014" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0015" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0016" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0017" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0018" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+	<SubTexture name="bf mx death loop0019" x="1505" y="2162" width="296" height="652" frameX="-35" frameY="-5" frameWidth="368" frameHeight="657"/>
+</TextureAtlas>

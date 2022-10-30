@@ -1,5 +1,9 @@
 package;
 
+import flixel.addons.display.FlxBackdrop;
+import flixel.math.FlxMath;
+import flixel.FlxBasic;
+import flixel.util.FlxTimer;
 import flixel.group.FlxSpriteGroup;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.tweens.FlxEase;
@@ -18,10 +22,18 @@ class ResultsState extends MusicBeatState
     public static var cutscene:String = '';
     public static var showThanksScreen = false;
 
+    var bg:FlxBackdrop;
+    
     var accepted = false;
 
     var titleCharList:FlxSpriteGroup;
     var timeElapsed:Float;
+
+    var songStatsTexts:Map<String, Array<ScoreText>> = new Map<String, Array<ScoreText>>();
+    var songStatsIcons:Map<String, HealthIcon> = new Map<String, HealthIcon>();
+    var songStatsRatingSprite:Map<String, FlxSprite> = new Map<String, FlxSprite>();
+
+    var skippedSequence = false;
 
     override public function new()
     {
@@ -33,8 +45,18 @@ class ResultsState extends MusicBeatState
     {
         persistentUpdate = true;
 
-        if (statsList.length == 0) // If there are no stats loaded, it creates a dummy Placeholder one to avoid a crash.
-            statsList.push(new SongStats('Bopeebo', 69420, 0, 100, 'SFC'));
+        if (statsList.length == 0)
+            // If there are no stats loaded, it just loads familiar but with dummy info
+            // It's basically just to prevent a crash
+            statsList.push(new SongStats('Familiar', 69420, 0, 100, 'SFC', 'fh'));
+
+		bg = new FlxBackdrop(Paths.image(path + 'bg_pattern', 'preload'), 1, 1, true, true);
+		bg.scrollFactor.set();
+		bg.antialiasing = false;
+        bg.velocity.set(-40, -40);
+        bg.alpha = 0;
+        FlxTween.tween(bg, {alpha: 1}, 1, {startDelay: 0.5});
+		add(bg);
 
         var wall = new FlxSprite().loadGraphic(Paths.image(path + 'score_wall', 'preload'));
         wall.setGraphicSize(Std.int(FlxG.width));
@@ -44,7 +66,9 @@ class ResultsState extends MusicBeatState
         wall.x += wall.width;
         add(wall);
 
-        FlxG.sound.play(Paths.sound('results/victoryTheme'));
+        Conductor.changeBPM(135);
+
+        FlxG.sound.playMusic(Paths.sound('results/victoryTheme'), 0.9, false);
 
         titleCharList = new FlxSpriteGroup(FlxG.width/2, 0);
         add(titleCharList);
@@ -59,24 +83,91 @@ class ResultsState extends MusicBeatState
             letter.ID = i;
             letter.alpha = 0;
             letter.antialiasing = ClientPrefs.globalAntialiasing;
-            FlxTween.tween(letter, {x: titleCharList.x + letter.x - 320, alpha: 1}, 0.5, {ease: FlxEase.expoOut, startDelay: 0.2 + letter.ID * 0.03});
+            FlxTween.tween(letter, {x: titleCharList.x + letter.x - 360, alpha: 1}, 0.5, {ease: FlxEase.expoOut, startDelay: 0.2 + letter.ID * 0.03});
             titleCharList.add(letter);
         }
 
         for (i in 0...statsList.length)
         {
-            var result:FlxText = new FlxText(FlxG.width/2, 120, 0, '', 20, true);
-            result.setFormat(Paths.font('Pixel_NES.otf'), 30, FlxColor.WHITE, LEFT, OUTLINE, FlxColor.BLACK);
-            result.antialiasing = ClientPrefs.globalAntialiasing;
-            result.text = statsList[i].songName + ":\n" +
-            "Score: " + statsList[i].songScore +
-            "\nMisses: " + statsList[i].songMisses +
-            "\nRating: " + Highscore.floorDecimal(statsList[i].songAccuracy * 100, 2) +
-            "%\nGrade: " + statsList[i].songGrade + "\n";
-            add(result);
-        }
+            var txtheight:Float = 0;
+            var textList:Array<ScoreText> = [];
 
-        FlxTween.tween(wall, {x: wall.x - wall.width}, 1, {ease: FlxEase.expoOut, startDelay: 0.2});
+            var icon:HealthIcon = new HealthIcon(statsList[i].songIcon, false);
+            icon.x = FlxG.width*0.32;
+            icon.y = 150 + (i * 160);
+            add(icon);
+
+            var tweenShit = FlxG.width - icon.x;
+
+            songStatsIcons.set(statsList[i].songName, icon);
+
+            for (j in 0...4)
+            {
+                var txtsize = j == 0 ? 42 : 30;
+                var texto:FlxText;
+
+                if (j == 0) // The song name
+                {
+                    var title:FlxText = new FlxText(icon.x + icon.width, icon.y + txtheight - 15, 0, statsList[i].songName, txtsize, true);
+                    title.color = FlxColor.RED;
+                    texto = title;
+                }
+                else // the actual score
+                {
+                    var stat:String = 'Score';
+                    var targetVal:Float = statsList[i].songScore;
+                    switch (j)
+                    {
+                        case 2:
+                            stat = 'Misses';
+                            targetVal = statsList[i].songMisses;
+                        case 3:
+                            stat = 'Accuracy';
+                            targetVal = statsList[i].songAccuracy * 100;
+                    }
+                    var result:ScoreText = new ScoreText(icon.x + icon.width, icon.y + txtheight - 15, 0, stat, txtsize, true, 0);
+                    result.color = FlxColor.WHITE;
+                    texto = result;
+                    textList.push(result);
+
+                    FlxTween.tween(result, {scoreValue: targetVal}, 1, {startDelay: (Conductor.crochet / 1000)});
+                }
+                
+                texto.setFormat(Paths.font('Pixel_NES.otf'), txtsize, texto.color, LEFT, OUTLINE, FlxColor.BLACK);
+                texto.borderSize = texto.size / 10;
+                add(texto);
+
+                texto.x += tweenShit;
+                FlxTween.tween(texto, {x: texto.x - tweenShit}, 0.5, {startDelay: (Conductor.crochet / 1000) + (i * 0.05) + (j * 0.05), ease: FlxEase.expoOut});
+
+                txtheight += texto.size;
+            }
+
+            var rating:FlxSprite = new FlxSprite();
+            rating.frames = Paths.getSparrowAtlas(path + 'ratings/' + statsList[i].songGrade.toUpperCase() + '_assets');
+            rating.animation.addByPrefix('invisible', statsList[i].songGrade.toUpperCase() + '_animation0000', 24, false);
+            rating.animation.addByPrefix('anim', statsList[i].songGrade.toUpperCase() + '_animation', 24, false);
+            rating.animation.play('invisible', true);
+            rating.antialiasing = ClientPrefs.globalAntialiasing;
+            rating.setGraphicSize(Std.int(rating.width * (statsList.length == 1 ? 1 : 0.7)));
+            rating.updateHitbox();
+            rating.x = statsList.length == 1 ? FlxG.width * 0.65 : FlxG.width * 0.85;
+            rating.y = statsList.length == 1 ? FlxG.height * 0.68 : icon.y + icon.height/2;
+            rating.x -= rating.width / 2;
+            rating.y -= rating.height / 2;
+            add(rating);
+
+            new FlxTimer().start((Conductor.crochet / 1000) * 2.85, function(tmr:FlxTimer)
+            {
+                if (!skippedSequence) rating.animation.play('anim', true);
+            });
+
+            icon.x += tweenShit;
+            FlxTween.tween(icon, {x: icon.x - tweenShit}, 0.4, {startDelay: (Conductor.crochet / 1000) + i * 0.05, ease: FlxEase.expoOut});
+            songStatsTexts.set(statsList[i].songName, textList);
+        }
+        
+        FlxTween.tween(wall, {x: wall.x - wall.width}, 0.8, {ease: FlxEase.expoOut, startDelay: 0.2});
 
         super.create();
     }
@@ -96,6 +187,11 @@ class ResultsState extends MusicBeatState
     {
         timeElapsed += elapsed;
 
+        if (FlxG.sound.music != null)
+        {
+            Conductor.songPosition = FlxG.sound.music.time;
+        }
+
         var back = controls.BACK && !accepted;
         var accept = controls.ACCEPT && !accepted;
 
@@ -107,21 +203,36 @@ class ResultsState extends MusicBeatState
 
         if (back || accept)
         {
-            accepted = true;
-
-            if (cutscene != '')
+            if (!skippedSequence)
             {
-                FlxG.camera.visible = false;
-                Main.fpsVar.visible = false;
-                (new FlxVideo(Paths.video(cutscene))).finishCallback = function()
-                {
-                    Main.fpsVar.visible = ClientPrefs.showFPS;
-                    moveOn();
-                }
-                cutscene = '';
+                finishSequence();
             }
             else
-                moveOn();
+            {
+                accepted = true;
+                FlxG.sound.play(Paths.sound('results/Clear', 'preload'), 1);
+
+                new FlxTimer().start(0.6, function(timer:FlxTimer) // Screens turns black
+                {
+                    FlxG.camera.visible = false;
+
+                    new FlxTimer().start(0.6, function(timer2:FlxTimer) // the rest of the shit
+                    {
+                        if (cutscene != '')
+                        {
+                            Main.fpsVar.visible = false;
+                            (new FlxVideo(Paths.video(cutscene))).finishCallback = function()
+                            {
+                                Main.fpsVar.visible = ClientPrefs.showFPS;
+                                moveOn();
+                            }
+                            cutscene = '';
+                        }
+                        else
+                            moveOn();
+                    });
+                });
+            }
         }
 
         super.update(elapsed);
@@ -149,11 +260,77 @@ class ResultsState extends MusicBeatState
         statsList = [];
     }
 
-    public static function AddSongStats(songName:String, songScore:Float, songMisses:Int, songAccuracy:Float, grade:String)
+    private function finishSequence():Void
     {
-        var stats:SongStats = new SongStats(songName, songScore, songMisses, songAccuracy, grade);
+        this.forEachAlive(function(spr:FlxBasic)
+        {
+            FlxTween.completeTweensOf(spr);
+        });
+
+        for (i in 0...statsList.length)
+        {
+            var grade = statsList[i].songGrade;
+            if (grade == 'FC' || grade == 'GFC' || grade == 'SFC')
+            {
+                songStatsIcons.get(statsList[i].songName).animation.curAnim.curFrame = 1;
+            }
+        }
+        FlxG.camera.flash(FlxColor.WHITE, 0.3);
+        FlxG.sound.play(Paths.sound('results/Powerup', 'preload'), 0.7);
+        skippedSequence = true;
+    }
+
+    override function beatHit()
+	{
+		super.beatHit();
+        switch (curBeat)
+        {
+            case 1:
+                if (!skippedSequence)
+                {
+                    FlxG.sound.play(Paths.sound('results/countdown', 'preload'), 0.7);
+                }
+            case 4:
+                if (!skippedSequence) finishSequence();
+        }
+    }
+
+    public static function AddSongStats(songName:String, songScore:Float, songMisses:Int, songAccuracy:Float, grade:String, icon:String = 'bf')
+    {
+        var stats:SongStats = new SongStats(songName, songScore, songMisses, songAccuracy, grade, icon);
         statsList.push(stats);
     }
+}
+
+class ScoreText extends FlxText
+{
+    public var scoreValue(default, set):Float;
+    public var scoreText(default, set):String;
+
+    public function new(X:Float = 0, Y:Float = 0, FieldWidth:Float = 0, ?Text:String, Size:Int = 8, EmbeddedFont:Bool = true, value:Float = 0)
+    {
+        super(X, Y, FieldWidth, Text, EmbeddedFont);
+        scoreText = Text;
+        scoreValue = value;
+    }
+
+    private function updateScoreText(textIn:String, valueIn:Float)
+    {
+        if (textIn.toLowerCase() == 'accuracy') text = textIn + ': ' + Highscore.floorDecimal(valueIn, 2) + '%';
+        else text = textIn + ': ' + Math.round(valueIn);
+    }
+
+	function set_scoreValue(value:Float):Float
+    {
+		updateScoreText(scoreText, value);
+        return scoreValue = value;
+	}
+
+	function set_scoreText(value:String):String
+    {
+		updateScoreText(value, scoreValue);
+        return scoreText = value;
+	}
 }
 
 class SongStats
@@ -163,13 +340,15 @@ class SongStats
     public var songMisses:Int;
     public var songAccuracy:Float;
     public var songGrade:String;
+    public var songIcon:String;
 
-    public function new(songName:String, songScore:Float, songMisses:Int, songAccuracy:Float, songGrade:String)
+    public function new(songName:String, songScore:Float, songMisses:Int, songAccuracy:Float, songGrade:String, songIcon:String)
     {
         this.songName = songName;
         this.songScore = songScore;
         this.songMisses = songMisses;
         this.songAccuracy = songAccuracy;
         this.songGrade = songGrade;
+        this.songIcon = songIcon;
     }
 }
