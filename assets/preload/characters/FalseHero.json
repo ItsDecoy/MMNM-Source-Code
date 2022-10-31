@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				145,
 				221
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "False Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "False Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				217,
 				163
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "False Note Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "False Note Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				298,
 				294
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "False Note Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "False Note Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				139,
 				172
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "False Note Left",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "False Note Left"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				425,
 				205
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "False Note Right"
+			"fps": 24,
+			"name": "False Note Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		0,
 		350
 	],
-	"healthicon": "fh",
+	"healthicon": "FH",
 	"flip_x": true,
 	"healthbar_colors": [
 		155,
