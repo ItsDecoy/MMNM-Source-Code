@@ -21,6 +21,7 @@ class ResultsState extends MusicBeatState
     private static var statsList:Array<SongStats> = [];
     public static var cutscene:String = '';
     public static var showThanksScreen = false;
+    public static var character:String = 'bf';
 
     var bg:FlxBackdrop;
     var bf:FlxSprite;
@@ -32,6 +33,7 @@ class ResultsState extends MusicBeatState
 
     var icons:Array<HealthIcon> = [];
     var ratingSprites:Array<FlxSprite> = [];
+    var newRecordTexts:Array<FlxText> = [];
 
     var skippedSequence = false;
 
@@ -154,6 +156,18 @@ class ResultsState extends MusicBeatState
                 txtheight += texto.size;
             }
 
+            var newRecord:FlxText = new FlxText(icon.x + 480, icon.y + (icon.height/2) - 55, 0, 'NR!', 60, true);
+            newRecord.setFormat(Paths.font('Pixel_NES.otf'), 60, FlxColor.fromRGB(0, 255, 0), LEFT, OUTLINE, FlxColor.BLACK);
+            newRecord.borderSize = newRecord.size / 10;
+            newRecord.visible = false;
+            add(newRecord);
+            newRecordTexts.push(newRecord);
+
+            if (Highscore.getScore(Highscore.formatSong(statsList[i].songName, 1), 1) > statsList[i].songScore) // just goes off screen because i'm too lazy
+            {
+                newRecord.y += FlxG.height;
+            }
+
             var rating:FlxSprite = new FlxSprite();
             rating.frames = Paths.getSparrowAtlas(path + 'ratings/' + statsList[i].songGrade.toUpperCase() + '_assets');
             rating.animation.addByPrefix('invisible', statsList[i].songGrade.toUpperCase() + '_animation0000', 24, false);
@@ -175,14 +189,24 @@ class ResultsState extends MusicBeatState
         
         FlxTween.tween(wall, {x: wall.x - wall.width}, 0.8, {ease: FlxEase.expoOut, startDelay: 0.2});
 
-        bf = new FlxSprite(20, 120);
-        bf.frames = Paths.getSparrowAtlas(path + 'characters/bfPipe_assets');
-        bf.animation.addByPrefix('intro', 'bf pipe intro', 24, false);
-        bf.animation.addByPrefix('idle', 'bf pipe idle', 24, false);
-        bf.animation.addByPrefix('hey', 'bf pipe hey', 24, false);
-        bf.animation.addByPrefix('outro', 'bf pipe outro', 24, false);
+        var characterIn:String = 'bf';
+        switch (character.toLowerCase())
+        {
+            case "gf-plumber-pf":
+                characterIn = 'gf';
+            case "mario pissin":
+                characterIn = 'piss';
+        }
+
+        bf = new FlxSprite(25, FlxG.height * 1.2);
+        bf.frames = Paths.getSparrowAtlas(path + 'characters/' + characterIn + 'Pipe_assets');
+        bf.animation.addByPrefix('intro', characterIn + ' pipe intro', 24, false);
+        bf.animation.addByPrefix('idle', characterIn + ' pipe idle', 24, false);
+        bf.animation.addByPrefix('hey', characterIn + ' pipe hey', 24, false);
+        bf.animation.addByPrefix('outro', characterIn + ' pipe outro', 24, true);
         bf.animation.play('intro', true);
         bf.antialiasing = ClientPrefs.globalAntialiasing;
+        bf.y -= bf.height;
         add(bf);
 
         super.create();
@@ -225,10 +249,11 @@ class ResultsState extends MusicBeatState
             {
                 accepted = true;
                 FlxG.sound.music.stop();
-                FlxG.sound.play(Paths.sound('results/Clear', 'preload'), 1);
+                if (character.toLowerCase() == 'mario pissin') FlxG.sound.play(Paths.sound('results/piss', 'preload'), 1);
+                else FlxG.sound.play(Paths.sound('results/Clear', 'preload'), 1);
                 bf.animation.play('outro', true);
 
-                new FlxTimer().start(0.6, function(timer:FlxTimer) // Screens turns black
+                new FlxTimer().start(character.toLowerCase() == 'mario pissin' ? 2 : 0.6, function(timer:FlxTimer) // Screens turns black
                 {
                     FlxG.camera.visible = false;
 
@@ -273,6 +298,7 @@ class ResultsState extends MusicBeatState
                 MusicBeatState.switchState(new FreeplayState());
         }
 
+        character = 'bf';
         statsList = [];
     }
 
@@ -292,6 +318,7 @@ class ResultsState extends MusicBeatState
             else if (grade == 'CLEAR') clears++;
 
             if (ratingSprites[i].animation.curAnim.name == 'invisible') ratingSprites[i].animation.play('anim', true);
+            newRecordTexts[i].visible = true;
         }
 
         if (clears < statsList.length)

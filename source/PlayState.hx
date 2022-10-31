@@ -3786,6 +3786,7 @@ class PlayState extends MusicBeatState
 						checkForFinalCutscene();
 					}
 					changedDifficulty = false;
+					ResultsState.character = boyfriend.curCharacter;
 					MusicBeatState.switchState(new ResultsState());
 				}
 				else
@@ -3814,6 +3815,7 @@ class PlayState extends MusicBeatState
 				if(FlxTransitionableState.skipNextTransIn) {
 					CustomFadeTransition.nextCamera = null;
 				}
+				ResultsState.character = boyfriend.curCharacter;
 				MusicBeatState.switchState(new ResultsState());
 				changedDifficulty = false;
 
