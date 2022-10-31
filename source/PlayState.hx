@@ -3733,15 +3733,19 @@ class PlayState extends MusicBeatState
 		var ret:Dynamic = FunkinLua.Function_Continue;
 		#end
 
-		if(ret != FunkinLua.Function_Stop && !transitioning) {
-			if (SONG.validScore)
+		if(ret != FunkinLua.Function_Stop && !transitioning)
+		{
+			var inPractice:Bool = ClientPrefs.getGameplaySetting('practice', false);
+			var inBotplay:Bool = ClientPrefs.getGameplaySetting('botplay', false);
+
+			if (SONG.validScore && (!inPractice && !inBotplay))
 			{
 				#if !switch
 				var percent:Float = ratingPercent;
 				if(Math.isNaN(percent)) percent = 0;
 				Highscore.saveScore(SONG.song, songScore, storyDifficulty, songMisses, percent, ratingFC);
-
 				ResultsState.AddSongStats(SONG.song, songScore, songMisses, percent, ratingFC, dad.healthIcon);
+				trace('Score of ' + SONG.song + ' has been saved!');
 				#end
 			}
 
@@ -3765,7 +3769,7 @@ class PlayState extends MusicBeatState
 						CustomFadeTransition.nextCamera = null;
 					}
 
-					if(!ClientPrefs.getGameplaySetting('practice', false) && !ClientPrefs.getGameplaySetting('botplay', false)) 
+					if(!inPractice && !inBotplay)
 					{
 						if (SONG.validScore)
 						{
@@ -3784,10 +3788,17 @@ class PlayState extends MusicBeatState
 						FlxG.save.flush();
 						
 						checkForFinalCutscene();
+
+						ResultsState.character = boyfriend.curCharacter;
+						MusicBeatState.switchState(new ResultsState());
+					}
+					else
+					{
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+						MusicBeatState.switchState(new MainMenuState());
 					}
 					changedDifficulty = false;
-					ResultsState.character = boyfriend.curCharacter;
-					MusicBeatState.switchState(new ResultsState());
+
 				}
 				else
 				{
@@ -3815,16 +3826,25 @@ class PlayState extends MusicBeatState
 				if(FlxTransitionableState.skipNextTransIn) {
 					CustomFadeTransition.nextCamera = null;
 				}
-				ResultsState.character = boyfriend.curCharacter;
-				MusicBeatState.switchState(new ResultsState());
+
 				changedDifficulty = false;
+				
+				if(!inPractice && !inBotplay)
+				{
+					StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
+					FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
+					FlxG.save.flush();
 
-				StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
+					checkForFinalCutscene();
 
-				FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
-				FlxG.save.flush();
-
-				checkForFinalCutscene();
+					ResultsState.character = boyfriend.curCharacter;
+					MusicBeatState.switchState(new ResultsState());
+				}
+				else
+				{
+					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					MusicBeatState.switchState(new FreeplayState());
+				}
 			}
 
 			transitioning = true;

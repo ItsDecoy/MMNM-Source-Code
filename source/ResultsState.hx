@@ -168,10 +168,19 @@ class ResultsState extends MusicBeatState
                 newRecord.y += FlxG.height;
             }
 
+            var grade:String = 'CLEAR';
+            if (statsList[i].songGrade.toUpperCase() == 'SFC' ||
+                statsList[i].songGrade.toUpperCase() == 'GFC' ||
+                statsList[i].songGrade.toUpperCase() == 'FC' ||
+                statsList[i].songGrade.toUpperCase() == 'SDCB')
+            {
+                grade = statsList[i].songGrade.toUpperCase();
+            }
+
             var rating:FlxSprite = new FlxSprite();
-            rating.frames = Paths.getSparrowAtlas(path + 'ratings/' + statsList[i].songGrade.toUpperCase() + '_assets');
-            rating.animation.addByPrefix('invisible', statsList[i].songGrade.toUpperCase() + '_animation0000', 24, false);
-            rating.animation.addByPrefix('anim', statsList[i].songGrade.toUpperCase() + '_animation', 24, false);
+            rating.frames = Paths.getSparrowAtlas(path + 'ratings/' + grade + '_assets');
+            rating.animation.addByPrefix('invisible', grade + '_animation0000', 24, false);
+            rating.animation.addByPrefix('anim', grade + '_animation', 24, false);
             rating.animation.play('invisible', true);
             rating.antialiasing = ClientPrefs.globalAntialiasing;
             rating.setGraphicSize(Std.int(rating.width * (statsList.length == 1 ? 1.12 : 0.7)));
