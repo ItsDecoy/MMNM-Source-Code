@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bfPipe_assets.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bf pipe intro0000" x="5" y="5" width="400" height="219" frameX="0" frameY="-526" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0001" x="410" y="5" width="372" height="260" frameX="-14" frameY="-479" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0002" x="787" y="5" width="327" height="507" frameX="-36" frameY="-194" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0003" x="1119" y="5" width="323" height="593" frameX="-38" frameY="-107" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0004" x="1119" y="5" width="323" height="593" frameX="-38" frameY="-107" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0005" x="1447" y="5" width="327" height="693" frameX="-36" frameY="-8" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0006" x="1779" y="5" width="352" height="701" frameX="-24" frameY="0" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0007" x="2136" y="5" width="348" height="701" frameX="-26" frameY="0" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0008" x="2489" y="5" width="347" height="689" frameX="-26" frameY="-12" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0009" x="2841" y="5" width="347" height="660" frameX="-26" frameY="-41" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0010" x="3193" y="5" width="347" height="595" frameX="-26" frameY="-106" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0011" x="3193" y="5" width="347" height="595" frameX="-26" frameY="-106" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0012" x="3545" y="5" width="347" height="599" frameX="-26" frameY="-102" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0013" x="3545" y="5" width="347" height="599" frameX="-26" frameY="-102" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0014" x="5" y="711" width="347" height="614" frameX="-26" frameY="-87" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0015" x="5" y="711" width="347" height="614" frameX="-26" frameY="-87" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0016" x="357" y="711" width="347" height="612" frameX="-26" frameY="-89" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0017" x="357" y="711" width="347" height="612" frameX="-26" frameY="-89" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe intro0018" x="357" y="711" width="347" height="612" frameX="-26" frameY="-89" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0000" x="709" y="711" width="347" height="606" frameX="-26" frameY="-95" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0001" x="709" y="711" width="347" height="606" frameX="-26" frameY="-95" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0002" x="1061" y="711" width="347" height="605" frameX="-26" frameY="-96" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0003" x="1061" y="711" width="347" height="605" frameX="-26" frameY="-96" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0004" x="1413" y="711" width="347" height="614" frameX="-26" frameY="-87" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0005" x="1413" y="711" width="347" height="614" frameX="-26" frameY="-87" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0006" x="1765" y="711" width="347" height="618" frameX="-26" frameY="-83" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0007" x="1765" y="711" width="347" height="618" frameX="-26" frameY="-83" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0008" x="2117" y="711" width="347" height="619" frameX="-26" frameY="-82" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0009" x="2117" y="711" width="347" height="619" frameX="-26" frameY="-82" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0010" x="2117" y="711" width="347" height="619" frameX="-26" frameY="-82" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe idle0011" x="2117" y="711" width="347" height="619" frameX="-26" frameY="-82" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0000" x="2469" y="711" width="347" height="626" frameX="-26" frameY="-75" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0001" x="2469" y="711" width="347" height="626" frameX="-26" frameY="-75" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0002" x="2821" y="711" width="347" height="621" frameX="-26" frameY="-80" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0003" x="2821" y="711" width="347" height="621" frameX="-26" frameY="-80" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0004" x="3173" y="711" width="347" height="622" frameX="-26" frameY="-79" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0005" x="3173" y="711" width="347" height="622" frameX="-26" frameY="-79" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0006" x="3173" y="711" width="347" height="622" frameX="-26" frameY="-79" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0007" x="3173" y="711" width="347" height="622" frameX="-26" frameY="-79" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0008" x="3173" y="711" width="347" height="622" frameX="-26" frameY="-79" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0009" x="3173" y="711" width="347" height="622" frameX="-26" frameY="-79" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0010" x="3173" y="711" width="347" height="622" frameX="-26" frameY="-79" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe hey0011" x="3173" y="711" width="347" height="622" frameX="-26" frameY="-79" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0000" x="3525" y="711" width="347" height="603" frameX="-26" frameY="-98" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0001" x="3525" y="711" width="347" height="603" frameX="-26" frameY="-98" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0002" x="5" y="1342" width="347" height="637" frameX="-26" frameY="-64" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0003" x="5" y="1342" width="347" height="637" frameX="-26" frameY="-64" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0004" x="357" y="1342" width="347" height="629" frameX="-26" frameY="-72" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0005" x="357" y="1342" width="347" height="629" frameX="-26" frameY="-72" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0006" x="709" y="1342" width="347" height="617" frameX="-26" frameY="-84" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0007" x="1061" y="1342" width="347" height="595" frameX="-26" frameY="-106" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0008" x="1413" y="1342" width="348" height="503" frameX="-26" frameY="-198" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0009" x="1766" y="1342" width="368" height="382" frameX="-16" frameY="-319" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0010" x="2139" y="1342" width="352" height="342" frameX="-24" frameY="-358" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0011" x="2139" y="1342" width="352" height="342" frameX="-24" frameY="-358" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0012" x="2496" y="1342" width="347" height="344" frameX="-26" frameY="-357" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0013" x="2496" y="1342" width="347" height="344" frameX="-26" frameY="-357" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0014" x="2496" y="1342" width="347" height="344" frameX="-26" frameY="-357" frameWidth="400" frameHeight="745"/>
+	<SubTexture name="bf pipe outro0015" x="2496" y="1342" width="347" height="344" frameX="-26" frameY="-357" frameWidth="400" frameHeight="745"/>
+</TextureAtlas>

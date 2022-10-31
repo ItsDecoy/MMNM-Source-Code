@@ -23,15 +23,15 @@ class ResultsState extends MusicBeatState
     public static var showThanksScreen = false;
 
     var bg:FlxBackdrop;
+    var bf:FlxSprite;
     
     var accepted = false;
 
     var titleCharList:FlxSpriteGroup;
     var timeElapsed:Float;
 
-    var songStatsTexts:Map<String, Array<ScoreText>> = new Map<String, Array<ScoreText>>();
-    var songStatsIcons:Map<String, HealthIcon> = new Map<String, HealthIcon>();
-    var songStatsRatingSprite:Map<String, FlxSprite> = new Map<String, FlxSprite>();
+    var icons:Array<HealthIcon> = [];
+    var ratingSprites:Array<FlxSprite> = [];
 
     var skippedSequence = false;
 
@@ -69,6 +69,17 @@ class ResultsState extends MusicBeatState
         Conductor.changeBPM(135);
 
         FlxG.sound.playMusic(Paths.sound('results/victoryTheme'), 0.9, false);
+        Conductor.songPosition = FlxG.sound.music.time;
+
+        new FlxTimer().start(FlxG.sound.music.length / 1000, function(tmr:FlxTimer)
+        {
+            if (!accepted)
+            {
+                Conductor.changeBPM(85);
+                FlxG.sound.playMusic(Paths.music('funky-mario-three', 'shared'), 0.15, true);
+                Conductor.songPosition = FlxG.sound.music.time;
+            }
+        });
 
         titleCharList = new FlxSpriteGroup(FlxG.width/2, 0);
         add(titleCharList);
@@ -93,13 +104,13 @@ class ResultsState extends MusicBeatState
             var textList:Array<ScoreText> = [];
 
             var icon:HealthIcon = new HealthIcon(statsList[i].songIcon, false);
-            icon.x = FlxG.width*0.32;
+            icon.x = statsList.length == 1 ? FlxG.width * 0.36 : FlxG.width * 0.315;
             icon.y = 150 + (i * 160);
             add(icon);
 
             var tweenShit = FlxG.width - icon.x;
 
-            songStatsIcons.set(statsList[i].songName, icon);
+            icons.push(icon);
 
             for (j in 0...4)
             {
@@ -149,25 +160,30 @@ class ResultsState extends MusicBeatState
             rating.animation.addByPrefix('anim', statsList[i].songGrade.toUpperCase() + '_animation', 24, false);
             rating.animation.play('invisible', true);
             rating.antialiasing = ClientPrefs.globalAntialiasing;
-            rating.setGraphicSize(Std.int(rating.width * (statsList.length == 1 ? 1 : 0.7)));
+            rating.setGraphicSize(Std.int(rating.width * (statsList.length == 1 ? 1.12 : 0.7)));
             rating.updateHitbox();
             rating.x = statsList.length == 1 ? FlxG.width * 0.65 : FlxG.width * 0.85;
             rating.y = statsList.length == 1 ? FlxG.height * 0.68 : icon.y + icon.height/2;
             rating.x -= rating.width / 2;
             rating.y -= rating.height / 2;
             add(rating);
-
-            new FlxTimer().start((Conductor.crochet / 1000) * 2.85, function(tmr:FlxTimer)
-            {
-                if (!skippedSequence) rating.animation.play('anim', true);
-            });
+            ratingSprites.push(rating);
 
             icon.x += tweenShit;
             FlxTween.tween(icon, {x: icon.x - tweenShit}, 0.4, {startDelay: (Conductor.crochet / 1000) + i * 0.05, ease: FlxEase.expoOut});
-            songStatsTexts.set(statsList[i].songName, textList);
         }
         
         FlxTween.tween(wall, {x: wall.x - wall.width}, 0.8, {ease: FlxEase.expoOut, startDelay: 0.2});
+
+        bf = new FlxSprite(20, 120);
+        bf.frames = Paths.getSparrowAtlas(path + 'characters/bfPipe_assets');
+        bf.animation.addByPrefix('intro', 'bf pipe intro', 24, false);
+        bf.animation.addByPrefix('idle', 'bf pipe idle', 24, false);
+        bf.animation.addByPrefix('hey', 'bf pipe hey', 24, false);
+        bf.animation.addByPrefix('outro', 'bf pipe outro', 24, false);
+        bf.animation.play('intro', true);
+        bf.antialiasing = ClientPrefs.globalAntialiasing;
+        add(bf);
 
         super.create();
     }
@@ -188,9 +204,7 @@ class ResultsState extends MusicBeatState
         timeElapsed += elapsed;
 
         if (FlxG.sound.music != null)
-        {
             Conductor.songPosition = FlxG.sound.music.time;
-        }
 
         var back = controls.BACK && !accepted;
         var accept = controls.ACCEPT && !accepted;
@@ -210,7 +224,9 @@ class ResultsState extends MusicBeatState
             else
             {
                 accepted = true;
+                FlxG.sound.music.stop();
                 FlxG.sound.play(Paths.sound('results/Clear', 'preload'), 1);
+                bf.animation.play('outro', true);
 
                 new FlxTimer().start(0.6, function(timer:FlxTimer) // Screens turns black
                 {
@@ -267,16 +283,25 @@ class ResultsState extends MusicBeatState
             FlxTween.completeTweensOf(spr);
         });
 
+        var clears:Int = 0;
         for (i in 0...statsList.length)
         {
-            var grade = statsList[i].songGrade;
-            if (grade == 'FC' || grade == 'GFC' || grade == 'SFC')
-            {
-                songStatsIcons.get(statsList[i].songName).animation.curAnim.curFrame = 1;
-            }
+            var grade = statsList[i].songGrade.toUpperCase();
+            
+            if (grade == 'FC' || grade == 'GFC' || grade == 'SFC') icons[i].animation.curAnim.curFrame = 1;
+            else if (grade == 'CLEAR') clears++;
+
+            if (ratingSprites[i].animation.curAnim.name == 'invisible') ratingSprites[i].animation.play('anim', true);
         }
+
+        if (clears < statsList.length)
+        {
+            FlxG.sound.play(Paths.sound('results/Powerup', 'preload'), 0.7);
+            bf.animation.play('hey', true);
+        }
+        else FlxG.sound.play(Paths.sound('results/Clear', 'preload'), 0.7);
         FlxG.camera.flash(FlxColor.WHITE, 0.3);
-        FlxG.sound.play(Paths.sound('results/Powerup', 'preload'), 0.7);
+
         skippedSequence = true;
     }
 
@@ -286,13 +311,19 @@ class ResultsState extends MusicBeatState
         switch (curBeat)
         {
             case 1:
-                if (!skippedSequence)
+                if (!skippedSequence) FlxG.sound.play(Paths.sound('results/countdown', 'preload'), 0.7);
+            case 3:
+                for (i in 0...ratingSprites.length)
                 {
-                    FlxG.sound.play(Paths.sound('results/countdown', 'preload'), 0.7);
+                    new FlxTimer().start((Conductor.crochet / 1000) * 0.5, function(tmr:FlxTimer)
+                    {
+                        if (!skippedSequence) ratingSprites[i].animation.play('anim', true);
+                    });
                 }
             case 4:
                 if (!skippedSequence) finishSequence();
         }
+        if (bf.animation.curAnim.name == 'idle' || bf.animation.curAnim.finished) bf.animation.play('idle', true);
     }
 
     public static function AddSongStats(songName:String, songScore:Float, songMisses:Int, songAccuracy:Float, grade:String, icon:String = 'bf')
