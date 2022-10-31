@@ -817,7 +817,7 @@ class EditorPlayState extends MusicBeatState
 				daRating = 'bad';
 			*/
 
-		var pixelShitPart1:String = "";
+		var pixelShitPart1:String = "judges/";
 		var pixelShitPart2:String = '';
 
 		if (PlayState.isPixelStage)
