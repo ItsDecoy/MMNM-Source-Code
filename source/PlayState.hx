@@ -3678,6 +3678,7 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	public static var songStats:Array<Array<Dynamic>> = [];
 
 	public var transitioning = false;
 	public function endSong():Void
@@ -3744,7 +3745,10 @@ class PlayState extends MusicBeatState
 				var percent:Float = ratingPercent;
 				if(Math.isNaN(percent)) percent = 0;
 				Highscore.saveScore(SONG.song, songScore, storyDifficulty, songMisses, percent, ratingFC);
-				ResultsState.AddSongStats(SONG.song, songScore, songMisses, percent, ratingFC, dad.healthIcon);
+
+				var stats:Array<Dynamic> = [SONG.song, songScore, songMisses, percent, ratingFC, dad.healthIcon];
+				songStats.push(stats);
+
 				trace('Score of ' + SONG.song + ' has been saved!');
 				#end
 			}
@@ -3782,12 +3786,15 @@ class PlayState extends MusicBeatState
 							Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
 						}
 
-						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
+						Highscore.weekCompleted.set(WeekData.weeksList[storyWeek], true);
 
-						FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
+						FlxG.save.data.weekCompleted = Highscore.weekCompleted;
 						FlxG.save.flush();
 						
 						checkForFinalCutscene();
+
+						for (i in 0...songStats.length)
+							ResultsState.AddSongStats(songStats[i][0], songStats[i][1], songStats[i][2], songStats[i][3], songStats[i][4], songStats[i][5]);
 
 						ResultsState.character = boyfriend.curCharacter;
 						MusicBeatState.switchState(new ResultsState());
@@ -3831,8 +3838,8 @@ class PlayState extends MusicBeatState
 				
 				if(!inPractice && !inBotplay)
 				{
-					StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
-					FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
+					Highscore.weekCompleted.set(WeekData.weeksList[storyWeek], true);
+					FlxG.save.data.weekCompleted = Highscore.weekCompleted;
 					FlxG.save.flush();
 
 					checkForFinalCutscene();
@@ -3843,7 +3850,7 @@ class PlayState extends MusicBeatState
 				else
 				{
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-					MusicBeatState.switchState(new FreeplayState());
+					MusicBeatState.switchState(new AllStarsState());
 				}
 			}
 
@@ -5305,6 +5312,17 @@ class PlayState extends MusicBeatState
 		return null;
 	}
 	#end
+
+	public static function resetProperties()
+	{
+		campaignScore = 0;
+		campaignMisses = 0;
+		chartingMode = false;
+		changedDifficulty = false;
+		deathCounter = 0;
+		seenCutscene = false;
+		songStats = [];
+	}
 
 	var curLight:Int = 0;
 	var curLightEvent:Int = 0;

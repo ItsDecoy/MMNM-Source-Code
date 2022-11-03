@@ -123,7 +123,7 @@ class MainMenuState extends MusicBeatState
 		pipes = new FlxTypedGroup<FlxSprite>();
 		add(pipes);
 
-		if (StoryMenuState.weekCompleted.exists(WeekData.weeksList[0]) || StoryMenuState.weekCompleted.get(WeekData.weeksList[0]))
+		if (Highscore.weekCompleted.exists(WeekData.weeksList[0]) || Highscore.weekCompleted.get(WeekData.weeksList[0]))
 		{
 			optionShit.insert(1, 'all_stars');
 		}
@@ -232,9 +232,9 @@ class MainMenuState extends MusicBeatState
 				}
 				else
 				{
-					if (!StoryMenuState.weekCompleted.exists('week1'))
+					if (!Highscore.weekCompleted.exists('week1'))
 					{
-						StoryMenuState.weekCompleted.set('week1', true);
+						Highscore.weekCompleted.set('week1', true);
 						FlxG.sound.play(Paths.sound('confirmMenu'), 0.8);
 						MusicBeatState.switchState(new MainMenuState());
 					}
@@ -296,7 +296,7 @@ class MainMenuState extends MusicBeatState
 									case 'mx_mode':
 										MusicBeatState.switchState(new MXModeStart());
 									case 'all_stars':
-										MusicBeatState.switchState(new FreeplayState());
+										MusicBeatState.switchState(new AllStarsState());
 									case 'extras':
 										MusicBeatState.switchState(new ExtrasMenu());
 									case 'options':

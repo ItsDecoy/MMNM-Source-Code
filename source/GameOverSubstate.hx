@@ -91,13 +91,13 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (controls.BACK)
 		{
 			FlxG.sound.music.stop();
-			PlayState.deathCounter = 0;
-			PlayState.seenCutscene = false;
+
+			PlayState.resetProperties();
 
 			if (PlayState.isStoryMode)
 				MusicBeatState.switchState(new MainMenuState());
 			else
-				MusicBeatState.switchState(new FreeplayState());
+				MusicBeatState.switchState(new AllStarsState());
 
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			PlayState.instance.callOnLuas('onGameOverConfirm', [false]);

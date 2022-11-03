@@ -7,6 +7,8 @@ using StringTools;
 class Highscore
 {
 	#if (haxe >= "4.0.0")
+	public static var weekCompleted:Map<String, Bool> = new Map();
+
 	public static var weekScores:Map<String, Int> = new Map();
 	public static var songScores:Map<String, Int> = new Map();
 	public static var songMisses:Map<String, Int> = new Map();

@@ -212,20 +212,17 @@ class MXModeStart extends MusicBeatState
                     }
 
                     // Nevermind that's stupid lmao
+                    PlayState.resetProperties();
                     PlayState.storyPlaylist = songArray;
                     PlayState.isStoryMode = true;
-                    PlayState.chartingMode = false;
 
                     var diffic = CoolUtil.getDifficultyFilePath(1);
                     if(diffic == null) diffic = '';
 
                     PlayState.storyDifficulty = 1;
-
                     PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-                    PlayState.campaignScore = 0;
-                    PlayState.campaignMisses = 0;
+                    AllStarsState.destroyFreeplayVocals();
 
-                    FreeplayState.destroyFreeplayVocals();
                     FlxG.sound.playMusic(Paths.sound('mxModeStart'), 1, false);
                     var dumbtime = FlxG.sound.music.length / 1000;
 

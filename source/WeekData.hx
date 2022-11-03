@@ -226,11 +226,11 @@ class WeekData {
 
 	public static function getWeekCompleted(weekName:String):Bool
 	{
-		if (!StoryMenuState.weekCompleted.exists(weekName))
+		if (!Highscore.weekCompleted.exists(weekName))
 		{
 			return false;
 		}
-		return StoryMenuState.weekCompleted.get(weekName);
+		return Highscore.weekCompleted.get(weekName);
 	}
 
 	public static function AllWeeksCompleted(excluded:Array<String> = null):Bool

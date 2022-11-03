@@ -26,10 +26,10 @@ import sys.FileSystem;
 
 using StringTools;
 
-class FreeplayState extends MusicBeatState
+class AllStarsState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
-	var path = 'freeplay/';
+	var path = 'allstars/';
 
 	var selector:FlxText;
 	private static var curSelected:Int = 0;
@@ -250,7 +250,7 @@ class FreeplayState extends MusicBeatState
 
 	function weekIsLocked(name:String):Bool {
 		var leWeek:WeekData = WeekData.weeksLoaded.get(name);
-		return (!leWeek.startUnlocked && leWeek.weekBefore.length > 0 && (!StoryMenuState.weekCompleted.exists(leWeek.weekBefore) || !StoryMenuState.weekCompleted.get(leWeek.weekBefore)));
+		return (!leWeek.startUnlocked && leWeek.weekBefore.length > 0 && (!Highscore.weekCompleted.exists(leWeek.weekBefore) || !Highscore.weekCompleted.get(leWeek.weekBefore)));
 	}
 
 	var instPlaying:Int = -1;
@@ -429,17 +429,9 @@ class FreeplayState extends MusicBeatState
 				persistentUpdate = false;
 				var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 				var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
-				/*#if MODS_ALLOWED
-				if(!sys.FileSystem.exists(Paths.modsJson(songLowercase + '/' + poop)) && !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop))) {
-				#else
-				if(!OpenFlAssets.exists(Paths.json(songLowercase + '/' + poop))) {
-				#end
-					poop = songLowercase;
-					curDifficulty = 1;
-					trace('Couldnt find file');
-				}*/
 				trace(poop);
 
+				PlayState.resetProperties();
 				PlayState.SONG = Song.loadFromJson(poop, songLowercase);
 				PlayState.isStoryMode = false;
 				PlayState.storyDifficulty = curDifficulty;

@@ -84,7 +84,7 @@ class MarioSevenStart extends MusicBeatState
             FlxG.camera.visible = false;
 			FlxG.sound.play(Paths.sound('Bump'));
             FlxG.sound.playMusic(Paths.music('freakyMenu'));
-			MusicBeatState.switchState(new FreeplayState());
+			MusicBeatState.switchState(new AllStarsState());
 		}
 
         if (accept)
@@ -115,18 +115,16 @@ class MarioSevenStart extends MusicBeatState
                         songArray.push(leWeek[i][0]);
                     }
 
+                    PlayState.resetProperties();
                     PlayState.storyPlaylist = songArray;
                     PlayState.isStoryMode = true;
-                    PlayState.chartingMode = false;
 
                     var diffic = CoolUtil.getDifficultyFilePath(1);
                     if(diffic == null) diffic = '';
 
                     PlayState.storyDifficulty = 1;
-
                     PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-                    PlayState.campaignScore = 0;
-                    PlayState.campaignMisses = 0;
+
 
                     ClientPrefs.unlockedGrandDad = true;
                     FlxG.save.data.unlockedGrandDad = ClientPrefs.unlockedGrandDad;

@@ -802,13 +802,12 @@ class FunkinLua {
 				CustomFadeTransition.nextCamera = null;
 
 			if(PlayState.isStoryMode)
-				MusicBeatState.switchState(new StoryMenuState());
+				MusicBeatState.switchState(new MainMenuState());
 			else
-				MusicBeatState.switchState(new FreeplayState());
+				MusicBeatState.switchState(new AllStarsState());
 
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
-			PlayState.changedDifficulty = false;
-			PlayState.chartingMode = false;
+			PlayState.resetProperties();
 			PlayState.instance.transitioning = true;
 		});
 		Lua_helper.add_callback(lua, "getSongPosition", function() {

@@ -304,7 +304,7 @@ class ResultsState extends MusicBeatState
             if (PlayState.isStoryMode)
                 MusicBeatState.switchState(new MainMenuState());
             else
-                MusicBeatState.switchState(new FreeplayState());
+                MusicBeatState.switchState(new AllStarsState());
         }
 
         character = 'bf';
