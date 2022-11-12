@@ -3844,6 +3844,9 @@ class PlayState extends MusicBeatState
 
 					checkForFinalCutscene();
 
+					for (i in 0...songStats.length)
+						ResultsState.AddSongStats(songStats[i][0], songStats[i][1], songStats[i][2], songStats[i][3], songStats[i][4], songStats[i][5]);
+
 					ResultsState.character = boyfriend.curCharacter;
 					MusicBeatState.switchState(new ResultsState());
 				}
