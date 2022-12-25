@@ -123,10 +123,12 @@ class MainMenuState extends MusicBeatState
 		pipes = new FlxTypedGroup<FlxSprite>();
 		add(pipes);
 
-		if (Highscore.weekCompleted.exists(WeekData.weeksList[0]) || Highscore.weekCompleted.get(WeekData.weeksList[0]))
+		/*if (Highscore.weekCompleted.exists(WeekData.weeksList[0]) || Highscore.weekCompleted.get(WeekData.weeksList[0]))
 		{
 			optionShit.insert(1, 'all_stars');
-		}
+		}*/
+
+		optionShit.insert(1, 'all_stars');
 
 		for (i in 0...optionShit.length)
 		{

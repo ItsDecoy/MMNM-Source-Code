@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-50,
+				39
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "IHY Idle"
+		},
+		{
+			"offsets": [
+				-50,
+				39
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "IHY dle"
+		},
+		{
+			"offsets": [
+				-25,
+				28
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "IHY Note Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				30
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "IHY Note Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-56,
+				76
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "IHY Note Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				15,
+				27
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "IHY Note Right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-56,
+				54
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "cutscene",
+			"loop": false,
+			"name": "IHY Job"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ChristmasHate",
+	"position": [
+		-170,
+		-50
+	],
+	"healthicon": "ihywin",
+	"flip_x": false,
+	"healthbar_colors": [
+		12,
+		148,
+		58
+	],
+	"camera_position": [
+		-40,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

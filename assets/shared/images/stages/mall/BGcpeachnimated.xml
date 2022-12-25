@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="crustacean day peach.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="peach crust0000" x="10" y="10" width="1377" height="925" frameX="0" frameY="-17" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0001" x="10" y="10" width="1377" height="925" frameX="0" frameY="-17" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0002" x="10" y="10" width="1377" height="925" frameX="0" frameY="-17" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0003" x="1407" y="10" width="1367" height="933" frameX="-8" frameY="-10" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0004" x="1407" y="10" width="1367" height="933" frameX="-8" frameY="-10" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0005" x="1407" y="10" width="1367" height="933" frameX="-8" frameY="-10" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0006" x="10" y="963" width="1352" height="942" frameX="-19" frameY="-2" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0007" x="10" y="963" width="1352" height="942" frameX="-19" frameY="-2" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0008" x="10" y="963" width="1352" height="942" frameX="-19" frameY="-2" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0009" x="1382" y="963" width="1344" height="944" frameX="-25" frameY="0" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0010" x="1382" y="963" width="1344" height="944" frameX="-25" frameY="0" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0011" x="1382" y="963" width="1344" height="944" frameX="-25" frameY="0" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0012" x="1382" y="963" width="1344" height="944" frameX="-25" frameY="0" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach crust0013" x="1382" y="963" width="1344" height="944" frameX="-25" frameY="0" frameWidth="1377" frameHeight="944"/>
+	<SubTexture name="peach norm0000" x="10" y="1927" width="1378" height="930" frameX="0" frameY="-17" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0001" x="10" y="1927" width="1378" height="930" frameX="0" frameY="-17" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0002" x="10" y="1927" width="1378" height="930" frameX="0" frameY="-17" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0003" x="1408" y="1927" width="1367" height="937" frameX="-8" frameY="-10" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0004" x="1408" y="1927" width="1367" height="937" frameX="-8" frameY="-10" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0005" x="1408" y="1927" width="1367" height="937" frameX="-8" frameY="-10" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0006" x="10" y="2884" width="1353" height="947" frameX="-19" frameY="-2" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0007" x="10" y="2884" width="1353" height="947" frameX="-19" frameY="-2" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0008" x="10" y="2884" width="1353" height="947" frameX="-19" frameY="-2" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0009" x="1383" y="2884" width="1345" height="949" frameX="-25" frameY="0" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0010" x="1383" y="2884" width="1345" height="949" frameX="-25" frameY="0" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0011" x="1383" y="2884" width="1345" height="949" frameX="-25" frameY="0" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0012" x="1383" y="2884" width="1345" height="949" frameX="-25" frameY="0" frameWidth="1378" frameHeight="949"/>
+	<SubTexture name="peach norm0013" x="1383" y="2884" width="1345" height="949" frameX="-25" frameY="0" frameWidth="1378" frameHeight="949"/>
+</TextureAtlas>

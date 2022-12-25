@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				38
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "MX Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				38
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "MX Note Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				57
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MX Note Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				38
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "MX Note Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				38
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MX Alt Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				57
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "MX Miss Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				38
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "MX Miss Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				38
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "MX Miss Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				38
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "MX Miss Left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "MX Death Intro"
+		},
+		{
+			"offsets": [
+				0,
+				-350
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "MX Death Loop"
+		},
+		{
+			"offsets": [
+				46,
+				463
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "MX Death Confirm"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MMchairPlayable",
+	"position": [
+		-170,
+		-50
+	],
+	"healthicon": "mxwin",
+	"flip_x": false,
+	"healthbar_colors": [
+		87,
+		7,
+		0
+	],
+	"camera_position": [
+		-220,
+		-240
+	],
+	"sing_duration": 6.1,
+	"scale": 1.5
+}

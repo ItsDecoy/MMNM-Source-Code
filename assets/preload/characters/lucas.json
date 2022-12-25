@@ -1,0 +1,165 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-12,
+				30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Lucas Idle"
+		},
+		{
+			"offsets": [
+				13,
+				29
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Lucas Note Left"
+		},
+		{
+			"offsets": [
+				1,
+				11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Lucas Note Down"
+		},
+		{
+			"offsets": [
+				-19,
+				45
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Lucas Note Up"
+		},
+		{
+			"offsets": [
+				-12,
+				29
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Lucas Note Right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				29
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "Lucas Miss Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1,
+				18
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "Lucas Miss Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				45
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Lucas Miss Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				28
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Lucas Miss Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				41,
+				100
+			],
+			"anim": "freeze",
+			"fps": 24,
+			"name": "Lucas Ice",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19
+			]
+		},
+		{
+			"offsets": [
+				-6,
+				28
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "Lucas Mad"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/LucasChrist",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "lucaswin",
+	"flip_x": true,
+	"healthbar_colors": [
+		75,
+		181,
+		26
+	],
+	"camera_position": [
+		-70,
+		10
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}

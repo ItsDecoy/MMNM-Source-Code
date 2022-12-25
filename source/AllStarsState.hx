@@ -95,6 +95,8 @@ class AllStarsState extends MusicBeatState
 				leChars.push(leWeek.songs[j][1]);
 			}
 
+			var christmas:Bool = true;
+
 			WeekData.setDirectoryFromWeek(leWeek);
 			for (song in leWeek.songs)
 			{
@@ -104,17 +106,24 @@ class AllStarsState extends MusicBeatState
 					colors = [146, 113, 253];
 				}
 				var formatName:String = Highscore.formatSong(song[0], 1);
-				if (formatName == "a-grand-ol'-time")
+				if(christmas)
 				{
-					grandDadWeek = WeekData.weeksList[i];
-					if (ClientPrefs.unlockedGrandDad)
-					{
-						addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]), false);
-					}
+					addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]), false);
 				}
 				else
 				{
-					addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]), weekIsLocked);
+					if (formatName == "a-grand-ol'-time")
+					{
+						grandDadWeek = WeekData.weeksList[i];
+						if (ClientPrefs.unlockedGrandDad)
+						{
+							addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]), false);
+						}
+					}
+					else
+					{
+						addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]), weekIsLocked);
+					}
 				}
 			}
 		}
@@ -138,7 +147,14 @@ class AllStarsState extends MusicBeatState
 		{
 			trace(path + 'art/' + songs[i].songName.toLowerCase() + '_idle');
 
-			var artCover = new FlxSprite().loadGraphic(Paths.image(path + 'art/' + songs[i].songName.toLowerCase() + '_idle', 'preload'));
+			var songArtThing:String = songs[i].songName.toLowerCase();
+
+			if(songs[i].songName.toLowerCase() == 'merry massacre' && (FlxG.save.data.merryMX != null && FlxG.save.data.merryMX == true))
+			{
+				songArtThing = 'merryCompleted';
+			}
+
+			var artCover = new FlxSprite().loadGraphic(Paths.image(path + 'art/' + songArtThing + '_idle', 'preload'));
 			artCover.scrollFactor.set();
 			artCover.screenCenter();
 			artCover.ID = i;
@@ -146,7 +162,7 @@ class AllStarsState extends MusicBeatState
 			artCover.antialiasing = ClientPrefs.globalAntialiasing;
 			arts.add(artCover);
 			
-			var artCoverSelect = new FlxSprite(artCover.x, artCover.y).loadGraphic(Paths.image(path + 'art/' + songs[i].songName.toLowerCase() + '_select', 'preload'));
+			var artCoverSelect = new FlxSprite(artCover.x, artCover.y).loadGraphic(Paths.image(path + 'art/' + songArtThing + '_select', 'preload'));
 			artCoverSelect.scrollFactor.set();
 			artCoverSelect.ID = i;
 			artCoverSelect.antialiasing = false;

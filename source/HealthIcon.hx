@@ -43,6 +43,8 @@ class HealthIcon extends FlxSprite
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
 			var file:Dynamic = Paths.image(name);
 
+			hasWinningIcon = false;
+
 			loadGraphic(file); //Load stupidly first for getting the file size
 			var frameSplit = 2;
 			if (width >= 450)

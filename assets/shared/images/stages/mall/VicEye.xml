@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="daiseye victim crust.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="crackers crust0000" x="10" y="10" width="1626" height="1098" frameX="0" frameY="-12" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0001" x="10" y="10" width="1626" height="1098" frameX="0" frameY="-12" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0002" x="10" y="10" width="1626" height="1098" frameX="0" frameY="-12" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0003" x="1656" y="10" width="1613" height="1106" frameX="-3" frameY="-7" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0004" x="1656" y="10" width="1613" height="1106" frameX="-3" frameY="-7" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0005" x="1656" y="10" width="1613" height="1106" frameX="-3" frameY="-7" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0006" x="3289" y="10" width="1592" height="1112" frameX="-8" frameY="-3" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0007" x="3289" y="10" width="1592" height="1112" frameX="-8" frameY="-3" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0008" x="3289" y="10" width="1592" height="1112" frameX="-8" frameY="-3" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0009" x="4901" y="10" width="1584" height="1117" frameX="-10" frameY="0" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0010" x="4901" y="10" width="1584" height="1117" frameX="-10" frameY="0" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0011" x="4901" y="10" width="1584" height="1117" frameX="-10" frameY="0" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0012" x="4901" y="10" width="1584" height="1117" frameX="-10" frameY="0" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers crust0013" x="4901" y="10" width="1584" height="1117" frameX="-10" frameY="0" frameWidth="1626" frameHeight="1117"/>
+	<SubTexture name="crackers norm0000" x="6505" y="10" width="1627" height="1098" frameX="0" frameY="-12" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0001" x="6505" y="10" width="1627" height="1098" frameX="0" frameY="-12" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0002" x="6505" y="10" width="1627" height="1098" frameX="0" frameY="-12" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0003" x="10" y="1147" width="1612" height="1106" frameX="-4" frameY="-7" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0004" x="10" y="1147" width="1612" height="1106" frameX="-4" frameY="-7" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0005" x="10" y="1147" width="1612" height="1106" frameX="-4" frameY="-7" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0006" x="1642" y="1147" width="1594" height="1113" frameX="-8" frameY="-3" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0007" x="1642" y="1147" width="1594" height="1113" frameX="-8" frameY="-3" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0008" x="1642" y="1147" width="1594" height="1113" frameX="-8" frameY="-3" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0009" x="3256" y="1147" width="1584" height="1117" frameX="-10" frameY="0" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0010" x="3256" y="1147" width="1584" height="1117" frameX="-10" frameY="0" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0011" x="3256" y="1147" width="1584" height="1117" frameX="-10" frameY="0" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0012" x="3256" y="1147" width="1584" height="1117" frameX="-10" frameY="0" frameWidth="1627" frameHeight="1117"/>
+	<SubTexture name="crackers norm0013" x="3256" y="1147" width="1584" height="1117" frameX="-10" frameY="0" frameWidth="1627" frameHeight="1117"/>
+</TextureAtlas>

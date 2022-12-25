@@ -348,11 +348,26 @@ class TitleState extends MusicBeatState
 				transitioning = true;
 
 				new FlxTimer().start(1.1, function(tmr:FlxTimer)
-				{
-					if (mustUpdate) {
-						MusicBeatState.switchState(new OutdatedState());
-					} else {
-						MusicBeatState.switchState(new MainMenuState());
+				{	
+					FlxG.sound.music.stop();
+					Main.fpsVar.visible = false;
+					var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+					bg.scrollFactor.set();
+					add(bg);
+		
+					(new FlxVideo(Paths.video('mx_chrims'))).finishCallback = function() {
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+
+						FlxG.sound.music.fadeIn(4, 0, 0.7);
+
+						remove(bg);
+						Main.fpsVar.visible = ClientPrefs.showFPS;
+						
+						if (mustUpdate) {
+							MusicBeatState.switchState(new OutdatedState());
+						} else {
+							MusicBeatState.switchState(new MainMenuState());
+						}
 					}
 					closedState = true;
 				});

@@ -1014,7 +1014,7 @@ class PlayState extends MusicBeatState
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
-		timeTxt.setFormat(Paths.font("Pixel_NES.otf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat(Paths.font("Pixel_NES.otf"), 32, PlayState.getCharacterColor('dad'), CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = timeTxt.size / 10;
@@ -1041,7 +1041,7 @@ class PlayState extends MusicBeatState
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+		timeBar.createFilledBar(0xFF000000, PlayState.getCharacterColor('dad'));
 		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.alpha = 0;
 		timeBar.visible = showTime;
@@ -1175,7 +1175,7 @@ class PlayState extends MusicBeatState
 		iconP2.alpha = ClientPrefs.healthBarAlpha;
 		iconP2.flipX = isReversed;
 		
-		reloadHealthBarColors();
+		reloadHealthBarColors(boyfriend, dad);
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 48, FlxG.width, "", 40);
 		scoreTxt.setFormat(Paths.font("Pixel_NES.otf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -1438,9 +1438,9 @@ class PlayState extends MusicBeatState
 		#end
 	}
 
-	public function reloadHealthBarColors() {
-		healthBar.createFilledBar(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
-			FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
+	public function reloadHealthBarColors(ch1:Character, ch2:Character) {
+		healthBar.createFilledBar(FlxColor.fromRGB(ch2.healthColorArray[0], ch2.healthColorArray[1], ch2.healthColorArray[2]),
+			FlxColor.fromRGB(ch1.healthColorArray[0], ch1.healthColorArray[1], ch1.healthColorArray[2]));
 			
 		healthBar.updateBar();
 	}
@@ -3285,6 +3285,28 @@ class PlayState extends MusicBeatState
 					char.specialAnim = true;
 				}
 
+			case 'Alternate Icons':
+				var char1:Character = dad;
+				var char2:Character = boyfriend;
+				switch(value1.toLowerCase().trim())
+				{
+					case 'bf' | 'boyfriend':
+						char1 = boyfriend;
+					case 'gf' | 'girlfriend':
+						char1 = gf;
+				}
+
+				switch(value2.toLowerCase().trim())
+				{
+					case 'dad':
+						char2 = dad;
+					case 'gf' | 'girlfriend':
+						char2 = gf;
+				}
+				iconP1.changeIcon(char2.healthIcon);
+				iconP2.changeIcon(char1.healthIcon);
+				reloadHealthBarColors(char2, char1);
+
 			case 'Camera Follow Pos':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
@@ -3410,7 +3432,7 @@ class PlayState extends MusicBeatState
 							setOnLuas('gfName', gf.curCharacter);
 						}
 				}
-				reloadHealthBarColors();
+				reloadHealthBarColors(dad, boyfriend);
 			
 			case 'BG Freaks Expression':
 				if(bgGirls != null) bgGirls.swapDanceType();
@@ -3745,6 +3767,11 @@ class PlayState extends MusicBeatState
 				var percent:Float = ratingPercent;
 				if(Math.isNaN(percent)) percent = 0;
 				Highscore.saveScore(SONG.song, songScore, storyDifficulty, songMisses, percent, ratingFC);
+
+				if(SONG.song.toLowerCase() == 'merry massacre')
+				{
+					FlxG.save.data.merryMX = true;
+				}
 
 				var stats:Array<Dynamic> = [SONG.song, songScore, songMisses, percent, ratingFC, dad.healthIcon];
 				songStats.push(stats);
@@ -4760,7 +4787,7 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.noteSplashes && note != null) {
 			var strum:StrumNote = playerStrums.members[note.noteData];
 			if(strum != null) {
-				spawnNoteSplash(strum.x, strum.y, note.noteData, note);
+				spawnNoteSplash(strum.x + 65, strum.y + 60, note.noteData, note);
 			}
 		}
 	}

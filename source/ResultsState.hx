@@ -36,6 +36,7 @@ class ResultsState extends MusicBeatState
     var newRecordTexts:Array<FlxText> = [];
 
     var skippedSequence = false;
+    var songName:String = '';
 
     override public function new()
     {
@@ -124,6 +125,7 @@ class ResultsState extends MusicBeatState
                     var title:FlxText = new FlxText(icon.x + icon.width, icon.y + txtheight - 15, 0, statsList[i].songName, txtsize, true);
                     title.color = FlxColor.RED;
                     texto = title;
+                    songName = statsList[i].songName;
                 }
                 else // the actual score
                 {
@@ -299,12 +301,16 @@ class ResultsState extends MusicBeatState
         }
         else
         {
-            FlxG.sound.playMusic(Paths.music('freakyMenu'));
+            if(songName != 'Merry Massacre')
+                FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
             if (PlayState.isStoryMode)
                 MusicBeatState.switchState(new MainMenuState());
             else
-                MusicBeatState.switchState(new AllStarsState());
+                if(songName == 'Merry Massacre')
+                    MusicBeatState.switchState(new CrimmasState());
+                else
+                    MusicBeatState.switchState(new AllStarsState());
         }
 
         character = 'bf';

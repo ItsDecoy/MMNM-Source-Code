@@ -71,7 +71,7 @@ class ExtrasMenu extends MusicBeatState
     {
         optionSprites = new FlxSpriteGroup();
 
-        bg = new FlxBackdrop(Paths.image('freeplay/loopingback','preload'), 1, 1, true, true);
+        bg = new FlxBackdrop(Paths.image('allstars/loopingback','preload'), 1, 1, true, true);
         bg.scrollFactor.set();
         bg.antialiasing = false;
         add(bg);
